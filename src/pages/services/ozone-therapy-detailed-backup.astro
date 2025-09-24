@@ -1,0 +1,132 @@
+---
+// Ozone Therapy Service Page - Central Dentist (DETAILED VERSION - BACKUP)
+import ServicePageLayout from '../../layouts/ServicePageLayout.astro';
+
+const features = [
+  'Natural antimicrobial action',
+  'No harmful side effects',
+  'Completely painless treatment',
+  'Alternative to antibiotics'
+];
+
+const benefits = [
+  'Eliminates harmful bacteria, viruses, and fungi',
+  'Accelerates natural healing',
+  'Non-toxic and completely safe',
+  'Promotes tissue regeneration',
+  'Alternative to antibiotics',
+  'Painless application'
+];
+
+const process = [
+  'Medical-grade ozone is applied to treatment area',
+  'Oxygen molecules eliminate harmful bacteria',
+  'Promotes natural healing and tissue regeneration',
+  'Completely painless and non-invasive'
+];
+
+const faqs = [
+  {
+    question: 'Is ozone therapy safe?',
+    answer: 'Yes, ozone therapy is completely safe when administered by trained professionals. Medical-grade ozone has been used in dentistry for decades with an excellent safety record and no harmful side effects.'
+  },
+  {
+    question: 'Does ozone therapy hurt?',
+    answer: 'No, ozone therapy is completely painless. The treatment involves applying ozone gas or ozonated water to the treatment area, which patients typically describe as refreshing.'
+  },
+  {
+    question: 'What conditions can ozone therapy treat?',
+    answer: 'Ozone therapy is effective for treating gum disease, tooth decay, infections, cold sores, and promoting healing after dental procedures. It\'s also used preventively to maintain oral health.'
+  },
+  {
+    question: 'How does ozone compare to antibiotics?',
+    answer: 'Ozone therapy provides natural antimicrobial action without the side effects or resistance issues associated with antibiotics. It eliminates bacteria, viruses, and fungi while promoting your body\'s natural healing response.'
+  }
+];
+---
+
+<ServicePageLayout
+  title="Ozone Therapy"
+  description="Natural antimicrobial treatment for enhanced healing and infection control"
+  image="/images/services/abstract-white-texture.jpg"
+  features={features}
+  benefits={benefits}
+  process={process}
+  faqs={faqs}
+>
+  <div slot="overview" class="space-y-4">
+    <p class="text-gray-dark leading-relaxed">
+      Ozone therapy is a natural, non-toxic treatment that harnesses the power of medical-grade ozone
+      to eliminate harmful bacteria, viruses, and fungi in the mouth. This advanced therapy works by
+      delivering highly concentrated oxygen to infected areas, creating an environment where harmful
+      microorganisms cannot survive while promoting natural healing processes.
+    </p>
+
+    <p class="text-gray-dark leading-relaxed">
+      We use ozone therapy as an adjunct treatment for periodontal disease, cavity treatment, and
+      post-surgical healing. The treatment is completely painless and provides a natural alternative
+      to antibiotics, making it an ideal choice for patients seeking holistic dental care without
+      harmful side effects.
+    </p>
+  </div>
+
+  <div slot="content">
+    <!-- How It Works & Benefits Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+      <div class="bg-white rounded-lg p-6 border border-gray-200 shadow-sm">
+        <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-teal to-teal-dark rounded-full flex items-center justify-center">
+          <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-dark mb-4 text-center" style="font-family: 'Playfair Display', serif;">
+          How It Works
+        </h3>
+        <ul class="text-gray-medium space-y-2">
+          <li>• Medical-grade ozone is applied to treatment area</li>
+          <li>• Oxygen molecules eliminate harmful bacteria</li>
+          <li>• Promotes natural healing and tissue regeneration</li>
+          <li>• Completely painless and non-invasive</li>
+        </ul>
+      </div>
+
+      <div class="bg-white rounded-lg p-6 border border-gray-200 shadow-sm">
+        <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-green-olive to-lime-light rounded-full flex items-center justify-center">
+          <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-dark mb-4 text-center" style="font-family: 'Playfair Display', serif;">
+          Key Benefits
+        </h3>
+        <ul class="text-gray-medium space-y-2">
+          <li>• Natural antimicrobial action</li>
+          <li>• No harmful side effects</li>
+          <li>• Accelerates healing processes</li>
+          <li>• Alternative to antibiotics</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Treatment Applications -->
+    <div class="bg-gradient-to-r from-teal-50 to-green-50 rounded-lg p-8 text-center border border-teal-200">
+      <h3 class="text-2xl font-semibold text-gray-dark mb-6" style="font-family: 'Playfair Display', serif;">
+        Treatment Applications
+      </h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="p-4">
+          <h4 class="font-semibold text-gray-dark mb-2">Gum Disease</h4>
+          <p class="text-sm text-gray-medium">Eliminates bacteria in periodontal pockets</p>
+        </div>
+        <div class="p-4">
+          <h4 class="font-semibold text-gray-dark mb-2">Cavity Treatment</h4>
+          <p class="text-sm text-gray-medium">Sterilizes decay before restoration</p>
+        </div>
+        <div class="p-4">
+          <h4 class="font-semibold text-gray-dark mb-2">Post-Surgery</h4>
+          <p class="text-sm text-gray-medium">Promotes faster, cleaner healing</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</ServicePageLayout>

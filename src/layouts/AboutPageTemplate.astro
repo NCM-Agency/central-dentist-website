@@ -1,0 +1,176 @@
+---
+// About Page Template - Central Dentist
+// Consistent with service page templates
+
+import Layout from './Layout.astro';
+import PageHero from '../components/shared/PageHero.astro';
+import Button from '../components/ui/Button.astro';
+import Card from '../components/ui/Card.astro';
+import BlurFade from '../components/ui/BlurFade.astro';
+
+export interface Props {
+  title: string;
+  description: string;
+  heroTitle: string;
+  heroSubtitle?: string;
+  backgroundImage?: string;
+  breadcrumbs?: Array<{label: string; href: string;}>;
+  schemaType?: string;
+}
+
+const {
+  title,
+  description,
+  heroTitle,
+  heroSubtitle,
+  backgroundImage = '/images/services/abstract-white-texture.jpg',
+  breadcrumbs,
+  schemaType = 'MedicalBusiness'
+} = Astro.props;
+---
+
+<Layout title={title} description={description} schemaType={schemaType}>
+  
+  <!-- Hero Section - Consistent with service pages -->
+  <PageHero
+    title={heroTitle}
+    subtitle={heroSubtitle}
+    backgroundImage={backgroundImage}
+    variant="standard"
+    breadcrumbs={breadcrumbs}
+  />
+
+  <!-- Philosophy/Introduction Slot -->
+  <slot name="philosophy" />
+
+  <!-- Team Section Slot (optional) -->
+  <slot name="team" />
+
+  <!-- Technology Section Slot (optional) -->
+  <slot name="technology" />
+
+  <!-- Gallery Section Slot (optional) -->
+  <slot name="gallery" />
+
+  <!-- Environmental Section Slot (optional) -->
+  <slot name="environmental" />
+
+  <!-- Forms Section Slot (optional) -->
+  <slot name="forms" />
+
+  <!-- Additional Content Slot -->
+  <slot />
+
+  <!-- CTA Section - Blue Gradient (Superior Design) -->
+  <slot name="cta">
+    <section class="py-16 md:py-20" style="background: linear-gradient(to bottom right, #0099ba, #006786);">
+      <div class="container mx-auto px-4 md:px-6">
+        <div class="max-w-3xl mx-auto text-center">
+          <h2 class="text-4xl md:text-5xl font-normal text-white mb-4"
+              style="font-family: 'Playfair Display', serif;">
+            Experience the Difference
+          </h2>
+          <p class="text-lg text-white/90 mb-8" style="font-family: 'Geist', sans-serif;">
+            Come experience the difference of holistic dental care in our warm and inviting office
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/contact"
+              class="px-8 py-3 bg-gradient-to-r from-[#a6b443] to-[#c7cd85] text-white rounded-full font-semibold transition-all duration-300 hover:from-[#8fa339] hover:to-[#a6b443] hover:shadow-lg inline-flex items-center justify-center"
+              style="font-family: 'Playfair Display', serif;"
+            >
+              Schedule Your Visit
+            </a>
+            <a
+              href="tel:214-368-0900"
+              class="px-8 py-3 bg-white border-2 rounded-full font-semibold transition-all duration-300 hover:shadow-lg inline-flex items-center justify-center"
+              style="font-family: 'Playfair Display', serif; color: #0099ba; border-color: white;"
+              onmouseover="this.style.backgroundColor='#006786'; this.style.color='white'; this.style.borderColor='#006786';"
+              onmouseout="this.style.backgroundColor='white'; this.style.color='#0099ba'; this.style.borderColor='white';"
+            >
+              <svg class="mr-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+              Call (214) 368-0900
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </slot>
+
+</Layout>
+
+<style>
+  :global(.about-section) {
+    padding: 4rem 1rem;
+  }
+  
+  @media (min-width: 768px) {
+    :global(.about-section) {
+      padding: 5rem 1.5rem;
+    }
+  }
+
+  :global(.team-grid) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+
+  :global(.tech-grid) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+
+  :global(.icon-circle) {
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+  }
+
+  :global(.team-avatar) {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 1.5rem;
+    aspect-ratio: 1/1;
+  }
+
+  :global(.prose-custom) {
+    max-width: none;
+    color: #4a5568;
+    line-height: 1.75;
+    font-family: 'Geist', sans-serif;
+  }
+
+  :global(.prose-custom p) {
+    margin-bottom: 1.5rem;
+  }
+
+  :global(.about-heading) {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.875rem;
+    font-weight: 400;
+    color: #006786;
+    margin-bottom: 1rem;
+  }
+
+  @media (min-width: 768px) {
+    :global(.about-heading) {
+      font-size: 2.25rem;
+    }
+  }
+
+  :global(.about-text) {
+    font-family: 'Geist', sans-serif;
+    color: #4b5563;
+    line-height: 1.75;
+  }
+</style>

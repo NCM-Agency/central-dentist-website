@@ -1,0 +1,484 @@
+---
+// Sleep Breathing Service Page - Using Detailed Template
+import ServicePageDetailed from '../../layouts/ServicePageDetailed.astro';
+import BlurFade from '../../components/ui/BlurFade.astro';
+---
+
+<ServicePageDetailed
+  title="Sleep Disordered Breathing Treatment"
+  description="Comprehensive airway management to improve sleep quality and overall health"
+  metaDescription="Comprehensive treatment for sleep disordered breathing, sleep apnea, and airway issues. Improve sleep, energy, and overall health at Central Dentist Dallas."
+>
+  <!-- Symptoms Section -->
+  <section class="service-section bg-white">
+    <div class="service-container">
+      <div class="service-content">
+        <div class="text-center mb-12">
+          <BlurFade delay={100} client:load>
+            <h2 class="service-heading" style="color: #006786;">
+              Symptoms We Can Help Improve
+            </h2>
+            <p class="service-subheading">
+              Sleep disordered breathing affects more than just your sleep - it impacts your entire well-being
+            </p>
+          </BlurFade>
+        </div>
+
+        <div class="service-grid mb-12">
+          <BlurFade delay={200} client:load>
+            <div class="service-card">
+              <div class="service-icon service-icon-teal mx-auto">
+                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-800 mb-3" style="font-family: 'Playfair Display', serif;">
+                Sleep Issues
+              </h3>
+              <ul class="service-text text-left space-y-2">
+                <li>• Loud snoring</li>
+                <li>• Sleep apnea</li>
+                <li>• Restless sleep</li>
+                <li>• Frequent awakening</li>
+                <li>• Insomnia</li>
+              </ul>
+            </div>
+          </BlurFade>
+
+          <BlurFade delay={300} client:load>
+            <div class="service-card">
+              <div class="service-icon service-icon-green mx-auto">
+                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-800 mb-3" style="font-family: 'Playfair Display', serif;">
+                Energy & Fatigue
+              </h3>
+              <ul class="service-text text-left space-y-2">
+                <li>• Daytime fatigue</li>
+                <li>• Morning exhaustion</li>
+                <li>• Afternoon crashes</li>
+                <li>• Low energy levels</li>
+                <li>• Need for stimulants</li>
+              </ul>
+            </div>
+          </BlurFade>
+
+          <BlurFade delay={400} client:load>
+            <div class="service-card">
+              <div class="service-icon mx-auto" style="background: linear-gradient(to bottom right, #0099ba, #a6b443);">
+                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-800 mb-3" style="font-family: 'Playfair Display', serif;">
+                Cognitive Issues
+              </h3>
+              <ul class="service-text text-left space-y-2">
+                <li>• Difficulty concentrating</li>
+                <li>• Memory problems</li>
+                <li>• Brain fog</li>
+                <li>• Poor focus</li>
+                <li>• Mental fatigue</li>
+              </ul>
+            </div>
+          </BlurFade>
+
+          <BlurFade delay={500} client:load>
+            <div class="service-card">
+              <div class="service-icon service-icon-green mx-auto">
+                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-800 mb-3" style="font-family: 'Playfair Display', serif;">
+                Mood & Behavior
+              </h3>
+              <ul class="service-text text-left space-y-2">
+                <li>• Irritability</li>
+                <li>• Depression</li>
+                <li>• Mood swings</li>
+                <li>• Anxiety</li>
+                <li>• Relationship stress</li>
+              </ul>
+            </div>
+          </BlurFade>
+
+          <BlurFade delay={600} client:load>
+            <div class="service-card">
+              <div class="service-icon mx-auto" style="background: linear-gradient(to bottom right, #8fa339, #0099ba);">
+                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-800 mb-3" style="font-family: 'Playfair Display', serif;">
+                Health Risks
+              </h3>
+              <ul class="service-text text-left space-y-2">
+                <li>• High blood pressure</li>
+                <li>• Heart disease risk</li>
+                <li>• Diabetes risk</li>
+                <li>• Stroke risk</li>
+                <li>• Immune system weakness</li>
+              </ul>
+            </div>
+          </BlurFade>
+        </div>
+
+        <!-- ADHD Connection -->
+        <BlurFade delay={700} client:load>
+          <div class="bg-gradient-to-r from-teal-50 to-green-50 rounded-2xl p-8">
+            <div class="max-w-3xl mx-auto text-center">
+              <h3 class="service-heading mb-4" style="color: #006786; font-size: 2rem;">
+                ADHD and Sleep Disordered Breathing Connection
+              </h3>
+              <p class="service-text mb-6">
+                Recent research shows a strong connection between sleep disordered breathing and ADHD symptoms.
+                Many children and adults diagnosed with ADHD actually have an underlying airway issue that,
+                when treated, can significantly improve concentration, hyperactivity, and behavioral issues.
+              </p>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
+                <div>
+                  <h4 class="text-lg font-semibold mb-3" style="color: #006786; font-family: 'Playfair Display', serif;">
+                    Similar Symptoms Include:
+                  </h4>
+                  <ul class="service-text space-y-2">
+                    <li>• Difficulty concentrating</li>
+                    <li>• Hyperactivity</li>
+                    <li>• Impulsivity</li>
+                    <li>• Memory problems</li>
+                    <li>• Emotional regulation issues</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="text-lg font-semibold mb-3" style="color: #006786; font-family: 'Playfair Display', serif;">
+                    Research Shows:
+                  </h4>
+                  <ul class="service-text space-y-2">
+                    <li>• Up to 25% of ADHD cases may be sleep-related</li>
+                    <li>• Treating airway issues often reduces ADHD symptoms</li>
+                    <li>• Better sleep leads to improved focus and behavior</li>
+                    <li>• Many patients reduce or eliminate ADHD medications</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </BlurFade>
+      </div>
+    </div>
+  </section>
+
+  <!-- Treatment Approach Section -->
+  <section class="service-section bg-gray-50">
+    <div class="service-container">
+      <div class="service-content">
+        <div class="text-center mb-12">
+          <BlurFade delay={100} client:load>
+            <h2 class="service-heading" style="color: #006786;">
+              Our Treatment Approach
+            </h2>
+            <p class="service-subheading">
+              Comprehensive care that addresses the root causes of sleep disordered breathing
+            </p>
+          </BlurFade>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <BlurFade delay={200} client:load>
+            <div>
+              <h3 class="text-2xl font-normal mb-6" style="color: #a6b443; font-family: 'Playfair Display', serif;">
+                What We Treat
+              </h3>
+              <ul class="service-list">
+                <li class="service-list-item">
+                  <svg class="service-checkmark" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                  <span class="service-text">Sleep apnea (mild, moderate, and severe)</span>
+                </li>
+                <li class="service-list-item">
+                  <svg class="service-checkmark" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                  <span class="service-text">Upper airway resistance syndrome</span>
+                </li>
+                <li class="service-list-item">
+                  <svg class="service-checkmark" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                  <span class="service-text">Chronic snoring</span>
+                </li>
+                <li class="service-list-item">
+                  <svg class="service-checkmark" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                  <span class="service-text">Mouth breathing</span>
+                </li>
+                <li class="service-list-item">
+                  <svg class="service-checkmark" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                  <span class="service-text">TMJ related breathing disorders</span>
+                </li>
+              </ul>
+            </div>
+          </BlurFade>
+
+          <BlurFade delay={300} client:load>
+            <div>
+              <h3 class="text-2xl font-normal mb-6" style="color: #a6b443; font-family: 'Playfair Display', serif;">
+                Treatment Options
+              </h3>
+              <ul class="service-list">
+                <li class="service-list-item">
+                  <svg class="service-checkmark" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                  <span class="service-text">Custom oral appliance therapy</span>
+                </li>
+                <li class="service-list-item">
+                  <svg class="service-checkmark" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                  <span class="service-text">Airway expansion treatments</span>
+                </li>
+                <li class="service-list-item">
+                  <svg class="service-checkmark" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                  <span class="service-text">Myofunctional therapy referrals</span>
+                </li>
+                <li class="service-list-item">
+                  <svg class="service-checkmark" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                  <span class="service-text">Sleep study coordination</span>
+                </li>
+                <li class="service-list-item">
+                  <svg class="service-checkmark" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                  <span class="service-text">Collaborative care with sleep physicians</span>
+                </li>
+              </ul>
+            </div>
+          </BlurFade>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section class="service-section bg-white">
+    <div class="service-container">
+      <div class="service-content">
+        <div class="text-center mb-12">
+          <BlurFade delay={100} client:load>
+            <h2 class="service-heading" style="color: #006786;">
+              Your Treatment Journey
+            </h2>
+            <p class="service-subheading">
+              A step-by-step approach to better sleep and improved health
+            </p>
+          </BlurFade>
+        </div>
+
+        <div class="space-y-6">
+          <BlurFade delay={200} client:load>
+            <div class="flex gap-4">
+              <div class="flex-shrink-0">
+                <div class="w-12 h-12 bg-gradient-to-br from-[#0099ba] to-[#006786] rounded-full flex items-center justify-center text-white font-bold">
+                  1
+                </div>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold mb-2" style="font-family: 'Playfair Display', serif;">
+                  Comprehensive Evaluation
+                </h3>
+                <p class="service-text">
+                  We begin with a thorough assessment including airway evaluation, sleep questionnaires,
+                  and 3D CBCT imaging to understand your unique situation.
+                </p>
+              </div>
+            </div>
+          </BlurFade>
+
+          <BlurFade delay={300} client:load>
+            <div class="flex gap-4">
+              <div class="flex-shrink-0">
+                <div class="w-12 h-12 bg-gradient-to-br from-[#0099ba] to-[#006786] rounded-full flex items-center justify-center text-white font-bold">
+                  2
+                </div>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold mb-2" style="font-family: 'Playfair Display', serif;">
+                  Sleep Study Coordination
+                </h3>
+                <p class="service-text">
+                  If needed, we'll coordinate with sleep physicians for diagnostic sleep studies to
+                  determine the severity of your condition.
+                </p>
+              </div>
+            </div>
+          </BlurFade>
+
+          <BlurFade delay={400} client:load>
+            <div class="flex gap-4">
+              <div class="flex-shrink-0">
+                <div class="w-12 h-12 bg-gradient-to-br from-[#0099ba] to-[#006786] rounded-full flex items-center justify-center text-white font-bold">
+                  3
+                </div>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold mb-2" style="font-family: 'Playfair Display', serif;">
+                  Custom Treatment Plan
+                </h3>
+                <p class="service-text">
+                  Based on your evaluation, we create a personalized treatment plan which may include
+                  oral appliance therapy, airway expansion, or collaborative care.
+                </p>
+              </div>
+            </div>
+          </BlurFade>
+
+          <BlurFade delay={500} client:load>
+            <div class="flex gap-4">
+              <div class="flex-shrink-0">
+                <div class="w-12 h-12 bg-gradient-to-br from-[#0099ba] to-[#006786] rounded-full flex items-center justify-center text-white font-bold">
+                  4
+                </div>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold mb-2" style="font-family: 'Playfair Display', serif;">
+                  Ongoing Monitoring
+                </h3>
+                <p class="service-text">
+                  We track your progress with regular follow-ups, adjustments as needed, and
+                  coordination with your healthcare team to ensure optimal results.
+                </p>
+              </div>
+            </div>
+          </BlurFade>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Results Section -->
+  <section class="service-section bg-gradient-to-b from-green-50 to-white">
+    <div class="service-container">
+      <div class="service-content">
+        <div class="text-center mb-12">
+          <BlurFade delay={100} client:load>
+            <h2 class="service-heading" style="color: #006786;">
+              Life-Changing Results
+            </h2>
+            <p class="service-subheading">
+              What our patients experience after treatment
+            </p>
+          </BlurFade>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <BlurFade delay={200} client:load>
+            <div class="bg-white rounded-2xl p-6 shadow-lg">
+              <h3 class="text-xl font-semibold mb-4" style="color: #a6b443; font-family: 'Playfair Display', serif;">
+                Immediate Improvements
+              </h3>
+              <ul class="service-list">
+                <li class="service-list-item">
+                  <span class="text-[#a6b443] mr-2">✓</span>
+                  <span class="service-text">Better sleep quality from night one</span>
+                </li>
+                <li class="service-list-item">
+                  <span class="text-[#a6b443] mr-2">✓</span>
+                  <span class="service-text">Reduced or eliminated snoring</span>
+                </li>
+                <li class="service-list-item">
+                  <span class="text-[#a6b443] mr-2">✓</span>
+                  <span class="service-text">More refreshing sleep</span>
+                </li>
+                <li class="service-list-item">
+                  <span class="text-[#a6b443] mr-2">✓</span>
+                  <span class="service-text">Partner sleeps better too</span>
+                </li>
+              </ul>
+            </div>
+          </BlurFade>
+
+          <BlurFade delay={300} client:load>
+            <div class="bg-white rounded-2xl p-6 shadow-lg">
+              <h3 class="text-xl font-semibold mb-4" style="color: #a6b443; font-family: 'Playfair Display', serif;">
+                Long-Term Benefits
+              </h3>
+              <ul class="service-list">
+                <li class="service-list-item">
+                  <span class="text-[#a6b443] mr-2">✓</span>
+                  <span class="service-text">Increased daytime energy</span>
+                </li>
+                <li class="service-list-item">
+                  <span class="text-[#a6b443] mr-2">✓</span>
+                  <span class="service-text">Better concentration and memory</span>
+                </li>
+                <li class="service-list-item">
+                  <span class="text-[#a6b443] mr-2">✓</span>
+                  <span class="service-text">Reduced health risks</span>
+                </li>
+                <li class="service-list-item">
+                  <span class="text-[#a6b443] mr-2">✓</span>
+                  <span class="service-text">Improved mood and relationships</span>
+                </li>
+              </ul>
+            </div>
+          </BlurFade>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Custom CTA Section -->
+  <section slot="cta" class="py-16 md:py-20" style="background: linear-gradient(to bottom right, #0099ba, #006786);">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="max-w-3xl mx-auto text-center">
+        <BlurFade delay={100} client:load>
+          <h2 class="text-4xl md:text-5xl font-normal text-white mb-4"
+              style="font-family: 'Playfair Display', serif;">
+            Start Sleeping Better Tonight
+          </h2>
+        </BlurFade>
+
+        <BlurFade delay={200} client:load>
+          <p class="text-lg text-white/90 mb-8" style="font-family: 'Geist', sans-serif;">
+            Don't let another night of poor sleep affect your health and happiness
+          </p>
+        </BlurFade>
+
+        <BlurFade delay={300} client:load>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/contact"
+              class="px-8 py-3 bg-gradient-to-r from-[#a6b443] to-[#c7cd85] text-white rounded-full font-semibold transition-all duration-300 hover:from-[#8fa339] hover:to-[#a6b443] hover:shadow-lg inline-flex items-center justify-center"
+              style="font-family: 'Playfair Display', serif;"
+            >
+              Schedule Sleep Consultation
+            </a>
+            <a
+              href="tel:214-368-0900"
+              class="px-8 py-3 bg-white border-2 rounded-full font-semibold transition-all duration-300 hover:shadow-lg inline-flex items-center justify-center"
+              style="font-family: 'Playfair Display', serif; color: #0099ba; border-color: white;"
+              onmouseover="this.style.backgroundColor='#006786'; this.style.color='white'; this.style.borderColor='#006786';"
+              onmouseout="this.style.backgroundColor='white'; this.style.color='#0099ba'; this.style.borderColor='white';"
+            >
+              <svg class="mr-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+              Call Now: (214) 368-0900
+            </a>
+          </div>
+        </BlurFade>
+      </div>
+    </div>
+  </section>
+</ServicePageDetailed>

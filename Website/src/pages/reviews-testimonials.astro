@@ -1,0 +1,426 @@
+---
+// Reviews & Testimonials Page - Central Dentist
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/ui/Card.astro';
+import Button from '../components/ui/Button.astro';
+---
+
+<Layout 
+  title="Patient Reviews & Testimonials | Central Dentist Dallas"
+  description="Real-life experiences from our patient families at Central Dentist in Dallas. Discover how holistic dentistry has transformed our patients' health and lives."
+  schemaType="MedicalBusiness"
+>
+  
+  <!-- Hero Section -->
+  <section class="section-padding bg-gradient-to-br from-teal to-teal-dark text-white">
+    <div class="container mx-auto container-padding">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="font-heading text-h1 font-bold mb-6">
+          Patient Reviews & Testimonials
+        </h1>
+        <p class="font-body text-xl mb-8 opacity-90">
+          Real-life experiences as told by our patient families
+        </p>
+        <div class="flex justify-center mb-4">
+          {Array.from({ length: 5 }, (_, i) => (
+            <svg key={i} class="w-8 h-8 text-lime-light mx-1" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+            </svg>
+          ))}
+        </div>
+        <p class="font-body opacity-75">Transforming lives through holistic dental care</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Testimonials Section -->
+  <section class="section-padding bg-white">
+    <div class="container mx-auto container-padding">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="font-heading text-h2 font-semibold text-gray-dark mb-12 text-center">
+          Patient Success Stories
+        </h2>
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+          <!-- Mom with 2 Children - Featured Story -->
+          <Card variant="bordered" class="p-8 lg:col-span-2">
+            <div class="text-center mb-6">
+              <div class="flex justify-center mb-4">
+                {Array.from({ length: 5 }, (_, i) => (
+                  <svg key={i} class="w-6 h-6 text-lime-light mx-1" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                  </svg>
+                ))}
+              </div>
+              <h3 class="font-heading text-h4 font-semibold text-gray-dark mb-4">
+                Mom with 2 Children - Comprehensive Early Treatment Success
+              </h3>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div>
+                <h4 class="font-heading text-lg font-semibold text-teal mb-3">Child #1: Crowding Treatment</h4>
+                <p class="font-body text-gray-medium leading-relaxed mb-4">
+                  "My older child began treatment due to excessive crowding of the baby teeth. Because we 
+                  decided to start treatment at the recommended earlier age, Dr. Ombrello was able to harness 
+                  natural forces and natural growth spurts to expand the arches and create the space needed."
+                </p>
+                <div class="bg-teal-50 p-4 rounded-lg">
+                  <p class="font-body text-teal-dark text-sm">
+                    <strong>Results:</strong> Straight and healthy smile, healthy airway development, 
+                    and optimal TMJ function.
+                  </p>
+                </div>
+              </div>
+              
+              <div>
+                <h4 class="font-heading text-lg font-semibold text-olive mb-3">Child #2: Down Syndrome Special Needs</h4>
+                <p class="font-body text-gray-medium leading-relaxed mb-4">
+                  "My second child has Down Syndrome and had sleep, snoring, breathing, and speech issues. 
+                  Though there were initial challenges, Dr. Ombrello created a customized plan unique to 
+                  this child's needs."
+                </p>
+                <div class="bg-olive-50 p-4 rounded-lg">
+                  <p class="font-body text-gray-dark text-sm">
+                    <strong>Amazing Results:</strong> Major improvements in speech, sleep quality, 
+                    and overall systemic health!
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="text-center mt-6 pt-6 border-t border-gray-200">
+              <cite class="font-body text-gray-medium font-semibold">
+                — Dallas Area Family (2 Children in Treatment)
+              </cite>
+            </div>
+          </Card>
+        </div>
+
+        <!-- Individual Testimonials Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <Card variant="bordered" class="p-6">
+            <div class="flex justify-center mb-4">
+              {Array.from({ length: 5 }, (_, i) => (
+                <svg key={i} class="w-5 h-5 text-lime-light" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                </svg>
+              ))}
+            </div>
+            <blockquote class="font-body text-gray-dark leading-relaxed mb-4 italic text-center">
+              "Absolutely loved everything about my experience here. The staff is so kind, so knowledgeable, 
+              and they found a health issue (UARS) that had been overlooked by all the healthcare practitioners 
+              I've seen in the past. Can't recommend them enough!"
+            </blockquote>
+            <cite class="font-body text-gray-medium font-semibold text-center block">
+              — Taylor S.
+            </cite>
+            <div class="text-center mt-2">
+              <span class="inline-flex items-center text-sm text-teal">
+                <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                Verified Patient
+              </span>
+            </div>
+          </Card>
+          
+          <Card variant="bordered" class="p-6">
+            <div class="flex justify-center mb-4">
+              {Array.from({ length: 5 }, (_, i) => (
+                <svg key={i} class="w-5 h-5 text-lime-light" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                </svg>
+              ))}
+            </div>
+            <blockquote class="font-body text-gray-dark leading-relaxed mb-4 italic text-center">
+              "My son's sleep improved dramatically after treatment for sleep disordered breathing. 
+              His teachers noticed a big difference in his focus and behavior. We're so grateful for 
+              Dr. Ombrello's holistic approach."
+            </blockquote>
+            <cite class="font-body text-gray-medium font-semibold text-center block">
+              — Sarah M.
+            </cite>
+            <div class="text-center mt-2">
+              <span class="inline-flex items-center text-sm text-teal">
+                <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                Verified Parent
+              </span>
+            </div>
+          </Card>
+          
+          <Card variant="bordered" class="p-6">
+            <div class="flex justify-center mb-4">
+              {Array.from({ length: 5 }, (_, i) => (
+                <svg key={i} class="w-5 h-5 text-lime-light" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                </svg>
+              ))}
+            </div>
+            <blockquote class="font-body text-gray-dark leading-relaxed mb-4 italic text-center">
+              "The mercury-free approach and biocompatible materials make such a difference. 
+              I finally found a dentist who understands the connection between oral health 
+              and overall wellness."
+            </blockquote>
+            <cite class="font-body text-gray-medium font-semibold text-center block">
+              — Michael R.
+            </cite>
+            <div class="text-center mt-2">
+              <span class="inline-flex items-center text-sm text-teal">
+                <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                Verified Patient
+              </span>
+            </div>
+          </Card>
+          
+          <Card variant="bordered" class="p-6">
+            <div class="flex justify-center mb-4">
+              {Array.from({ length: 5 }, (_, i) => (
+                <svg key={i} class="w-5 h-5 text-lime-light" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                </svg>
+              ))}
+            </div>
+            <blockquote class="font-body text-gray-dark leading-relaxed mb-4 italic text-center">
+              "We avoided extractions and years of traditional braces with Healthy Start! 
+              My daughter's teeth came in beautifully straight, and her breathing has 
+              improved tremendously."
+            </blockquote>
+            <cite class="font-body text-gray-medium font-semibold text-center block">
+              — Jennifer L.
+            </cite>
+            <div class="text-center mt-2">
+              <span class="inline-flex items-center text-sm text-teal">
+                <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                Verified Parent
+              </span>
+            </div>
+          </Card>
+          
+          <Card variant="bordered" class="p-6">
+            <div class="flex justify-center mb-4">
+              {Array.from({ length: 5 }, (_, i) => (
+                <svg key={i} class="w-5 h-5 text-lime-light" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                </svg>
+              ))}
+            </div>
+            <blockquote class="font-body text-gray-dark leading-relaxed mb-4 italic text-center">
+              "The ceramic implants were perfect - no gray lines and they feel completely natural. 
+              I love that they're metal-free and biocompatible. Best dental decision I ever made."
+            </blockquote>
+            <cite class="font-body text-gray-medium font-semibold text-center block">
+              — David K.
+            </cite>
+            <div class="text-center mt-2">
+              <span class="inline-flex items-center text-sm text-teal">
+                <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                Verified Patient
+              </span>
+            </div>
+          </Card>
+          
+          <Card variant="bordered" class="p-6">
+            <div class="flex justify-center mb-4">
+              {Array.from({ length: 5 }, (_, i) => (
+                <svg key={i} class="w-5 h-5 text-lime-light" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                </svg>
+              ))}
+            </div>
+            <blockquote class="font-body text-gray-dark leading-relaxed mb-4 italic text-center">
+              "Invisalign treatment was so much easier than I expected. Nearly invisible, 
+              no food restrictions, and my smile looks amazing. The whole team was wonderful!"
+            </blockquote>
+            <cite class="font-body text-gray-medium font-semibold text-center block">
+              — Rachel W.
+            </cite>
+            <div class="text-center mt-2">
+              <span class="inline-flex items-center text-sm text-teal">
+                <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                Verified Patient
+              </span>
+            </div>
+          </Card>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Treatment Outcomes Section -->
+  <section class="section-padding bg-gray-light">
+    <div class="container mx-auto container-padding">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="font-heading text-h2 font-semibold text-gray-dark mb-8 text-center">
+          Common Treatment Outcomes Our Patients Experience
+        </h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <Card variant="bordered" class="p-6 text-center">
+            <div class="w-12 h-12 mx-auto mb-4 bg-teal rounded-full flex items-center justify-center">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1m4 0h1m-6 4h8m2-10h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+              </svg>
+            </div>
+            <h3 class="font-heading text-lg font-semibold text-gray-dark mb-2">
+              Straight & Healthy Smiles
+            </h3>
+            <p class="font-body text-gray-medium text-sm">
+              Beautiful alignment with improved function
+            </p>
+          </Card>
+          
+          <Card variant="bordered" class="p-6 text-center">
+            <div class="w-12 h-12 mx-auto mb-4 bg-olive rounded-full flex items-center justify-center">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path>
+              </svg>
+            </div>
+            <h3 class="font-heading text-lg font-semibold text-gray-dark mb-2">
+              Improved Speech
+            </h3>
+            <p class="font-body text-gray-medium text-sm">
+              Clearer communication and pronunciation
+            </p>
+          </Card>
+          
+          <Card variant="bordered" class="p-6 text-center">
+            <div class="w-12 h-12 mx-auto mb-4 bg-lime-light rounded-full flex items-center justify-center">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+              </svg>
+            </div>
+            <h3 class="font-heading text-lg font-semibold text-gray-dark mb-2">
+              Better Sleep Quality
+            </h3>
+            <p class="font-body text-gray-medium text-sm">
+              More restful nights and reduced snoring
+            </p>
+          </Card>
+          
+          <Card variant="bordered" class="p-6 text-center">
+            <div class="w-12 h-12 mx-auto mb-4 bg-teal-dark rounded-full flex items-center justify-center">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+              </svg>
+            </div>
+            <h3 class="font-heading text-lg font-semibold text-gray-dark mb-2">
+              Enhanced Systemic Health
+            </h3>
+            <p class="font-body text-gray-medium text-sm">
+              Improved overall wellness and vitality
+            </p>
+          </Card>
+          
+          <Card variant="bordered" class="p-6 text-center">
+            <div class="w-12 h-12 mx-auto mb-4 bg-teal rounded-full flex items-center justify-center">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
+              </svg>
+            </div>
+            <h3 class="font-heading text-lg font-semibold text-gray-dark mb-2">
+              Functional Airway
+            </h3>
+            <p class="font-body text-gray-medium text-sm">
+              Optimal breathing and oxygen flow
+            </p>
+          </Card>
+          
+          <Card variant="bordered" class="p-6 text-center">
+            <div class="w-12 h-12 mx-auto mb-4 bg-olive rounded-full flex items-center justify-center">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <h3 class="font-heading text-lg font-semibold text-gray-dark mb-2">
+              TMJ Health
+            </h3>
+            <p class="font-body text-gray-medium text-sm">
+              Reduced jaw pain and improved function
+            </p>
+          </Card>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications Section -->
+  <section class="section-padding bg-white">
+    <div class="container mx-auto container-padding">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="font-heading text-h2 font-semibold text-gray-dark mb-8">
+          Our Certifications & Recognition
+        </h2>
+        
+        <div class="flex justify-center items-center space-x-12">
+          <div class="text-center">
+            <img 
+              src="/images/certifications/texas-top-10-percent.png"
+              alt="Texas Top 10 Percent"
+              class="w-24 h-24 mx-auto mb-4"
+              loading="lazy"
+              onerror="this.parentElement.innerHTML='<div class=&quot;w-24 h-24 mx-auto mb-4 bg-teal rounded-full flex items-center justify-center text-white font-bold&quot;>TOP 10%</div>'"
+            />
+            <h3 class="font-heading text-lg font-semibold text-gray-dark">
+              Texas Top 10%
+            </h3>
+            <p class="font-body text-gray-medium text-sm">
+              Recognition for Excellence
+            </p>
+          </div>
+          
+          <div class="text-center">
+            <img 
+              src="/images/certifications/iaomt-member.png"
+              alt="IAOMT Proud Member"
+              class="w-24 h-24 mx-auto mb-4"
+              loading="lazy"
+              onerror="this.parentElement.innerHTML='<div class=&quot;w-24 h-24 mx-auto mb-4 bg-olive rounded-full flex items-center justify-center text-white font-bold&quot;>IAOMT</div>'"
+            />
+            <h3 class="font-heading text-lg font-semibold text-gray-dark">
+              IAOMT Member
+            </h3>
+            <p class="font-body text-gray-medium text-sm">
+              Oral Medicine & Toxicology
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section-padding bg-gradient-to-br from-teal to-olive text-white">
+    <div class="container mx-auto container-padding text-center">
+      <h2 class="font-heading text-h2 font-bold mb-6">
+        Ready to Join Our Family of Happy Patients?
+      </h2>
+      <p class="font-body text-lg mb-8 opacity-90 max-w-3xl mx-auto">
+        Experience the difference of holistic dentistry and join the hundreds of families who have 
+        transformed their health and smiles with our comprehensive approach to dental care.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center mb-6">
+        <Button variant="secondary" size="lg" href="tel:214-368-0900">
+          Call (214) 368-0900
+        </Button>
+        <Button variant="outline" size="lg" href="/contact">
+          Schedule Your Consultation
+        </Button>
+      </div>
+      <p class="font-body text-sm opacity-75">
+        New patient consultations available. Experience the Central Dentist difference for yourself.
+      </p>
+    </div>
+  </section>
+
+</Layout>

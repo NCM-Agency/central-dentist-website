@@ -1,0 +1,298 @@
+---
+// Blog Listing Page - Central Dentist
+import Layout from '../../layouts/Layout.astro';
+import PageHero from '../../components/shared/PageHero.astro';
+import Card from '../../components/ui/Card.astro';
+import Button from '../../components/ui/Button.astro';
+import BlurFade from '../../components/ui/BlurFade.astro';
+
+// Sample blog posts data (in production, this would come from a CMS or markdown files)
+const blogPosts = [
+  {
+    title: "The Connection Between Oral Health and Heart Disease",
+    excerpt: "Discover how your oral health directly impacts your cardiovascular system and what you can do to protect both.",
+    author: "Dr. Jill Ombrello",
+    date: "2024-01-15",
+    category: "Holistic Health",
+    readTime: "5 min",
+    slug: "oral-health-heart-disease",
+    image: "/images/blog/heart-health.jpg"
+  },
+  {
+    title: "Understanding Ceramic Implants: A Biocompatible Solution",
+    excerpt: "Learn why ceramic implants are becoming the preferred choice for patients seeking metal-free tooth replacement options.",
+    author: "Dr. Sahil Sawnani",
+    date: "2024-01-08",
+    category: "Treatment Options",
+    readTime: "7 min",
+    slug: "ceramic-implants-guide",
+    image: "/images/blog/ceramic-implants.jpg"
+  },
+  {
+    title: "Natural Ways to Prevent Cavities in Children",
+    excerpt: "Effective, holistic strategies to keep your child's teeth healthy without harsh chemicals or treatments.",
+    author: "Melanie Galles",
+    date: "2023-12-20",
+    category: "Pediatric Care",
+    readTime: "4 min",
+    slug: "natural-cavity-prevention-kids",
+    image: "/images/blog/kids-dental.jpg"
+  },
+  {
+    title: "The Benefits of Ozone Therapy in Dentistry",
+    excerpt: "How ozone therapy provides a natural, effective alternative to traditional antimicrobial treatments.",
+    author: "Dr. Jill Ombrello",
+    date: "2023-12-10",
+    category: "Biological Dentistry",
+    readTime: "6 min",
+    slug: "ozone-therapy-benefits",
+    image: "/images/blog/ozone-therapy.jpg"
+  },
+  {
+    title: "Sleep Apnea: The Silent Health Crisis",
+    excerpt: "Understanding the signs, symptoms, and holistic treatment approaches for sleep-disordered breathing.",
+    author: "Dr. Jill Ombrello",
+    date: "2023-11-28",
+    category: "Sleep Health",
+    readTime: "8 min",
+    slug: "sleep-apnea-treatment",
+    image: "/images/blog/sleep-health.jpg"
+  },
+  {
+    title: "Mercury-Free Dentistry: Why It Matters",
+    excerpt: "The importance of safe amalgam removal and biocompatible alternatives for your dental restorations.",
+    author: "Dr. Sahil Sawnani",
+    date: "2023-11-15",
+    category: "Biological Dentistry",
+    readTime: "5 min",
+    slug: "mercury-free-dentistry",
+    image: "/images/blog/mercury-free.jpg"
+  }
+];
+
+// Categories for filtering
+const categories = [
+  "All",
+  "Holistic Health",
+  "Biological Dentistry",
+  "Treatment Options",
+  "Pediatric Care",
+  "Sleep Health"
+];
+
+const breadcrumbs = [
+  { label: 'Home', href: '/' },
+  { label: 'Blog', href: '/blog' }
+];
+---
+
+<Layout 
+  title="Blog | Holistic Dental Health Education | Central Dentist"
+  description="Read our latest articles on biological dentistry, holistic oral health, and natural dental care approaches from our expert team in Dallas."
+  schemaType="Blog"
+>
+  
+  <!-- Hero Section -->
+  <PageHero
+    title="Holistic Dental Health Blog"
+    subtitle="Educational articles and insights from our biological dentistry experts"
+    variant="gradient"
+    breadcrumbs={breadcrumbs}
+  />
+
+  <!-- Blog Listing Section -->
+  <section class="section-padding bg-white">
+    <div class="container mx-auto container-padding">
+      <div class="max-w-7xl mx-auto">
+        
+        <!-- Category Filter -->
+        <div class="flex flex-wrap gap-2 justify-center mb-12">
+          {categories.map((category, index) => (
+            <button 
+              class={`px-4 py-2 rounded-full font-medium transition-all ${
+                index === 0 
+                  ? 'bg-gradient-to-r from-[#a6b443] to-[#c7cd85] text-white' 
+                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+              }`}
+              data-category={category}
+            >
+              {category}
+            </button>
+          ))}
+        </div>
+
+        <!-- Blog Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {blogPosts.map((post, index) => (
+            <BlurFade delay={0.1 * index} client:visible>
+              <article class="h-full">
+                <Card variant="hover" class="h-full flex flex-col overflow-hidden">
+                  <!-- Post Image -->
+                  <div class="aspect-[16/9] bg-gradient-to-br from-[#0099ba] to-[#006786] relative overflow-hidden">
+                    {post.image && (
+                      <img 
+                        src={post.image}
+                        alt={post.title}
+                        class="w-full h-full object-cover"
+                        loading="lazy"
+                        onerror="this.style.display='none'"
+                      />
+                    )}
+                    <div class="absolute top-4 left-4">
+                      <span class="inline-block px-3 py-1 bg-white/90 backdrop-blur-sm text-xs font-medium rounded-full" style="color: #0099ba;">
+                        {post.category}
+                      </span>
+                    </div>
+                  </div>
+                  
+                  <!-- Post Content -->
+                  <div class="p-6 flex-grow flex flex-col">
+                    <h3 class="font-heading text-h4 font-semibold text-gray-dark mb-3 line-clamp-2">
+                      {post.title}
+                    </h3>
+                    
+                    <p class="text-gray-600 mb-4 flex-grow line-clamp-3">
+                      {post.excerpt}
+                    </p>
+                    
+                    <!-- Post Meta -->
+                    <div class="flex items-center justify-between text-sm text-gray-500 mb-4">
+                      <span>{post.author}</span>
+                      <div class="flex items-center gap-2">
+                        <time datetime={post.date}>
+                          {new Date(post.date).toLocaleDateString('en-US', { 
+                            month: 'short', 
+                            day: 'numeric',
+                            year: 'numeric'
+                          })}
+                        </time>
+                        <span>•</span>
+                        <span>{post.readTime}</span>
+                      </div>
+                    </div>
+                    
+                    <!-- Read More Link -->
+                    <a 
+                      href={`/blog/${post.slug}`}
+                      class="inline-flex items-center gap-2 text-sm font-semibold hover:gap-3 transition-all"
+                      style="color: #0099ba;"
+                    >
+                      Read Article
+                      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                      </svg>
+                    </a>
+                  </div>
+                </Card>
+              </article>
+            </BlurFade>
+          ))}
+        </div>
+
+        <!-- Pagination -->
+        <div class="flex justify-center items-center gap-2 mt-12">
+          <button class="px-4 py-2 rounded-lg border border-gray-300 text-gray-600 hover:bg-gray-50 transition-colors">
+            Previous
+          </button>
+          <span class="px-4 py-2 text-gray-600">Page 1 of 1</span>
+          <button class="px-4 py-2 rounded-lg border border-gray-300 text-gray-600 hover:bg-gray-50 transition-colors">
+            Next
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section class="section-padding bg-gradient-to-br from-green-50 to-teal-50">
+    <div class="container mx-auto container-padding">
+      <div class="max-w-2xl mx-auto text-center">
+        <h2 class="font-heading text-h2 font-semibold text-gray-dark mb-4">
+          Stay Informed About Holistic Dental Health
+        </h2>
+        <p class="text-gray-600 mb-8">
+          Subscribe to our newsletter for the latest articles, tips, and updates on biological dentistry.
+        </p>
+        <form class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+          <input 
+            type="email" 
+            placeholder="Enter your email"
+            class="flex-grow px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#0099ba] focus:border-transparent"
+            required
+          />
+          <Button type="submit" variant="primary" size="md">
+            Subscribe
+          </Button>
+        </form>
+        <p class="text-sm text-gray-500 mt-4">
+          We respect your privacy. Unsubscribe at any time.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section-padding bg-gradient-to-br from-[#0099ba] to-[#006786] text-white">
+    <div class="container mx-auto container-padding text-center">
+      <h2 class="font-heading text-h2 font-bold mb-6">
+        Have Questions About Your Dental Health?
+      </h2>
+      <p class="text-lg mb-8 opacity-90 max-w-2xl mx-auto">
+        Our team is here to provide personalized guidance and holistic dental care solutions.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <Button variant="secondary" size="lg" href="/contact">
+          Schedule Consultation
+        </Button>
+        <Button variant="outline" size="lg" href="tel:214-368-0900">
+          Call (214) 368-0900
+        </Button>
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<script>
+  // Simple category filter functionality
+  document.addEventListener('DOMContentLoaded', () => {
+    const categoryButtons = document.querySelectorAll('[data-category]');
+    const blogCards = document.querySelectorAll('.grid article');
+    
+    categoryButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const selectedCategory = button.dataset.category;
+        
+        // Update button styles
+        categoryButtons.forEach(btn => {
+          btn.className = btn === button 
+            ? 'px-4 py-2 rounded-full font-medium transition-all bg-gradient-to-r from-[#a6b443] to-[#c7cd85] text-white'
+            : 'px-4 py-2 rounded-full font-medium transition-all bg-gray-100 text-gray-700 hover:bg-gray-200';
+        });
+        
+        // Filter cards (in a real app, this would filter the actual posts)
+        // For now, just showing all posts since we don't have real filtering
+        blogCards.forEach(card => {
+          card.style.display = 'block';
+        });
+      });
+    });
+  });
+</script>
+
+<style>
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+</style>

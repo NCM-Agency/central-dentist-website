@@ -1,0 +1,41 @@
+---
+// Card.astro - Base card component for content sections
+export interface Props {
+  variant?: 'default' | 'hover' | 'service';
+  padding?: 'sm' | 'md' | 'lg';
+  class?: string;
+}
+
+const { 
+  variant = 'default',
+  padding = 'md',
+  class: className = ''
+} = Astro.props;
+
+// Base card classes
+const baseClasses = 'bg-white rounded-xl';
+
+// Variant classes
+const variantClasses = {
+  default: 'shadow-teal',
+  hover: 'shadow-teal hover:shadow-teal-lg transition-shadow cursor-pointer',
+  service: 'shadow-teal hover:shadow-teal-lg transition-all hover:-translate-y-1 cursor-pointer'
+};
+
+// Padding classes
+const paddingClasses = {
+  sm: 'p-4',
+  md: 'p-6',
+  lg: 'p-8'
+};
+
+// Combine all classes
+const cardClasses = `${baseClasses} ${variantClasses[variant]} ${paddingClasses[padding]} ${className}`.trim();
+---
+
+<div 
+  class={cardClasses}
+  data-gjs-type="card"
+>
+  <slot />
+</div>

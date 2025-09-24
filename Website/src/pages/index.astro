@@ -1,0 +1,462 @@
+---
+// Homepage - Central Dentist
+import Layout from '../layouts/Layout.astro';
+import HeroSection from '../components/sections/HeroSection.astro';
+import ServicesGrid from '../components/sections/ServicesGrid.astro';
+import CTASection from '../components/sections/CTASection.astro';
+import Card from '../components/ui/Card.astro';
+import Button from '../components/ui/Button.astro';
+import BlurFade from '../components/ui/BlurFade.astro';
+
+// Import content data
+import homepageData from '../content/homepage.json';
+import servicesData from '../content/services.json';
+
+// Get featured services (highlighted ones, sorted by priority)
+const featuredServices = servicesData.services
+  .filter(service => service.highlight)
+  .sort((a, b) => a.priority - b.priority)
+  .slice(0, 6)
+  .map(service => ({
+    title: service.title,
+    description: service.shortDescription,
+    href: `/services/${service.slug}`,
+    image: service.image,
+    imageAlt: service.imageAlt,
+    features: service.features?.slice(0, 3), // Limit to 3 features for homepage
+    highlight: service.highlight
+  }));
+
+// Get additional services to fill out the grid if needed
+const additionalServices = servicesData.services
+  .filter(service => !service.highlight)
+  .sort((a, b) => a.priority - b.priority)
+  .slice(0, Math.max(0, 6 - featuredServices.length))
+  .map(service => ({
+    title: service.title,
+    description: service.shortDescription,
+    href: `/services/${service.slug}`,
+    image: service.image,
+    imageAlt: service.imageAlt,
+    features: service.features?.slice(0, 3),
+    highlight: false
+  }));
+
+const displayServices = [...featuredServices, ...additionalServices];
+---
+
+<Layout 
+  title="Home"
+  description="Holistic Family Dentistry practice in Dallas, TX focusing on preventive and biocompatible oral health therapy addressing the root causes of disease."
+  schemaType="MedicalBusiness"
+>
+  
+  <!-- Hero Section -->
+  <HeroSection
+    mainTitle={homepageData.hero.mainTitle}
+    tagline1={homepageData.hero.tagline1}
+    tagline2={homepageData.hero.tagline2}
+    boldSubhead={homepageData.hero.boldSubhead}
+    description={homepageData.hero.description}
+    primaryCTA={homepageData.hero.primaryCTA}
+    secondaryCTA={homepageData.hero.secondaryCTA}
+    backgroundImage={homepageData.hero.backgroundImage}
+  />
+
+  <!-- Why Holistic Dentistry Section -->
+  <section class="section-padding bg-gradient-to-br from-teal-50 via-white to-lime-50 relative overflow-hidden">
+    <!-- Background Pattern -->
+    <div class="absolute inset-0 opacity-5">
+      <div class="absolute top-10 left-10 w-32 h-32 bg-teal rounded-full blur-3xl"></div>
+      <div class="absolute bottom-20 right-20 w-40 h-40 bg-lime rounded-full blur-3xl"></div>
+      <div class="absolute top-1/2 left-1/3 w-24 h-24 bg-teal-light rounded-full blur-2xl"></div>
+    </div>
+    
+    <div class="container mx-auto container-padding relative">
+      <BlurFade delay={100}>
+        <div class="text-center mb-16">
+          <h2 class="font-heading text-4xl lg:text-5xl font-bold text-gray-dark mb-6 bg-gradient-to-r from-teal to-teal-dark bg-clip-text text-transparent">
+            <span data-gjs-editable="true">{homepageData.aboutPreview.title}</span>
+          </h2>
+          <p class="font-body text-xl text-gray-medium max-w-2xl mx-auto leading-relaxed">
+            <span data-gjs-editable="true">{homepageData.aboutPreview.subtitle}</span>
+          </p>
+        </div>
+      </BlurFade>
+
+      <!-- Benefits Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+        {homepageData.aboutPreview.benefits.map((benefit, index) => (
+          <BlurFade delay={200 + (index * 100)}>
+            <div class="bg-white rounded-2xl p-8 text-center shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 group">
+              <!-- Icon -->
+              <div class="w-20 h-20 mx-auto mb-6 bg-[#0099ba] rounded-2xl flex items-center justify-center group-hover:scale-110 transition-all duration-300">
+                {benefit.icon === 'shield' && (
+                  <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/>
+                  </svg>
+                )}
+                {benefit.icon === 'moon' && (
+                  <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
+                  </svg>
+                )}
+                {benefit.icon === 'leaf' && (
+                  <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/>
+                    <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/>
+                  </svg>
+                )}
+                {benefit.icon === 'heart' && (
+                  <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"/>
+                  </svg>
+                )}
+                {benefit.icon === 'zap' && (
+                  <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="13,2 3,14 12,14 11,22 21,10 12,10"/>
+                  </svg>
+                )}
+                {benefit.icon === 'check' && (
+                  <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"/>
+                    <path d="m9 12 2 2 4-4"/>
+                  </svg>
+                )}
+              </div>
+              
+              <!-- Content -->
+              <h3 class="font-heading text-xl font-bold text-gray-dark mb-4 group-hover:text-teal-dark transition-colors">
+                {benefit.title}
+              </h3>
+              <p class="font-body text-gray-medium leading-relaxed text-sm">
+                {benefit.description}
+              </p>
+              
+            </div>
+          </BlurFade>
+        ))}
+      </div>
+      
+      <!-- Optional Lottie Animation -->
+      <div class="text-center mt-12">
+        <div class="w-32 h-32 mx-auto opacity-20 hover:opacity-40 transition-opacity">
+          <lottie-player
+            src="https://assets-v2.lottiefiles.com/a/ddf24df8-1183-11ee-b986-83364ca60ad3/gJj7bXdQlc.json"
+            background="transparent"
+            speed="0.5"
+            style="width: 100%; height: 100%;"
+            loop
+            autoplay>
+          </lottie-player>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <ServicesGrid
+    title="Our Holistic Services"
+    subtitle="Comprehensive dental care that addresses the root causes of oral health issues"
+    services={displayServices}
+  />
+
+  <!-- Meet Our Doctors Section -->
+  <section class="section-padding bg-gradient-to-b from-white to-gray-50 relative">
+    <!-- Subtle background pattern -->
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-20 right-10 w-64 h-64 bg-teal rounded-full blur-3xl"></div>
+      <div class="absolute bottom-20 left-10 w-48 h-48 bg-lime rounded-full blur-3xl"></div>
+    </div>
+    
+    <div class="container mx-auto container-padding relative">
+      <div class="text-center mb-16">
+        <h2 class="font-heading text-4xl lg:text-5xl font-bold text-gray-dark mb-6">
+          <span data-gjs-editable="true">{homepageData.doctors.title}</span>
+        </h2>
+        <p class="font-body text-xl text-gray-medium max-w-2xl mx-auto">
+          Our experienced team of holistic dental professionals
+        </p>
+      </div>
+
+      <!-- Doctors Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+        {homepageData.doctors.doctors.map((doctor, index) => (
+          <BlurFade delay={300 + (index * 150)}>
+            <div class="bg-white rounded-3xl p-8 text-center group hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-teal/20 hover:-translate-y-2">
+              <!-- Professional headshot with enhanced styling -->
+              <div class="relative w-40 h-40 mx-auto mb-6">
+                <div class="absolute inset-0 bg-gradient-to-br from-teal to-teal-dark rounded-full opacity-20 group-hover:opacity-30 transition-opacity"></div>
+                <div class="relative w-full h-full rounded-full overflow-hidden ring-4 ring-white shadow-xl">
+                  <img 
+                    src={doctor.image}
+                    alt={doctor.name}
+                    class="w-full h-full object-cover object-center transition-transform group-hover:scale-110 duration-300"
+                    loading="lazy"
+                  />
+                </div>
+                <!-- Medical stethoscope icon overlay -->
+                <div class="absolute -bottom-2 -right-2 w-8 h-8 bg-teal rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                  <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M11 2v3c0 .6-.4 1-1 1H7c-.6 0-1-.4-1-1V2c0-.6.4-1 1-1h3c.6 0 1 .4 1 1Z"/>
+                    <path d="M11 4H7v3a6 6 0 0 0 4 0V4Z"/>
+                    <path d="M7 7v1a2 2 0 0 0 4 0V7"/>
+                    <path d="M15 12a5 5 0 0 1-5-5 5 5 0 0 1 5-5"/>
+                    <circle cx="19" cy="19" r="2"/>
+                    <path d="M15 12c-1 0-3 1-3 3s2 3 3 3 3-2 3-3-2-3-3-3"/>
+                  </svg>
+                </div>
+              </div>
+              
+              <h3 class="font-heading text-lg font-bold text-gray-dark mb-3 group-hover:text-teal-dark transition-colors">
+                {doctor.name}
+              </h3>
+              <p class="font-body text-gray-medium mb-6 leading-relaxed text-sm">
+                {doctor.title}
+              </p>
+              
+              <!-- Enhanced CTA button -->
+              <div class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-teal to-teal-dark text-white rounded-full font-semibold text-sm hover:shadow-lg hover:scale-105 transition-all duration-300 group-hover:from-teal-dark group-hover:to-teal-dark cursor-pointer">
+                <span>Learn More</span>
+                <svg class="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </div>
+            </div>
+          </BlurFade>
+        ))}
+      </div>
+
+      <!-- Learn More About History - Enhanced -->
+      <div class="text-center mt-16">
+        <div class="inline-flex items-center px-8 py-4 bg-white border-2 border-teal text-teal rounded-full font-semibold hover:bg-teal hover:text-white transition-all duration-300 hover:shadow-lg hover:scale-105 cursor-pointer">
+          <svg class="mr-3 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+          </svg>
+          Learn More about our history
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="section-padding bg-gradient-to-br from-teal-50 via-gray-50 to-white relative overflow-hidden">
+    <!-- Background decorative elements -->
+    <div class="absolute inset-0 opacity-5">
+      <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-teal rounded-full blur-3xl"></div>
+      <div class="absolute bottom-1/4 right-1/4 w-64 h-64 bg-lime rounded-full blur-3xl"></div>
+    </div>
+    
+    <div class="container mx-auto container-padding relative">
+      <div class="text-center mb-16">
+        <h2 class="font-heading text-4xl lg:text-5xl font-bold text-gray-dark mb-6">
+          What Our Patients Say
+        </h2>
+        <p class="font-body text-xl text-gray-medium max-w-2xl mx-auto">
+          Real experiences from our holistic dentistry family
+        </p>
+        
+        <!-- Google & Yelp badges -->
+        <div class="flex justify-center items-center gap-6 mt-8">
+          <div class="flex items-center bg-white px-4 py-2 rounded-full shadow-md border">
+            <svg class="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="#4285f4">
+              <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+              <path fill="#34a853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+              <path fill="#fbbc05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+              <path fill="#ea4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+            </svg>
+            <span class="text-sm font-semibold text-gray-700">Google Reviews</span>
+          </div>
+          <div class="flex items-center bg-white px-4 py-2 rounded-full shadow-md border">
+            <svg class="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="#ff5a00">
+              <path d="M12 2l2.4 7.2h7.6l-6 4.8 2.4 7.2L12 17.2 5.6 21.2l2.4-7.2-6-4.8h7.6L12 2z"/>
+            </svg>
+            <span class="text-sm font-semibold text-gray-700">Yelp Reviews</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Enhanced Testimonial Cards -->
+      <div class="max-w-6xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-8">
+          {homepageData.testimonials.map((testimonial, index) => (
+            <BlurFade delay={400 + (index * 150)}>
+              <div class="bg-white/80 backdrop-blur-sm rounded-3xl p-8 lg:p-12 text-center relative shadow-xl border border-white/20 hover:bg-white hover:shadow-2xl transition-all duration-300">
+                <!-- Quote icon -->
+                <div class="absolute top-6 left-8 text-teal/20">
+                  <svg class="w-12 h-12" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M6.5 10c-.223 0-.437.034-.65.065.069-.232.14-.468.254-.68.114-.308.292-.575.469-.844.148-.291.409-.488.601-.737.201-.242.475-.403.692-.604.213-.21.492-.315.714-.463.232-.133.434-.28.65-.35L8.945 4.5c-.206.094-.412.192-.604.35-.18.148-.38.295-.567.454-.207.159-.414.301-.61.464-.207.156-.412.31-.604.464-.202.146-.394.297-.579.454-.197.156-.366.343-.544.514-.193.14-.379.298-.552.462-.17.164-.330.347-.479.53-.133.178-.257.37-.371.562-.09.189-.172.395-.251.598-.086.213-.179.432-.256.658-.076.235-.15.468-.206.716-.065.263-.11.527-.138.8-.037.291-.044.576-.044.86 0 .507.074 1.011.259 1.493.177.462.433.88.764 1.24.315.343.683.625 1.074.85.391.226.811.381 1.239.475.442.1.899.13 1.354.13.46 0 .916-.026 1.365-.087.462-.055.905-.162 1.336-.317.425-.156.823-.361 1.178-.631.353-.268.655-.597.896-.971.24-.375.418-.794.518-1.23.1-.436.117-.884.051-1.324-.07-.457-.214-.9-.423-1.311-.207-.413-.469-.781-.781-1.099-.31-.317-.663-.579-1.037-.792-.373-.213-.764-.378-1.162-.494-.4-.119-.808-.188-1.217-.188z"/>
+                    <path d="M18.5 10c-.223 0-.437.034-.65.065.069-.232.14-.468.254-.68.114-.308.292-.575.469-.844.148-.291.409-.488.601-.737.201-.242.475-.403.692-.604.213-.21.492-.315.714-.463.232-.133.434-.28.65-.35L20.945 4.5c-.206.094-.412.192-.604.35-.18.148-.38.295-.567.454-.207.159-.414.301-.61.464-.207.156-.412.31-.604.464-.202.146-.394.297-.579.454-.197.156-.366.343-.544.514-.193.14-.379.298-.552.462-.17.164-.330.347-.479.53-.133.178-.257.37-.371.562-.09.189-.172.395-.251.598-.086.213-.179.432-.256.658-.076.235-.15.468-.206.716-.065.263-.11.527-.138.8-.037.291-.044.576-.044.86 0 .507.074 1.011.259 1.493.177.462.433.88.764 1.24.315.343.683.625 1.074.85.391.226.811.381 1.239.475.442.1.899.13 1.354.13.46 0 .916-.026 1.365-.087.462-.055.905-.162 1.336-.317.425-.156.823-.361 1.178-.631.353-.268.655-.597.896-.971.24-.375.418-.794.518-1.23.1-.436.117-.884.051-1.324-.07-.457-.214-.9-.423-1.311-.207-.413-.469-.781-.781-1.099-.31-.317-.663-.579-1.037-.792-.373-.213-.764-.378-1.162-.494-.4-.119-.808-.188-1.217-.188z"/>
+                  </svg>
+                </div>
+                
+                <!-- Stars -->
+                <div class="flex justify-center mb-6">
+                  {Array.from({ length: testimonial.rating }, (_, i) => (
+                    <svg class="w-7 h-7 text-lime" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                    </svg>
+                  ))}
+                </div>
+                
+                <!-- Quote -->
+                <blockquote class="font-body text-xl lg:text-2xl text-gray-dark leading-relaxed mb-8 italic font-light">
+                  "{testimonial.content}"
+                </blockquote>
+                
+                <!-- Author section with avatar placeholder -->
+                <div class="flex items-center justify-center">
+                  <div class="w-12 h-12 bg-gradient-to-br from-teal to-teal-dark rounded-full flex items-center justify-center mr-4">
+                    <span class="text-white font-bold text-lg">{testimonial.author[0]}</span>
+                  </div>
+                  <div class="text-left">
+                    <cite class="font-body text-gray-dark font-semibold block">
+                      {testimonial.author}
+                    </cite>
+                    {testimonial.verified && (
+                      <div class="flex items-center mt-1 text-sm text-teal">
+                        <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
+                        </svg>
+                        Verified Patient
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </div>
+            </BlurFade>
+          ))}
+        </div>
+
+        <!-- Enhanced CTA -->
+        <div class="text-center mt-12">
+          <div class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-teal to-teal-dark text-white rounded-full font-semibold hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer">
+            <svg class="mr-3 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+            </svg>
+            More Patient Reviews
+          </div>
+        </div>
+      </div>
+      
+      <!-- Subtle Lottie animation -->
+      <div class="absolute bottom-10 right-10 w-24 h-24 opacity-20">
+        <lottie-player
+          src="https://assets-v2.lottiefiles.com/a/82d9e46a-1153-11ee-b7f3-1b21e5a94a93/WaxiX2XV0q.json"
+          background="transparent"
+          speed="0.3"
+          style="width: 100%; height: 100%;"
+          loop
+          autoplay>
+        </lottie-player>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Approach Section -->
+  <section class="section-padding bg-gradient-to-b from-white to-teal-50 relative">
+    <!-- Background decorative elements -->
+    <div class="absolute inset-0 opacity-5">
+      <div class="absolute top-1/3 left-1/4 w-80 h-80 bg-lime rounded-full blur-3xl"></div>
+      <div class="absolute bottom-1/3 right-1/4 w-60 h-60 bg-teal rounded-full blur-3xl"></div>
+    </div>
+    
+    <div class="container mx-auto container-padding relative">
+      <div class="text-center mb-16">
+        <h2 class="font-heading text-4xl lg:text-5xl font-bold text-gray-dark mb-6">
+          <span data-gjs-editable="true">{homepageData.approach.title}</span>
+        </h2>
+        <p class="font-body text-xl text-gray-medium max-w-3xl mx-auto leading-relaxed">
+          Our comprehensive approach to holistic dental care
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+        {homepageData.approach.approaches.map((approach, index) => (
+          <BlurFade delay={500 + (index * 150)}>
+            <div class="bg-white rounded-3xl p-8 text-center shadow-lg hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group">
+              <!-- Icon -->
+              <div class="w-24 h-24 mx-auto mb-6 bg-[#0099ba] rounded-2xl flex items-center justify-center group-hover:scale-110 transition-all duration-300">
+                {approach.title.includes('Diagnostics') && (
+                  <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M6 2h6l4 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2Z"/>
+                    <path d="M10 2v6h6"/>
+                    <circle cx="10" cy="16" r="2"/>
+                    <path d="m16 16-1.9-1.9"/>
+                  </svg>
+                )}
+                {approach.title.includes('Preventive') && (
+                  <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/>
+                    <path d="m9 12 2 2 4-4"/>
+                  </svg>
+                )}
+                {approach.title.includes('Collaboration') && (
+                  <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                    <circle cx="9" cy="7" r="4"/>
+                    <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                  </svg>
+                )}
+              </div>
+              
+              <!-- Enhanced image display -->
+              <div class="aspect-video w-full mb-6 overflow-hidden rounded-2xl bg-gray-light">
+                <img 
+                  src={approach.image}
+                  alt={approach.title}
+                  class="w-full h-full object-cover transition-transform group-hover:scale-105 duration-300"
+                  loading="lazy"
+                />
+              </div>
+              
+              <h3 class="font-heading text-xl font-bold text-gray-dark mb-4 group-hover:text-teal-dark transition-colors">
+                {approach.title}
+              </h3>
+              <p class="font-body text-gray-medium mb-6 leading-relaxed">
+                {approach.description}
+              </p>
+              
+              <!-- Enhanced CTA button -->
+              <div class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-teal-light to-teal text-white rounded-full font-semibold text-sm hover:shadow-lg hover:scale-105 transition-all duration-300 group-hover:from-teal group-hover:to-teal-dark cursor-pointer">
+                <span>Learn More</span>
+                <svg class="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </div>
+              
+              <!-- Subtle animation line -->
+              <div class="w-16 h-1 bg-gradient-to-r from-teal to-lime mx-auto mt-6 rounded-full transform scale-0 group-hover:scale-100 transition-transform duration-300"></div>
+            </div>
+          </BlurFade>
+        ))}
+      </div>
+      
+      <!-- Optional dental care Lottie animation -->
+      <div class="text-center mt-16">
+        <div class="w-40 h-40 mx-auto opacity-30 hover:opacity-50 transition-opacity">
+          <lottie-player
+            src="https://assets-v2.lottiefiles.com/a/0593a28a-1166-11ee-98d7-cbd0bb62c8be/TVNFvp7iEy.json"
+            background="transparent"
+            speed="0.8"
+            style="width: 100%; height: 100%;"
+            loop
+            autoplay>
+          </lottie-player>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA Section -->
+  <CTASection
+    variant="centered"
+    title={homepageData.cta.title}
+    description={homepageData.cta.description}
+    primaryCTA={homepageData.cta.primaryCTA}
+    secondaryCTA={homepageData.cta.secondaryCTA}
+    backgroundColor="teal"
+  />
+
+</Layout>

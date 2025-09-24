@@ -1,0 +1,249 @@
+---
+// Melanie Galles - Central Dentist
+import TeamMemberTemplate from '../../layouts/TeamMemberTemplate.astro';
+import Card from '../../components/ui/Card.astro';
+import Button from '../../components/ui/Button.astro';
+import BlurFade from '../../components/ui/BlurFade.astro';
+---
+
+<TeamMemberTemplate
+  title="Melanie Galles | Biological Hygienist | Central Dentist"
+  description="Meet Melanie Galles, RDH - Biological hygienist specializing in holistic dental hygiene, nutrition, and ozone therapy at Central Dentist in Dallas, TX."
+  memberName="Melanie Galles, RDH"
+  memberTitle="Biological Hygienist"
+  memberImage="/images/team/melanie-galles.jpg"
+  memberImageAlt="Melanie Galles - Biological Hygienist at Central Dentist"
+  memberBio="Melanie Galles is a dedicated biological hygienist with a genuine concern for the importance of dental health. Her extensive education and certifications in holistic dentistry, combined with her compassionate approach, make her an invaluable member of our team committed to helping patients achieve optimal oral and overall health."
+  memberSpecialties={[
+    "Biological Dental Hygiene",
+    "Holistic Oral Healthcare",
+    "Nutrition Counseling",
+    "Ozone Therapy",
+    "Laser Dentistry",
+    "Preventive Care"
+  ]}
+  breadcrumbs={[
+    { label: 'Team', href: '/team' },
+    { label: 'Melanie Galles', href: '/team/melanie-galles' }
+  ]}
+>
+  <section slot="education" class="section-padding bg-white">
+    <div class="container mx-auto container-padding">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="font-heading text-h3 font-semibold text-gray-dark mb-8">Education & Journey to Holistic Hygiene</h2>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <Card variant="bordered" className="p-6">
+            <h3 class="font-heading text-h4 font-semibold text-teal mb-4">Educational Background</h3>
+            <ul class="space-y-3 font-body text-gray-medium">
+              <li class="flex items-start">
+                <span class="text-olive mr-2">•</span>
+                <div>
+                  <strong>Bachelor of Biomedical Science</strong> - Grand Valley State University (GVSU)
+                </div>
+              </li>
+              <li class="flex items-start">
+                <span class="text-olive mr-2">•</span>
+                <div>
+                  <strong>Dental Hygienist Degree</strong> - Concorde College
+                </div>
+              </li>
+              <li class="flex items-start">
+                <span class="text-olive mr-2">•</span>
+                <div>
+                  <strong>Dean's List</strong> - Dental Hygiene School
+                </div>
+              </li>
+              <li class="flex items-start">
+                <span class="text-olive mr-2">•</span>
+                <div>
+                  <strong>IHSA High Point Rider</strong> - State of Michigan (2007-08 season)
+                </div>
+              </li>
+            </ul>
+          </Card>
+
+          <Card variant="bordered" className="p-6">
+            <h3 class="font-heading text-h4 font-semibold text-teal mb-4">Certifications & Training</h3>
+            <ul class="space-y-3 font-body text-gray-medium">
+              <li class="flex items-start">
+                <span class="text-olive mr-2">•</span>
+                <div>
+                  <strong>IAOMT</strong> - International Academy of Oral Medicine and Toxicology
+                </div>
+              </li>
+              <li class="flex items-start">
+                <span class="text-olive mr-2">•</span>
+                <div>
+                  <strong>IABDM</strong> - International Academy of Biological Dentistry and Medicine
+                </div>
+              </li>
+              <li class="flex items-start">
+                <span class="text-olive mr-2">•</span>
+                <div>
+                  <strong>Laser Certification</strong> - The Academy of Laser Dentistry
+                </div>
+              </li>
+            </ul>
+          </Card>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section slot="expertise" class="section-padding bg-gray-light">
+    <div class="container mx-auto container-padding">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="font-heading text-h3 font-semibold text-gray-dark mb-8">Clinical Expertise</h2>
+
+        <div class="expertise-list">
+          <div class="expertise-item">
+            <h3 class="font-heading text-h4 font-semibold text-teal mb-3">Biological Dental Hygiene</h3>
+            <p class="font-body text-gray-medium">
+              Providing comprehensive hygiene services using only biocompatible products and techniques that
+              support the body's natural healing processes and overall wellness.
+            </p>
+          </div>
+
+          <div class="expertise-item">
+            <h3 class="font-heading text-h4 font-semibold text-teal mb-3">Nutritional Counseling</h3>
+            <p class="font-body text-gray-medium">
+              Educating patients on the vital connection between nutrition and oral health, providing personalized
+              dietary guidance to support dental wellness and systemic health.
+            </p>
+          </div>
+
+          <div class="expertise-item">
+            <h3 class="font-heading text-h4 font-semibold text-teal mb-3">Ozone Therapy</h3>
+            <p class="font-body text-gray-medium">
+              Utilizing medical-grade ozone for natural antimicrobial treatment, promoting healing and eliminating
+              harmful bacteria without the use of harsh chemicals.
+            </p>
+          </div>
+
+          <div class="expertise-item">
+            <h3 class="font-heading text-h4 font-semibold text-teal mb-3">Laser Dentistry</h3>
+            <p class="font-body text-gray-medium">
+              Certified in advanced laser techniques for gentle, minimally invasive periodontal therapy and
+              bacterial reduction with enhanced patient comfort.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section slot="approach" class="section-padding bg-white">
+    <div class="container mx-auto container-padding">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="font-heading text-h3 font-semibold text-gray-dark mb-8">Community Involvement & Personal Touch</h2>
+
+        <div class="prose max-w-none mb-8">
+          <p class="font-body text-lg text-gray-medium mb-6">
+            Melanie's commitment to dental health extends far beyond the office. She has been involved with
+            numerous charitable organizations and dental outreach programs, demonstrating her genuine desire
+            to help others who are less fortunate.
+          </p>
+
+          <h3 class="font-heading text-h4 font-semibold text-gray-dark mb-4">Community Service</h3>
+          <div class="grid md:grid-cols-2 gap-4 mb-8">
+            <ul class="font-body text-gray-medium space-y-2">
+              <li>• Mission of Mercy</li>
+              <li>• Operation Care</li>
+              <li>• Dentistry From The Heart</li>
+              <li>• Texas Red Cross</li>
+              <li>• Tooth Time Grand Rapids Children's Museum</li>
+              <li>• Dental Health Month Programs</li>
+            </ul>
+            <ul class="font-body text-gray-medium space-y-2">
+              <li>• Operation White Christmas</li>
+              <li>• Hospice Support</li>
+              <li>• Whirlpool Steelhead Triathlon</li>
+              <li>• Berrien County Youth Fair</li>
+              <li>• Multiple Dental Outreaches</li>
+              <li>• Underserved Community Programs</li>
+            </ul>
+          </div>
+
+          <p class="font-body text-lg text-gray-medium mb-6">
+            Outside of her professional life, Melanie enjoys an active lifestyle that includes traveling,
+            working out, church activities, and cooking. She loves sports, riding horses, hiking, and fishing.
+            This balance of professional dedication and personal fulfillment allows her to bring fresh energy
+            and genuine care to every patient interaction.
+          </p>
+
+          <blockquote class="border-l-4 border-olive pl-6 my-8">
+            <p class="font-body text-lg italic text-gray-medium">
+              "I love what I do, and I'm committed to helping patients take care of their teeth and overall
+              health. Every patient deserves personalized care that considers their unique needs and goals."
+            </p>
+            <footer class="mt-4">
+              <cite class="font-body text-sm text-gray-medium not-italic">— Melanie Galles, RDH</cite>
+            </footer>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section slot="certifications" class="section-padding bg-gray-light">
+    <div class="container mx-auto container-padding">
+      <div class="max-w-4xl mx-auto text-center">
+        <h3 class="font-heading text-h3 font-semibold text-gray-dark mb-8">Professional Affiliations</h3>
+        <div class="flex flex-wrap justify-center gap-2">
+          <span class="certification-badge">ADHA Member</span>
+          <span class="certification-badge">Texas Dental Hygienists' Association</span>
+          <span class="certification-badge">IAOMT Associate Member</span>
+          <span class="certification-badge">IABDM Associate Member</span>
+          <span class="certification-badge">Academy of Laser Dentistry</span>
+          <span class="certification-badge">Holistic Dental Hygiene Network</span>
+          <span class="certification-badge">Dallas Dental Hygienists' Society</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section slot="cta" class="py-16 md:py-20" style="background: linear-gradient(to bottom right, #0099ba, #006786);">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="max-w-3xl mx-auto text-center">
+        <BlurFade delay={100} client:load>
+          <h2 class="text-4xl md:text-5xl font-normal text-white mb-4"
+              style="font-family: 'Playfair Display', serif;">
+            Schedule Your Biological Cleaning with Melanie
+          </h2>
+        </BlurFade>
+
+        <BlurFade delay={200} client:load>
+          <p class="text-lg text-white/90 mb-8" style="font-family: 'Geist', sans-serif;">
+            Experience the difference of holistic dental hygiene with gentle, thorough care using only biocompatible products and techniques
+          </p>
+        </BlurFade>
+
+        <BlurFade delay={300} client:load>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/appointment"
+              class="px-8 py-3 bg-gradient-to-r from-[#a6b443] to-[#c7cd85] text-white rounded-full font-semibold transition-all duration-300 hover:from-[#8fa339] hover:to-[#a6b443] hover:shadow-lg inline-flex items-center justify-center"
+              style="font-family: 'Playfair Display', serif;"
+            >
+              Book Your Cleaning
+            </a>
+            <a
+              href="tel:214-368-0900"
+              class="px-8 py-3 bg-white border-2 rounded-full font-semibold transition-all duration-300 hover:shadow-lg inline-flex items-center justify-center"
+              style="font-family: 'Playfair Display', serif; color: #0099ba; border-color: white;"
+              onmouseover="this.style.backgroundColor='#006786'; this.style.color='white'; this.style.borderColor='#006786';"
+              onmouseout="this.style.backgroundColor='white'; this.style.color='#0099ba'; this.style.borderColor='white';"
+            >
+              <svg class="mr-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+              Call Now: (214) 368-0900
+            </a>
+          </div>
+        </BlurFade>
+      </div>
+    </div>
+  </section>
+
+</TeamMemberTemplate>

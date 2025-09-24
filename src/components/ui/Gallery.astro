@@ -1,0 +1,97 @@
+---
+// Gallery.astro - Office photo gallery component
+export interface Props {
+  images: Array<{
+    src: string;
+    alt: string;
+    caption?: string;
+  }>;
+  title?: string;
+  columns?: 2 | 3 | 4;
+}
+
+const { images, title, columns = 3 } = Astro.props;
+
+const gridClass = {
+  2: 'grid-cols-1 md:grid-cols-2',
+  3: 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3',
+  4: 'grid-cols-1 md:grid-cols-2 lg:grid-cols-4'
+}[columns];
+---
+
+<div class="gallery-container">
+  {title && (
+    <h3 class="font-heading text-2xl md:text-3xl font-normal text-gray-dark mb-8 text-center"
+        style="font-family: 'Playfair Display', serif;">
+      {title}
+    </h3>
+  )}
+
+  <div class={`grid ${gridClass} gap-4`}>
+    {images.map((image, index) => (
+      <div class="gallery-item group relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
+        <img
+          src={image.src}
+          alt={image.alt}
+          loading="lazy"
+          class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+          onclick={`openLightbox('${image.src}', '${image.alt}')`}
+        />
+        {image.caption && (
+          <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <p class="text-white text-sm">{image.caption}</p>
+          </div>
+        )}
+        <div class="absolute inset-0 bg-gradient-to-br from-[#0099ba]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+      </div>
+    ))}
+  </div>
+</div>
+
+<!-- Simple Lightbox -->
+<div id="lightbox" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/90 p-4" onclick="closeLightbox()">
+  <button class="absolute top-4 right-4 text-white text-4xl hover:text-gray-300 z-50" onclick="closeLightbox()">&times;</button>
+  <img id="lightbox-image" src="" alt="" class="max-w-full max-h-full object-contain" />
+</div>
+
+<style>
+  .gallery-item {
+    cursor: pointer;
+  }
+
+  #lightbox {
+    display: none;
+  }
+
+  #lightbox.active {
+    display: flex;
+  }
+</style>
+
+<script>
+  function openLightbox(src, alt) {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImage = document.getElementById('lightbox-image');
+    lightboxImage.src = src;
+    lightboxImage.alt = alt;
+    lightbox.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    const lightbox = document.getElementById('lightbox');
+    lightbox.classList.remove('active');
+    document.body.style.overflow = 'auto';
+  }
+
+  // Close lightbox with Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      closeLightbox();
+    }
+  });
+
+  // Make functions global
+  window.openLightbox = openLightbox;
+  window.closeLightbox = closeLightbox;
+</script>

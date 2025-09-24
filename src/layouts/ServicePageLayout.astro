@@ -1,0 +1,274 @@
+---
+// ServicePageLayout.astro - Superior template matching sleep-breathing design
+import Layout from './Layout.astro';
+import PageHero from '../components/shared/PageHero.astro';
+import BlurFade from '../components/ui/BlurFade.astro';
+import Button from '../components/ui/Button.astro';
+
+export interface Props {
+  title: string;
+  description: string;
+  image?: string;
+  features?: string[];
+  benefits?: string[];
+  process?: string[];
+  faqs?: Array<{
+    question: string;
+    answer: string;
+  }>;
+}
+
+const { title, description, image, features = [], benefits = [], process = [], faqs = [] } = Astro.props;
+---
+
+<Layout title={`${title} | Central Dentist`} description={description}>
+  <!-- Hero Section -->
+  <PageHero
+    title={title}
+    subtitle={description}
+    backgroundImage={image}
+    variant="service"
+    breadcrumbs={[
+      { label: 'Services', href: '/services' },
+      { label: title, href: '#' }
+    ]}
+  />
+
+  <!-- Overview Section - White Background -->
+  <section class="py-16 md:py-20 bg-white">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="max-w-6xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+          
+          <!-- Main Content Area -->
+          <div class="lg:col-span-2 space-y-10">
+            <!-- Overview -->
+            <BlurFade delay={100} client:visible>
+              <div>
+                <h2 class="text-3xl md:text-4xl font-normal mb-4" 
+                    style="font-family: 'Playfair Display', serif; color: #006786;">
+                  Overview
+                </h2>
+                <div class="prose prose-lg max-w-none" style="color: #4b5563; font-family: 'Geist', sans-serif;">
+                  <slot name="overview" />
+                </div>
+              </div>
+            </BlurFade>
+
+            <!-- Additional Content Slot -->
+            <slot name="content" />
+          </div>
+
+          <!-- Sidebar -->
+          <div class="lg:col-span-1">
+            <div class="sticky top-24 space-y-6">
+              <!-- Quick Features -->
+              {features.length > 0 && (
+                <BlurFade delay={200} client:visible>
+                  <div class="bg-white rounded-xl p-6 shadow-lg">
+                    <h3 class="text-xl font-normal mb-4"
+                        style="font-family: 'Playfair Display', serif; color: #006786;">
+                      Key Features
+                    </h3>
+                    <ul class="space-y-3">
+                      {features.map((feature) => (
+                        <li class="flex items-start space-x-2">
+                          <svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #a6b443;" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                          </svg>
+                          <span class="text-sm" style="color: #4b5563; font-family: 'Geist', sans-serif;">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </BlurFade>
+              )}
+
+              <!-- CTA Box -->
+              <BlurFade delay={300} client:visible>
+                <div class="rounded-xl p-6 text-white" style="background: linear-gradient(to bottom right, #0099ba, #006786);">
+                  <h3 class="text-xl font-normal mb-3"
+                      style="font-family: 'Playfair Display', serif;">
+                    Ready to Get Started?
+                  </h3>
+                  <p class="mb-4 text-white/90" style="font-family: 'Geist', sans-serif;">
+                    Schedule your consultation today and take the first step toward better health.
+                  </p>
+                  <a 
+                    href="/contact" 
+                    class="block w-full text-center px-6 py-3 bg-white rounded-full font-semibold transition-colors"
+                    style="color: #0099ba; font-family: 'Playfair Display', serif;"
+                    onmouseover="this.style.transform='translateY(-2px)'"
+                    onmouseout="this.style.transform='translateY(0)'"
+                  >
+                    Schedule Consultation
+                  </a>
+                </div>
+              </BlurFade>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section - Gray Background -->
+  {benefits.length > 0 && (
+    <section class="py-16 md:py-20 bg-gray-50">
+      <div class="container mx-auto px-4 md:px-6">
+        <div class="max-w-4xl mx-auto">
+          <BlurFade delay={100} client:visible>
+            <div class="text-center mb-12">
+              <h2 class="text-3xl md:text-4xl font-normal mb-4"
+                  style="font-family: 'Playfair Display', serif; color: #006786;">
+                Benefits
+              </h2>
+              <p class="text-lg" style="color: #6b7280; font-family: 'Geist', sans-serif;">
+                Experience the advantages of our holistic approach
+              </p>
+            </div>
+          </BlurFade>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {benefits.map((benefit, index) => (
+              <BlurFade delay={200 + (index * 100)} client:visible>
+                <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+                  <div class="flex items-start space-x-3">
+                    <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" 
+                         style="background: linear-gradient(to bottom right, #a6b443, #c7cd85);">
+                      <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                      </svg>
+                    </div>
+                    <p style="color: #4b5563; font-family: 'Geist', sans-serif;">{benefit}</p>
+                  </div>
+                </div>
+              </BlurFade>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- Process Section - White Background -->
+  {process.length > 0 && (
+    <section class="py-16 md:py-20 bg-white">
+      <div class="container mx-auto px-4 md:px-6">
+        <div class="max-w-3xl mx-auto">
+          <BlurFade delay={100} client:visible>
+            <div class="text-center mb-12">
+              <h2 class="text-3xl md:text-4xl font-normal mb-4"
+                  style="font-family: 'Playfair Display', serif; color: #006786;">
+                The Process
+              </h2>
+              <p class="text-lg" style="color: #6b7280; font-family: 'Geist', sans-serif;">
+                Your journey to better oral health
+              </p>
+            </div>
+          </BlurFade>
+          
+          <div class="space-y-6">
+            {process.map((step, index) => (
+              <BlurFade delay={200 + (index * 100)} client:visible>
+                <div class="flex space-x-4">
+                  <div class="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center text-white font-bold" 
+                       style="background: linear-gradient(to bottom right, #0099ba, #006786); font-family: 'Playfair Display', serif;">
+                    {index + 1}
+                  </div>
+                  <div class="flex-grow">
+                    <p class="pt-3" style="color: #4b5563; font-family: 'Geist', sans-serif;">{step}</p>
+                  </div>
+                </div>
+              </BlurFade>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- FAQs Section - Gradient Background -->
+  {faqs.length > 0 && (
+    <section class="py-16 md:py-20 bg-gradient-to-b from-green-50 to-white">
+      <div class="container mx-auto px-4 md:px-6">
+        <div class="max-w-3xl mx-auto">
+          <BlurFade delay={100} client:visible>
+            <div class="text-center mb-12">
+              <h2 class="text-3xl md:text-4xl font-normal mb-4"
+                  style="font-family: 'Playfair Display', serif; color: #006786;">
+                Frequently Asked Questions
+              </h2>
+              <p class="text-lg" style="color: #6b7280; font-family: 'Geist', sans-serif;">
+                Get answers to common questions
+              </p>
+            </div>
+          </BlurFade>
+          
+          <div class="space-y-4">
+            {faqs.map((faq, index) => (
+              <BlurFade delay={200 + (index * 50)} client:visible>
+                <details class="bg-white rounded-lg shadow-sm p-6 hover:shadow-md transition-shadow group">
+                  <summary class="font-semibold cursor-pointer flex items-center justify-between" 
+                           style="color: #1f2937; font-family: 'Playfair Display', serif;">
+                    {faq.question}
+                    <svg class="w-5 h-5 transition-transform group-open:rotate-180" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                  </summary>
+                  <p class="mt-4" style="color: #6b7280; font-family: 'Geist', sans-serif;">
+                    {faq.answer}
+                  </p>
+                </details>
+              </BlurFade>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- Bottom CTA - Blue Gradient (Superior to Green) -->
+  <section class="py-16 md:py-20" style="background: linear-gradient(to bottom right, #0099ba, #006786);">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="max-w-3xl mx-auto text-center">
+        <BlurFade delay={100} client:visible>
+          <h2 class="text-4xl md:text-5xl font-normal text-white mb-4"
+              style="font-family: 'Playfair Display', serif;">
+            Ready to Transform Your Smile?
+          </h2>
+        </BlurFade>
+        
+        <BlurFade delay={200} client:visible>
+          <p class="text-lg text-white/90 mb-8" style="font-family: 'Geist', sans-serif;">
+            Experience the difference of holistic dental care with biocompatible materials and personalized treatment
+          </p>
+        </BlurFade>
+        
+        <BlurFade delay={300} client:visible>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/contact"
+              class="px-8 py-3 bg-gradient-to-r from-[#a6b443] to-[#c7cd85] text-white rounded-full font-semibold transition-all duration-300 hover:from-[#8fa339] hover:to-[#a6b443] hover:shadow-lg inline-flex items-center justify-center"
+              style="font-family: 'Playfair Display', serif;"
+            >
+              Schedule Consultation
+            </a>
+            <a
+              href="tel:214-368-0900"
+              class="px-8 py-3 bg-white border-2 rounded-full font-semibold transition-all duration-300 hover:shadow-lg inline-flex items-center justify-center"
+              style="font-family: 'Playfair Display', serif; color: #0099ba; border-color: white;"
+              onmouseover="this.style.backgroundColor='#006786'; this.style.color='white'; this.style.borderColor='#006786';"
+              onmouseout="this.style.backgroundColor='white'; this.style.color='#0099ba'; this.style.borderColor='white';"
+            >
+              <svg class="mr-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+              Call (214) 368-0900
+            </a>
+          </div>
+        </BlurFade>
+      </div>
+    </div>
+  </section>
+</Layout>

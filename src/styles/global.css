@@ -1,0 +1,329 @@
+/* Google Fonts - Must be imported first - Using DoctorMeade Style */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Tailwind CSS */
+@import "tailwindcss";
+
+/* Typography System - MUST be imported after Tailwind for proper layering */
+@import "./typography.css";
+
+/* Custom Component Classes */
+@layer components {
+  .btn-primary {
+    background: linear-gradient(to right, #0099ba, #006786);
+    @apply text-white px-8 py-3 rounded-full font-medium
+           transition-all
+           focus:outline-none focus:ring-2 focus:ring-offset-2;
+    font-family: 'Playfair Display', 'Times', serif;
+    box-shadow: 0 4px 12px rgba(0, 153, 186, 0.1);
+  }
+  
+  .btn-primary:focus {
+    --tw-ring-color: #0099ba;
+  }
+  
+  .btn-primary:hover {
+    background: linear-gradient(to right, #006786, #004d5c) !important;
+    @apply shadow-xl -translate-y-0.5 text-white;
+    box-shadow: 0 8px 24px rgba(0, 153, 186, 0.16);
+  }
+
+  .btn-secondary {
+    @apply bg-white px-8 py-3 rounded-full font-medium
+           transition-all focus:outline-none focus:ring-2 focus:ring-offset-2;
+    font-family: 'Playfair Display', 'Times', serif;
+    color: #0099ba;
+    border: 2px solid #0099ba;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #0099ba !important;
+    color: white !important;
+    border-color: #006786 !important;
+  }
+  
+  .btn-secondary:focus {
+    --tw-ring-color: #0099ba;
+  }
+
+  .btn-accent {
+    background: linear-gradient(to right, #a6b443, #c7cd85);
+    @apply text-white px-6 py-3 rounded-full font-medium text-sm
+           transition-all hover:shadow-lg hover:scale-105
+           focus:outline-none focus:ring-2 focus:ring-offset-2;
+    font-family: 'Playfair Display', 'Times', serif;
+    box-shadow: 0 4px 15px rgba(166, 180, 67, 0.3);
+  }
+  
+  .btn-accent:hover {
+    background: linear-gradient(to right, #8fa339, #a6b443) !important;
+    @apply shadow-xl -translate-y-0.5;
+  }
+  
+  .btn-accent:focus {
+    --tw-ring-color: #a6b443;
+  }
+
+  .card {
+    @apply bg-white rounded-xl p-6;
+    box-shadow: 0 4px 12px rgba(0, 103, 134, 0.1);
+  }
+
+  .card-service {
+    @apply bg-white rounded-xl p-6 transition-shadow cursor-pointer;
+    box-shadow: 0 4px 12px rgba(0, 103, 134, 0.1);
+  }
+  
+  .card-service:hover {
+    box-shadow: 0 8px 24px rgba(0, 103, 134, 0.16);
+  }
+  
+  .card-service-enhanced {
+    @apply bg-white rounded-xl p-6 transition-all duration-300 cursor-pointer relative overflow-hidden;
+    box-shadow: 0 4px 12px rgba(0, 103, 134, 0.1);
+    border: 2px solid transparent;
+  }
+  
+  .card-service-enhanced::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    padding: 2px;
+    background: linear-gradient(90deg, var(--color-1), var(--color-3), var(--color-2), var(--color-4));
+    border-radius: inherit;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: xor;
+    -webkit-mask-composite: xor;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .card-service-enhanced:hover::before {
+    opacity: 1;
+    animation: border-beam 2s linear infinite;
+  }
+  
+  .card-service-enhanced:hover {
+    box-shadow: 0 12px 40px rgba(0, 103, 134, 0.2);
+    transform: translateY(-4px) scale(1.02);
+  }
+
+  .section-padding {
+    @apply py-16 md:py-20 lg:py-24;
+  }
+
+  .container-padding {
+    @apply px-4 md:px-6 lg:px-8;
+  }
+}
+
+/* Animation Variables */
+:root {
+  --animation-fast: 200ms;
+  --animation-normal: 300ms;
+  --animation-slow: 500ms;
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  
+  /* Magic UI Colors for animations */
+  --color-1: #0099ba;
+  --color-2: #006786;
+  --color-3: #a6b443;
+  --color-4: #c7cd85;
+  --color-5: #8bc34a;
+}
+
+/* Magic UI Animations */
+@keyframes shimmer-slide {
+  to {
+    transform: translate(calc(100cqw - 100%), -50%);
+  }
+}
+
+@keyframes spin-around {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+@keyframes rainbow {
+  0%, 100% { background-position: 0% 50% }
+  50% { background-position: 100% 50% }
+}
+
+@keyframes ripple {
+  0%, 70%, 100% {
+    transform: scale3d(1, 1, 1);
+  }
+  35% {
+    transform: scale3d(1.25, 1.25, 1);
+  }
+}
+
+@keyframes border-beam {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 400% 50%;
+  }
+}
+
+@keyframes grid {
+  0% { transform: translateY(-50%); }
+  100% { transform: translateY(0); }
+}
+
+/* Accessibility - Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Utility classes for animations */
+@layer utilities {
+  .animate-shimmer-slide {
+    animation: shimmer-slide 1s infinite linear;
+  }
+  
+  .animate-spin-around {
+    animation: spin-around calc(var(--speed) * 2) infinite linear;
+  }
+  
+  .animate-rainbow {
+    animation: rainbow var(--speed, 2s) infinite linear;
+  }
+  
+  .animate-ripple {
+    animation: ripple 0.6s ease-out;
+  }
+  
+  .animate-rippling {
+    animation: ripple 0.6s ease-out;
+    transform-origin: center center;
+  }
+  
+  .animate-border-beam {
+    animation: border-beam calc(var(--duration)*1s) infinite linear;
+  }
+  
+  .animate-grid {
+    animation: grid 15s ease-in-out infinite;
+  }
+  
+  .animate-fade-up {
+    animation: fade-up 0.5s ease-out;
+  }
+  
+  .animate-blur-fade {
+    animation: blur-fade var(--animation-normal) var(--ease-smooth);
+  }
+  
+  .animate-gradient-x {
+    animation: gradient-x 3s ease infinite;
+    background-size: 300% 300%;
+  }
+  
+  .bg-300\% {
+    background-size: 300% 300%;
+  }
+}
+
+/* Enhanced button animations */
+@layer components {
+  .btn-shimmer {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(90deg, var(--color-1), var(--color-2));
+    --shimmer-color: rgba(255, 255, 255, 0.8);
+  }
+  
+  .btn-shimmer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, var(--shimmer-color), transparent);
+    animation: shimmer 2s infinite;
+  }
+  
+  @keyframes shimmer {
+    0% { left: -100%; }
+    100% { left: 100%; }
+  }
+  
+  .btn-border-beam {
+    position: relative;
+    background: transparent;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+  }
+  
+  .btn-border-beam::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    padding: 2px;
+    background: linear-gradient(90deg, var(--color-1), var(--color-3), var(--color-2));
+    border-radius: inherit;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: xor;
+    -webkit-mask-composite: xor;
+  }
+}
+
+/* Dot pattern for backgrounds */
+.dot-pattern {
+  background-image: 
+    radial-gradient(circle at 20px 20px, rgba(166, 180, 67, 0.15) 2px, transparent 0),
+    radial-gradient(circle at 80px 40px, rgba(0, 153, 186, 0.1) 1.5px, transparent 0),
+    radial-gradient(circle at 50px 70px, rgba(199, 205, 133, 0.2) 1px, transparent 0);
+  background-size: 100px 100px, 120px 120px, 80px 80px;
+  animation: drift 20s ease-in-out infinite;
+}
+
+@keyframes drift {
+  0%, 100% { background-position: 0% 0%, 0% 0%, 0% 0%; }
+  50% { background-position: 100% 100%, -100% 100%, 50% -50%; }
+}
+
+@keyframes gradient-x {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes blur-fade {
+  0% {
+    opacity: 0;
+    filter: blur(6px);
+    transform: translateY(6px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateY(0);
+  }
+}

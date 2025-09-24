@@ -1,0 +1,132 @@
+{
+  "hero": {
+    "mainTitle": "Holistic Family Dentistry",
+    "tagline1": "Preventive & Biocompatible Oral Health Therapy",
+    "tagline2": "Addressing the Root Causes of Disease",
+    "boldSubhead": "Radical Generosity",
+    "description": "Exceptional care. Innovative education. Whole body wellness—delivered with radical generosity and heartfelt compassion.",
+    "backgroundVideo": "/videos/hero-video.mp4",
+    "primaryCTA": {
+      "text": "Schedule Your Visit",
+      "href": "/contact"
+    },
+    "secondaryCTA": {
+      "text": "Learn Our Philosophy", 
+      "href": "/philosophy"
+    }
+  },
+  "aboutPreview": {
+    "title": "Why Holistic Family Dentistry & Biocompatible Oral Health?",
+    "subtitle": "It can help with",
+    "benefits": [
+      {
+        "title": "Disease Prevention",
+        "description": "Education & early intervention/preventive therapy programs rooted in optimal nutrition, hygiene, oral habits, & supplementation",
+        "icon": "shield"
+      },
+      {
+        "title": "Sleep & Fatigue", 
+        "description": "Proper airway development & management with optimal mandibular positioning & TMJ function",
+        "icon": "moon"
+      },
+      {
+        "title": "Detoxification",
+        "description": "Removal of mercury amalgam & other heavy metals. Ozone & charcoal therapy",
+        "icon": "leaf"
+      },
+      {
+        "title": "Chronic Inflammatory Symptoms",
+        "description": "Treatment based on root cause of symptoms. Active collaboration amongst your health & wellness providers.",
+        "icon": "heart"
+      },
+      {
+        "title": "Chronic Pain",
+        "description": "Orthopedic, orthodontic, & myofunctional approach to treating most common head & neck sources of pain",
+        "icon": "zap"
+      },
+      {
+        "title": "Biocompatible",
+        "description": "Minimize or eliminate overall burden on systemic health via use of biological products",
+        "icon": "check"
+      }
+    ]
+  },
+  "doctors": {
+    "title": "Meet Our Doctors",
+    "doctors": [
+      {
+        "name": "Dr. Jill Rosellini Ombrello, DDS",
+        "title": "Founder & Lead Dentist",
+        "image": "/images/team/dr-ombrello.jpg",
+        "href": "/team/dr-jill-ombrello"
+      },
+      {
+        "name": "Dr. Elizabeth Alejandrez, DMD",
+        "title": "Biological & Family Dentist",
+        "image": "/images/team/dr-alejandrez.jpg",
+        "href": "/team/dr-elizabeth-alejandrez"
+      },
+      {
+        "name": "Dr. Sahil Sawnani, DDS",
+        "title": "Associate Doctor",
+        "image": "/images/team/dr-sawnani.jpg",
+        "href": "/team/dr-sahil-sawnani"
+      }
+    ]
+  },
+  "testimonials": [
+    {
+      "content": "Absolutely loved everything about my experience here. The staff is so kind, so knowledgeable, and they found a health issue (UARS) that had been overlooked by all the healthcare practitioners I've seen in the past. Can't recommend them enough!",
+      "author": "Taylor S.",
+      "rating": 5,
+      "verified": true
+    },
+    {
+      "content": "Dr. Ombrello and her team are absolutely wonderful! They take a holistic approach to dentistry that considers your whole health, not just your teeth. The mercury-free treatments and biocompatible materials give me peace of mind.",
+      "author": "Michael R.",
+      "rating": 5,
+      "verified": true
+    },
+    {
+      "content": "Finally found a dentist who understands the connection between oral health and overall wellness. The staff is incredibly knowledgeable about holistic dentistry and they truly care about their patients' long-term health.",
+      "author": "Sarah L.",
+      "rating": 5,
+      "verified": true
+    }
+  ],
+  "approach": {
+    "title": "How We Optimize for Your Comprehensive Care...",
+    "approaches": [
+      {
+        "title": "Advanced Diagnostics",
+        "description": "Identifying the root causes of oral & systemic health issues",
+        "image": "/images/approach/diagnostics.jpg",
+        "href": "/advanced-diagnostics"
+      },
+      {
+        "title": "Preventive & Biological Solutions", 
+        "description": "Research-supported, advanced therapies",
+        "image": "/images/approach/biological.jpg",
+        "href": "/philosophy"
+      },
+      {
+        "title": "Collaboration within Our Community",
+        "description": "Working with other healthcare providers to optimize care",
+        "image": "/images/approach/collaboration.jpg",
+        "href": "/our-philosophy"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Experience Holistic Dentistry?",
+    "description": "Join our family of patients who have discovered a healthier approach to dental care",
+    "primaryCTA": {
+      "text": "Schedule Your Appointment",
+      "href": "tel:214-368-0900"
+    },
+    "secondaryCTA": {
+      "text": "Contact Us Online",
+      "href": "/contact"
+    }
+  }
+}

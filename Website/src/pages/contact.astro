@@ -1,0 +1,443 @@
+---
+// Contact Page - Central Dentist
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/ui/Card.astro';
+import Button from '../components/ui/Button.astro';
+---
+
+<Layout 
+  title="Contact Us | Schedule Appointment | Central Dentist Dallas"
+  description="Contact Central Dentist in Dallas for holistic family dentistry. Schedule your appointment, get directions, or download new patient forms."
+  schemaType="MedicalBusiness"
+>
+  
+  <!-- Hero Section -->
+  <section class="section-padding bg-gradient-to-br from-teal-dark to-teal text-white">
+    <div class="container mx-auto container-padding">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="font-heading text-h1 font-bold mb-6">
+          Contact Central Dentist
+        </h1>
+        <p class="font-body text-xl mb-8 opacity-90">
+          Your health starts here. Contact us today to begin your journey to optimal oral and systemic wellness.
+        </p>
+        <Button variant="secondary" size="lg" href="tel:214-368-0900">
+          Call (214) 368-0900 Now
+        </Button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Contact Info -->
+  <section class="section-padding bg-white">
+    <div class="container mx-auto container-padding">
+      <div class="max-w-6xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <Card variant="hover" class="p-6 text-center">
+            <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-teal to-teal-dark rounded-full flex items-center justify-center">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+              </svg>
+            </div>
+            <h3 class="font-heading text-h4 font-semibold text-gray-dark mb-2">
+              Phone
+            </h3>
+            <a href="tel:214-368-0900" class="font-body text-teal text-xl font-semibold hover:underline">
+              (214) 368-0900
+            </a>
+            <p class="font-body text-gray-medium text-sm mt-2">
+              Call for appointments & questions
+            </p>
+          </Card>
+          
+          <Card variant="hover" class="p-6 text-center">
+            <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-olive to-lime-light rounded-full flex items-center justify-center">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+              </svg>
+            </div>
+            <h3 class="font-heading text-h4 font-semibold text-gray-dark mb-2">
+              Email
+            </h3>
+            <a href="mailto:info@centraldentist.com" class="font-body text-olive text-lg font-semibold hover:underline">
+              info@centraldentist.com
+            </a>
+            <p class="font-body text-gray-medium text-sm mt-2">
+              Send us a message
+            </p>
+          </Card>
+          
+          <Card variant="hover" class="p-6 text-center">
+            <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-teal-dark to-lime-light rounded-full flex items-center justify-center">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+              </svg>
+            </div>
+            <h3 class="font-heading text-h4 font-semibold text-gray-dark mb-2">
+              Location
+            </h3>
+            <address class="font-body text-gray-dark not-italic">
+              10210 N Central Expy<br>
+              Suite 100<br>
+              Dallas, TX 75231
+            </address>
+          </Card>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form & Office Hours -->
+  <section class="section-padding bg-gray-light">
+    <div class="container mx-auto container-padding">
+      <div class="max-w-6xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          
+          <!-- Contact Form -->
+          <div>
+            <h2 class="font-heading text-h2 font-semibold text-gray-dark mb-6">
+              Send Us a Message
+            </h2>
+            <p class="font-body text-gray-medium mb-8">
+              To save you time, you can contact us directly here. We'll respond promptly to schedule 
+              your appointment or answer any questions about our holistic dental services.
+            </p>
+            
+            <Card variant="bordered" class="p-6">
+              <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" class="space-y-6">
+                <!-- Netlify form detection -->
+                <input type="hidden" name="form-name" value="contact" />
+                
+                <!-- Honeypot field -->
+                <div style="display: none;">
+                  <input name="bot-field" />
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <label for="name" class="block font-body text-sm font-semibold text-gray-dark mb-2">
+                      Full Name *
+                    </label>
+                    <input 
+                      type="text" 
+                      id="name" 
+                      name="name" 
+                      required
+                      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal focus:border-teal font-body"
+                      placeholder="Your full name"
+                    />
+                  </div>
+                  <div>
+                    <label for="phone" class="block font-body text-sm font-semibold text-gray-dark mb-2">
+                      Phone Number
+                    </label>
+                    <input 
+                      type="tel" 
+                      id="phone" 
+                      name="phone"
+                      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal focus:border-teal font-body"
+                      placeholder="(214) 555-0123"
+                    />
+                  </div>
+                </div>
+                
+                <div>
+                  <label for="email" class="block font-body text-sm font-semibold text-gray-dark mb-2">
+                    Email Address *
+                  </label>
+                  <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    required
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal focus:border-teal font-body"
+                    placeholder="your.email@example.com"
+                  />
+                </div>
+                
+                <div>
+                  <label for="subject" class="block font-body text-sm font-semibold text-gray-dark mb-2">
+                    Subject
+                  </label>
+                  <select 
+                    id="subject" 
+                    name="subject"
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal focus:border-teal font-body"
+                  >
+                    <option value="">Select a subject</option>
+                    <option value="New Patient Consultation">New Patient Consultation</option>
+                    <option value="Existing Patient">Existing Patient Question</option>
+                    <option value="Sleep Disordered Breathing">Sleep Disordered Breathing</option>
+                    <option value="Pediatric Healthy Start">Pediatric Healthy Start</option>
+                    <option value="Ceramic Implants">Ceramic Implants</option>
+                    <option value="Invisalign">Invisalign</option>
+                    <option value="Mercury-Free Dentistry">Mercury-Free Dentistry</option>
+                    <option value="Insurance/Billing">Insurance/Billing</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+                
+                <div>
+                  <label for="message" class="block font-body text-sm font-semibold text-gray-dark mb-2">
+                    Message *
+                  </label>
+                  <textarea 
+                    id="message" 
+                    name="message" 
+                    rows="5" 
+                    required
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal focus:border-teal font-body resize-vertical"
+                    placeholder="Please describe how we can help you or any questions you may have..."
+                  ></textarea>
+                </div>
+                
+                <div class="flex items-start">
+                  <input 
+                    type="checkbox" 
+                    id="consent" 
+                    name="consent" 
+                    required
+                    class="mt-1 mr-3 h-4 w-4 text-teal focus:ring-teal border-gray-300 rounded"
+                  />
+                  <label for="consent" class="font-body text-sm text-gray-medium">
+                    I consent to Central Dentist contacting me regarding my inquiry. I understand that 
+                    I can opt-out at any time. *
+                  </label>
+                </div>
+                
+                <Button type="submit" variant="primary" size="lg" class="w-full">
+                  Send Message
+                </Button>
+              </form>
+            </Card>
+          </div>
+          
+          <!-- Office Hours & Additional Info -->
+          <div>
+            <h2 class="font-heading text-h2 font-semibold text-gray-dark mb-6">
+              Office Hours & Information
+            </h2>
+            
+            <Card variant="bordered" class="p-6 mb-8">
+              <h3 class="font-heading text-h4 font-semibold text-gray-dark mb-4">
+                Office Hours
+              </h3>
+              <div class="space-y-3">
+                <div class="flex justify-between">
+                  <span class="font-body text-gray-dark font-semibold">Monday:</span>
+                  <span class="font-body text-gray-medium">8:00 AM - 5:00 PM</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="font-body text-gray-dark font-semibold">Tuesday:</span>
+                  <span class="font-body text-gray-medium">8:00 AM - 5:00 PM</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="font-body text-gray-dark font-semibold">Wednesday:</span>
+                  <span class="font-body text-gray-medium">8:00 AM - 5:00 PM</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="font-body text-gray-dark font-semibold">Thursday:</span>
+                  <span class="font-body text-gray-medium">8:00 AM - 5:00 PM</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="font-body text-gray-dark font-semibold">Friday:</span>
+                  <span class="font-body text-gray-medium">8:00 AM - 3:00 PM</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="font-body text-gray-dark font-semibold">Saturday:</span>
+                  <span class="font-body text-gray-medium">Closed</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="font-body text-gray-dark font-semibold">Sunday:</span>
+                  <span class="font-body text-gray-medium">Closed</span>
+                </div>
+              </div>
+              
+              <div class="mt-6 pt-6 border-t border-gray-200">
+                <p class="font-body text-gray-medium text-sm">
+                  <strong>Emergency Care:</strong> We provide emergency dental care for our patients. 
+                  Call our main number and follow the prompts for after-hours emergencies.
+                </p>
+              </div>
+            </Card>
+            
+            <Card variant="bordered" class="p-6 mb-8">
+              <h3 class="font-heading text-h4 font-semibold text-gray-dark mb-4">
+                New Patient Information
+              </h3>
+              <div class="space-y-4">
+                <div>
+                  <h4 class="font-body font-semibold text-gray-dark mb-2">Save Time - Download Forms</h4>
+                  <div class="space-y-2">
+                    <a 
+                      href="/forms/adult-new-patient-paperwork.pdf" 
+                      class="font-body text-teal hover:underline block"
+                      target="_blank"
+                    >
+                      → Adult New Patient Forms (PDF)
+                    </a>
+                    <a 
+                      href="/forms/child-new-patient-paperwork.pdf" 
+                      class="font-body text-teal hover:underline block"
+                      target="_blank"
+                    >
+                      → Child New Patient Forms (PDF)
+                    </a>
+                  </div>
+                </div>
+                
+                <div>
+                  <h4 class="font-body font-semibold text-gray-dark mb-2">What to Bring</h4>
+                  <ul class="font-body text-gray-medium text-sm space-y-1">
+                    <li>• Valid photo ID</li>
+                    <li>• Insurance cards</li>
+                    <li>• Completed new patient forms</li>
+                    <li>• List of current medications</li>
+                    <li>• Recent X-rays (if available)</li>
+                  </ul>
+                </div>
+                
+                <div>
+                  <h4 class="font-body font-semibold text-gray-dark mb-2">First Visit</h4>
+                  <p class="font-body text-gray-medium text-sm">
+                    Your initial consultation includes a comprehensive evaluation, 3D imaging 
+                    if needed, and a personalized treatment plan discussion.
+                  </p>
+                </div>
+              </div>
+            </Card>
+            
+            <Card variant="bordered" class="p-6">
+              <h3 class="font-heading text-h4 font-semibold text-gray-dark mb-4">
+                Insurance & Payment
+              </h3>
+              <div class="space-y-4">
+                <div>
+                  <h4 class="font-body font-semibold text-gray-dark mb-2">Insurance Accepted</h4>
+                  <p class="font-body text-gray-medium text-sm mb-2">
+                    We work with most dental insurance plans and will help maximize your benefits.
+                  </p>
+                </div>
+                
+                <div>
+                  <h4 class="font-body font-semibold text-gray-dark mb-2">Payment Options</h4>
+                  <ul class="font-body text-gray-medium text-sm space-y-1">
+                    <li>• Cash, Check, Credit Cards</li>
+                    <li>• HSA/FSA accounts</li>
+                    <li>• Flexible payment plans available</li>
+                    <li>• Third-party financing options</li>
+                  </ul>
+                </div>
+              </div>
+            </Card>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map Section -->
+  <section class="section-padding bg-white">
+    <div class="container mx-auto container-padding">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="font-heading text-h2 font-semibold text-gray-dark mb-8 text-center">
+          Find Us in Dallas
+        </h2>
+        
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div class="lg:col-span-2">
+            <Card variant="bordered" class="overflow-hidden h-96">
+              <!-- Google Maps Embed -->
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3347.8657326282464!2d-96.77089088481569!3d32.92676688094159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c210bb7ba6a41%3A0x7e5c9b7c8f2e8b7a!2s10210%20N%20Central%20Expy%20%23100%2C%20Dallas%2C%20TX%2075231!5e0!3m2!1sen!2sus!4v1642684800000!5m2!1sen!2sus"
+                width="100%"
+                height="100%"
+                style="border:0;"
+                allowfullscreen
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Central Dentist Location Map"
+              ></iframe>
+            </Card>
+          </div>
+          
+          <div>
+            <Card variant="bordered" class="p-6 h-full">
+              <h3 class="font-heading text-h4 font-semibold text-gray-dark mb-4">
+                Directions & Parking
+              </h3>
+              
+              <div class="space-y-4">
+                <div>
+                  <h4 class="font-body font-semibold text-gray-dark mb-2">Our Address</h4>
+                  <address class="font-body text-gray-medium not-italic">
+                    Central Dentist<br>
+                    10210 N Central Expressway<br>
+                    Suite 100<br>
+                    Dallas, TX 75231
+                  </address>
+                </div>
+                
+                <div>
+                  <h4 class="font-body font-semibold text-gray-dark mb-2">Parking</h4>
+                  <p class="font-body text-gray-medium text-sm">
+                    Free parking available in our building's parking lot. 
+                    Additional street parking available.
+                  </p>
+                </div>
+                
+                <div>
+                  <h4 class="font-body font-semibold text-gray-dark mb-2">Public Transportation</h4>
+                  <p class="font-body text-gray-medium text-sm">
+                    Accessible via DART bus routes. Check DART.org for 
+                    current schedules and routes.
+                  </p>
+                </div>
+                
+                <div>
+                  <h4 class="font-body font-semibold text-gray-dark mb-2">Nearby Landmarks</h4>
+                  <ul class="font-body text-gray-medium text-sm space-y-1">
+                    <li>• North of I-635 (LBJ Freeway)</li>
+                    <li>• Near Preston Center</li>
+                    <li>• Close to Northpark Mall</li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div class="mt-6 pt-6 border-t border-gray-200">
+                <Button variant="primary" size="sm" class="w-full" 
+                       href="https://maps.google.com/?q=10210+N+Central+Expy+Suite+100+Dallas+TX+75231" 
+                       target="_blank">
+                  Get Directions
+                </Button>
+              </div>
+            </Card>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section-padding bg-gradient-to-br from-olive to-lime-light text-white">
+    <div class="container mx-auto container-padding text-center">
+      <h2 class="font-heading text-h2 font-bold mb-6">
+        Ready to Start Your Holistic Dental Journey?
+      </h2>
+      <p class="font-body text-lg mb-8 opacity-90 max-w-3xl mx-auto">
+        Don't wait to prioritize your oral and systemic health. Contact us today to schedule your 
+        comprehensive consultation and discover the difference holistic dentistry can make for you and your family.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <Button variant="secondary" size="lg" href="tel:214-368-0900">
+          Call (214) 368-0900 Now
+        </Button>
+        <Button variant="outline" size="lg" href="mailto:info@centraldentist.com">
+          Email Us Today
+        </Button>
+      </div>
+    </div>
+  </section>
+
+</Layout>

@@ -1,0 +1,145 @@
+---
+// ContentPageLayout.astro - Template for general content pages
+import Layout from './Layout.astro';
+import PageHero from '../components/shared/PageHero.astro';
+
+export interface Props {
+  title: string;
+  subtitle?: string;
+  heroImage?: string;
+  showSidebar?: boolean;
+}
+
+const { title, subtitle, heroImage, showSidebar = false } = Astro.props;
+---
+
+<Layout title={`${title} | Central Dentist`} description={subtitle || ''}>
+  <!-- Hero Section -->
+  <PageHero
+    title={title}
+    subtitle={subtitle}
+    backgroundImage={heroImage}
+    variant="compact"
+    breadcrumbs={[
+      { label: title, href: '#' }
+    ]}
+  />
+
+  <!-- Main Content -->
+  <section class="py-16 md:py-20 lg:py-24">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class={showSidebar ? "grid grid-cols-1 lg:grid-cols-3 gap-12" : "max-w-4xl mx-auto"}>
+        
+        <!-- Main Content Area -->
+        <div class={showSidebar ? "lg:col-span-2" : ""}>
+          <div class="prose prose-lg max-w-none">
+            <!-- 
+              All typography will automatically be styled with:
+              - Headers: Playfair Display, teal-dark
+              - Body: Inter, gray-dark
+              - Links: teal with hover effects
+            -->
+            <slot />
+          </div>
+        </div>
+
+        <!-- Optional Sidebar -->
+        {showSidebar && (
+          <div class="lg:col-span-1">
+            <div class="sticky top-24 space-y-6">
+              <slot name="sidebar" />
+              
+              <!-- Default sidebar content -->
+              <div class="bg-gradient-to-br from-teal to-teal-light rounded-xl p-6 text-white">
+                <h3 class="text-xl font-semibold mb-3"
+                    style="font-family: 'Playfair Display', serif;">
+                  Have Questions?
+                </h3>
+                <p class="mb-4 text-white/90">
+                  We're here to help you on your journey to better health.
+                </p>
+                <a 
+                  href="/contact" 
+                  class="block w-full text-center px-6 py-3 bg-white text-teal rounded-full font-semibold hover:bg-gray-light transition-colors"
+                >
+                  Contact Us
+                </a>
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  /* Ensure proper typography for content pages */
+  :global(.prose h1),
+  :global(.prose h2),
+  :global(.prose h3),
+  :global(.prose h4) {
+    font-family: 'Playfair Display', serif;
+    color: #006786;
+    font-weight: 400;
+  }
+  
+  :global(.prose h1) {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  :global(.prose h2) {
+    font-size: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  :global(.prose h3) {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  :global(.prose p) {
+    font-family: 'Inter', sans-serif;
+    color: #4a5568;
+    line-height: 1.75;
+    margin-bottom: 1.25rem;
+  }
+  
+  :global(.prose a) {
+    color: #0099ba;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  
+  :global(.prose a:hover) {
+    color: #006786;
+    text-decoration: underline;
+  }
+  
+  :global(.prose ul),
+  :global(.prose ol) {
+    margin-bottom: 1.25rem;
+  }
+  
+  :global(.prose li) {
+    font-family: 'Inter', sans-serif;
+    color: #4a5568;
+    margin-bottom: 0.5rem;
+  }
+  
+  :global(.prose strong) {
+    color: #2d3748;
+    font-weight: 600;
+  }
+  
+  :global(.prose blockquote) {
+    border-left: 4px solid #a6b443;
+    padding-left: 1.5rem;
+    font-style: italic;
+    color: #718096;
+    margin: 1.5rem 0;
+  }
+</style>

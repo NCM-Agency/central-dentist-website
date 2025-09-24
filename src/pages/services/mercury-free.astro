@@ -1,0 +1,437 @@
+---
+// Mercury-Free Dentistry Service Page
+import ServicePageLayout from '../../layouts/ServicePageLayout.astro';
+import BlurFade from '../../components/ui/BlurFade.astro';
+import Card from '../../components/ui/Card.astro';
+import Button from '../../components/ui/Button.astro';
+---
+
+<ServicePageLayout
+  title="Mercury-Free Dentistry | Holistic Dental Care | Central Dentist"
+  description="Safe mercury amalgam removal and biocompatible dentistry in Dallas. We use the SMART protocol for mercury-free fillings and restorations."
+  heroTitle="Mercury-Free Dentistry"
+  heroSubtitle="Safe Amalgam Removal & Biocompatible Restorations"
+  heroImage="/images/services/abstract-white-texture.jpg"
+  variant="standard"
+  breadcrumbs={[
+    { label: 'Services', href: '/services' },
+    { label: 'Mercury-Free', href: '/services/mercury-free' }
+  ]}
+>
+  <!-- Main Content -->
+  <div slot="main">
+    <!-- Introduction -->
+    <section class="mb-12">
+      <BlurFade delay={100}>
+        <h2 class="text-section-header text-header-primary mb-6">
+          Your Health Deserves Mercury-Free Solutions
+        </h2>
+        <p class="text-body-large text-gray-dark mb-6">
+          At Central Dentist, we've been mercury-free for over 30 years. We believe that your dental
+          care shouldn't compromise your overall health. That's why we exclusively use biocompatible
+          materials and follow the strictest safety protocols for amalgam removal.
+        </p>
+        <p class="text-body-regular text-gray-medium">
+          Mercury is continuously emitted from amalgam fillings and absorbed by your body, particularly
+          affecting the brain, kidneys, liver, lungs, and gastrointestinal tract. We're committed to
+          providing safer alternatives that protect both your oral and systemic health.
+        </p>
+      </BlurFade>
+    </section>
+
+    <!-- SMART Protocol Section -->
+    <section class="mb-12">
+      <BlurFade delay={200}>
+        <h2 class="text-section-header text-header-primary mb-6">
+          Safe Mercury Amalgam Removal Technique (SMART)
+        </h2>
+        <p class="text-body-regular text-gray-medium mb-8">
+          We follow the SMART protocol developed by the International Academy of Oral Medicine and
+          Toxicology (IAOMT) to ensure your safety during amalgam removal:
+        </p>
+
+        <div class="grid gap-4 md:grid-cols-2">
+          <Card variant="bordered" class="p-6">
+            <h3 class="text-card-header mb-3" style="color: #006786;">
+              Patient Protection
+            </h3>
+            <ul class="space-y-2 text-body-regular text-gray-medium">
+              <li class="flex items-start">
+                <span class="text-teal mr-2">•</span>
+                Rubber dam isolation to prevent mercury particle ingestion
+              </li>
+              <li class="flex items-start">
+                <span class="text-teal mr-2">•</span>
+                Clean air/oxygen delivery to avoid mercury vapor inhalation
+              </li>
+              <li class="flex items-start">
+                <span class="text-teal mr-2">•</span>
+                Protective draping to prevent skin contact
+              </li>
+              <li class="flex items-start">
+                <span class="text-teal mr-2">•</span>
+                Activated charcoal rinse for additional protection
+              </li>
+            </ul>
+          </Card>
+
+          <Card variant="bordered" class="p-6">
+            <h3 class="text-card-header mb-3" style="color: #006786;">
+              Environmental Safety
+            </h3>
+            <ul class="space-y-2 text-body-regular text-gray-medium">
+              <li class="flex items-start">
+                <span class="text-teal mr-2">•</span>
+                High-volume suction to capture mercury vapor
+              </li>
+              <li class="flex items-start">
+                <span class="text-teal mr-2">•</span>
+                Air filtration systems throughout the operatory
+              </li>
+              <li class="flex items-start">
+                <span class="text-teal mr-2">•</span>
+                Proper disposal following EPA guidelines
+              </li>
+              <li class="flex items-start">
+                <span class="text-teal mr-2">•</span>
+                Sectioning technique to minimize aerosols
+              </li>
+            </ul>
+          </Card>
+        </div>
+      </BlurFade>
+    </section>
+
+    <!-- Health Concerns Section -->
+    <section class="mb-12">
+      <BlurFade delay={300}>
+        <h2 class="text-section-header text-header-primary mb-6">
+          Why Remove Mercury Amalgam?
+        </h2>
+        <p class="text-body-regular text-gray-medium mb-8">
+          Research has linked mercury exposure from dental amalgams to numerous health conditions:
+        </p>
+
+        <div class="grid gap-6 md:grid-cols-3">
+          <div class="text-center">
+            <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style="background-color: #e6f7f9;">
+              <svg class="w-8 h-8" style="color: #0099ba;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+              </svg>
+            </div>
+            <h3 class="text-card-header mb-2" style="color: #006786;">Neurological</h3>
+            <p class="text-body-small text-gray-medium">
+              Chronic fatigue, brain fog, memory issues, headaches, and mood disorders
+            </p>
+          </div>
+
+          <div class="text-center">
+            <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style="background-color: #f0f9e8;">
+              <svg class="w-8 h-8" style="color: #a6b443;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+              </svg>
+            </div>
+            <h3 class="text-card-header mb-2" style="color: #006786;">Cardiovascular</h3>
+            <p class="text-body-small text-gray-medium">
+              Heart palpitations, blood pressure issues, and circulatory problems
+            </p>
+          </div>
+
+          <div class="text-center">
+            <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style="background-color: #fef3e6;">
+              <svg class="w-8 h-8" style="color: #f59e0b;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+              </svg>
+            </div>
+            <h3 class="text-card-header mb-2" style="color: #006786;">Immune System</h3>
+            <p class="text-body-small text-gray-medium">
+              Autoimmune disorders, allergies, and chronic inflammation
+            </p>
+          </div>
+        </div>
+      </BlurFade>
+    </section>
+
+    <!-- Biocompatible Alternatives -->
+    <section class="mb-12">
+      <BlurFade delay={400}>
+        <h2 class="text-section-header text-header-primary mb-6">
+          Biocompatible Alternatives
+        </h2>
+        <p class="text-body-regular text-gray-medium mb-8">
+          We offer superior alternatives to mercury amalgam that are both safer and more aesthetic:
+        </p>
+
+        <div class="space-y-6">
+          <Card variant="bordered" class="p-6">
+            <h3 class="text-card-header mb-3" style="color: #006786;">
+              Composite Resin Restorations
+            </h3>
+            <p class="text-body-regular text-gray-medium mb-4">
+              BPA-free, tooth-colored materials that bond directly to your tooth structure,
+              preserving more of your natural tooth while providing excellent durability and aesthetics.
+            </p>
+            <ul class="grid md:grid-cols-2 gap-2 text-body-small text-gray-medium">
+              <li class="flex items-center">
+                <svg class="w-5 h-5 mr-2" style="color: #a6b443;" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                Natural appearance
+              </li>
+              <li class="flex items-center">
+                <svg class="w-5 h-5 mr-2" style="color: #a6b443;" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                Minimal tooth removal
+              </li>
+              <li class="flex items-center">
+                <svg class="w-5 h-5 mr-2" style="color: #a6b443;" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                No mercury or metals
+              </li>
+              <li class="flex items-center">
+                <svg class="w-5 h-5 mr-2" style="color: #a6b443;" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                Repairable if damaged
+              </li>
+            </ul>
+          </Card>
+
+          <Card variant="bordered" class="p-6">
+            <h3 class="text-card-header mb-3" style="color: #006786;">
+              Ceramic Restorations
+            </h3>
+            <p class="text-body-regular text-gray-medium mb-4">
+              For larger restorations, we offer ceramic inlays, onlays, and crowns that provide
+              superior strength and longevity without any metals or toxins.
+            </p>
+            <ul class="grid md:grid-cols-2 gap-2 text-body-small text-gray-medium">
+              <li class="flex items-center">
+                <svg class="w-5 h-5 mr-2" style="color: #a6b443;" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                Exceptional durability
+              </li>
+              <li class="flex items-center">
+                <svg class="w-5 h-5 mr-2" style="color: #a6b443;" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                100% biocompatible
+              </li>
+              <li class="flex items-center">
+                <svg class="w-5 h-5 mr-2" style="color: #a6b443;" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                Stain resistant
+              </li>
+              <li class="flex items-center">
+                <svg class="w-5 h-5 mr-2" style="color: #a6b443;" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                Natural translucency
+              </li>
+            </ul>
+          </Card>
+        </div>
+      </BlurFade>
+    </section>
+
+    <!-- Detoxification Support -->
+    <section class="mb-12">
+      <BlurFade delay={500}>
+        <h2 class="text-section-header text-header-primary mb-6">
+          Detoxification Support
+        </h2>
+        <p class="text-body-regular text-gray-medium mb-8">
+          We support your body's natural detoxification processes before and after amalgam removal:
+        </p>
+
+        <div class="bg-gray-50 rounded-xl p-8">
+          <div class="grid md:grid-cols-2 gap-8">
+            <div>
+              <h3 class="text-card-header mb-4" style="color: #006786;">
+                Pre-Removal Preparation
+              </h3>
+              <ul class="space-y-3 text-body-regular text-gray-medium">
+                <li class="flex items-start">
+                  <span class="text-teal mr-2">•</span>
+                  Nutritional assessment and optimization
+                </li>
+                <li class="flex items-start">
+                  <span class="text-teal mr-2">•</span>
+                  Supplementation protocols to support detox pathways
+                </li>
+                <li class="flex items-start">
+                  <span class="text-teal mr-2">•</span>
+                  Immune system strengthening
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 class="text-card-header mb-4" style="color: #006786;">
+                Post-Removal Support
+              </h3>
+              <ul class="space-y-3 text-body-regular text-gray-medium">
+                <li class="flex items-start">
+                  <span class="text-teal mr-2">•</span>
+                  Activated charcoal and chlorella protocols
+                </li>
+                <li class="flex items-start">
+                  <span class="text-teal mr-2">•</span>
+                  Vitamin C and glutathione support
+                </li>
+                <li class="flex items-start">
+                  <span class="text-teal mr-2">•</span>
+                  Monitoring and follow-up care
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </BlurFade>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="mb-12">
+      <BlurFade delay={600}>
+        <h2 class="text-section-header text-header-primary mb-6">
+          Frequently Asked Questions
+        </h2>
+
+        <div class="space-y-4">
+          <Card variant="bordered" class="p-6">
+            <h3 class="text-card-header mb-2" style="color: #006786;">
+              Is mercury amalgam removal covered by insurance?
+            </h3>
+            <p class="text-body-regular text-gray-medium">
+              Many insurance plans cover the replacement of amalgam fillings when medically necessary.
+              We'll help you understand your benefits and provide documentation for your insurance company.
+            </p>
+          </Card>
+
+          <Card variant="bordered" class="p-6">
+            <h3 class="text-card-header mb-2" style="color: #006786;">
+              How many appointments will I need?
+            </h3>
+            <p class="text-body-regular text-gray-medium">
+              We typically remove amalgams quadrant by quadrant to minimize your exposure and allow
+              your body time to detoxify between appointments. Most patients require 2-4 visits depending
+              on the number of fillings.
+            </p>
+          </Card>
+
+          <Card variant="bordered" class="p-6">
+            <h3 class="text-card-header mb-2" style="color: #006786;">
+              Can I have all my amalgams removed at once?
+            </h3>
+            <p class="text-body-regular text-gray-medium">
+              While possible, we generally recommend a phased approach to minimize stress on your
+              immune system and allow proper detoxification between procedures. We'll create a
+              personalized plan based on your health status and preferences.
+            </p>
+          </Card>
+        </div>
+      </BlurFade>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="text-center py-8 px-6 rounded-xl" style="background: linear-gradient(to bottom right, #0099ba, #006786);">
+      <BlurFade delay={700}>
+        <h2 class="text-section-header text-white mb-4">
+          Ready for Mercury-Free Dentistry?
+        </h2>
+        <p class="text-body-large text-white/90 mb-8 max-w-2xl mx-auto">
+          Take the first step toward safer, biocompatible dental care. Schedule your consultation
+          to discuss mercury amalgam removal and healthier alternatives.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <Button href="/contact" variant="primary" size="lg">
+            Schedule Consultation
+          </Button>
+          <Button href="tel:214-368-0900" variant="secondary" size="lg">
+            Call (214) 368-0900
+          </Button>
+        </div>
+      </BlurFade>
+    </section>
+  </div>
+
+  <!-- Sidebar Content -->
+  <div slot="sidebar">
+    <!-- Quick Facts Card -->
+    <Card variant="bordered" class="p-6 mb-6">
+      <h3 class="text-card-header mb-4" style="color: #006786;">
+        Mercury-Free Since 1990
+      </h3>
+      <ul class="space-y-3 text-body-small text-gray-medium">
+        <li class="flex items-start">
+          <svg class="w-5 h-5 mr-2 mt-0.5 flex-shrink-0" style="color: #a6b443;" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+          </svg>
+          SMART certified practitioners
+        </li>
+        <li class="flex items-start">
+          <svg class="w-5 h-5 mr-2 mt-0.5 flex-shrink-0" style="color: #a6b443;" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+          </svg>
+          IAOMT member practice
+        </li>
+        <li class="flex items-start">
+          <svg class="w-5 h-5 mr-2 mt-0.5 flex-shrink-0" style="color: #a6b443;" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+          </svg>
+          EPA-compliant disposal
+        </li>
+        <li class="flex items-start">
+          <svg class="w-5 h-5 mr-2 mt-0.5 flex-shrink-0" style="color: #a6b443;" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+          </svg>
+          Air filtration systems
+        </li>
+        <li class="flex items-start">
+          <svg class="w-5 h-5 mr-2 mt-0.5 flex-shrink-0" style="color: #a6b443;" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+          </svg>
+          Detox support protocols
+        </li>
+      </ul>
+    </Card>
+
+    <!-- Related Services -->
+    <Card variant="bordered" class="p-6 mb-6">
+      <h3 class="text-card-header mb-4" style="color: #006786;">
+        Related Services
+      </h3>
+      <div class="space-y-3">
+        <a href="/services/ceramic-implants" class="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+          <h4 class="font-semibold text-gray-dark mb-1">Ceramic Implants</h4>
+          <p class="text-body-small text-gray-medium">Metal-free tooth replacement</p>
+        </a>
+        <a href="/services/ozone-therapy" class="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+          <h4 class="font-semibold text-gray-dark mb-1">Ozone Therapy</h4>
+          <p class="text-body-small text-gray-medium">Natural infection control</p>
+        </a>
+        <a href="/services/bonding" class="block p-3 rounded-lg hover:bg-gray-50 transition-colors">
+          <h4 class="font-semibold text-gray-dark mb-1">Fluoride-Free Bonding</h4>
+          <p class="text-body-small text-gray-medium">Safe cosmetic solutions</p>
+        </a>
+      </div>
+    </Card>
+
+    <!-- Contact Card -->
+    <Card variant="gradient" class="p-6">
+      <h3 class="text-card-header text-white mb-4">
+        Schedule Your Consultation
+      </h3>
+      <p class="text-body-small text-white/90 mb-4">
+        Learn about safe amalgam removal and biocompatible alternatives.
+      </p>
+      <Button href="/contact" variant="secondary" size="md" class="w-full">
+        Book Appointment
+      </Button>
+    </Card>
+  </div>
+</ServicePageLayout>

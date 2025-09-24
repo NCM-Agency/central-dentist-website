@@ -1,0 +1,155 @@
+---
+// Dr. Sahil Sawnani - Central Dentist
+import TeamMemberTemplate from '../../layouts/TeamMemberTemplate.astro';
+import Card from '../../components/ui/Card.astro';
+import Button from '../../components/ui/Button.astro';
+import BlurFade from '../../components/ui/BlurFade.astro';
+---
+
+<TeamMemberTemplate
+  title="Dr. Sahil Sawnani | Holistic Dentist | Central Dentist Dallas"
+  description="Meet Dr. Sahil Sawnani, DDS, IAOMT, AAID - Associate doctor specializing in holistic dentistry and biocompatible dental implants in Dallas, TX."
+  memberName="Dr. Sahil Sawnani"
+  credentials="DDS, IAOMT, AAID"
+  role="Associate Holistic Dentist"
+  imageUrl="/images/team/dr-sawnani.jpg"
+>
+  
+  <div slot="biography" class="bio-content">
+    <h3>About Dr. Sawnani</h3>
+    <p>
+      Dr. Sahil Sawnani is a dedicated holistic dentist who brings expertise in biological dentistry and advanced implant techniques to Central Dentist. His commitment to using biocompatible materials and minimally invasive procedures ensures that patients receive care that supports their overall health and well-being.
+    </p>
+    <p>
+      As a member of the International Academy of Oral Medicine and Toxicology (IAOMT) and the American Academy of Implant Dentistry (AAID), Dr. Sawnani stays at the forefront of biological dentistry and implant innovations. He specializes in ceramic implants and other metal-free restorative options that provide both aesthetic and health benefits.
+    </p>
+    <p>
+      Dr. Sawnani's approach to dentistry focuses on prevention and conservative treatment, always considering the impact of dental procedures on the patient's systemic health. His gentle chairside manner and thorough explanations help patients feel comfortable and informed about their treatment options.
+    </p>
+  </div>
+
+  <div slot="education" class="member-section bg-gray-50 rounded-xl p-6 mt-8">
+    <h3 class="font-heading text-h4 font-semibold text-gray-dark mb-6">Education & Training</h3>
+    <ul class="space-y-3 text-gray-medium">
+      <li class="flex items-start">
+        <span class="text-green-500 mr-2">•</span>
+        <span>Doctor of Dental Surgery (DDS) - University of Texas Health Science Center at Houston</span>
+      </li>
+      <li class="flex items-start">
+        <span class="text-green-500 mr-2">•</span>
+        <span>Advanced Training in Biological Dentistry - IAOMT</span>
+      </li>
+      <li class="flex items-start">
+        <span class="text-green-500 mr-2">•</span>
+        <span>Implant Dentistry Certification - American Academy of Implant Dentistry</span>
+      </li>
+      <li class="flex items-start">
+        <span class="text-green-500 mr-2">•</span>
+        <span>Ceramic Implant Training - International Congress of Oral Implantologists</span>
+      </li>
+      <li class="flex items-start">
+        <span class="text-green-500 mr-2">•</span>
+        <span>SMART Certification for Safe Mercury Amalgam Removal</span>
+      </li>
+    </ul>
+  </div>
+
+  <div slot="specialties" class="member-section mt-8">
+    <h3 class="font-heading text-h4 font-semibold text-gray-dark mb-6">Areas of Expertise</h3>
+    <div class="services-grid">
+      <div class="bg-white p-4 rounded-lg border border-gray-200 hover:shadow-md transition-shadow">
+        <h4 class="font-semibold mb-2" style="color: #0099ba;">Ceramic Implants</h4>
+        <p class="text-sm text-gray-600">Metal-free, biocompatible tooth replacement</p>
+      </div>
+      <div class="bg-white p-4 rounded-lg border border-gray-200 hover:shadow-md transition-shadow">
+        <h4 class="font-semibold mb-2" style="color: #0099ba;">Biological Dentistry</h4>
+        <p class="text-sm text-gray-600">Holistic approach with biocompatible materials</p>
+      </div>
+      <div class="bg-white p-4 rounded-lg border border-gray-200 hover:shadow-md transition-shadow">
+        <h4 class="font-semibold mb-2" style="color: #0099ba;">PRF Therapy</h4>
+        <p class="text-sm text-gray-600">Natural healing with platelet-rich fibrin</p>
+      </div>
+      <div class="bg-white p-4 rounded-lg border border-gray-200 hover:shadow-md transition-shadow">
+        <h4 class="font-semibold mb-2" style="color: #0099ba;">Mercury-Free Restorations</h4>
+        <p class="text-sm text-gray-600">Composite and ceramic alternatives</p>
+      </div>
+      <div class="bg-white p-4 rounded-lg border border-gray-200 hover:shadow-md transition-shadow">
+        <h4 class="font-semibold mb-2" style="color: #0099ba;">3D Imaging & Planning</h4>
+        <p class="text-sm text-gray-600">CBCT technology for precise treatment</p>
+      </div>
+      <div class="bg-white p-4 rounded-lg border border-gray-200 hover:shadow-md transition-shadow">
+        <h4 class="font-semibold mb-2" style="color: #0099ba;">Minimally Invasive Dentistry</h4>
+        <p class="text-sm text-gray-600">Conservative treatment approaches</p>
+      </div>
+    </div>
+  </div>
+
+  <div slot="philosophy" class="member-section bg-gradient-to-r from-teal-50 to-green-50 rounded-xl p-8 mt-8">
+    <h3 class="font-heading text-h4 font-semibold text-gray-dark mb-4">Treatment Philosophy</h3>
+    <blockquote class="italic text-lg text-gray-700 border-l-4 border-green-500 pl-6">
+      "Modern dentistry should work in harmony with the body's natural healing processes. By choosing biocompatible materials and minimally invasive techniques, we can achieve excellent dental outcomes while supporting our patients' overall health and immune system."
+    </blockquote>
+    <p class="mt-4 text-right font-semibold" style="color: #0099ba;">- Dr. Sahil Sawnani</p>
+  </div>
+
+  <section slot="certifications" class="section-padding bg-gray-light">
+    <div class="container mx-auto container-padding">
+      <div class="max-w-4xl mx-auto text-center">
+        <h3 class="font-heading text-h3 font-semibold text-gray-dark mb-8">Professional Affiliations</h3>
+        <div class="flex flex-wrap justify-center gap-2">
+          <span class="certification-badge">IAOMT Member</span>
+          <span class="certification-badge">AAID Member</span>
+          <span class="certification-badge">ICOI Member</span>
+          <span class="certification-badge">ADA Member</span>
+          <span class="certification-badge">Texas Dental Association</span>
+          <span class="certification-badge">Dallas County Dental Society</span>
+          <span class="certification-badge">Academy of General Dentistry</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section slot="cta" class="py-16 md:py-20" style="background: linear-gradient(to bottom right, #0099ba, #006786);">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="max-w-3xl mx-auto text-center">
+        <BlurFade delay={100} client:load>
+          <h2 class="text-4xl md:text-5xl font-normal text-white mb-4"
+              style="font-family: 'Playfair Display', serif;">
+            Schedule a Consultation with Dr. Sawnani
+          </h2>
+        </BlurFade>
+
+        <BlurFade delay={200} client:load>
+          <p class="text-lg text-white/90 mb-8" style="font-family: 'Geist', sans-serif;">
+            Experience advanced holistic dentistry with a focus on biocompatible materials and minimally invasive techniques for optimal health
+          </p>
+        </BlurFade>
+
+        <BlurFade delay={300} client:load>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/appointment"
+              class="px-8 py-3 bg-gradient-to-r from-[#a6b443] to-[#c7cd85] text-white rounded-full font-semibold transition-all duration-300 hover:from-[#8fa339] hover:to-[#a6b443] hover:shadow-lg inline-flex items-center justify-center"
+              style="font-family: 'Playfair Display', serif;"
+            >
+              Book Appointment
+            </a>
+            <a
+              href="tel:214-368-0900"
+              class="px-8 py-3 bg-white border-2 rounded-full font-semibold transition-all duration-300 hover:shadow-lg inline-flex items-center justify-center"
+              style="font-family: 'Playfair Display', serif; color: #0099ba; border-color: white;"
+              onmouseover="this.style.backgroundColor='#006786'; this.style.color='white'; this.style.borderColor='#006786';"
+              onmouseout="this.style.backgroundColor='white'; this.style.color='#0099ba'; this.style.borderColor='white';"
+            >
+              <svg class="mr-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+              Call Now: (214) 368-0900
+            </a>
+          </div>
+        </BlurFade>
+      </div>
+    </div>
+  </section>
+
+</TeamMemberTemplate>

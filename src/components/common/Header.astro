@@ -1,0 +1,14 @@
+---
+// Header.astro - Site header with navigation
+import Navigation from './Navigation.astro';
+
+export interface Props {
+  currentPath?: string;
+}
+
+const { currentPath } = Astro.props;
+---
+
+<header class="w-full" data-gjs-type="header">
+  <Navigation currentPath={currentPath} />
+</header>

@@ -1,0 +1,21 @@
+# robots.txt for Central Dentist
+# Holistic Family Dentistry in Dallas, TX
+
+User-agent: *
+Allow: /
+
+# Allow access to all pages and resources
+Allow: /images/
+Allow: /favicon.ico
+Allow: /favicon.svg
+
+# Disallow test pages and admin areas
+Disallow: /test
+Disallow: /admin/
+Disallow: /_astro/
+
+# Sitemap location
+Sitemap: https://www.centraldentist.com/sitemap.xml
+
+# Crawl delay (optional - 1 second delay)
+Crawl-delay: 1

@@ -1,0 +1,121 @@
+{
+  "hero": {
+    "mainTitle": "Holistic Family Dentistry",
+    "tagline1": "Preventive & Biocompatible Oral Health Therapy",
+    "tagline2": "Addressing the Root Causes of Disease",
+    "boldSubhead": "Radical Generosity",
+    "description": "Exceptional care. Innovative education. Whole body wellness—delivered with radical generosity and heartfelt compassion.",
+    "backgroundImage": "/images/hero/hero-main.jpg",
+    "primaryCTA": {
+      "text": "Schedule Your Visit",
+      "href": "/contact"
+    },
+    "secondaryCTA": {
+      "text": "Learn Our Philosophy", 
+      "href": "/philosophy"
+    }
+  },
+  "aboutPreview": {
+    "title": "Why Holistic Family Dentistry & Biocompatible Oral Health?",
+    "subtitle": "It can help with",
+    "benefits": [
+      {
+        "title": "Disease Prevention",
+        "description": "Education & early intervention/preventive therapy programs rooted in optimal nutrition, hygiene, oral habits, & supplementation",
+        "icon": "shield"
+      },
+      {
+        "title": "Sleep & Fatigue", 
+        "description": "Proper airway development & management with optimal mandibular positioning & TMJ function",
+        "icon": "moon"
+      },
+      {
+        "title": "Detoxification",
+        "description": "Removal of mercury amalgam & other heavy metals. Ozone & charcoal therapy",
+        "icon": "leaf"
+      },
+      {
+        "title": "Chronic Inflammatory Symptoms",
+        "description": "Treatment based on root cause of symptoms. Active collaboration amongst your health & wellness providers.",
+        "icon": "heart"
+      },
+      {
+        "title": "Chronic Pain",
+        "description": "Orthopedic, orthodontic, & myofunctional approach to treating most common head & neck sources of pain",
+        "icon": "zap"
+      },
+      {
+        "title": "Biocompatible",
+        "description": "Minimize or eliminate overall burden on systemic health via use of biological products",
+        "icon": "check"
+      }
+    ]
+  },
+  "doctors": {
+    "title": "Meet Our Doctors",
+    "doctors": [
+      {
+        "name": "Jill Rosellini Ombrello, DDS, AIAOMT, AIABDM, IFMCP",
+        "title": "Holistic Family Dentist, Certified Functional Medicine Practitioner, Special Needs Patient Advocate",
+        "image": "/images/team/dr-jill-ombrello-actual.jpg",
+        "href": "/dr-jill-ombrello"
+      },
+      {
+        "name": "Melanie Galles, RDH", 
+        "title": "Biological Hygienist",
+        "image": "/images/team/melanie-galles-actual.jpg",
+        "href": "/melanie-galles-rdh"
+      },
+      {
+        "name": "Sahil Sawnani, DDS, IAOMT, AAID",
+        "title": "Associate Doctor",
+        "image": "/images/team/dr-sahil-sawnani-actual.jpg", 
+        "href": "/dr-sahil-sawnani"
+      }
+    ]
+  },
+  "testimonials": [
+    {
+      "content": "Absolutely loved everything about my experience here. The staff is so kind, so knowledgeable, and they found a health issue (UARS) that had been overlooked by all the healthcare practitioners I've seen in the past. Can't recommend them enough!",
+      "author": "Taylor S.",
+      "rating": 5,
+      "verified": true
+    }
+  ],
+  "cta": {
+    "title": "Your Health Starts Here",
+    "subtitle": "Contact us today!",
+    "description": "Experience holistic family dentistry that addresses the root causes of dental issues with biocompatible, mercury-free treatments.",
+    "primaryCTA": {
+      "text": "Call (214) 368-0900",
+      "href": "tel:214-368-0900"
+    },
+    "secondaryCTA": {
+      "text": "Schedule Online",
+      "href": "/contact"
+    }
+  },
+  "approach": {
+    "title": "How We Optimize for Your Comprehensive Care...",
+    "approaches": [
+      {
+        "title": "Advanced Diagnostics",
+        "description": "Identifying the root causes of oral & systemic health issues",
+        "image": "/images/approach/diagnostics.jpg",
+        "href": "/advanced-diagnostics"
+      },
+      {
+        "title": "Preventive & Biological Solutions", 
+        "description": "Research-supported, advanced therapies",
+        "image": "/images/approach/biological.jpg",
+        "href": "/philosophy"
+      },
+      {
+        "title": "Collaboration within Our Community",
+        "description": "Working with other healthcare providers to optimize care",
+        "image": "/images/approach/collaboration.jpg",
+        "href": "/our-philosophy"
+      }
+    ]
+  }
+}

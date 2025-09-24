@@ -1,0 +1,293 @@
+---
+// Blog Post Template - Central Dentist
+// For educational articles and blog posts
+
+import Layout from './Layout.astro';
+import PageHero from '../components/shared/PageHero.astro';
+import Button from '../components/ui/Button.astro';
+import Card from '../components/ui/Card.astro';
+import BlurFade from '../components/ui/BlurFade.astro';
+
+export interface Props {
+  title: string;
+  description: string;
+  postTitle: string;
+  author?: string;
+  authorRole?: string;
+  publishDate?: string;
+  category?: string;
+  readTime?: string;
+  heroImage?: string;
+  breadcrumbs?: Array<{label: string; href: string;}>;
+  schemaType?: string;
+}
+
+const {
+  title,
+  description,
+  postTitle,
+  author = 'Central Dentist Team',
+  authorRole = 'Holistic Dental Practice',
+  publishDate,
+  category = 'Dental Health',
+  readTime,
+  heroImage,
+  breadcrumbs = [
+    { label: 'Blog', href: '/blog' },
+    { label: postTitle, href: '#' }
+  ],
+  schemaType = 'BlogPosting'
+} = Astro.props;
+
+// Format the date if provided
+const formattedDate = publishDate ? new Date(publishDate).toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric'
+}) : '';
+---
+
+<Layout title={title} description={description} schemaType={schemaType}>
+  
+  <!-- Hero Section -->
+  <PageHero
+    title={postTitle}
+    variant="minimal"
+    breadcrumbs={breadcrumbs}
+  />
+
+  <!-- Article Container -->
+  <article class="section-padding bg-white">
+    <div class="container mx-auto container-padding">
+      <div class="max-w-4xl mx-auto">
+        
+        <!-- Article Meta -->
+        <div class="flex flex-wrap items-center gap-4 mb-8 text-sm text-gray-600">
+          {author && (
+            <div class="flex items-center gap-2">
+              <div class="w-10 h-10 rounded-full bg-gradient-to-br from-[#0099ba] to-[#006786] flex items-center justify-center text-white font-bold">
+                {author.split(' ').map(n => n[0]).join('')}
+              </div>
+              <div>
+                <div class="font-semibold text-gray-800">{author}</div>
+                {authorRole && <div class="text-xs text-gray-500">{authorRole}</div>}
+              </div>
+            </div>
+          )}
+          
+          {publishDate && (
+            <>
+              <span class="text-gray-400">•</span>
+              <time datetime={publishDate} class="text-gray-600">
+                {formattedDate}
+              </time>
+            </>
+          )}
+          
+          {readTime && (
+            <>
+              <span class="text-gray-400">•</span>
+              <span class="text-gray-600">{readTime} read</span>
+            </>
+          )}
+          
+          {category && (
+            <>
+              <span class="text-gray-400">•</span>
+              <span class="inline-block px-3 py-1 bg-green-100 text-green-800 rounded-full text-xs font-medium">
+                {category}
+              </span>
+            </>
+          )}
+        </div>
+
+        <!-- Hero Image (if provided) -->
+        {heroImage && (
+          <div class="mb-12 rounded-2xl overflow-hidden shadow-lg">
+            <img 
+              src={heroImage} 
+              alt={postTitle}
+              class="w-full h-auto"
+              loading="lazy"
+            />
+          </div>
+        )}
+
+        <!-- Article Content -->
+        <div class="blog-content">
+          <slot />
+        </div>
+
+        <!-- Author Bio (optional slot) -->
+        <slot name="author-bio" />
+
+        <!-- Related Articles (optional slot) -->
+        <slot name="related-articles" />
+
+        <!-- CTA Section -->
+        <div class="mt-12 p-8 bg-gradient-to-br from-green-50 to-teal-50 rounded-2xl text-center">
+          <h3 class="font-heading text-h3 font-semibold text-gray-dark mb-4">
+            Ready to Experience Holistic Dental Care?
+          </h3>
+          <p class="text-gray-600 mb-6 max-w-2xl mx-auto">
+            Schedule a consultation with our team to learn more about how biological dentistry can benefit your overall health.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button variant="primary" size="md" href="/contact">
+              Schedule Consultation
+            </Button>
+            <Button variant="outline" size="md" href="/services">
+              Explore Our Services
+            </Button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </article>
+
+  <!-- Share Section -->
+  <section class="py-8 border-t border-gray-200">
+    <div class="container mx-auto container-padding">
+      <div class="max-w-4xl mx-auto flex items-center justify-between">
+        <span class="text-gray-600 font-semibold">Share this article:</span>
+        <div class="flex gap-4">
+          <button 
+            class="text-gray-500 hover:text-[#0099ba] transition-colors"
+            onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(window.location.href), '_blank')"
+            aria-label="Share on Facebook"
+          >
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+          </button>
+          <button 
+            class="text-gray-500 hover:text-[#0099ba] transition-colors"
+            onclick="window.open('https://twitter.com/intent/tweet?url=' + encodeURIComponent(window.location.href) + '&text=' + encodeURIComponent(document.title), '_blank')"
+            aria-label="Share on Twitter"
+          >
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+            </svg>
+          </button>
+          <button 
+            class="text-gray-500 hover:text-[#0099ba] transition-colors"
+            onclick="window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(window.location.href), '_blank')"
+            aria-label="Share on LinkedIn"
+          >
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  :global(.blog-content) {
+    font-size: 1.125rem;
+    line-height: 1.75;
+    color: #374151;
+  }
+
+  :global(.blog-content h2) {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+  }
+
+  :global(.blog-content h3) {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #374151;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  :global(.blog-content h4) {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #4b5563;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+  }
+
+  :global(.blog-content p) {
+    margin-bottom: 1.5rem;
+  }
+
+  :global(.blog-content ul),
+  :global(.blog-content ol) {
+    margin-bottom: 1.5rem;
+    margin-left: 2rem;
+  }
+
+  :global(.blog-content li) {
+    margin-bottom: 0.5rem;
+  }
+
+  :global(.blog-content blockquote) {
+    border-left: 4px solid #a6b443;
+    padding-left: 1.5rem;
+    margin: 2rem 0;
+    font-style: italic;
+    color: #4b5563;
+  }
+
+  :global(.blog-content a) {
+    color: #0099ba;
+    text-decoration: underline;
+    transition: color 300ms;
+  }
+
+  :global(.blog-content a:hover) {
+    color: #006786;
+  }
+
+  :global(.blog-content img) {
+    border-radius: 1rem;
+    margin: 2rem 0;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  }
+
+  :global(.blog-content .highlight) {
+    background: linear-gradient(to right, rgba(166, 180, 67, 0.2), rgba(199, 205, 133, 0.2));
+    padding: 0.125rem 0.25rem;
+    border-radius: 0.25rem;
+  }
+
+  :global(.blog-content .callout) {
+    background: linear-gradient(to right, #f0fdf4, #ecfdf5);
+    border-left: 4px solid #a6b443;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    border-radius: 0.5rem;
+  }
+
+  :global(.blog-content table) {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+  }
+
+  :global(.blog-content th) {
+    background: #f3f4f6;
+    padding: 0.75rem;
+    text-align: left;
+    font-weight: 600;
+    border-bottom: 2px solid #d1d5db;
+  }
+
+  :global(.blog-content td) {
+    padding: 0.75rem;
+    border-bottom: 1px solid #e5e7eb;
+  }
+</style>

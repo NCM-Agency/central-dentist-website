@@ -1,0 +1,214 @@
+---
+// BioPageLayout.astro - Template for staff bio pages
+import Layout from './Layout.astro';
+import PageHero from '../components/shared/PageHero.astro';
+
+export interface Props {
+  name: string;
+  title: string;
+  credentials?: string;
+  image: string;
+  specialties?: string[];
+  education?: Array<{
+    degree: string;
+    school: string;
+    year?: string;
+  }>;
+  memberships?: string[];
+}
+
+const { 
+  name, 
+  title, 
+  credentials, 
+  image, 
+  specialties = [], 
+  education = [], 
+  memberships = [] 
+} = Astro.props;
+---
+
+<Layout title={`${name} | Central Dentist`} description={`Meet ${name}, ${title} at Central Dentist`}>
+  <!-- Hero Section -->
+  <PageHero
+    title={name}
+    subtitle={title}
+    variant="compact"
+    breadcrumbs={[
+      { label: 'About', href: '/about' },
+      { label: 'Our Team', href: '/about#team' },
+      { label: name, href: '#' }
+    ]}
+  />
+
+  <!-- Main Content -->
+  <section class="py-16 md:py-20 lg:py-24">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        
+        <!-- Sidebar with Photo and Quick Info -->
+        <div class="lg:col-span-1">
+          <div class="sticky top-24 space-y-6">
+            <!-- Photo -->
+            <div class="rounded-xl overflow-hidden shadow-lg">
+              <img 
+                src={image} 
+                alt={name}
+                class="w-full h-auto"
+              />
+            </div>
+
+            <!-- Credentials -->
+            {credentials && (
+              <div class="bg-white rounded-xl p-6 shadow-sm">
+                <h3 class="text-lg font-semibold text-teal-dark mb-2"
+                    style="font-family: 'Playfair Display', serif;">
+                  Credentials
+                </h3>
+                <p class="text-gray-dark">{credentials}</p>
+              </div>
+            )}
+
+            <!-- Specialties -->
+            {specialties.length > 0 && (
+              <div class="bg-gray-light rounded-xl p-6">
+                <h3 class="text-lg font-semibold text-teal-dark mb-3"
+                    style="font-family: 'Playfair Display', serif;">
+                  Areas of Focus
+                </h3>
+                <ul class="space-y-2">
+                  {specialties.map((specialty) => (
+                    <li class="flex items-start space-x-2">
+                      <svg class="w-5 h-5 text-green-olive mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                      </svg>
+                      <span class="text-sm text-gray-dark">{specialty}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            <!-- Contact CTA -->
+            <div class="bg-gradient-to-br from-teal to-teal-light rounded-xl p-6 text-white">
+              <h3 class="text-lg font-semibold mb-3"
+                  style="font-family: 'Playfair Display', serif;">
+                Schedule with {name.split(' ')[0]}
+              </h3>
+              <p class="mb-4 text-white/90 text-sm">
+                Ready to experience our holistic approach to dental care?
+              </p>
+              <a 
+                href="/contact" 
+                class="block w-full text-center px-6 py-3 bg-white text-teal rounded-full font-semibold hover:bg-gray-light transition-colors text-sm"
+              >
+                Book Appointment
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Main Bio Content -->
+        <div class="lg:col-span-2 space-y-8">
+          <!-- About Section -->
+          <div>
+            <h2 class="text-3xl md:text-4xl font-normal text-teal-dark mb-6"
+                style="font-family: 'Playfair Display', serif;">
+              About {name.split(' ')[0]}
+            </h2>
+            <div class="prose prose-lg max-w-none text-gray-dark">
+              <slot name="bio" />
+            </div>
+          </div>
+
+          <!-- Philosophy -->
+          <div>
+            <h2 class="text-3xl md:text-4xl font-normal text-teal-dark mb-6"
+                style="font-family: 'Playfair Display', serif;">
+              Treatment Philosophy
+            </h2>
+            <div class="prose prose-lg max-w-none text-gray-dark">
+              <slot name="philosophy" />
+            </div>
+          </div>
+
+          <!-- Education -->
+          {education.length > 0 && (
+            <div>
+              <h2 class="text-3xl md:text-4xl font-normal text-teal-dark mb-6"
+                  style="font-family: 'Playfair Display', serif;">
+                Education & Training
+              </h2>
+              <div class="space-y-4">
+                {education.map((edu) => (
+                  <div class="flex items-start space-x-4 bg-white rounded-lg p-4">
+                    <div class="flex-shrink-0">
+                      <div class="w-10 h-10 bg-gradient-to-br from-green-olive to-green-lime rounded-full flex items-center justify-center">
+                        <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                          <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z" />
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="flex-1">
+                      <h4 class="font-semibold text-gray-dark">{edu.degree}</h4>
+                      <p class="text-gray-medium">{edu.school}</p>
+                      {edu.year && (
+                        <p class="text-sm text-gray-medium mt-1">Class of {edu.year}</p>
+                      )}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          <!-- Professional Memberships -->
+          {memberships.length > 0 && (
+            <div>
+              <h2 class="text-3xl md:text-4xl font-normal text-teal-dark mb-6"
+                  style="font-family: 'Playfair Display', serif;">
+                Professional Memberships
+              </h2>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                {memberships.map((membership) => (
+                  <div class="flex items-center space-x-3 bg-white rounded-lg p-3">
+                    <svg class="w-5 h-5 text-teal flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                    </svg>
+                    <span class="text-sm text-gray-dark">{membership}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          <!-- Additional Content Slots -->
+          <slot name="additional" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Meet the Team CTA -->
+  <section class="py-16 bg-gray-light">
+    <div class="container mx-auto px-4 md:px-6 text-center">
+      <h2 class="text-3xl md:text-4xl font-normal text-teal-dark mb-4"
+          style="font-family: 'Playfair Display', serif;">
+        Meet Our Entire Team
+      </h2>
+      <p class="text-lg text-gray-dark mb-8 max-w-2xl mx-auto">
+        Our dedicated professionals work together to provide comprehensive holistic dental care.
+      </p>
+      <a 
+        href="/about#team" 
+        class="inline-flex items-center space-x-2 px-8 py-3 bg-gradient-to-r from-[#a6b443] to-[#c7cd85] text-white rounded-full font-semibold hover:from-[#8fa339] hover:to-[#a6b443] hover:shadow-lg hover:scale-105 transition-all duration-300"
+        style="font-family: 'Playfair Display', serif;"
+      >
+        <span>View All Team Members</span>
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+      </a>
+    </div>
+  </section>
+</Layout>

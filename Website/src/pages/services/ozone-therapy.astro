@@ -1,0 +1,133 @@
+---
+// Ozone Therapy Service Page - Central Dentist (Simplified)
+import Layout from '../../layouts/Layout.astro';
+import Card from '../../components/ui/Card.astro';
+import Button from '../../components/ui/Button.astro';
+---
+
+<Layout 
+  title="Ozone Therapy | Natural Dental Treatment | Central Dentist Dallas"
+  description="Ozone therapy for natural dental treatment and healing. Safe, effective antimicrobial treatment at Central Dentist Dallas."
+  schemaType="MedicalBusiness"
+>
+  
+  <!-- Hero Section -->
+  <section class="section-padding bg-gradient-to-br from-teal-dark to-olive text-white">
+    <div class="container mx-auto container-padding">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="font-heading text-h1 font-bold mb-6">
+          Ozone Therapy
+        </h1>
+        <p class="font-body text-xl mb-8 opacity-90">
+          Natural antimicrobial treatment for enhanced healing and infection control
+        </p>
+        <Button variant="secondary" size="lg" href="tel:214-368-0900">
+          Learn More About Ozone
+        </Button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content Section -->
+  <section class="section-padding bg-white">
+    <div class="container mx-auto container-padding">
+      <div class="max-w-3xl mx-auto">
+        
+        <div class="prose prose-lg max-w-none mb-8">
+          <p class="font-body text-lg text-gray-medium leading-relaxed mb-6">
+            Ozone therapy is a natural, non-toxic treatment that harnesses the power of medical-grade ozone 
+            to eliminate harmful bacteria, viruses, and fungi in the mouth. This advanced therapy works by 
+            delivering highly concentrated oxygen to infected areas, creating an environment where harmful 
+            microorganisms cannot survive while promoting natural healing processes.
+          </p>
+          
+          <p class="font-body text-lg text-gray-medium leading-relaxed">
+            We use ozone therapy as an adjunct treatment for periodontal disease, cavity treatment, and 
+            post-surgical healing. The treatment is completely painless and provides a natural alternative 
+            to antibiotics, making it an ideal choice for patients seeking holistic dental care without 
+            harmful side effects.
+          </p>
+        </div>
+
+        <!-- How It Works & Benefits -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+          <Card variant="bordered" class="p-6">
+            <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-teal to-teal-dark rounded-full flex items-center justify-center">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+              </svg>
+            </div>
+            <h3 class="font-heading text-h4 font-semibold text-gray-dark mb-4 text-center">
+              How It Works
+            </h3>
+            <ul class="font-body text-gray-medium space-y-2">
+              <li>• Medical-grade ozone is applied to treatment area</li>
+              <li>• Oxygen molecules eliminate harmful bacteria</li>
+              <li>• Promotes natural healing and tissue regeneration</li>
+              <li>• Completely painless and non-invasive</li>
+            </ul>
+          </Card>
+          
+          <Card variant="bordered" class="p-6">
+            <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-olive to-lime-light rounded-full flex items-center justify-center">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <h3 class="font-heading text-h4 font-semibold text-gray-dark mb-4 text-center">
+              Key Benefits
+            </h3>
+            <ul class="font-body text-gray-medium space-y-2">
+              <li>• Natural antimicrobial action</li>
+              <li>• No harmful side effects</li>
+              <li>• Accelerates healing processes</li>
+              <li>• Alternative to antibiotics</li>
+            </ul>
+          </Card>
+        </div>
+
+        <!-- Treatment Uses -->
+        <Card variant="hover" class="p-8 text-center">
+          <h3 class="font-heading text-h3 font-semibold text-gray-dark mb-6">
+            Treatment Applications
+          </h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="p-4">
+              <h4 class="font-heading font-semibold text-gray-dark mb-2">Gum Disease</h4>
+              <p class="font-body text-sm text-gray-medium">Eliminates bacteria in periodontal pockets</p>
+            </div>
+            <div class="p-4">
+              <h4 class="font-heading font-semibold text-gray-dark mb-2">Cavity Treatment</h4>
+              <p class="font-body text-sm text-gray-medium">Sterilizes decay before restoration</p>
+            </div>
+            <div class="p-4">
+              <h4 class="font-heading font-semibold text-gray-dark mb-2">Post-Surgery</h4>
+              <p class="font-body text-sm text-gray-medium">Promotes faster, cleaner healing</p>
+            </div>
+          </div>
+        </Card>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section-padding bg-gradient-to-br from-olive to-teal text-white">
+    <div class="container mx-auto container-padding text-center">
+      <h2 class="font-heading text-h2 font-bold mb-4">
+        Experience Natural Healing with Ozone
+      </h2>
+      <p class="font-body text-lg mb-8 opacity-90">
+        Discover the benefits of this safe, natural antimicrobial treatment
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <Button variant="secondary" size="lg" href="tel:214-368-0900">
+          Call for More Information
+        </Button>
+        <Button variant="outline" size="lg" href="/contact">
+          Schedule Consultation
+        </Button>
+      </div>
+    </div>
+  </section>
+
+</Layout>

@@ -1,0 +1,106 @@
+---
+// PageHero.astro - Consistent hero section for all pages
+export interface Props {
+  title: string;
+  subtitle?: string;
+  backgroundImage?: string;
+  backgroundVideo?: string;
+  variant?: 'default' | 'standard' | 'compact' | 'service' | 'minimal' | 'gradient';
+  breadcrumbs?: Array<{
+    label: string;
+    href: string;
+  }>;
+  // Deprecated props (kept for backward compatibility)
+  showButtons?: boolean; // No longer used, kept to prevent errors
+}
+
+const {
+  title,
+  subtitle,
+  backgroundImage,
+  backgroundVideo,
+  variant = 'standard',
+  breadcrumbs = [],
+  showButtons // Ignored but accepted
+} = Astro.props;
+
+// Map variants for backward compatibility and simplification
+const variantMap = {
+  'default': 'standard',    // Alias for standard
+  'standard': 'standard',   // Main variant for most pages (350px/450px)
+  'compact': 'compact',     // For bios, blog posts (250px/300px)
+  'service': 'standard',    // Service pages use standard
+  'minimal': 'compact',     // Blog posts use compact
+  'gradient': 'standard'    // Blog index uses standard
+};
+
+const mappedVariant = variantMap[variant] || 'standard';
+
+const heightClasses = {
+  standard: 'min-h-[350px] md:min-h-[450px]',
+  compact: 'min-h-[250px] md:min-h-[300px]'
+};
+---
+
+<section
+  class={`relative ${heightClasses[mappedVariant]} flex items-center overflow-hidden`}
+  style={backgroundImage ? `background-image: url('${backgroundImage}');` : ''}
+>
+  {backgroundVideo && (
+    <video
+      autoplay
+      loop
+      muted
+      playsinline
+      class="absolute inset-0 w-full h-full object-cover"
+    >
+      <source src={backgroundVideo} type="video/mp4" />
+    </video>
+  )}
+
+  <!-- Overlay -->
+  <div class="absolute inset-0 bg-gradient-to-br from-teal-dark/90 via-teal/80 to-teal-light/70" style="background: linear-gradient(to bottom right, rgba(0, 103, 134, 0.9), rgba(0, 153, 186, 0.8), rgba(77, 208, 225, 0.7));"></div>
+
+  <!-- Content -->
+  <div class="relative z-10 container mx-auto px-4 md:px-6">
+    <!-- Breadcrumbs -->
+    {breadcrumbs.length > 0 && (
+      <nav class="mb-6">
+        <ol class="flex items-center space-x-2 text-sm text-white/80">
+          <li>
+            <a href="/" class="hover:text-white transition-colors">Home</a>
+          </li>
+          {breadcrumbs.map((crumb, index) => (
+            <>
+              <li class="text-white/60">/</li>
+              <li>
+                {index === breadcrumbs.length - 1 ? (
+                  <span class="text-white">{crumb.label}</span>
+                ) : (
+                  <a href={crumb.href} class="hover:text-white transition-colors">
+                    {crumb.label}
+                  </a>
+                )}
+              </li>
+            </>
+          ))}
+        </ol>
+      </nav>
+    )}
+
+    <!-- Title & Subtitle - LEFT ALIGNED -->
+    <div class="max-w-4xl">
+      <h1
+        class="text-4xl md:text-5xl lg:text-6xl font-normal text-white mb-4"
+        style="font-family: 'Playfair Display', serif;"
+      >
+        {title}
+      </h1>
+      {subtitle && (
+        <p class="text-lg md:text-xl text-white/90 font-light">
+          {subtitle}
+        </p>
+      )}
+    </div>
+  </div>
+</section>

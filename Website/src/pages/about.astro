@@ -1,0 +1,359 @@
+---
+// About/Our Office Page - Central Dentist
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/ui/Card.astro';
+import Button from '../components/ui/Button.astro';
+---
+
+<Layout 
+  title="About Us | Our Holistic Dental Office | Central Dentist Dallas"
+  description="Welcome to our holistic dental office in Dallas - a home away from home with advanced technology and environmental protections for whole-body wellness."
+  schemaType="MedicalBusiness"
+>
+  
+  <!-- Hero Section -->
+  <section class="section-padding bg-gradient-to-br from-olive to-lime-light text-white">
+    <div class="container mx-auto container-padding">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="font-heading text-h1 font-bold mb-6">
+          Welcome to Our Home Away from Home!
+        </h1>
+        <p class="font-body text-xl mb-8 opacity-90">
+          A holistic dental practice committed to positive experiences for adults and children alike
+        </p>
+        <Button variant="secondary" size="lg" href="/contact">
+          Schedule Your Visit
+        </Button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Philosophy Section -->
+  <section class="section-padding bg-white">
+    <div class="container mx-auto container-padding">
+      <div class="max-w-4xl mx-auto">
+        <div class="prose prose-lg max-w-none mb-12">
+          <p class="font-body text-lg text-gray-medium leading-relaxed mb-6">
+            As we've recently expanded our practice and brought in new technology and equipment (such as our 
+            CBCT machine, ozone therapy, and SMART equipment), we thought this would be a great opportunity to 
+            update our office to reflect who we are to those new to our practice and to remind our existing 
+            patients why they've chosen to partner with us for their families' care.
+          </p>
+          
+          <p class="font-body text-lg text-gray-medium leading-relaxed mb-6">
+            What we hope you feel when you step into our office is that we are committed to a positive 
+            (dare we say, fun!) experience for adults and children alike. We recognize that each family 
+            and each individual patient will have a unique dental history and personal goals for their 
+            future oral and systemic health. We want to personalize and optimize each person's visit with 
+            us, allowing you to feel at ease with our consultations and our treatment appointments.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Meet Our Team Section -->
+  <section class="section-padding bg-gray-light">
+    <div class="container mx-auto container-padding">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="font-heading text-h2 font-semibold text-gray-dark mb-12 text-center">
+          Meet Our Holistic Dental Team
+        </h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Dr. Jill Rosellini Ombrello -->
+          <Card variant="hover" class="text-center p-6">
+            <div class="aspect-square w-40 h-40 mx-auto mb-6 rounded-full overflow-hidden bg-gradient-to-br from-teal to-teal-dark">
+              <img 
+                src="/images/team/dr-jill-ombrello.jpg"
+                alt="Dr. Jill Rosellini Ombrello"
+                class="w-full h-full object-cover"
+                loading="lazy"
+                onerror="this.parentElement.innerHTML='<div class=&quot;w-full h-full flex items-center justify-center text-white text-4xl font-heading font-bold&quot;>JO</div>'"
+              />
+            </div>
+            <h3 class="font-heading text-h4 font-semibold text-gray-dark mb-2">
+              Dr. Jill Rosellini Ombrello
+            </h3>
+            <p class="font-body text-teal font-medium mb-3">
+              DDS, AIAOMT, AIABDM, IFMCP
+            </p>
+            <p class="font-body text-gray-medium mb-4 leading-relaxed">
+              Holistic Family Dentist, Certified Functional Medicine Practitioner, 
+              Special Needs Patient Advocate
+            </p>
+            <Button variant="secondary" size="sm" href="/team/dr-jill-ombrello">
+              Learn More
+            </Button>
+          </Card>
+          
+          <!-- Melanie Galles -->
+          <Card variant="hover" class="text-center p-6">
+            <div class="aspect-square w-40 h-40 mx-auto mb-6 rounded-full overflow-hidden bg-gradient-to-br from-olive to-lime-light">
+              <img 
+                src="/images/team/melanie-galles.jpg"
+                alt="Melanie Galles, RDH"
+                class="w-full h-full object-cover"
+                loading="lazy"
+                onerror="this.parentElement.innerHTML='<div class=&quot;w-full h-full flex items-center justify-center text-white text-4xl font-heading font-bold&quot;>MG</div>'"
+              />
+            </div>
+            <h3 class="font-heading text-h4 font-semibold text-gray-dark mb-2">
+              Melanie Galles, RDH
+            </h3>
+            <p class="font-body text-olive font-medium mb-3">
+              Biological Hygienist
+            </p>
+            <p class="font-body text-gray-medium mb-4 leading-relaxed">
+              Specializes in holistic dental hygiene and preventive care with a focus 
+              on biocompatible materials and whole-body health.
+            </p>
+            <Button variant="secondary" size="sm" href="/team/melanie-galles">
+              Learn More
+            </Button>
+          </Card>
+          
+          <!-- Dr. Sahil Sawnani -->
+          <Card variant="hover" class="text-center p-6">
+            <div class="aspect-square w-40 h-40 mx-auto mb-6 rounded-full overflow-hidden bg-gradient-to-br from-teal-dark to-olive">
+              <img 
+                src="/images/team/dr-sahil-sawnani.jpg"
+                alt="Dr. Sahil Sawnani"
+                class="w-full h-full object-cover"
+                loading="lazy"
+                onerror="this.parentElement.innerHTML='<div class=&quot;w-full h-full flex items-center justify-center text-white text-4xl font-heading font-bold&quot;>SS</div>'"
+              />
+            </div>
+            <h3 class="font-heading text-h4 font-semibold text-gray-dark mb-2">
+              Dr. Sahil Sawnani
+            </h3>
+            <p class="font-body text-teal-dark font-medium mb-3">
+              DDS, IAOMT, AAID
+            </p>
+            <p class="font-body text-gray-medium mb-4 leading-relaxed">
+              Associate Doctor specializing in holistic dentistry with expertise 
+              in biocompatible materials and advanced dental implants.
+            </p>
+            <Button variant="secondary" size="sm" href="/team/dr-sahil-sawnani">
+              Learn More
+            </Button>
+          </Card>
+        </div>
+        
+        <div class="text-center mt-12">
+          <Button variant="primary" size="md" href="/our-history">
+            Learn More About Our History
+          </Button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Advanced Technology Section -->
+  <section class="section-padding bg-white">
+    <div class="container mx-auto container-padding">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="font-heading text-h2 font-semibold text-gray-dark mb-12 text-center">
+          Advanced Holistic Technology
+        </h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <Card variant="bordered" class="p-6 text-center">
+            <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-teal to-teal-dark rounded-full flex items-center justify-center">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+              </svg>
+            </div>
+            <h3 class="font-heading text-h4 font-semibold text-gray-dark mb-3">
+              CBCT 3D Imaging
+            </h3>
+            <p class="font-body text-gray-medium">
+              Advanced 3D imaging for precise diagnosis and treatment planning with minimal radiation exposure.
+            </p>
+          </Card>
+          
+          <Card variant="bordered" class="p-6 text-center">
+            <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-olive to-lime-light rounded-full flex items-center justify-center">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+              </svg>
+            </div>
+            <h3 class="font-heading text-h4 font-semibold text-gray-dark mb-3">
+              Ozone Therapy
+            </h3>
+            <p class="font-body text-gray-medium">
+              Natural antimicrobial treatment that promotes healing and eliminates harmful bacteria without side effects.
+            </p>
+          </Card>
+          
+          <Card variant="bordered" class="p-6 text-center">
+            <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-teal-dark to-lime-light rounded-full flex items-center justify-center">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+              </svg>
+            </div>
+            <h3 class="font-heading text-h4 font-semibold text-gray-dark mb-3">
+              SMART Protocol
+            </h3>
+            <p class="font-body text-gray-medium">
+              Safe Mercury Amalgam Removal Technique following IAOMT guidelines for maximum patient protection.
+            </p>
+          </Card>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Environmental Protections Section -->
+  <section class="section-padding bg-gray-light">
+    <div class="container mx-auto container-padding">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="font-heading text-h2 font-semibold text-gray-dark mb-8 text-center">
+          Environmental Protections
+        </h2>
+        
+        <p class="font-body text-lg text-gray-medium text-center mb-12 leading-relaxed">
+          In addition to our new technology and fun decorations, we have installed a number of environmental 
+          protectors that may be less obvious but were just as intentional. These protectors help us create 
+          a safe and sustainable environment in our office and our larger community.
+        </p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <Card variant="bordered" class="p-6">
+            <h3 class="font-heading text-h4 font-semibold text-gray-dark mb-4">
+              Air Quality Systems
+            </h3>
+            <ul class="font-body text-gray-medium space-y-3">
+              <li class="flex items-start">
+                <span class="text-olive mr-2">•</span>
+                <div>
+                  <strong>Negative Ionizers:</strong> Help remove airborne contaminants and improve air quality
+                </div>
+              </li>
+              <li class="flex items-start">
+                <span class="text-olive mr-2">•</span>
+                <div>
+                  <strong>Enhanced Air Purification:</strong> Advanced filtration systems for cleaner air
+                </div>
+              </li>
+              <li class="flex items-start">
+                <span class="text-olive mr-2">•</span>
+                <div>
+                  <strong>Improved Circulation:</strong> Optimized air flow throughout the office
+                </div>
+              </li>
+            </ul>
+          </Card>
+          
+          <Card variant="bordered" class="p-6">
+            <h3 class="font-heading text-h4 font-semibold text-gray-dark mb-4">
+              Water & Waste Management
+            </h3>
+            <ul class="font-body text-gray-medium space-y-3">
+              <li class="flex items-start">
+                <span class="text-teal mr-2">•</span>
+                <div>
+                  <strong>Water Filtration System:</strong> Pure, clean water for all dental procedures
+                </div>
+              </li>
+              <li class="flex items-start">
+                <span class="text-teal mr-2">•</span>
+                <div>
+                  <strong>Amalgam Separator:</strong> Prevents mercury from entering the water supply
+                </div>
+              </li>
+            </ul>
+          </Card>
+        </div>
+        
+        <Card variant="hover" class="p-8 mt-8">
+          <div class="text-center">
+            <h3 class="font-heading text-h3 font-semibold text-gray-dark mb-4">
+              Our Environmental Commitment
+            </h3>
+            <p class="font-body text-gray-medium leading-relaxed">
+              We recognize the importance of minimizing our footprint in our environment while also being 
+              mindful of ever-increasing toxicities from materials, chemicals, and other environmental 
+              variables. We are doing all that we can to ensure that we are creating a safe and sustainable 
+              environment in our office, as well as in our larger community.
+            </p>
+          </div>
+        </Card>
+      </div>
+    </div>
+  </section>
+
+  <!-- Patient Forms Section -->
+  <section class="section-padding bg-white">
+    <div class="container mx-auto container-padding">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="font-heading text-h2 font-semibold text-gray-dark mb-8 text-center">
+          New Patient Forms
+        </h2>
+        
+        <p class="font-body text-lg text-gray-medium text-center mb-8 leading-relaxed">
+          Save time during your first visit by downloading and completing your paperwork in advance.
+        </p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <Card variant="hover" class="p-6 text-center">
+            <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-teal to-teal-dark rounded-full flex items-center justify-center">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z"></path>
+              </svg>
+            </div>
+            <h3 class="font-heading text-h4 font-semibold text-gray-dark mb-4">
+              Adult New Patient Forms
+            </h3>
+            <p class="font-body text-gray-medium mb-6">
+              Comprehensive intake forms for adult patients including health history and treatment preferences.
+            </p>
+            <Button variant="primary" size="md" href="/forms/adult-new-patient-paperwork.pdf" target="_blank">
+              Download Adult Forms
+            </Button>
+          </Card>
+          
+          <Card variant="hover" class="p-6 text-center">
+            <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-olive to-lime-light rounded-full flex items-center justify-center">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1m4 0h1m-6 4h8m2-10h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+              </svg>
+            </div>
+            <h3 class="font-heading text-h4 font-semibold text-gray-dark mb-4">
+              Child New Patient Forms
+            </h3>
+            <p class="font-body text-gray-medium mb-6">
+              Pediatric intake forms designed specifically for children's health history and development.
+            </p>
+            <Button variant="primary" size="md" href="/forms/child-new-patient-paperwork.pdf" target="_blank">
+              Download Child Forms
+            </Button>
+          </Card>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section-padding bg-gradient-to-br from-olive to-lime-light text-white">
+    <div class="container mx-auto container-padding text-center">
+      <h2 class="font-heading text-h2 font-bold mb-6">
+        We Hope You Find Our Office as Warm and Inviting as We Intended
+      </h2>
+      <p class="font-body text-lg mb-8 opacity-90 max-w-3xl mx-auto">
+        If not, please let us know, as we very much appreciate your feedback, and we are always looking 
+        for opportunities to grow and improve! Come experience the difference of holistic dental care.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <Button variant="secondary" size="lg" href="tel:214-368-0900">
+          Call (214) 368-0900
+        </Button>
+        <Button variant="outline" size="lg" href="/contact">
+          Schedule Your Visit
+        </Button>
+      </div>
+    </div>
+  </section>
+
+</Layout>

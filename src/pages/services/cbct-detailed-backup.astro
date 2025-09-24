@@ -1,0 +1,142 @@
+---
+// CBCT Service Page - Central Dentist (DETAILED VERSION - BACKUP)
+import ServicePageLayout from '../../layouts/ServicePageLayout.astro';
+
+const features = [
+  'Detailed 3D imaging technology',
+  'Minimal radiation exposure',
+  'Comprehensive airway analysis',
+  'Precise implant planning'
+];
+
+const benefits = [
+  'See what traditional X-rays cannot',
+  'Early detection of hidden problems',
+  'Better surgical outcomes',
+  'Accurate diagnosis and treatment planning',
+  'Comprehensive airway evaluation',
+  'Minimal radiation with maximum information'
+];
+
+const process = [
+  'Quick 3D scan (less than 20 seconds)',
+  'Computer generates detailed 3D images',
+  'Doctor reviews images from all angles',
+  'Precise measurements and planning',
+  'Discussion of findings with patient'
+];
+
+const faqs = [
+  {
+    question: 'How is CBCT different from regular X-rays?',
+    answer: 'CBCT provides a complete 3D view of your teeth, jaw, sinuses, and airway, while traditional X-rays only show 2D images. This allows us to see structures from every angle and detect issues that might be hidden in regular X-rays.'
+  },
+  {
+    question: 'Is CBCT safe?',
+    answer: 'Yes, CBCT is very safe. It uses significantly less radiation than medical CT scans and provides much more information than traditional dental X-rays. We follow all safety protocols and only recommend it when the diagnostic benefits outweigh any risks.'
+  },
+  {
+    question: 'What can CBCT diagnose?',
+    answer: 'CBCT helps diagnose TMJ disorders, plan implant placement, evaluate airways for sleep apnea, detect hidden infections, assess bone quality, plan complex extractions, and evaluate trauma or pathology.'
+  },
+  {
+    question: 'How long does the scan take?',
+    answer: 'The actual scan takes less than 20 seconds. You\'ll stand or sit still while the scanner rotates around your head. The entire appointment, including positioning and image review, typically takes about 15-20 minutes.'
+  }
+];
+---
+
+<ServicePageLayout
+  title="CBCT 3D Imaging"
+  description="Advanced 3D imaging for comprehensive diagnosis and treatment planning"
+  image="/images/services/abstract-white-texture.jpg"
+  features={features}
+  benefits={benefits}
+  process={process}
+  faqs={faqs}
+>
+  <div slot="overview" class="space-y-4">
+    <p class="text-gray-dark leading-relaxed">
+      Cone Beam Computed Tomography (CBCT) represents the gold standard in dental imaging technology.
+      This advanced 3D imaging system provides incredibly detailed views of your teeth, jaw, nerve
+      pathways, soft tissues, and bone structure - all with minimal radiation exposure. Unlike
+      traditional 2D X-rays that can miss important details, CBCT gives us a complete picture of
+      your oral and facial structures.
+    </p>
+
+    <p class="text-gray-dark leading-relaxed">
+      At Central Dentist, we use CBCT technology for precise implant planning, comprehensive airway
+      analysis for sleep disorders, TMJ evaluation, and diagnosing complex dental conditions. This
+      technology allows us to provide more accurate diagnoses, plan treatments with greater precision,
+      and achieve better outcomes for our patients while maintaining the highest safety standards.
+    </p>
+  </div>
+
+  <div slot="content">
+    <!-- Technology Benefits Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+      <div class="bg-gradient-to-r from-blue-50 to-teal-50 rounded-lg p-6 border border-teal-200">
+        <h3 class="text-xl font-semibold text-gray-dark mb-4" style="font-family: 'Playfair Display', serif;">
+          Diagnostic Advantages
+        </h3>
+        <ul class="text-gray-medium space-y-2">
+          <li>• Complete 3D visualization</li>
+          <li>• Hidden infection detection</li>
+          <li>• Bone quality assessment</li>
+          <li>• Nerve pathway mapping</li>
+          <li>• Sinus evaluation</li>
+        </ul>
+      </div>
+
+      <div class="bg-gradient-to-r from-green-50 to-lime-50 rounded-lg p-6 border border-green-200">
+        <h3 class="text-xl font-semibold text-gray-dark mb-4" style="font-family: 'Playfair Display', serif;">
+          Treatment Applications
+        </h3>
+        <ul class="text-gray-medium space-y-2">
+          <li>• Implant placement planning</li>
+          <li>• Airway & sleep apnea analysis</li>
+          <li>• TMJ disorder evaluation</li>
+          <li>• Complex extraction planning</li>
+          <li>• Orthodontic assessment</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Why 3D Imaging Matters -->
+    <div class="bg-white rounded-lg p-8 border border-gray-200 shadow-sm">
+      <h3 class="text-2xl font-semibold text-gray-dark mb-6 text-center" style="font-family: 'Playfair Display', serif;">
+        Why 3D Imaging Makes a Difference
+      </h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="text-center">
+          <div class="w-16 h-16 mx-auto mb-3 bg-gradient-to-br from-teal to-teal-dark rounded-full flex items-center justify-center">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <h4 class="font-semibold text-gray-dark mb-2">Accuracy</h4>
+          <p class="text-sm text-gray-medium">Precise measurements for predictable outcomes</p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 mx-auto mb-3 bg-gradient-to-br from-olive to-lime-light rounded-full flex items-center justify-center">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+            </svg>
+          </div>
+          <h4 class="font-semibold text-gray-dark mb-2">Clarity</h4>
+          <p class="text-sm text-gray-medium">See hidden problems before symptoms appear</p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 mx-auto mb-3 bg-gradient-to-br from-teal-dark to-lime-light rounded-full flex items-center justify-center">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <h4 class="font-semibold text-gray-dark mb-2">Efficiency</h4>
+          <p class="text-sm text-gray-medium">Quick scan saves time and improves treatment</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</ServicePageLayout>

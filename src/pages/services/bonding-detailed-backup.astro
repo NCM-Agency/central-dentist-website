@@ -1,0 +1,117 @@
+---
+// Bonding Service Page - Central Dentist (DETAILED VERSION - BACKUP)
+import ServicePageLayout from '../../layouts/ServicePageLayout.astro';
+
+const features = [
+  'Fluoride-free and biocompatible',
+  'Natural-looking color matching',
+  'Conservative tooth preservation',
+  'Same-day treatment available'
+];
+
+const benefits = [
+  'Fluoride-free and safe materials',
+  'Natural-looking appearance',
+  'Same-day treatment available',
+  'Long-lasting results',
+  'Biocompatible with your body',
+  'Conservative tooth preservation'
+];
+
+const process = [
+  'Initial consultation and tooth evaluation',
+  'Tooth surface preparation (minimal)',
+  'Color matching to natural teeth',
+  'Bonding material application',
+  'Shaping and polishing for perfect finish'
+];
+
+const faqs = [
+  {
+    question: 'How long does dental bonding last?',
+    answer: 'With proper care, dental bonding can last 5-10 years or longer. The longevity depends on your oral hygiene habits, the location of the bonding, and lifestyle factors.'
+  },
+  {
+    question: 'Is the bonding procedure painful?',
+    answer: 'No, dental bonding is typically painless and often requires no anesthesia unless it\'s being used to fill a cavity. The procedure is non-invasive and comfortable.'
+  },
+  {
+    question: 'Can bonding be used on any tooth?',
+    answer: 'Bonding works best on front teeth and areas with less biting pressure. For molars or areas with heavy wear, we may recommend stronger alternatives like ceramic restorations.'
+  },
+  {
+    question: 'How do I care for bonded teeth?',
+    answer: 'Care for bonded teeth just like natural teeth with regular brushing and flossing. Avoid biting hard objects and limit staining foods and drinks for the first 48 hours after treatment.'
+  }
+];
+---
+
+<ServicePageLayout
+  title="Fluoride-Free Dental Bonding"
+  description="Safe, biocompatible bonding materials for natural-looking tooth repair"
+  image="/images/services/abstract-white-texture.jpg"
+  features={features}
+  benefits={benefits}
+  process={process}
+  faqs={faqs}
+>
+  <div slot="overview" class="space-y-4">
+    <p class="text-gray-dark leading-relaxed">
+      Dental bonding is a conservative treatment option for repairing chipped, cracked, or discolored teeth.
+      At Central Dentist, we exclusively use <strong class="text-teal">fluoride-free bonding materials</strong>
+      that are biocompatible and safe for your overall health. Our composite bonding materials bond naturally
+      to your tooth structure and can be color-matched to blend seamlessly with your natural teeth.
+    </p>
+
+    <p class="text-gray-dark leading-relaxed">
+      For patients who come to our practice with existing fluoridated bonding, we offer to replace these
+      materials with our safer, fluoride-free alternatives. This holistic approach ensures that all materials
+      in your mouth support your overall wellness while providing excellent aesthetic and functional results
+      that can last for many years with proper care.
+    </p>
+  </div>
+
+  <div slot="content">
+    <!-- Fluoride-Free Highlight -->
+    <div class="rounded-xl p-8 bg-gradient-to-r from-green-50 to-teal-50 mb-8 border border-teal-200">
+      <div class="text-center">
+        <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-green-olive to-lime-light rounded-full flex items-center justify-center">
+          <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+        </div>
+        <h3 class="text-2xl font-semibold text-gray-dark mb-4" style="font-family: 'Playfair Display', serif;">
+          Fluoride-Free Promise
+        </h3>
+        <p class="text-gray-medium">
+          We replace existing fluoridated bonding with safe, biocompatible materials that support your whole-body health
+        </p>
+      </div>
+    </div>
+
+    <!-- Common Uses -->
+    <div class="mb-8">
+      <h2 class="text-2xl md:text-3xl font-normal text-teal-dark mb-4" style="font-family: 'Playfair Display', serif;">
+        Common Uses for Dental Bonding
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="flex items-start">
+          <span class="text-teal mr-3 mt-1">•</span>
+          <span class="text-gray-dark">Repair chipped or cracked teeth</span>
+        </div>
+        <div class="flex items-start">
+          <span class="text-teal mr-3 mt-1">•</span>
+          <span class="text-gray-dark">Close small gaps between teeth</span>
+        </div>
+        <div class="flex items-start">
+          <span class="text-teal mr-3 mt-1">•</span>
+          <span class="text-gray-dark">Improve tooth color and shape</span>
+        </div>
+        <div class="flex items-start">
+          <span class="text-teal mr-3 mt-1">•</span>
+          <span class="text-gray-dark">Replace old fluoridated bonding</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</ServicePageLayout>

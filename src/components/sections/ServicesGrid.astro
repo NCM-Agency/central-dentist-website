@@ -1,0 +1,77 @@
+---
+// ServicesGrid.astro - Grid of service cards with responsive layout
+import ServiceCard from '../ui/ServiceCard.astro';
+import Button from '../ui/Button.astro';
+
+export interface Service {
+  title: string;
+  description: string;
+  href: string;
+  image?: string;
+  imageAlt?: string;
+  features?: string[];
+  highlight?: boolean;
+}
+
+export interface Props {
+  title?: string;
+  subtitle?: string;
+  services: Service[];
+  showAllServicesButton?: boolean;
+  class?: string;
+}
+
+const { 
+  title = "Our Holistic Services",
+  subtitle = "Comprehensive dental care that addresses the root causes of oral health issues",
+  services = [],
+  showAllServicesButton = true,
+  class: className = ''
+} = Astro.props;
+---
+
+<section class={`section-padding bg-white ${className}`} data-gjs-type="services-grid">
+  <div class="container mx-auto container-padding">
+    
+    <!-- Section Header -->
+    <div class="text-center mb-12">
+      <h2 class="text-4xl md:text-5xl font-normal text-teal-dark" style="font-family: 'Playfair Display', serif;">
+        <span data-gjs-editable="true">{title}</span>
+      </h2>
+      <p class="text-lg text-gray-600 max-w-3xl mx-auto mt-4">
+        <span data-gjs-editable="true">{subtitle}</span>
+      </p>
+    </div>
+
+    <!-- Services Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-12">
+      {services.map((service) => (
+        <ServiceCard
+          title={service.title}
+          description={service.description}
+          href={service.href}
+          image={service.image}
+          imageAlt={service.imageAlt}
+          features={service.features}
+          highlight={service.highlight}
+          class="service-card"
+        />
+      ))}
+    </div>
+
+    <!-- View All Services Button -->
+    {showAllServicesButton && (
+      <div class="text-center">
+        <a 
+          href="/services"
+          class="inline-block px-8 py-3 bg-gradient-to-r from-[#a6b443] to-[#c7cd85] text-white rounded-full font-semibold hover:from-[#8fa339] hover:to-[#a6b443] hover:shadow-lg hover:scale-105 transition-all duration-300 min-w-[200px] text-center"
+        >
+          View All Services
+        </a>
+        <p class="font-body text-sm text-gray-medium mt-3">
+          Or call <a href="tel:214-368-0900" class="text-teal hover:text-teal-dark font-semibold transition-colors">214-368-0900</a> to discuss your needs
+        </p>
+      </div>
+    )}
+  </div>
+</section>

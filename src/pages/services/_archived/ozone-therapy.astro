@@ -1,0 +1,29 @@
+---
+// Ozone Therapy Service Page - Central Dentist (Minimized per PM requirements)
+import ServicePageMinimal from '../../layouts/ServicePageMinimal.astro';
+
+const content = `Ozone therapy uses medical-grade ozone to eliminate harmful bacteria, viruses, and fungi naturally. This painless treatment creates an oxygen-rich environment that promotes healing without antibiotics or chemicals.
+
+We use ozone for gum disease treatment, cavity sterilization, and post-surgical healing. It's a safe, effective alternative to traditional antimicrobial treatments.`;
+
+const benefits = [
+  'Natural antimicrobial treatment',
+  'Completely painless procedure',
+  'No harmful side effects',
+  'Eliminates bacteria naturally in gum disease',
+  'Sterilizes cavities before filling',
+  'Speeds post-surgical recovery',
+  'Alternative to antibiotics'
+];
+---
+
+<ServicePageMinimal
+  title="Ozone Therapy"
+  description="Natural antimicrobial treatment for enhanced healing"
+  metaDescription="Ozone therapy at Central Dentist Dallas. Natural, painless antimicrobial treatment for gum disease, cavities, and enhanced healing."
+  backgroundImage="/images/services/abstract-white-texture.jpg"
+  content={content}
+  benefits={benefits}
+  ctaTitle="Interested in Natural Healing?"
+  ctaText="Experience the benefits of ozone therapy"
+/>

@@ -1,0 +1,151 @@
+---
+import ResearchPageTemplate from '../../layouts/ResearchPageTemplate.astro';
+import BlurFade from '../../components/ui/BlurFade.astro';
+import Card from '../../components/ui/Card.astro';
+
+const studies = [
+  {
+    title: "Effect of anterior crowding or spacing on oral health-related quality of life: a cross-sectional study",
+    date: "August 14, 2017",
+    source: "Dove Press",
+    sourceUrl: "https://www.dovepress.com/effect-of-anterior-crowding-or-spacing-on-oral-health-related-quality--peer-reviewed-article-PPA",
+    content: "Introduction: Oral health-related quality of life (OHRQoL) involves many aspects such as chewing ability, sleeping, social interactions, self-esteem, and satisfaction with life and oral health. The increasing research interest in OHRQoL began only after the shortcomings of previous approaches of treating symptoms only and neglecting the patient's self-perception were revealed."
+  },
+  {
+    title: "Causal relationship between malocclusion and oral muscles dysfunction: a model of approach",
+    date: "April 13, 2012",
+    source: "European Journal of Pediatric Dentistry",
+    sourceUrl: null,
+    content: "Abstract: Bad habits result in altered functions which with time can cause anomalies of the orofacial morphology. To solve these problems, orthodontic treatment can be supported by myofunctional therapy in order to recover the normal functionality of the oral muscles. The aim of this study is to assess the need to treat patients with neuromuscular disorders, from both the occlusion and the muscles condition approach in order to obtain the balance needed for the stability of treatment."
+  },
+  {
+    title: "Posterior crossbite in the deciduous dentition period, its relation with sucking habits, irregular orofacial functions, and otolaryngological findings",
+    date: "July 2010",
+    source: "American Journal of Orthodontics & Dentofacial Orthopedics",
+    sourceUrl: null,
+    content: "Summary: The aim of this study was to assess unilateral posterior crossbite, sucking habits, orofacial functions, and otolaryngological findings in the deciduous dentition. These findings would allow us to establish a preventive program for posterior crossbite, based on interceptive treatment at an early stage of dental development. We would determine the predictive value for posterior crossbite development in correlation with the duration of sucking habits."
+  },
+  {
+    title: "The Influence of an Experimentally-Induced Malocclusion on Vertebral Alignment in Rats: A Controlled Pilot Study",
+    date: "May 2005",
+    source: "Cranio: The Journal of Craniomandibular Practice",
+    sourceUrl: "https://cdn2.hubspot.net/hubfs/3272443/Research/TMJ-Occlusion-Research-The_Influence_of_an_Experimentally-Induced_Malocclusion.pdf?t=1519675430096",
+    content: "Abstract: There is a growing interest in the relationship between occlusion and posture because of a greater incidence of neck and trunk pain in patients with occlusal dysfunction. The study was designed to verify whether an alteration of the spinal column alignment may be experimentally induced in rats as a consequence of altering dental occlusion and also to investigate whether the spinal column underwent any further changes when normal occlusion was then restored. Thirty rats were divided into two groups. Fifteen (15) rats (test group) wore an occlusal bite pad made of composite resin on the maxillary right first molar for a week (T1). The same rats wore a second composite bite pad for another week on the left first molar in order to rebalance dental occlusion (T2). Fifteen rats were included in an untreated control group. All the rats underwent total body radiographs at T0 (before the occlusal pad was placed), at T1 (one week after application of a resin occlusal bite pad on the maxillary left first molar) and at T2 (one week after application of a second resin occlusal bite pad on the maxillary right first molar). A scoliotic curve developed in all the test rats at T1. There were no alterations of spinal position observed in any of the control rats. Additionally, the spinal column returned to normal condition in 83% of the test rats when the balance in occlusal function was restored. The alignment of the spinal column seemed to be influenced by the dental occlusion."
+  }
+];
+---
+
+<ResearchPageTemplate
+  title="Malocclusion Clinical Research"
+  metaTitle="Malocclusion Research | Central Dentist"
+  description="Clinical research on malocclusion and its systemic effects. Learn about the connection between bite alignment, oral function, posture, and overall health."
+>
+  <div slot="introduction">
+    <h2 class="text-section-header text-header-primary mb-6">
+      Understanding Malocclusion & Its Systemic Impact
+    </h2>
+    <p class="text-body-large mb-8">
+      Malocclusion—improper bite alignment—affects far more than just the appearance of your smile.
+      Research reveals significant connections between occlusal dysfunction and oral muscle function,
+      quality of life, posture, and overall systemic health.
+    </p>
+  </div>
+
+  <div slot="main-content">
+    <div class="bg-teal-50 rounded-lg p-6 mb-8" style="border-left: 4px solid #0099ba;">
+      <p class="text-body-regular font-semibold" style="color: #006786;">
+        Important Finding: Studies show that malocclusion can influence spinal alignment and posture,
+        demonstrating the interconnected nature of oral health and whole-body wellness.
+      </p>
+    </div>
+  </div>
+
+  <section slot="studies-section" class="py-16 md:py-20 bg-gray-50">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="max-w-4xl mx-auto">
+        <BlurFade delay={100}>
+          <h2 class="text-section-header text-header-primary text-center mb-4">
+            Clinical Research on Malocclusion
+          </h2>
+          <p class="text-section-subheader text-center mb-12">
+            Evidence linking bite alignment to systemic health
+          </p>
+        </BlurFade>
+
+        <div class="space-y-8">
+          {studies.map((study, index) => (
+            <BlurFade delay={200 + (index * 100)}>
+              <Card className="p-6">
+                <h3 class="text-card-header mb-3" style="color: #006786;">
+                  {study.title}
+                </h3>
+                <div class="flex items-center gap-4 mb-4 text-sm text-gray-600">
+                  <span>📅 {study.date}</span>
+                  {study.sourceUrl ? (
+                    <a
+                      href={study.sourceUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="hover:underline"
+                      style="color: #0099ba;"
+                    >
+                      📚 Source: {study.source}
+                    </a>
+                  ) : (
+                    <span>📚 Source: {study.source}</span>
+                  )}
+                </div>
+                <p class="text-body-regular">
+                  {study.content}
+                </p>
+              </Card>
+            </BlurFade>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div slot="related-links">
+    <div class="grid md:grid-cols-3 gap-6">
+      <BlurFade delay={200}>
+        <a href="/services/functional-health#tmj" class="block">
+          <Card className="h-full hover:shadow-lg transition-shadow">
+            <div class="p-6">
+              <h3 class="text-card-header mb-3">TMJ Treatment</h3>
+              <p class="text-body-regular">
+                Learn about our approach to TMJ dysfunction and jaw pain.
+              </p>
+            </div>
+          </Card>
+        </a>
+      </BlurFade>
+
+      <BlurFade delay={300}>
+        <a href="/services/invisalign" class="block">
+          <Card className="h-full hover:shadow-lg transition-shadow">
+            <div class="p-6">
+              <h3 class="text-card-header mb-3">Invisalign</h3>
+              <p class="text-body-regular">
+                Clear aligner therapy to correct malocclusion.
+              </p>
+            </div>
+          </Card>
+        </a>
+      </BlurFade>
+
+      <BlurFade delay={400}>
+        <a href="/clinical-research/growth-and-development" class="block">
+          <Card className="h-full hover:shadow-lg transition-shadow">
+            <div class="p-6">
+              <h3 class="text-card-header mb-3">Growth & Development</h3>
+              <p class="text-body-regular">
+                Preventing malocclusion through early intervention.
+              </p>
+            </div>
+          </Card>
+        </a>
+      </BlurFade>
+    </div>
+  </div>
+</ResearchPageTemplate>

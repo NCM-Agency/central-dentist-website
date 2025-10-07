@@ -1,0 +1,371 @@
+---
+// Advanced Technologies Page - Consolidates CBCT, Ozone Therapy, and Ceramic Implants
+import ServicePageDetailed from '../../layouts/ServicePageDetailed.astro';
+import BlurFade from '../../components/ui/BlurFade.astro';
+import Card from '../../components/ui/Card.astro';
+
+const technologies = [
+  {
+    id: 'cbct',
+    icon: '🔬',
+    title: 'CBCT 3D Imaging',
+    subtitle: 'Advanced 3D Dental Imaging for Accurate Diagnosis',
+    description: 'CBCT (Cone Beam Computed Tomography) provides detailed 3D images of your teeth, jaw, and airway. This technology allows us to see what traditional X-rays cannot, making diagnosis and treatment planning more accurate.',
+    benefits: [
+      '3D view of teeth and jaw structures',
+      'Minimal radiation exposure',
+      'Precise treatment planning',
+      'See hidden infections and problems',
+      'Plan implants with precision',
+      'Evaluate airway for sleep issues',
+      'Detect problems before symptoms appear'
+    ],
+    gradient: 'from-[#0099ba] to-[#006786]'
+  },
+  {
+    id: 'ozone',
+    icon: '💨',
+    title: 'Ozone Therapy',
+    subtitle: 'Natural Antimicrobial Treatment for Enhanced Healing',
+    description: 'Ozone therapy uses medical-grade ozone to eliminate harmful bacteria, viruses, and fungi naturally. This painless treatment creates an oxygen-rich environment that promotes healing without antibiotics or chemicals.',
+    benefits: [
+      'Natural antimicrobial treatment',
+      'Completely painless procedure',
+      'No harmful side effects',
+      'Eliminates bacteria naturally in gum disease',
+      'Sterilizes cavities before filling',
+      'Speeds post-surgical recovery',
+      'Alternative to antibiotics'
+    ],
+    gradient: 'from-[#a6b443] to-[#c7cd85]'
+  },
+  {
+    id: 'ceramic-implants',
+    icon: '🦷',
+    title: 'Ceramic Implants + PRF',
+    subtitle: 'Mercury-Free Biocompatible Implants with Enhanced Healing',
+    description: 'Ceramic implants made from high-strength zirconia provide all the benefits of traditional implants without introducing any metals into your body. When combined with PRF therapy derived from your own blood, these implants offer superior healing, integration, and long-term success.',
+    benefits: [
+      'Natural white color - no gray lines at gums',
+      'Zero metal content or mercury risk',
+      'Superior gum health and tissue response',
+      'No risk of galvanic currents in mouth',
+      'Enhanced healing with PRF',
+      'Reduced post-operative pain',
+      'Higher success rates'
+    ],
+    gradient: 'from-[#0099ba] to-[#a6b443]'
+  }
+];
+
+const ceramicVsTitanium = {
+  advantages: [
+    'Natural white color - no gray lines at gums',
+    'Zero metal content or mercury risk',
+    'Superior gum health and tissue response',
+    'No risk of galvanic currents in mouth'
+  ],
+  concerns: [
+    'Can cause gray discoloration at gum line',
+    'Potential for metal sensitivity or allergy',
+    'May interfere with body\'s energy meridians',
+    'Can create galvanic reactions with other metals'
+  ]
+};
+
+const prfBenefits = {
+  immediate: [
+    'Reduced post-operative pain',
+    'Minimal swelling and bruising',
+    'Faster initial healing',
+    'Lower infection risk'
+  ],
+  longTerm: [
+    'Enhanced bone integration',
+    'Improved implant stability',
+    'Better soft tissue health',
+    'Higher success rates'
+  ]
+};
+
+const faqs = [
+  {
+    question: "What can CBCT imaging detect that traditional X-rays cannot?",
+    answer: "CBCT provides a complete 3D view of your teeth, jaw, sinuses, and airway. It can detect hidden infections, evaluate bone density for implants, assess airway for sleep issues, identify TMJ problems, and plan complex procedures with millimeter precision."
+  },
+  {
+    question: "Is ozone therapy safe?",
+    answer: "Yes, medical-grade ozone therapy is completely safe when administered properly. It's a natural treatment that harnesses the power of oxygen to eliminate pathogens without chemicals or antibiotics. It's painless, has no side effects, and is suitable for all ages."
+  },
+  {
+    question: "Are ceramic implants as strong as titanium implants?",
+    answer: "Yes! Modern ceramic implants made from zirconia are incredibly strong and durable. They have been proven to withstand the forces of chewing just as well as titanium implants, with the added benefits of being metal-free and more biocompatible."
+  },
+  {
+    question: "What is PRF and why is it important?",
+    answer: "Platelet-Rich Fibrin (PRF) is a concentration of healing factors from your own blood. When applied during implant placement, it significantly accelerates healing, reduces post-operative discomfort, and improves the integration of the implant with your bone."
+  },
+  {
+    question: "How do these technologies work together?",
+    answer: "CBCT imaging allows us to precisely plan implant placement and identify optimal bone sites. Ozone therapy sterilizes the surgical site and promotes healing. Ceramic implants with PRF provide biocompatible tooth replacement with enhanced healing. Together, these technologies offer the safest, most predictable outcomes."
+  }
+];
+---
+
+<ServicePageDetailed
+  title="Advanced Technologies"
+  subtitle="CBCT Imaging, Ozone Therapy & Ceramic Implants"
+  description="Advanced dental technologies at Central Dentist - CBCT 3D imaging, ozone therapy, and ceramic implants for optimal care"
+  metaDescription="Advanced dental technologies at Central Dentist Dallas. CBCT 3D imaging, ozone therapy, and mercury-free ceramic implants with PRF for superior results."
+  backgroundImage="/images/services/abstract-white-texture.jpg"
+>
+  <!-- Introduction Section - White Background -->
+  <section class="py-16 md:py-20 bg-white">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="max-w-4xl mx-auto">
+        <BlurFade delay={100}>
+          <div class="text-center mb-12">
+            <h2 class="text-section-header text-header-primary">
+              Technology That Transforms Care
+            </h2>
+            <p class="text-section-subheader">
+              Advanced diagnostics, natural healing, and biocompatible solutions
+            </p>
+          </div>
+        </BlurFade>
+
+        <BlurFade delay={200}>
+          <p class="text-body-regular text-gray-dark text-center mb-8">
+            At Central Dentist, we invest in cutting-edge technologies that allow us to diagnose more accurately,
+            treat more conservatively, and support your body's natural healing processes. Our commitment to
+            mercury-free, biocompatible dentistry means every technology we use is chosen to enhance your overall
+            health and wellbeing.
+          </p>
+        </BlurFade>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technologies Section - Gray Background -->
+  <section class="py-16 md:py-20 bg-gray-50">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="max-w-6xl mx-auto">
+        <div class="space-y-16">
+          {technologies.map((tech, index) => (
+            <BlurFade delay={100 + index * 100}>
+              <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                <div class={`p-8 bg-gradient-to-r ${tech.gradient}`}>
+                  <div class="flex items-center space-x-4 mb-4">
+                    <span class="text-5xl">{tech.icon}</span>
+                    <div>
+                      <h3 class="text-3xl font-normal text-white" style="font-family: 'Playfair Display', serif;">
+                        {tech.title}
+                      </h3>
+                      <p class="text-lg text-white/90">{tech.subtitle}</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="p-8">
+                  <p class="text-body-regular text-gray-dark mb-6">
+                    {tech.description}
+                  </p>
+
+                  <h4 class="text-card-header text-header-primary mb-4">Benefits</h4>
+                  <div class="grid md:grid-cols-2 gap-3">
+                    {tech.benefits.map((benefit) => (
+                      <div class="flex items-start">
+                        <svg class="w-5 h-5 mr-3 mt-0.5 flex-shrink-0" style="color: #a6b443;" fill="currentColor" viewBox="0 0 20 20">
+                          <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span class="text-body-regular text-gray-dark">{benefit}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </BlurFade>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ceramic vs Titanium - White Background -->
+  <section class="py-16 md:py-20 bg-white">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="max-w-6xl mx-auto">
+        <BlurFade delay={100}>
+          <div class="text-center mb-12">
+            <h2 class="text-section-header text-header-primary">
+              Why Choose Ceramic Over Titanium?
+            </h2>
+            <p class="text-section-subheader">
+              The biocompatible alternative to metal implants
+            </p>
+          </div>
+        </BlurFade>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <BlurFade delay={200}>
+            <Card variant="bordered" class="p-8 bg-green-50">
+              <h3 class="text-card-header text-header-secondary mb-6">Ceramic Advantages</h3>
+              <ul class="space-y-3">
+                {ceramicVsTitanium.advantages.map((advantage) => (
+                  <li class="flex items-start">
+                    <svg class="w-5 h-5 mr-3 mt-0.5 flex-shrink-0" style="color: #a6b443;" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                    </svg>
+                    <span class="text-body-regular text-gray-dark">{advantage}</span>
+                  </li>
+                ))}
+              </ul>
+            </Card>
+          </BlurFade>
+
+          <BlurFade delay={300}>
+            <Card variant="bordered" class="p-8 bg-red-50 border-red-200">
+              <h3 class="text-card-header mb-6" style="color: #dc2626;">Titanium Concerns</h3>
+              <ul class="space-y-3">
+                {ceramicVsTitanium.concerns.map((concern) => (
+                  <li class="flex items-start">
+                    <span class="text-red-600 mr-3 mt-0.5 text-lg">✗</span>
+                    <span class="text-body-regular" style="color: #991b1b;">{concern}</span>
+                  </li>
+                ))}
+              </ul>
+            </Card>
+          </BlurFade>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRF Benefits - Gray Background -->
+  <section class="py-16 md:py-20 bg-gray-50">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="max-w-4xl mx-auto">
+        <BlurFade delay={100}>
+          <div class="text-center mb-12">
+            <h2 class="text-section-header text-header-primary">
+              The PRF Advantage
+            </h2>
+            <p class="text-section-subheader">
+              Harness your body's natural healing power
+            </p>
+          </div>
+        </BlurFade>
+
+        <BlurFade delay={200}>
+          <Card variant="bordered" class="p-8">
+            <p class="text-body-regular text-gray-dark mb-8">
+              Platelet-Rich Fibrin (PRF) is a game-changer in implant dentistry. This advanced healing technique
+              uses a concentrated form of your body's own healing factors to dramatically improve outcomes:
+            </p>
+
+            <div class="grid md:grid-cols-2 gap-8">
+              <div>
+                <h4 class="text-card-header text-header-secondary mb-4">Immediate Benefits</h4>
+                <ul class="space-y-2">
+                  {prfBenefits.immediate.map((benefit) => (
+                    <li class="flex items-start">
+                      <span class="text-xl mr-3" style="color: #0099ba;">•</span>
+                      <span class="text-body-regular text-gray-dark">{benefit}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div>
+                <h4 class="text-card-header text-header-secondary mb-4">Long-Term Benefits</h4>
+                <ul class="space-y-2">
+                  {prfBenefits.longTerm.map((benefit) => (
+                    <li class="flex items-start">
+                      <span class="text-xl mr-3" style="color: #0099ba;">•</span>
+                      <span class="text-body-regular text-gray-dark">{benefit}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </Card>
+        </BlurFade>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section - White Background -->
+  <section class="py-16 md:py-20 bg-white">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="max-w-3xl mx-auto">
+        <BlurFade delay={100}>
+          <div class="text-center mb-12">
+            <h2 class="text-section-header text-header-primary">
+              Frequently Asked Questions
+            </h2>
+            <p class="text-section-subheader">
+              Learn more about our advanced technologies
+            </p>
+          </div>
+        </BlurFade>
+
+        <BlurFade delay={200}>
+          <div class="space-y-4">
+            {faqs.map((faq) => (
+              <details class="group bg-gray-50 rounded-lg">
+                <summary class="flex justify-between items-center cursor-pointer p-6 hover:bg-gray-100 transition-colors">
+                  <span class="text-body-regular font-semibold text-gray-dark pr-4">{faq.question}</span>
+                  <svg class="w-5 h-5 flex-shrink-0 transition-transform group-open:rotate-180" style="color: #0099ba;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </summary>
+                <div class="px-6 pb-6 pt-0">
+                  <p class="text-body-regular text-gray-medium">{faq.answer}</p>
+                </div>
+              </details>
+            ))}
+          </div>
+        </BlurFade>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section - Blue Gradient Background -->
+  <section slot="cta" class="py-16 md:py-20" style="background: linear-gradient(to bottom right, #0099ba, #006786);">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="max-w-3xl mx-auto text-center">
+        <BlurFade delay={100}>
+          <h2 class="text-4xl md:text-5xl font-normal text-white mb-4"
+              style="font-family: 'Playfair Display', serif;">
+            Experience Advanced Dental Technology
+          </h2>
+          <p class="text-lg text-white/90 mb-8" style="font-family: 'Geist', sans-serif;">
+            Discover how our state-of-the-art technologies can provide more accurate diagnosis,
+            more conservative treatment, and better outcomes for your oral and overall health.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/contact"
+              class="px-8 py-3 bg-gradient-to-r from-[#a6b443] to-[#c7cd85] text-white rounded-full font-semibold transition-all duration-300 hover:from-[#8fa339] hover:to-[#a6b443] hover:shadow-lg inline-flex items-center justify-center"
+              style="font-family: 'Playfair Display', serif;"
+            >
+              Schedule Consultation
+            </a>
+            <a
+              href="tel:214-368-0900"
+              class="px-8 py-3 bg-white border-2 rounded-full font-semibold transition-all duration-300 hover:shadow-lg inline-flex items-center justify-center"
+              style="font-family: 'Playfair Display', serif; color: #0099ba; border-color: white;"
+              onmouseover="this.style.backgroundColor='#006786'; this.style.color='white'; this.style.borderColor='#006786';"
+              onmouseout="this.style.backgroundColor='white'; this.style.color='#0099ba'; this.style.borderColor='white';"
+            >
+              <svg class="mr-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+              Call (214) 368-0900
+            </a>
+          </div>
+        </BlurFade>
+      </div>
+    </div>
+  </section>
+</ServicePageDetailed>

@@ -1,0 +1,216 @@
+---
+import ResearchPageTemplate from '../../layouts/ResearchPageTemplate.astro';
+import BlurFade from '../../components/ui/BlurFade.astro';
+import Card from '../../components/ui/Card.astro';
+
+const featuredStudies = [
+  {
+    title: "Porphyromonas gingivalis in Alzheimer's disease brains: Evidence for disease causation",
+    date: "January 2019",
+    source: "Science Magazine",
+    sourceUrl: "https://advances.sciencemag.org/content/5/1/eaau3333",
+    content: "This groundbreaking study identified oral bacteria from periodontal disease in the brains of Alzheimer's patients, demonstrating a potential link between oral health and neurodegeneration."
+  },
+  {
+    title: "Interrupted sleep may lead to Alzheimer's, new studies show",
+    date: "July 18, 2017",
+    source: "The Washington Post",
+    sourceUrl: null,
+    content: "Summary: Three studies by researchers at Wheaton College in Illinois found significant connections between breathing disorders that interrupt sleep and the accumulation of biomarkers for Alzheimer's disease. People with sleep-disordered breathing experience repeated episodes of hypopnea (under-breathing) and apnea (not breathing) during sleep. It occurs when the upper airway closes fully or partially while efforts to breathe continue, and it can wake a person 50 or 60 times a night, interrupting the stages of sleep necessary for a restful night."
+  },
+  {
+    title: "Sleep Disordered Breathing (SBD) Tied to Risk for Behavioral, Emotional Problems",
+    date: "November 28, 2016",
+    source: "PsychCentral",
+    sourceUrl: null,
+    content: "Summary: Young children with sleep-disordered breathing (SDB) are more likely to develop behavioral problems including hyperactivity and aggressiveness, as well as emotional and friendship difficulties, according to researchers at Albert Einstein College of Medicine of Yeshiva University. The study, the largest and most comprehensive of its kind, evaluated and followed more than 11,000 children for over six years. \"This is the strongest evidence to date that snoring, mouth breathing, and apnea (abnormally long pauses in breathing during sleep) can have serious behavioral and social - emotional consequences for children,\" said study leader Karen Bonuck, Ph.D., professor of family and social medicine and of obstetrics and gynecology and women's health at Einstein. \"Parents and pediatricians alike should be paying closer attention to sleep - disordered breathing in young children, perhaps as early as the first year of life\""
+  },
+  {
+    title: "A Randomized Trial of Adenotonsillectomy for Childhood Sleep Apnea",
+    date: "June 20, 2013",
+    source: "The New England Journal of Medicine",
+    sourceUrl: null,
+    content: "Abstract: Adenotonsillectomy is commonly performed in children with the obstructive sleep apnea syndrome, yet its usefulness in reducing symptoms and improving cognition, behavior, quality of life, and polysomnographic findings has not been rigorously evaluated. We hypothesized that, in children with the obstructive sleep apnea syndrome without prolonged oxyhemoglobin desaturation, early adenotonsillectomy, as compared with watchful waiting with supportive care, would result in improved outcomes."
+  },
+  {
+    title: "Children with sleep apnea have higher risk of behavioral, adaptive and learning problems",
+    date: "March 29, 2013",
+    source: "AASM",
+    sourceUrl: null,
+    content: "Summary: A new study found that obstructive sleep apnea, a common form of sleep-disordered breathing (SDB), is associated with increased rates of ADHD-like behavioral problems in children as well as other adaptive and learning problems."
+  },
+  {
+    title: "Critical role of myofascial reeducation in pediatric sleep-disordered breathing",
+    date: "March 23, 2013",
+    source: "Elsevier",
+    sourceUrl: null,
+    content: "Abstract: Limited studies suggest that pubertal development may lead to a recurrence of sleep-disordered breathing (SDB) despite previous curative surgery. Our study evaluates the impact of myofunctional reeducation in children with SDB referred for adenotonsillectomy, orthodontia, and myofunctional treatment in three different geographic areas."
+  },
+  {
+    title: "Pediatric Obstructive Sleep Apnea and the Critical Role of Oral-Facial Growth : Evidences",
+    date: "January 22, 2013",
+    source: "Frontiers in Neurology",
+    sourceUrl: null,
+    content: "Abstract: Review of evidence in support of an oral-facial growth impairment in the development of pediatric sleep apnea in non-obese children."
+  },
+  {
+    title: "Persistent Snoring in Preschool Children: Predictors and Behavioral and Developmental Correlates",
+    date: "September 2012",
+    source: "Official Journal of the American Academy of Pediatrics",
+    sourceUrl: null,
+    content: "Objective: To clarify whether persistent snoring in 2- to 3-year-olds is associated with behavioral and cognitive development, and to identify predictors of transient and persistent snoring. Conclusions: Persistent, loud snoring was associated with higher rates of problem behaviors. These results support routine screening and tracking of snoring, especially in children from low socioeconomic backgrounds; referral for follow-up care of persistent snoring in young children; and encouragement and facilitation of infant breastfeeding."
+  },
+  {
+    title: "Sleep-Disordered Breathing in a Population-Based Cohort: Behavioral Outcomes at 4 and 7 Years",
+    date: "March 2012",
+    source: "Pediatrics",
+    sourceUrl: null,
+    content: "Objectives: Examine statistical effects of sleep-disordered breathing (SDB) symptom trajectories from 6 months to 7 years on subsequent behavior."
+  },
+  {
+    title: "Sleep and Obesity in Children and Adolescents",
+    date: "April 2011",
+    source: "Pediatric Clinics of North America",
+    sourceUrl: null,
+    content: "Summary: The purpose of the present review is to provide a comprehensive update of current epidemiological studies that have assessed the association between sleep and obesity risk. Data from 29 studies conducted in 16 countries suggest that short sleep is associated with an increased risk for being or becoming overweight/obese or having increased body fat. Late bedtimes were also found to be a risk factor for overweight/obesity. Findings also suggest that changes in eating pathways may lead to increased body fat. Future experimental studies are needed to enhance our understanding of the underlying mechanisms through which sleep may play a role in the development and maintenance of childhood obesity."
+  },
+  {
+    title: "Sleep behaviors and sleep quality in children with autism spectrum disorders",
+    date: "December 2009",
+    source: "Sleep",
+    sourceUrl: null,
+    content: "Objectives: (1) Compare sleep behaviors of children with autism spectrum disorders (ASD) with sleep behaviors of typically developing (TD) children using the Children's Sleep Habits Questionnaire (CSHQ); (2) compare sleep quality--defined as mean activity, sleep latency, number of awakenings, sleep efficiency and total sleep time--of the cohort of children with ASD and TD, as measured by 10 nights of actigraphy; and (3) estimate the prevalence of sleep disturbances in the ASD and TD cohorts. Conclusions: The prevalence estimate of 45% for mild sleep disturbances in the TD cohort highlights pediatric sleep debt as a public health problem of concern. The prevalence estimate of 66% for moderate sleep disturbances in the ASD cohort underscores the significant sleep problems that the families of these children face. The predominant sleep disorders in the ASD cohort were behavioral insomnia sleep-onset type and insomnia due to PDD."
+  },
+  {
+    title: "Sleep-Disordered Breathing, Behavior, and Cognition in Children Before and After Adenotonsillectomy",
+    date: "April 2006",
+    source: "Pediatrics - Official Journal of the American Academy of Pediatrics",
+    sourceUrl: null,
+    content: "Abstract: Most children with sleep-disordered breathing (SDB) have mild-to-moderate forms, for which neurobehavioral complications are believed to be the most important adverse outcomes. To improve understanding of this morbidity, its long-term response to adenotonsillectomy, and its relationship to polysomnographic measures, we studied a series of children before and after clinically indicated adenotonsillectomy or unrelated surgical care."
+  },
+  {
+    title: "Developmental Changes in Upper Airway Dynamics",
+    date: "February 27, 2004",
+    source: "American Physiological Society",
+    sourceUrl: null,
+    content: "Summary: Normal children have a less collapsible upper airway in response to subatmospheric pressure administration (PNEG) during sleep than normal adults do, and this upper airway response appears to be modulated by the central ventilatory drive. Children have a greater ventilatory drive than adults."
+  }
+];
+---
+
+<ResearchPageTemplate
+  title="Sleep Clinical Research"
+  metaTitle="Sleep Clinical Research | Central Dentist"
+  description="Comprehensive clinical research on sleep-disordered breathing and its impact on health. Discover the connection between sleep quality and cognitive function, behavior, and systemic health."
+>
+  <div slot="introduction">
+    <h2 class="text-section-header text-header-primary mb-6">
+      The Critical Importance of Quality Sleep
+    </h2>
+    <p class="text-body-large mb-8">
+      Sleep-disordered breathing is far more than just snoring—it's a serious health condition that affects
+      cognitive development, behavior, learning, and long-term health outcomes. Extensive research demonstrates
+      that proper breathing and quality sleep are essential for optimal brain function, emotional regulation,
+      and overall wellness at every age.
+    </p>
+  </div>
+
+  <div slot="main-content">
+    <div class="bg-teal-50 rounded-lg p-6 mb-8" style="border-left: 4px solid #0099ba;">
+      <p class="text-body-regular font-semibold" style="color: #006786;">
+        Critical Finding: The largest study of its kind, following over 11,000 children for six years,
+        found that sleep-disordered breathing is strongly associated with behavioral problems, hyperactivity,
+        and emotional difficulties—often misdiagnosed as ADHD.
+      </p>
+    </div>
+  </div>
+
+  <section slot="studies-section" class="py-16 md:py-20 bg-gray-50">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="max-w-4xl mx-auto">
+        <BlurFade delay={100}>
+          <h2 class="text-section-header text-header-primary text-center mb-4">
+            Extensive Research on Sleep & Health
+          </h2>
+          <p class="text-section-subheader text-center mb-12">
+            Decades of peer-reviewed evidence on the critical role of sleep
+          </p>
+        </BlurFade>
+
+        <div class="space-y-8">
+          {featuredStudies.map((study, index) => (
+            <BlurFade delay={200 + (index * 50)}>
+              <Card className="p-6">
+                <h3 class="text-card-header mb-3" style="color: #006786;">
+                  {study.title}
+                </h3>
+                <div class="flex items-center gap-4 mb-4 text-sm text-gray-600">
+                  <span>📅 {study.date}</span>
+                  {study.sourceUrl ? (
+                    <a
+                      href={study.sourceUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="hover:underline"
+                      style="color: #0099ba;"
+                    >
+                      📚 Source: {study.source}
+                    </a>
+                  ) : (
+                    <span>📚 Source: {study.source}</span>
+                  )}
+                </div>
+                <p class="text-body-regular">
+                  {study.content}
+                </p>
+              </Card>
+            </BlurFade>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div slot="related-links">
+    <div class="grid md:grid-cols-3 gap-6">
+      <BlurFade delay={200}>
+        <a href="/services/functional-health#sleep" class="block">
+          <Card className="h-full hover:shadow-lg transition-shadow">
+            <div class="p-6">
+              <h3 class="text-card-header mb-3">Sleep-Breathing Treatment</h3>
+              <p class="text-body-regular">
+                Learn about our comprehensive approach to treating sleep disorders.
+              </p>
+            </div>
+          </Card>
+        </a>
+      </BlurFade>
+
+      <BlurFade delay={300}>
+        <a href="/pediatrics/sleep-breathing" class="block">
+          <Card className="h-full hover:shadow-lg transition-shadow">
+            <div class="p-6">
+              <h3 class="text-card-header mb-3">Pediatric Sleep Issues</h3>
+              <p class="text-body-regular">
+                Addressing sleep-disordered breathing in children.
+              </p>
+            </div>
+          </Card>
+        </a>
+      </BlurFade>
+
+      <BlurFade delay={400}>
+        <a href="/clinical-research/add-adhd" class="block">
+          <Card className="h-full hover:shadow-lg transition-shadow">
+            <div class="p-6">
+              <h3 class="text-card-header mb-3">ADD/ADHD Research</h3>
+              <p class="text-body-regular">
+                The connection between sleep disorders and ADHD symptoms.
+              </p>
+            </div>
+          </Card>
+        </a>
+      </BlurFade>
+    </div>
+  </div>
+</ResearchPageTemplate>

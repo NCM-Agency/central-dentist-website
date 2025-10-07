@@ -1,0 +1,159 @@
+---
+import ResearchPageTemplate from '../../layouts/ResearchPageTemplate.astro';
+import BlurFade from '../../components/ui/BlurFade.astro';
+import Card from '../../components/ui/Card.astro';
+
+const studies = [
+  {
+    title: "Porphyromonas gingivalis in Alzheimer's disease brains: Evidence for disease causation and treatment with small-molecule inhibitors",
+    date: "January 2019",
+    source: "Science Magazine",
+    sourceUrl: "https://advances.sciencemag.org/content/5/1/eaau3333",
+    content: "Abstract: Porphyromonas gingivalis, the keystone pathogen in chronic periodontitis, was identified in the brain of Alzheimer's disease patients. Toxic proteases from the bacterium called gingipains were also identified in the brain of Alzheimer's patients, and levels correlated with tau and ubiquitin pathology. Oral P. gingivalis infection in mice resulted in brain colonization and increased production of Aβ1–42, a component of amyloid plaques. Further, gingipains were neurotoxic in vivo and in vitro, exerting detrimental effects on tau, a protein needed for normal neuronal function. To block this neurotoxicity, we designed and synthesized small-molecule inhibitors targeting gingipains. Gingipain inhibition reduced the bacterial load of an established P. gingivalis brain infection, blocked Aβ1–42 production, reduced neuroinflammation, and rescued neurons in the hippocampus. These data suggest that gingipain inhibitors could be valuable for treating P. gingivalis brain colonization and neurodegeneration in Alzheimer's disease."
+  },
+  {
+    title: "Certain Oral Bacteria Associated with Increased Pancreatic Cancer Risk",
+    date: "April 2016",
+    source: "American Association for Cancer Research",
+    sourceUrl: "https://www.aacr.org/Newsroom/Pages/News-Release-Detail.aspx?ItemID=876",
+    content: "Quote from Researcher: \"We found that Porphyromonas gingivalis and Aggregatibacter actinomycetemcomitans, two species of bacteria linked to periodontal disease, were associated with a more than 50 percent increased risk of pancreatic cancer,\" Ahn continued. \"These data do not show a causal relationship, but they are the first steps in understanding a potential new risk factor for pancreatic cancer, which is vital if we are to develop new approaches for pancreatic cancer prevention and early detection in the future.\""
+  },
+  {
+    title: "Oral Bacteria and Cancer",
+    date: "March 10, 2014",
+    source: "National Center for Biotechnology Information",
+    sourceUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3968118/",
+    content: "Quote from Researcher: \"We found that Porphyromonas gingivalis and Aggregatibacter actinomycetemcomitans, two species of bacteria linked to periodontal disease, were associated with a more than 50 percent increased risk of pancreatic cancer,\" Ahn continued. \"These data do not show a causal relationship, but they are the first steps in understanding a potential new risk factor for pancreatic cancer, which is vital if we are to develop new approaches for pancreatic cancer prevention and early detection in the future.\""
+  },
+  {
+    title: "Ozone therapy in dentistry: A strategic review",
+    date: "December 2011",
+    source: "NCBI",
+    sourceUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3276005/",
+    content: "Abstract: The oral cavity appears as an open ecosystem, with a dynamic balance between the entrance of microorganisms, colonization modalities, and host defenses aimed to their removal: To avoid elimination, bacteria need to adhere to either hard dental surfaces or epithelial surfaces. The oral biofilm formation and development, and the inside selection of specific microorganisms have been correlated with the most common oral pathologies, such as dental caries, periodontal disease, and peri-implantitis. The mechanical removal of the biofilm and adjunctive use of antibiotic disinfectants or various antibiotics have been the conventional methods for periodontal therapy. Ozone (O3) is a triatomic molecule, consisting of three oxygen atoms, and its application in medicine and dentistry has been indicated for the treatment of 260 different pathologies. The ozone therapy has been more beneficial than present conventional therapeutic modalities that follow a minimally invasive and conservative application to dental treatment. The exposition of molecular mechanisms of ozone further benefits practical function in dentistry."
+  },
+  {
+    title: "Periodontitis and Atherosclerotic Cardiovascular Disease",
+    date: "July 2009",
+    source: "American Journal of Cardiology",
+    sourceUrl: "https://aap.onlinelibrary.wiley.com/doi/pdf/10.1902/jop.2009.097001",
+    content: "Summary: This authors of this renowned research article from 2009 explain, \"This aim of this document is to provide health professionals, especially cardiologists and periodontists, a better understanding of the link between atherosclerotic CVD and periodontitis and, on the basis of current information, an approach to reducing the risk for primary and secondary atherosclerotic CVD events in patients with periodontitis.\""
+  }
+];
+---
+
+<ResearchPageTemplate
+  title="Oral Infection Clinical Research"
+  metaTitle="Oral Infection Research | Central Dentist"
+  description="Clinical research on the systemic impact of oral infections. Learn about the connection between oral bacteria and conditions like Alzheimer's, cancer, and heart disease."
+>
+  <div slot="introduction">
+    <h2 class="text-section-header text-header-primary mb-6">
+      The Oral-Systemic Connection
+    </h2>
+    <p class="text-body-large mb-8">
+      Groundbreaking research reveals that oral infections have far-reaching effects beyond the mouth.
+      Pathogenic oral bacteria have been found in the brains of Alzheimer's patients and linked to
+      increased risks of pancreatic cancer, cardiovascular disease, and other systemic conditions.
+    </p>
+  </div>
+
+  <div slot="main-content">
+    <div class="bg-teal-50 rounded-lg p-6 mb-8" style="border-left: 4px solid #0099ba;">
+      <p class="text-body-regular font-semibold" style="color: #006786;">
+        Critical Finding: Porphyromonas gingivalis, a bacterium from periodontal disease, has been
+        identified in the brains of Alzheimer's patients, suggesting oral health may play a role in
+        neurodegenerative disease.
+      </p>
+    </div>
+  </div>
+
+  <section slot="studies-section" class="py-16 md:py-20 bg-gray-50">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="max-w-4xl mx-auto">
+        <BlurFade delay={100}>
+          <h2 class="text-section-header text-header-primary text-center mb-4">
+            Research on Oral Infections & Systemic Health
+          </h2>
+          <p class="text-section-subheader text-center mb-12">
+            Evidence linking oral bacteria to serious health conditions
+          </p>
+        </BlurFade>
+
+        <div class="space-y-8">
+          {studies.map((study, index) => (
+            <BlurFade delay={200 + (index * 100)}>
+              <Card className="p-6">
+                <h3 class="text-card-header mb-3" style="color: #006786;">
+                  {study.title}
+                </h3>
+                <div class="flex items-center gap-4 mb-4 text-sm text-gray-600">
+                  <span>📅 {study.date}</span>
+                  {study.sourceUrl ? (
+                    <a
+                      href={study.sourceUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="hover:underline"
+                      style="color: #0099ba;"
+                    >
+                      📚 Source: {study.source}
+                    </a>
+                  ) : (
+                    <span>📚 Source: {study.source}</span>
+                  )}
+                </div>
+                <p class="text-body-regular">
+                  {study.content}
+                </p>
+              </Card>
+            </BlurFade>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div slot="related-links">
+    <div class="grid md:grid-cols-3 gap-6">
+      <BlurFade delay={200}>
+        <a href="/services/advanced-technologies#ozone" class="block">
+          <Card className="h-full hover:shadow-lg transition-shadow">
+            <div class="p-6">
+              <h3 class="text-card-header mb-3">Ozone Therapy</h3>
+              <p class="text-body-regular">
+                Learn about ozone therapy for treating oral infections.
+              </p>
+            </div>
+          </Card>
+        </a>
+      </BlurFade>
+
+      <BlurFade delay={300}>
+        <a href="/clinical-research/biological-root-canals" class="block">
+          <Card className="h-full hover:shadow-lg transition-shadow">
+            <div class="p-6">
+              <h3 class="text-card-header mb-3">Biological Root Canals</h3>
+              <p class="text-body-regular">
+                Biocompatible approaches to endodontic infections.
+              </p>
+            </div>
+          </Card>
+        </a>
+      </BlurFade>
+
+      <BlurFade delay={400}>
+        <a href="/clinical-research/nutrition" class="block">
+          <Card className="h-full hover:shadow-lg transition-shadow">
+            <div class="p-6">
+              <h3 class="text-card-header mb-3">Nutrition Research</h3>
+              <p class="text-body-regular">
+                The role of nutrition in immune function and infection resistance.
+              </p>
+            </div>
+          </Card>
+        </a>
+      </BlurFade>
+    </div>
+  </div>
+</ResearchPageTemplate>

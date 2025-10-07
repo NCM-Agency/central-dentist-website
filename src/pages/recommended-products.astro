@@ -1,0 +1,518 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHero from '../components/shared/PageHero.astro';
+import BlurFade from '../components/ui/BlurFade.astro';
+import Card from '../components/ui/Card.astro';
+
+const productCategories = [
+  {
+    title: "Oral Hygiene Essentials",
+    icon: "🦷",
+    products: [
+      {
+        name: "Risewell Mint Toothpaste",
+        description: "Fluoride-free hydroxyapatite toothpaste for natural remineralization.",
+        shopLink: "https://www.amazon.com/RiseWell-Natural-Hydroxyapatite-Toothpaste-Remineralizing/dp/B09HGHKFGK/"
+      },
+      {
+        name: "Risewell Mouthwash",
+        description: "Natural mouthwash without alcohol or harsh chemicals.",
+        shopLink: "https://amzn.to/3K64Pno"
+      },
+      {
+        name: "Risewell Mints",
+        description: "Sugar-free mints with xylitol for fresh breath.",
+        shopLink: "https://www.amazon.com/dp/B0CHDZQL9R"
+      },
+      {
+        name: "Tooth & Gum Tonic",
+        description: "Natural herbal tonic for oral health support.",
+        shopLink: "https://amzn.to/3zr9f3m"
+      },
+      {
+        name: "Coco Floss",
+        description: "High-quality dental floss that actually cleans between teeth.",
+        shopLink: "https://amzn.to/3Kujomp"
+      },
+      {
+        name: "Bamboo Toothbrush",
+        description: "Eco-friendly, sustainable bamboo toothbrush.",
+        shopLink: "https://amzn.to/3nJ9gxe"
+      }
+    ]
+  },
+  {
+    title: "Specialty Toothpastes",
+    icon: "✨",
+    products: [
+      {
+        name: "Boka Charcoal Toothpaste",
+        description: "Activated charcoal toothpaste with hydroxyapatite for whitening.",
+        shopLink: "https://www.amazon.com/Boka-Charcoal-Toothpaste-Hydroxyapatite-Remineralizing/dp/B0C9L92PMM/"
+      },
+      {
+        name: "Hello Activated Charcoal",
+        description: "Epic teeth whitening fluoride-free toothpaste.",
+        shopLink: "https://www.amazon.com/dp/B09C2KXVY3"
+      },
+      {
+        name: "Himalaya Toothpaste",
+        description: "Natural herbal toothpaste with neem and pomegranate.",
+        shopLink: "https://amzn.to/3nHPOk6"
+      },
+      {
+        name: "Dentalcidin Toothpaste",
+        description: "Professional-grade botanical toothpaste.",
+        shopLink: "https://amzn.to/3U0sMRO"
+      },
+      {
+        name: "Ozone Apothecary's Toothpaste",
+        description: "Ozonated toothpaste for advanced oral care.",
+        shopLink: "https://www.amazon.com/Ozone-Apothecary-Toothpaste-Flouride-Promoting/dp/B0CWDT93WQ/"
+      }
+    ]
+  },
+  {
+    title: "Professional Care Products",
+    icon: "🏥",
+    products: [
+      {
+        name: "MI Paste",
+        description: "Calcium and phosphate remineralizing paste (fluoride-free option).",
+        shopLink: "https://optimusdentalsupply.com/gc-america-mi-paste-without-fluoride/"
+      },
+      {
+        name: "Stellalife Gel",
+        description: "Natural healing gel for oral surgery recovery.",
+        shopLink: "https://amzn.to/42UvsEJ"
+      },
+      {
+        name: "Ozone Oil",
+        description: "Ozonated oil for oral therapeutic applications.",
+        shopLink: "https://amzn.to/3GcLOyG"
+      },
+      {
+        name: "Dentalcidin LS",
+        description: "Liquid botanical formula for oral microbiome support.",
+        shopLink: "https://amzn.to/40QKM3e"
+      },
+      {
+        name: "pH Strips",
+        description: "Test strips to monitor oral pH balance.",
+        shopLink: "https://amzn.to/3m9cido"
+      }
+    ]
+  },
+  {
+    title: "Tools & Devices",
+    icon: "🔧",
+    products: [
+      {
+        name: "Sonicare Toothbrush",
+        description: "Professional electric toothbrush for superior cleaning.",
+        shopLink: "https://amzn.to/3JWS7Y0"
+      },
+      {
+        name: "Tongue Scraper",
+        description: "Copper tongue scraper for oral hygiene and fresh breath.",
+        shopLink: "https://amzn.to/3Ks1GQg"
+      },
+      {
+        name: "Gum Stimulator",
+        description: "Tool for gum massage and circulation improvement.",
+        shopLink: "https://amzn.to/42Xh4LQ"
+      },
+      {
+        name: "Disclosing Tabs",
+        description: "Tablets that reveal plaque for better brushing.",
+        shopLink: "https://amzn.to/3KrEbGV"
+      }
+    ]
+  },
+  {
+    title: "Children's Products",
+    icon: "👶",
+    products: [
+      {
+        name: "Risewell Kids Cake Batter Toothpaste",
+        description: "Fun-flavored fluoride-free toothpaste kids love.",
+        shopLink: "https://amzn.to/3Gdy5rf"
+      },
+      {
+        name: "Kids Bamboo Toothbrush",
+        description: "Eco-friendly toothbrush sized for children.",
+        shopLink: "https://amzn.to/40BeQjG"
+      },
+      {
+        name: "Kids Flossers",
+        description: "Easy-to-use floss picks designed for small hands.",
+        shopLink: "https://amzn.to/3GaMTH3"
+      }
+    ]
+  },
+  {
+    title: "Nasal & Airway Health",
+    icon: "💨",
+    products: [
+      {
+        name: "Xlear Nasal Spray",
+        description: "Xylitol nasal spray for sinus health.",
+        shopLink: "https://amzn.to/40ArMX0"
+      },
+      {
+        name: "Nasopure Starter Kit",
+        description: "Nasal irrigation system for sinus cleansing.",
+        shopLink: "https://amzn.to/3MaAo20"
+      },
+      {
+        name: "Nasopure Salt Refills",
+        description: "Buffered salt packets for nasal irrigation.",
+        shopLink: "https://amzn.to/3JWOTDS"
+      }
+    ]
+  },
+  {
+    title: "Supplements & Nutrition",
+    icon: "💊",
+    products: [
+      {
+        name: "ProBiora Probiotics",
+        description: "Oral probiotics for balanced mouth microbiome.",
+        shopLink: "https://www.amazon.com/ProBiora-Professional-Oral-Care-ProBioraPro-Supplement/dp/B017HJTHAA"
+      },
+      {
+        name: "Biocidin Drops",
+        description: "Botanical supplement for microbiome support.",
+        shopLink: "https://amzn.to/3G6KixN"
+      },
+      {
+        name: "Biocidin Spray",
+        description: "Throat spray for immune support.",
+        shopLink: "https://amzn.to/40BbrkW"
+      },
+      {
+        name: "Quinton Minerals",
+        description: "Marine plasma for mineral replenishment.",
+        shopLink: "https://www.amazon.com/Original-Quinton-Hypertonic-Seawater-Electrolytes/dp/B008J6OUYY/"
+      },
+      {
+        name: "Core Minerals",
+        description: "Essential mineral supplement for overall health.",
+        shopLink: "https://amzn.to/3MbiU5H"
+      },
+      {
+        name: "Glutathione",
+        description: "Master antioxidant for detox support.",
+        shopLink: "https://amzn.to/430JzIl"
+      }
+    ]
+  },
+  {
+    title: "Teeth Whitening",
+    icon: "⚪",
+    products: [
+      {
+        name: "Opalescence Syringes",
+        description: "Professional-grade whitening gel syringes.",
+        shopLink: "https://www.amazon.com/Opalescence-35-MINT-REFILL-KIT/dp/B000MMYI8G/"
+      },
+      {
+        name: "Opalescence Go 15% - 4 Pack",
+        description: "Pre-filled whitening trays for convenience.",
+        shopLink: "https://amzn.to/3KpASQO"
+      },
+      {
+        name: "Opalescence Go 15% - 10 Pack",
+        description: "Larger pack of whitening trays for extended treatment.",
+        shopLink: "https://www.amazon.com/Opalesceence-Opalescence-Go-15/dp/B00ER5NN3K/"
+      }
+    ]
+  },
+  {
+    title: "Natural Remedies",
+    icon: "🌿",
+    products: [
+      {
+        name: "GI Detox Binder",
+        description: "Activated charcoal and clay for detox support.",
+        shopLink: "https://amzn.to/3U6fu6s"
+      },
+      {
+        name: "CBD Salve",
+        description: "Natural pain relief salve for TMJ and jaw pain.",
+        shopLink: "https://amzn.to/40zAUeB"
+      },
+      {
+        name: "Cytokine Suppress",
+        description: "Anti-inflammatory support supplement.",
+        shopLink: "https://amzn.to/3G9g4KA"
+      },
+      {
+        name: "ALA Supplement",
+        description: "Alpha-lipoic acid for antioxidant support.",
+        shopLink: "https://amzn.to/3Mj4QXM"
+      },
+      {
+        name: "Beeswax Lip Balm",
+        description: "Natural lip protection without harmful chemicals.",
+        shopLink: "https://amzn.to/3G9ubQh"
+      }
+    ]
+  },
+  {
+    title: "Wellness Tools",
+    icon: "🏃",
+    products: [
+      {
+        name: "Ozone Machine",
+        description: "Home ozone generator for various therapeutic uses.",
+        shopLink: "https://amzn.to/3nAbBKB"
+      },
+      {
+        name: "Ear & Nose Ozone Insufflation",
+        description: "Accessories for ozone therapy applications.",
+        shopLink: "https://www.amazon.com/Nuv%C3%A4lsa-25-Piece-Ozone-Therapy-Ozone-Resistant/dp/B087YQZG6S/"
+      },
+      {
+        name: "Infrared Sauna Blanket",
+        description: "Portable infrared sauna for detox and relaxation.",
+        shopLink: "https://www.amazon.com/LifePro-Far-Infrared-Sauna-Blanket/dp/B09PSKN6X3/"
+      },
+      {
+        name: "Vibration Plate",
+        description: "Whole body vibration for lymphatic drainage.",
+        shopLink: "https://www.amazon.com/LifePro-Vibration-Plate-Exercise-Machine-Weight-Loss/dp/B0794BXVY4/"
+      },
+      {
+        name: "Berkey Water Filter",
+        description: "Gravity-fed water filtration system.",
+        shopLink: "https://www.amazon.com/Berkey-Gravity-Fed-Filter-Elements-Stainless/dp/B0B8JY7MCY/"
+      }
+    ]
+  },
+  {
+    title: "Recommended Books",
+    icon: "📚",
+    products: [
+      {
+        name: "Moms In The Trenches",
+        description: "Guide for moms advocating for children's health.",
+        shopLink: "https://www.amazon.com/Moms-Trenches-Unpack-Advocate-Childrens/dp/1636801285/"
+      },
+      {
+        name: "Nutrition and Physical Degeneration",
+        description: "Dr. Weston Price's landmark work on nutrition and dental health.",
+        shopLink: "https://amzn.to/3U5aSNM"
+      },
+      {
+        name: "Breath",
+        description: "James Nestor's exploration of the science of breathing.",
+        shopLink: "https://amzn.to/3zobDIa"
+      },
+      {
+        name: "Sleep, Interrupted",
+        description: "Understanding sleep-disordered breathing.",
+        shopLink: "https://amzn.to/40LzgWS"
+      },
+      {
+        name: "Gasp! Airway Health",
+        description: "The hidden path to wellness through proper breathing.",
+        shopLink: "https://amzn.to/3MbozbX"
+      },
+      {
+        name: "Tongue Tied",
+        description: "How a tiny string impacts nursing, speech, feeding, and more.",
+        shopLink: "https://amzn.to/3GftqVN"
+      },
+      {
+        name: "Root Canal Cover-Up",
+        description: "Exposing the truth about root canal dangers.",
+        shopLink: "https://amzn.to/40s0fa9"
+      }
+    ]
+  }
+];
+---
+
+<Layout
+  title="Recommended Products | Central Dentist"
+  description="Our carefully curated selection of holistic dental care products for optimal oral and systemic health."
+>
+  <PageHero
+    title="Recommended Products"
+    subtitle="Carefully selected products for your holistic dental health journey"
+    backgroundImage="/images/services/abstract-white-texture.jpg"
+    variant="standard"
+    breadcrumbs={[
+      { label: 'Recommended Products', href: '/recommended-products' }
+    ]}
+  />
+
+  <!-- Introduction Section -->
+  <section class="py-16 md:py-20 bg-white">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="max-w-4xl mx-auto">
+        <BlurFade delay={100}>
+          <h2 class="text-section-header text-header-primary text-center mb-6">
+            Products We Trust and Recommend
+          </h2>
+          <p class="text-body-large text-center mb-8">
+            At Central Dentist, we believe in recommending products that align with our holistic philosophy.
+            These carefully selected items support your oral health naturally, without harmful chemicals or unnecessary additives.
+          </p>
+        </BlurFade>
+
+        <BlurFade delay={200}>
+          <Card className="p-6 mb-8" style="background-color: #f0f9ff; border-left: 4px solid #0099ba;">
+            <h3 class="text-card-header mb-2" style="color: #006786;">Disclosure:</h3>
+            <p class="text-body-regular">
+              These recommended products are a collection of Central Dentist's favorite Amazon products.
+              Dr. Ombrello is a participant in the Amazon Services LLC Associates Program.
+              As an Amazon Associate, Dr. Ombrello earns commissions for qualifying purchases.
+            </p>
+          </Card>
+        </BlurFade>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Categories -->
+  {productCategories.map((category, categoryIndex) => (
+    <section class={`py-16 md:py-20 ${categoryIndex % 2 === 0 ? 'bg-gray-50' : 'bg-white'}`}>
+      <div class="container mx-auto px-4 md:px-6">
+        <div class="max-w-6xl mx-auto">
+          <BlurFade delay={100}>
+            <div class="text-center mb-12">
+              <div class="text-5xl mb-4">{category.icon}</div>
+              <h2 class="text-section-header text-header-primary mb-4">{category.title}</h2>
+            </div>
+          </BlurFade>
+
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {category.products.map((product, index) => (
+              <BlurFade delay={200 + (index * 100)}>
+                <Card className="h-full flex flex-col">
+                  <div class="p-6 flex-grow">
+                    <h3 class="text-card-header mb-3" style="color: #006786;">
+                      {product.name}
+                    </h3>
+                    <p class="text-body-regular mb-4">
+                      {product.description}
+                    </p>
+                  </div>
+                  <div class="p-6 pt-0">
+                    <a
+                      href={product.shopLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="block text-center px-4 py-2 rounded-full transition-all duration-300"
+                      style="background-color: #0099ba; color: white;"
+                      onmouseover="this.style.backgroundColor='#006786';"
+                      onmouseout="this.style.backgroundColor='#0099ba';">
+                      Shop on Amazon →
+                    </a>
+                  </div>
+                </Card>
+              </BlurFade>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  ))}
+
+  <!-- Tips Section -->
+  <section class="py-16 md:py-20 bg-white">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="max-w-4xl mx-auto">
+        <BlurFade delay={100}>
+          <h2 class="text-section-header text-header-primary text-center mb-12">
+            Product Usage Tips
+          </h2>
+        </BlurFade>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <BlurFade delay={200}>
+            <Card className="p-6">
+              <h3 class="text-card-header mb-3" style="color: #006786;">
+                🕐 Timing Matters
+              </h3>
+              <p class="text-body-regular">
+                Use oral care products at the right times. Oil pulling is best done first thing in the morning,
+                while xylitol products work best after meals.
+              </p>
+            </Card>
+          </BlurFade>
+
+          <BlurFade delay={300}>
+            <Card className="p-6">
+              <h3 class="text-card-header mb-3" style="color: #006786;">
+                🔄 Consistency is Key
+              </h3>
+              <p class="text-body-regular">
+                Natural products often work best with consistent use. Give new products at least 2-4 weeks
+                to see results before making judgments.
+              </p>
+            </Card>
+          </BlurFade>
+
+          <BlurFade delay={400}>
+            <Card className="p-6">
+              <h3 class="text-card-header mb-3" style="color: #006786;">
+                👨‍⚕️ Consult First
+              </h3>
+              <p class="text-body-regular">
+                Always consult with our team before starting new supplements or if you have specific
+                oral health concerns that need addressing.
+              </p>
+            </Card>
+          </BlurFade>
+
+          <BlurFade delay={500}>
+            <Card className="p-6">
+              <h3 class="text-card-header mb-3" style="color: #006786;">
+                🌱 Quality Over Quantity
+              </h3>
+              <p class="text-body-regular">
+                Invest in high-quality, natural products. A little often goes a long way with premium
+                oral care items.
+              </p>
+            </Card>
+          </BlurFade>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 md:py-20" style="background: linear-gradient(to bottom right, #0099ba, #006786);">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="max-w-3xl mx-auto text-center">
+        <BlurFade delay={100}>
+          <h2 class="text-section-header text-white mb-6">
+            Need Personalized Product Recommendations?
+          </h2>
+          <p class="text-section-subheader text-white/90 mb-8">
+            Our team can provide customized product suggestions based on your specific oral health needs and goals.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/contact"
+              class="px-8 py-3 bg-gradient-to-r from-[#a6b443] to-[#c7cd85] text-white rounded-full font-semibold transition-all duration-300 hover:from-[#8fa339] hover:to-[#a6b443] hover:shadow-lg"
+              style="font-family: 'Playfair Display', serif;">
+              Schedule Consultation
+            </a>
+            <a
+              href="tel:2143680900"
+              class="px-8 py-3 bg-white border-2 rounded-full font-semibold transition-all duration-300 hover:shadow-lg"
+              style="font-family: 'Playfair Display', serif; color: #0099ba; border-color: white;"
+              onmouseover="this.style.backgroundColor='#006786'; this.style.color='white';"
+              onmouseout="this.style.backgroundColor='white'; this.style.color='#0099ba';">
+              Call (214) 368-0900
+            </a>
+          </div>
+        </BlurFade>
+      </div>
+    </div>
+  </section>
+</Layout>

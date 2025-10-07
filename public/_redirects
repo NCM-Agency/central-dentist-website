@@ -1,0 +1,15 @@
+# 301 Redirects for consolidated service pages
+# Created during service page consolidation (January 2025)
+
+# Advanced Technologies consolidation (CBCT + Ozone + Ceramic Implants)
+/services/cbct                  /services/advanced-technologies#cbct               301
+/services/ozone-therapy         /services/advanced-technologies#ozone              301
+/services/ceramic-implants      /services/advanced-technologies#ceramic-implants   301
+
+# Mercury-Free Approach consolidation (Mercury-free + Fluoride-free + BPA-free)
+/services/bonding               /services/mercury-free-approach#fluoride-free      301
+/services/mercury-free          /services/mercury-free-approach                    301
+
+# Functional Health consolidation (Sleep + TMJ + ADHD)
+/services/sleep-breathing       /services/functional-health#sleep                  301
+/services/tmj                   /services/functional-health#tmj                    301

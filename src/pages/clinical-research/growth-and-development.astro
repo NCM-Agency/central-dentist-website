@@ -1,0 +1,144 @@
+---
+import ResearchPageTemplate from '../../layouts/ResearchPageTemplate.astro';
+import BlurFade from '../../components/ui/BlurFade.astro';
+import Card from '../../components/ui/Card.astro';
+
+const studies = [
+  {
+    title: "Should children get their tonsils taken out?",
+    date: "January 17, 2017",
+    source: "CNN",
+    sourceUrl: "https://www.cnn.com/2017/01/17/health/tonsils-removed-surgery-children-study/index.html",
+    content: "Summary: After reviewing the studies, the researchers found that, even in children with a few infections, their throat infections, health care utilization and school absences improved in the first year after surgery versus those who did not undergo surgery. However, benefits did not persist over time, and longer-term outcomes were limited, the researchers wrote. The researchers noted that they advocate for parents and physicians to make the decision together regarding a possible tonsillectomy for a child. The surgery poses risks, such as the potential for serious bleeding, swelling, infection, or reactions to anesthetics, that must be weighed with the potential benefits."
+  },
+  {
+    title: "Breast feeding, bottle feeding, and non-nutritive sucking; effects on occlusion in deciduous dentition",
+    date: "November 19, 2004",
+    source: "Archives of Disease in Childhood",
+    sourceUrl: null,
+    content: "Abstract: To assess the effect of the type of feeding and non-nutritive sucking activity on occlusion in deciduous dentition."
+  },
+  {
+    title: "When Should A Baby See A Dentist For The First Time? Earlier Than You Think",
+    date: "June 2018",
+    source: "Romper",
+    sourceUrl: "https://www.romper.com/p/when-should-a-baby-see-a-dentist-for-the-first-time-earlier-than-you-think-9318000",
+    content: "Introduction: Taking care of your kids' teeth is as important as taking care of the rest of their bodies. Looking at your toothless wonder, it may be hard to imagine a life full of dental visits, orthodontia, and maybe even oral surgery (because wisdom teeth rarely behave themselves and often need to be removed) but they are all a reality and may come sooner than you might think."
+  }
+];
+---
+
+<ResearchPageTemplate
+  title="Growth and Development Clinical Research"
+  metaTitle="Growth and Development Research | Central Dentist"
+  description="Clinical research on proper facial and airway development in children. Learn about the impact of feeding methods, early intervention, and preventive approaches."
+>
+  <div slot="introduction">
+    <h2 class="text-section-header text-header-primary mb-6">
+      Understanding Proper Growth & Development
+    </h2>
+    <p class="text-body-large mb-8">
+      Proper facial and dental development in early childhood sets the foundation for lifelong health.
+      Research shows that feeding methods, oral habits, and early intervention can significantly impact
+      a child's craniofacial growth, airway development, and overall wellness.
+    </p>
+  </div>
+
+  <div slot="main-content">
+    <div class="bg-teal-50 rounded-lg p-6 mb-8" style="border-left: 4px solid #0099ba;">
+      <p class="text-body-regular font-semibold" style="color: #006786;">
+        Key Insight: Early dental visits and proper guidance on feeding and oral habits can prevent
+        many developmental issues before they become serious problems.
+      </p>
+    </div>
+  </div>
+
+  <section slot="studies-section" class="py-16 md:py-20 bg-gray-50">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="max-w-4xl mx-auto">
+        <BlurFade delay={100}>
+          <h2 class="text-section-header text-header-primary text-center mb-4">
+            Research on Growth & Development
+          </h2>
+          <p class="text-section-subheader text-center mb-12">
+            Evidence-based insights for optimal childhood development
+          </p>
+        </BlurFade>
+
+        <div class="space-y-8">
+          {studies.map((study, index) => (
+            <BlurFade delay={200 + (index * 100)}>
+              <Card className="p-6">
+                <h3 class="text-card-header mb-3" style="color: #006786;">
+                  {study.title}
+                </h3>
+                <div class="flex items-center gap-4 mb-4 text-sm text-gray-600">
+                  <span>📅 {study.date}</span>
+                  {study.sourceUrl ? (
+                    <a
+                      href={study.sourceUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="hover:underline"
+                      style="color: #0099ba;"
+                    >
+                      📚 Source: {study.source}
+                    </a>
+                  ) : (
+                    <span>📚 Source: {study.source}</span>
+                  )}
+                </div>
+                <p class="text-body-regular">
+                  {study.content}
+                </p>
+              </Card>
+            </BlurFade>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div slot="related-links">
+    <div class="grid md:grid-cols-3 gap-6">
+      <BlurFade delay={200}>
+        <a href="/pediatrics/healthy-start" class="block">
+          <Card className="h-full hover:shadow-lg transition-shadow">
+            <div class="p-6">
+              <h3 class="text-card-header mb-3">Healthy Start™</h3>
+              <p class="text-body-regular">
+                Early intervention for proper facial and airway development.
+              </p>
+            </div>
+          </Card>
+        </a>
+      </BlurFade>
+
+      <BlurFade delay={300}>
+        <a href="/clinical-research/nutrition" class="block">
+          <Card className="h-full hover:shadow-lg transition-shadow">
+            <div class="p-6">
+              <h3 class="text-card-header mb-3">Nutrition Research</h3>
+              <p class="text-body-regular">
+                The role of nutrition in proper growth and development.
+              </p>
+            </div>
+          </Card>
+        </a>
+      </BlurFade>
+
+      <BlurFade delay={400}>
+        <a href="/pediatrics/sleep-breathing" class="block">
+          <Card className="h-full hover:shadow-lg transition-shadow">
+            <div class="p-6">
+              <h3 class="text-card-header mb-3">Sleep-Breathing Disorders</h3>
+              <p class="text-body-regular">
+                Understanding airway development and breathing issues in children.
+              </p>
+            </div>
+          </Card>
+        </a>
+      </BlurFade>
+    </div>
+  </div>
+</ResearchPageTemplate>

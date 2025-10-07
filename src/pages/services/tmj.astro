@@ -1,0 +1,367 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PageHero from '../../components/shared/PageHero.astro';
+import BlurFade from '../../components/ui/BlurFade.astro';
+import Card from '../../components/ui/Card.astro';
+import Button from '../../components/ui/Button.astro';
+
+const symptoms = [
+  { title: "Headaches", description: "Sometimes of migraine proportions" },
+  { title: "Ear Pain Symptoms", description: "Ringing in the ears, hearing loss, 'plugged' ears, ear pain, feeling of 'underwater'" },
+  { title: "Clicking/Popping", description: "The disc between temporal bone and mandible can slip out of place causing clicking when opening and closing" },
+  { title: "Locking", description: "When a disc is chronically displaced, it leads to locking of the jaw joint with limited range of motion" },
+  { title: "Jaw Pain", description: "Most commonly from dental or musculoskeletal sources. Can radiate from the neck" }
+];
+
+const treatments = [
+  {
+    title: "TMJ Oral Appliances",
+    description: "Sved appliance, Garcia splint - TMJ appliances all reposition the jaw to decrease clicking and decompress the auriculotemporal nerve. Stabilization appliances are also used for myofascial pain.",
+    icon: "🦷"
+  },
+  {
+    title: "Sleep Appliances for TMJ",
+    description: "Breathing related sleep disorders are often diagnosed in conjunction with TMJ disorders. Oral sleep appliances can be prescribed in these cases.",
+    icon: "😴"
+  },
+  {
+    title: "Trigger Point Injections",
+    description: "Trigger point injection therapy involves the injection of a local anesthetic into tender points to eliminate pain and re-educate the muscles.",
+    icon: "💉"
+  },
+  {
+    title: "Physical Therapy",
+    description: "Manual physical therapy can be used in myofascial release, mobilization of the TMJs, and deep muscle therapy.",
+    icon: "🤲"
+  }
+];
+
+const causes = [
+  { name: "Bruxism", detail: "Sleep movement disorder causing repetitive strain injury" },
+  { name: "Estrogen", detail: "Hormonal factors affecting joint health, especially in women" },
+  { name: "Autoimmune", detail: "Conditions like rheumatoid arthritis, lupus, and others" },
+  { name: "Joint Laxity", detail: "Elongated ligaments allowing disc displacement" },
+  { name: "Trauma", detail: "Falls, blows to chin, intubation, or dental procedures" },
+  { name: "Sleep Issues", detail: "Lack of restorative sleep affecting healing" },
+  { name: "Arthritis", detail: "Localized or systemic inflammation" }
+];
+
+const faqs = [
+  {
+    question: "What is TMJ exactly?",
+    answer: "The temporomandibular joints (TMJ) are the hinges located on either side of your face that connect the lower jaw to the skull. These joints work together with facial bones and muscles to allow jaw movements. TMJ dysfunction occurs when muscles and joints don't work together correctly, causing pain and other symptoms."
+  },
+  {
+    question: "What causes TMJ disorders?",
+    answer: "TMJ disorders have many causes including teeth grinding, hormonal factors (80% of patients are women), autoimmune conditions, joint laxity, trauma, sleep issues, and arthritis. Often multiple factors contribute to the condition."
+  },
+  {
+    question: "What is the difference between TMJ and TMD?",
+    answer: "TMJ refers to the temporomandibular joint itself. TMD (temporomandibular disorders) refers to the various conditions affecting the joint, muscles, tendons, and ligaments of the jaw, including pain, inflammation, clicking, and limited movement."
+  },
+  {
+    question: "How do I use my TMJ appliances?",
+    answer: "Daytime symptoms typically require daytime appliance therapy for 6-8 weeks. Nighttime treatment depends on your specific diagnosis. Some appliances address sleep breathing disorders, while others target bruxism and grinding."
+  },
+  {
+    question: "Should I get dental work done before TMJ treatment?",
+    answer: "We only recommend emergency dental treatment before TMJ therapy. One goal of treatment is finding a jaw position that alleviates symptoms, and dental work done beforehand might need adjustment later."
+  }
+];
+---
+
+<Layout title="TMJ Treatment | Central Dentist" description="Expert TMJ disorder treatment in Dallas. Find relief from jaw pain, headaches, clicking, and other TMJ symptoms with our comprehensive approach.">
+  <!-- Hero Section -->
+  <PageHero
+    title="TMJ Treatment"
+    subtitle="Comprehensive Relief for Temporomandibular Joint Disorders"
+    backgroundImage="/images/services/abstract-white-texture.jpg"
+    variant="standard"
+    breadcrumbs={[
+      { label: 'Services', href: '/services' },
+      { label: 'TMJ Treatment', href: '#' }
+    ]}
+  />
+
+  <!-- Overview Section - White Background -->
+  <section class="py-16 md:py-20 bg-white">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="max-w-4xl mx-auto">
+        <BlurFade delay={100}>
+          <div class="text-center mb-12">
+            <h2 class="text-section-header text-header-primary">Do You Suffer from TMJ Disorder?</h2>
+            <p class="text-section-subheader">Millions suffer from TMJ disorders, many without knowing the source of their pain</p>
+          </div>
+        </BlurFade>
+
+        <BlurFade delay={200}>
+          <div class="prose max-w-none">
+            <p class="text-body-regular text-gray-dark mb-6">
+              It's estimated that tens of millions of men, women, and children suffer from TMJ and TMD. Headaches and pain are the most common complaints—around 80% of patients with TMJ disorder experience debilitating headaches, and over 40% report facial pain.
+            </p>
+
+            <div class="bg-gray-50 rounded-lg p-6 my-8">
+              <p class="text-body-regular text-gray-dark font-semibold mb-4" style="color: #006786;">
+                Important: Without proper TMJ treatment, you may experience:
+              </p>
+              <ul class="space-y-2">
+                <li class="text-body-regular text-gray-dark flex items-start">
+                  <span class="text-red-500 mr-2">•</span>
+                  Increasing joint damage and inflammation
+                </li>
+                <li class="text-body-regular text-gray-dark flex items-start">
+                  <span class="text-red-500 mr-2">•</span>
+                  Further wear and breakdown of teeth
+                </li>
+                <li class="text-body-regular text-gray-dark flex items-start">
+                  <span class="text-red-500 mr-2">•</span>
+                  Increased muscle contraction and pain
+                </li>
+                <li class="text-body-regular text-gray-dark flex items-start">
+                  <span class="text-red-500 mr-2">•</span>
+                  Progressive deterioration affecting every jaw movement
+                </li>
+              </ul>
+            </div>
+
+            <p class="text-body-regular text-gray-dark">
+              If your jaw is not correctly aligned, you'll add wear and tear every time you speak, chew, swallow, and yawn—even while you sleep. Our TMJ specialist doctors customize all treatments to your specific needs to ensure optimal relief.
+            </p>
+          </div>
+        </BlurFade>
+      </div>
+    </div>
+  </section>
+
+  <!-- Symptoms Section - Gray Background -->
+  <section class="py-16 md:py-20 bg-gray-50">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="max-w-6xl mx-auto">
+        <BlurFade delay={100}>
+          <div class="text-center mb-12">
+            <h2 class="text-section-header text-header-primary">Common TMJ Symptoms</h2>
+            <p class="text-section-subheader">Recognizing the signs of TMJ disorder</p>
+          </div>
+        </BlurFade>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {symptoms.map((symptom, index) => (
+            <BlurFade delay={200 + index * 50}>
+              <Card variant="bordered" class="p-6 h-full">
+                <h3 class="text-card-header text-header-primary mb-3">{symptom.title}</h3>
+                <p class="text-body-regular text-gray-medium">{symptom.description}</p>
+              </Card>
+            </BlurFade>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Diagnostics Section - White Background -->
+  <section class="py-16 md:py-20 bg-white">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="max-w-6xl mx-auto">
+        <BlurFade delay={100}>
+          <div class="text-center mb-12">
+            <h2 class="text-section-header text-header-primary">Advanced TMJ Diagnostics</h2>
+            <p class="text-section-subheader">Joint Vibration Analysis for Precise Diagnosis</p>
+          </div>
+        </BlurFade>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <BlurFade delay={200}>
+            <div>
+              <h3 class="text-card-header text-header-primary mb-4">Joint Vibration Analysis (JVA)</h3>
+              <p class="text-body-regular text-gray-dark mb-4">
+                Your TMJs are the skeletal foundation of your mouth. Our office uses Joint Vibration Analysis (JVA) which records the vibrations created by joint fluid, cartilage, and bone as you open and close your mouth.
+              </p>
+              <p class="text-body-regular text-gray-dark mb-4">
+                This test allows us to objectively measure and document the health of your jaw joint in just 10 seconds of opening and closing.
+              </p>
+
+              <div class="bg-gray-50 rounded-lg p-4 mt-6">
+                <h4 class="text-body-regular font-semibold text-header-primary mb-2">Benefits of JVA:</h4>
+                <ul class="space-y-2">
+                  <li class="text-body-regular text-gray-medium flex items-start">
+                    <span style="color: #a6b443;" class="mr-2">✓</span>
+                    Quick 10-second assessment
+                  </li>
+                  <li class="text-body-regular text-gray-medium flex items-start">
+                    <span style="color: #a6b443;" class="mr-2">✓</span>
+                    Non-invasive and painless
+                  </li>
+                  <li class="text-body-regular text-gray-medium flex items-start">
+                    <span style="color: #a6b443;" class="mr-2">✓</span>
+                    Objective measurement of joint health
+                  </li>
+                  <li class="text-body-regular text-gray-medium flex items-start">
+                    <span style="color: #a6b443;" class="mr-2">✓</span>
+                    Helps prevent treatment complications
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </BlurFade>
+
+          <BlurFade delay={300}>
+            <div class="bg-gray-50 rounded-lg p-8">
+              <img
+                src="/images/services/diagnostics.jpg"
+                alt="TMJ Joint Vibration Analysis"
+                class="rounded-lg shadow-md w-full h-auto"
+              />
+              <!-- TODO: Replace with actual JVA equipment image when available -->
+            </div>
+          </BlurFade>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Treatment Options - Gray Background -->
+  <section class="py-16 md:py-20 bg-gray-50">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="max-w-6xl mx-auto">
+        <BlurFade delay={100}>
+          <div class="text-center mb-12">
+            <h2 class="text-section-header text-header-primary">TMJ Treatment Options</h2>
+            <p class="text-section-subheader">Customized, non-surgical solutions for lasting relief</p>
+          </div>
+        </BlurFade>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {treatments.map((treatment, index) => (
+            <BlurFade delay={200 + index * 50}>
+              <Card variant="bordered" class="p-6 h-full hover:shadow-lg transition-shadow">
+                <div class="flex items-start space-x-4">
+                  <span class="text-3xl flex-shrink-0">{treatment.icon}</span>
+                  <div>
+                    <h3 class="text-card-header text-header-primary mb-2">{treatment.title}</h3>
+                    <p class="text-body-regular text-gray-medium">{treatment.description}</p>
+                  </div>
+                </div>
+              </Card>
+            </BlurFade>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Causes Section - White Background -->
+  <section class="py-16 md:py-20 bg-white">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="max-w-4xl mx-auto">
+        <BlurFade delay={100}>
+          <div class="text-center mb-12">
+            <h2 class="text-section-header text-header-primary">Understanding TMJ Causes</h2>
+            <p class="text-section-subheader">Multiple factors can contribute to TMJ disorders</p>
+          </div>
+        </BlurFade>
+
+        <BlurFade delay={200}>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {causes.map((cause, index) => (
+              <div class="flex items-start space-x-3 p-4 rounded-lg hover:bg-gray-50 transition-colors">
+                <div class="w-2 h-2 rounded-full mt-2 flex-shrink-0" style="background-color: #0099ba;"></div>
+                <div>
+                  <h4 class="text-body-regular font-semibold text-gray-dark">{cause.name}</h4>
+                  <p class="text-body-small text-gray-medium">{cause.detail}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </BlurFade>
+
+        <BlurFade delay={300}>
+          <div class="mt-12 p-6 rounded-lg" style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);">
+            <h3 class="text-card-header text-header-primary mb-4">TMJ and Your Ears</h3>
+            <p class="text-body-regular text-gray-dark mb-4">
+              <strong>Did you know</strong> there is an intimate connection between the jaw and the ear?
+              The TMJ and the ear are connected through the petrotympanic suture via Pinto's ligament.
+            </p>
+            <p class="text-body-regular text-gray-dark mb-4">
+              This connection explains why TMJ disorders often cause ear-related symptoms:
+            </p>
+            <ul class="space-y-2">
+              <li class="text-body-regular text-gray-dark flex items-start">
+                <span style="color: #0099ba;" class="mr-2">•</span>
+                <strong>Tinnitus:</strong> Ringing, buzzing, or hissing sounds
+              </li>
+              <li class="text-body-regular text-gray-dark flex items-start">
+                <span style="color: #0099ba;" class="mr-2">•</span>
+                <strong>Ear Aches:</strong> Pain referred from compressed nerves
+              </li>
+              <li class="text-body-regular text-gray-dark flex items-start">
+                <span style="color: #0099ba;" class="mr-2">•</span>
+                <strong>Dizziness:</strong> Balance and equilibrium issues
+              </li>
+              <li class="text-body-regular text-gray-dark flex items-start">
+                <span style="color: #0099ba;" class="mr-2">•</span>
+                <strong>Sensitivity:</strong> Difficulty adapting to everyday sounds
+              </li>
+            </ul>
+          </div>
+        </BlurFade>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section - Gray Background -->
+  <section class="py-16 md:py-20 bg-gray-50">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="max-w-4xl mx-auto">
+        <BlurFade delay={100}>
+          <div class="text-center mb-12">
+            <h2 class="text-section-header text-header-primary">Frequently Asked Questions</h2>
+            <p class="text-section-subheader">Get answers about TMJ treatment</p>
+          </div>
+        </BlurFade>
+
+        <BlurFade delay={200}>
+          <div class="space-y-4">
+            {faqs.map((faq, index) => (
+              <details class="group bg-white rounded-lg shadow-sm">
+                <summary class="flex justify-between items-center cursor-pointer p-6 hover:bg-gray-50 transition-colors">
+                  <span class="text-body-regular font-semibold text-gray-dark pr-4">{faq.question}</span>
+                  <svg class="w-5 h-5 flex-shrink-0 transition-transform group-open:rotate-180" style="color: #0099ba;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </summary>
+                <div class="px-6 pb-6 pt-0">
+                  <p class="text-body-regular text-gray-medium">{faq.answer}</p>
+                </div>
+              </details>
+            ))}
+          </div>
+        </BlurFade>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section - Blue Gradient Background -->
+  <section class="py-16 md:py-20" style="background: linear-gradient(to bottom right, #0099ba, #006786);">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="max-w-3xl mx-auto text-center">
+        <BlurFade delay={100}>
+          <h2 class="text-section-header text-white mb-4">
+            TMD is Painful But Doesn't Have to Be Debilitating
+          </h2>
+          <p class="text-section-subheader text-white/90 mb-8">
+            There are plenty of treatments available. Schedule your consultation today and take the first step toward relief.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button variant="primary" href="/contact">Schedule TMJ Consultation</Button>
+            <Button variant="secondary" href="tel:214-368-0900">
+              <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+              Call (214) 368-0900
+            </Button>
+          </div>
+        </BlurFade>
+      </div>
+    </div>
+  </section>
+</Layout>

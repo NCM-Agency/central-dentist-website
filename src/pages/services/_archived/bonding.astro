@@ -1,0 +1,29 @@
+---
+// Bonding Service Page - Central Dentist (Simplified per PM requirements)
+import ServicePageMinimal from '../../layouts/ServicePageMinimal.astro';
+
+const content = `Dental bonding is a quick, conservative treatment for repairing chipped, cracked, or discolored teeth. At Central Dentist, we exclusively use fluoride-free bonding materials that are biocompatible and safe for your overall health.
+
+Important: We replace existing fluoridated bonding for new patients with our safer, fluoride-free alternatives. This ensures all materials in your mouth support your whole-body wellness.`;
+
+const benefits = [
+  'Fluoride-free and biocompatible materials',
+  'Natural-looking color matching',
+  'Same-day treatment available',
+  'Repairs chipped or cracked teeth',
+  'Closes small gaps between teeth',
+  'Improves tooth color and shape',
+  'Replaces old fluoridated bonding'
+];
+---
+
+<ServicePageMinimal
+  title="Fluoride-Free Dental Bonding"
+  description="Safe, biocompatible bonding materials for natural-looking tooth repair"
+  metaDescription="Fluoride-free dental bonding at Central Dentist Dallas. Safe, biocompatible materials for tooth repair with same-day treatment available."
+  backgroundImage="/images/services/abstract-white-texture.jpg"
+  content={content}
+  benefits={benefits}
+  ctaTitle="Ready for Fluoride-Free Bonding?"
+  ctaText="Replace your old bonding with safe, biocompatible materials"
+/>

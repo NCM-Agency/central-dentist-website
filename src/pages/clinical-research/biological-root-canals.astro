@@ -1,0 +1,157 @@
+---
+import ResearchPageTemplate from '../../layouts/ResearchPageTemplate.astro';
+import BlurFade from '../../components/ui/BlurFade.astro';
+import Card from '../../components/ui/Card.astro';
+
+const studies = [
+  {
+    title: "Strategies for Biocompatible Endodontics With Calcium Oxide",
+    date: "2014",
+    source: "IAOMT",
+    sourceUrl: "https://iaomt.org/wp-content/uploads/stragegies-for-biocompatible-endo.pdf",
+    content: "Summary: An introduction and technique manual for using calcium oxide in endodontic treatment."
+  },
+  {
+    title: "Ozone therapy in dentistry: A strategic review",
+    date: "December 2011",
+    source: "NCBI",
+    sourceUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3276005/",
+    content: "Abstract: The oral cavity appears as an open ecosystem, with a dynamic balance between the entrance of microorganisms, colonization modalities, and host defenses aimed to their removal: To avoid elimination, bacteria need to adhere to either hard dental surfaces or epithelial surfaces. The oral biofilm formation and development, and the inside selection of specific microorganisms have been correlated with the most common oral pathologies, such as dental caries, periodontal disease, and peri-implantitis. The mechanical removal of the biofilm and adjunctive use of antibiotic disinfectants or various antibiotics have been the conventional methods for periodontal therapy. Ozone (O3) is a triatomic molecule, consisting of three oxygen atoms, and its application in medicine and dentistry has been indicated for the treatment of 260 different pathologies. The ozone therapy has been more beneficial than present conventional therapeutic modalities that follow a minimally invasive and conservative application to dental treatment. The exposition of molecular mechanisms of ozone further benefits practical function in dentistry."
+  },
+  {
+    title: "Calcium Oxide as a Root Filling Material: a Three-Year Prospective Clinical Outcome Study",
+    date: "March 1, 2011",
+    source: "NCBI",
+    sourceUrl: null,
+    content: "Abstract: Calcium oxide, available for decades as a root canal filling material, has been little used in recent years due to its lack of radio-opacity, and an expectation that it would lead to an excess of root fractures. In this study, four general dentists submitted 79 cases of endodontically treated teeth whose roots were filled with either Biocalex 6/9, or Endocal-10, and rendered adequately radio-opaque with yttrium oxide. 57 teeth were available for follow up at three years. Criteria for success were comfort, function, radiographic signs of healing. The overall success rate was 89%. The percentage of teeth retained in function was 98%; aside from one equivocal case, no teeth were lost to root fractures. These numbers are indistinguishable from success rates reported for conventional root filling materials. Conclusion: Calcium oxide may be considered a safe and viable alternative to other current methods of root obturation."
+  },
+  {
+    title: "Root Canal Dangers",
+    date: "June 25, 2010",
+    source: "Weston Price",
+    sourceUrl: "https://www.westonaprice.org/health-topics/dentistry/root-canal-dangers/",
+    content: "Introduction: In 2010, Hal Huggins, DDS, wrote this article about how DNA studies are confirming the findings of Dr. Weston Price. He explains, \"Toxic dental materials have created much havoc in the dental profession, as well as in patient health, for nearly two centuries. Dental mercury fillings, nickel crowns (especially in children, called \"chrome crowns\"), root canals and cavitations have been the target of concern for a long time.\""
+  },
+  {
+    title: "Status Report on Endodontic Therapy",
+    date: "March 2001",
+    source: "IAOMT",
+    sourceUrl: "https://iaomt.org/wp-content/uploads/article_Status-Report-on-Endodontic-Therapy.pdf",
+    content: "Summary: IAOMT positions paper on the current status of endodontics, from the standpoint of biocompatibility."
+  }
+];
+---
+
+<ResearchPageTemplate
+  title="Biological Root Canals & Cavitations Clinical Research"
+  metaTitle="Biological Root Canals & Cavitations Research | Central Dentist"
+  description="Clinical research on biological endodontic therapy, calcium oxide treatments, ozone therapy, and biocompatible alternatives to traditional root canal procedures."
+>
+  <div slot="introduction">
+    <h2 class="text-section-header text-header-primary mb-6">
+      Advancing Biological Endodontic Therapy
+    </h2>
+    <p class="text-body-large mb-8">
+      Biological root canal therapy represents a paradigm shift in endodontic treatment, focusing on biocompatibility,
+      tissue regeneration, and the elimination of chronic infections without compromising the body's natural healing processes.
+    </p>
+  </div>
+
+  <div slot="main-content">
+    <div class="bg-teal-50 rounded-lg p-6 mb-8" style="border-left: 4px solid #0099ba;">
+      <p class="text-body-regular font-semibold" style="color: #006786;">
+        Key Focus: Our research explores safer, more biocompatible alternatives to traditional root canal therapy,
+        including calcium oxide, ozone therapy, and other biological approaches that support the body's natural healing.
+      </p>
+    </div>
+  </div>
+
+  <section slot="studies-section" class="py-16 md:py-20 bg-gray-50">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="max-w-4xl mx-auto">
+        <BlurFade delay={100}>
+          <h2 class="text-section-header text-header-primary text-center mb-4">
+            Research Studies & Clinical Evidence
+          </h2>
+          <p class="text-section-subheader text-center mb-12">
+            Peer-reviewed research supporting biological endodontic approaches
+          </p>
+        </BlurFade>
+
+        <div class="space-y-8">
+          {studies.map((study, index) => (
+            <BlurFade delay={200 + (index * 100)}>
+              <Card className="p-6">
+                <h3 class="text-card-header mb-3" style="color: #006786;">
+                  {study.title}
+                </h3>
+                <div class="flex items-center gap-4 mb-4 text-sm text-gray-600">
+                  <span>📅 {study.date}</span>
+                  {study.sourceUrl ? (
+                    <a
+                      href={study.sourceUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="hover:underline"
+                      style="color: #0099ba;"
+                    >
+                      📚 Source: {study.source}
+                    </a>
+                  ) : (
+                    <span>📚 Source: {study.source}</span>
+                  )}
+                </div>
+                <p class="text-body-regular">
+                  {study.content}
+                </p>
+              </Card>
+            </BlurFade>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div slot="related-links">
+    <div class="grid md:grid-cols-3 gap-6">
+      <BlurFade delay={200}>
+        <a href="/clinical-research/oral-infection" class="block">
+          <Card className="h-full hover:shadow-lg transition-shadow">
+            <div class="p-6">
+              <h3 class="text-card-header mb-3">Oral Infection Research</h3>
+              <p class="text-body-regular">
+                Understanding the systemic impact of oral infections.
+              </p>
+            </div>
+          </Card>
+        </a>
+      </BlurFade>
+
+      <BlurFade delay={300}>
+        <a href="/services/advanced-technologies#ozone" class="block">
+          <Card className="h-full hover:shadow-lg transition-shadow">
+            <div class="p-6">
+              <h3 class="text-card-header mb-3">Ozone Therapy</h3>
+              <p class="text-body-regular">
+                Learn about our ozone therapy treatment options.
+              </p>
+            </div>
+          </Card>
+        </a>
+      </BlurFade>
+
+      <BlurFade delay={400}>
+        <a href="/services/mercury-free-approach" class="block">
+          <Card className="h-full hover:shadow-lg transition-shadow">
+            <div class="p-6">
+              <h3 class="text-card-header mb-3">Mercury-Free Dentistry</h3>
+              <p class="text-body-regular">
+                Learn about our mercury-free dental materials and safe removal protocols.
+              </p>
+            </div>
+          </Card>
+        </a>
+      </BlurFade>
+    </div>
+  </div>
+</ResearchPageTemplate>

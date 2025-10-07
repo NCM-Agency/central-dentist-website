@@ -1,0 +1,286 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PageHero from '../../components/shared/PageHero.astro';
+import BlurFade from '../../components/ui/BlurFade.astro';
+import Card from '../../components/ui/Card.astro';
+import Button from '../../components/ui/Button.astro';
+
+const diagnosticTools = [
+  {
+    title: "Cone Beam Computed Tomography (CBCT)",
+    description: "Multi-layered, 3D analysis of hard & soft tissue of the head & neck",
+    icon: "🔬"
+  },
+  {
+    title: "Lab Testing",
+    description: "Analysis of hair, urine, & blood for mercury levels. Blood test for sensitivity to materials planned to be used",
+    icon: "🧪"
+  },
+  {
+    title: "Comprehensive Questionnaires",
+    description: "Understanding the full scope of a patient's health requires knowledge of systemic conditions",
+    icon: "📋"
+  },
+  {
+    title: "Digital Occlusion Scan",
+    description: "Visualize asymmetries & undesired forces on individual teeth in opposing dental arches",
+    icon: "📊"
+  },
+  {
+    title: "Salivary Testing",
+    description: "Identifying bacterial & fungal profile associated with periodontal disease",
+    icon: "🧬"
+  },
+  {
+    title: "Joint Vibration Analysis",
+    description: "Electronic recording of TMJ sounds & dynamic movements",
+    icon: "📈"
+  },
+  {
+    title: "Home Sleep Test",
+    description: "Collecting a variety of metrics, but most importantly, # of apneic episodes, O2 desaturation, & heart rate",
+    icon: "😴"
+  },
+  {
+    title: "Digital Radiographs",
+    description: "Minimal radiation exposure with optimal analysis capabilities",
+    icon: "📷"
+  }
+];
+
+const faqs = [
+  {
+    question: "Why do you use so many diagnostic tools?",
+    answer: "By evaluating the synergistic nature of symptoms and how multiple diseases can have similar root causes, we can heal the core components of your system that are malfunctioning and leading to these symptoms. This holistic approach helps patients avoid a lifetime of medications and their negative side effects."
+  },
+  {
+    question: "How is this different from traditional dentistry?",
+    answer: "Traditional approaches often focus on reducing or masking symptoms instead of discovering and fixing the root cause. Our integrative healthcare approach evaluates how multiple conditions can share similar root causes, allowing us to treat the source of the problem rather than just the symptoms."
+  },
+  {
+    question: "What conditions can these diagnostics help identify?",
+    answer: "Our comprehensive diagnostics can reveal sleep disorders, TMJ dysfunction, airway issues, periodontal disease, material sensitivities, mercury toxicity, occlusal problems, and many other conditions that affect your oral and overall health."
+  },
+  {
+    question: "Do I need all of these tests?",
+    answer: "Not necessarily. After your initial consultation, we'll recommend specific diagnostic tools based on your symptoms, health history, and concerns. We customize our diagnostic approach to each patient's unique needs."
+  }
+];
+---
+
+<Layout title="Advanced Diagnostics | Central Dentist" description="Discover and prevent the root causes of disease with comprehensive diagnostic tools at Central Dentist in Dallas, TX.">
+  <!-- Hero Section -->
+  <PageHero
+    title="Advanced Diagnostics"
+    subtitle="How We Discover & Prevent the Root Causes of Disease"
+    backgroundImage="/images/services/abstract-white-texture.jpg"
+    variant="standard"
+    breadcrumbs={[
+      { label: 'Services', href: '/services' },
+      { label: 'Advanced Diagnostics', href: '#' }
+    ]}
+  />
+
+  <!-- Philosophy Section - White Background -->
+  <section class="py-16 md:py-20 bg-white">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="max-w-4xl mx-auto">
+        <BlurFade delay={100}>
+          <div class="text-center mb-12">
+            <blockquote class="text-xl md:text-2xl italic text-gray-dark mb-2" style="font-family: 'Playfair Display', serif;">
+              "When solving problems, dig at the roots instead of just hacking at the leaves."
+            </blockquote>
+            <p class="text-body-regular text-gray-medium">- Anthony J. D'Angelo</p>
+          </div>
+        </BlurFade>
+
+        <BlurFade delay={200}>
+          <div class="space-y-6">
+            <h2 class="text-section-header text-header-primary">Our Integrative Approach</h2>
+
+            <p class="text-body-regular text-gray-dark">
+              Traditional medical and dental schools follow a linear approach to disease management that often leads to focusing on reducing or masking symptoms, instead of discovering and fixing the root cause. Oftentimes, each disease process is treated separately, so patients can end up taking multiple medications for various symptoms that are all caused by the same core issue.
+            </p>
+
+            <div class="my-8 p-6 bg-gray-50 rounded-lg">
+              <p class="text-body-regular text-gray-dark font-semibold italic text-center">
+                In the words of Taylor Swift, this approach is like putting band-aids over bullet holes.
+              </p>
+              <!-- TODO: Add Bullet-Holes-Covered-Band-Aids.gif here when client provides it -->
+              <p class="text-body-small text-gray-medium text-center mt-4 italic">
+                Disclaimer: we know this is a very serious topic, but we've found that most all things are improved when we maintain our sense of humor ;)
+              </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center my-10">
+              <div>
+                <p class="text-body-regular text-gray-dark">
+                  What integrative healthcare does differently is evaluate the synergistic nature of symptoms and how multiple diseases can have similar root causes. By peeling back the proverbial onion of your health, we can supplement, remedy, and heal the core components of your system that are malfunctioning. This more holistic approach allows patients to avoid a lifetime of medications and their negative side effects.
+                </p>
+              </div>
+              <div>
+                <img
+                  src="/images/approach/diagnostics.jpg"
+                  alt="Root Cause Analysis Approach"
+                  class="rounded-lg shadow-md w-full h-auto"
+                />
+                <!-- TODO: Replace with root-cause.jpg when client provides it -->
+              </div>
+            </div>
+
+            <p class="text-body-regular text-gray-dark">
+              With this philosophy in mind, we use comprehensive diagnostic tools to get a full scope of how our patients are functioning at their core, which allows us to educate and counsel them on best next steps towards a happier and healthier version of themselves.
+            </p>
+          </div>
+        </BlurFade>
+      </div>
+    </div>
+  </section>
+
+  <!-- Diagnostic Tools Grid - Gray Background -->
+  <section class="py-16 md:py-20 bg-gray-50">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="max-w-6xl mx-auto">
+        <BlurFade delay={100}>
+          <div class="text-center mb-12">
+            <h2 class="text-section-header text-header-primary">Our Diagnostic Tools</h2>
+            <p class="text-section-subheader">Comprehensive testing to uncover root causes</p>
+          </div>
+        </BlurFade>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {diagnosticTools.map((tool, index) => (
+            <BlurFade delay={200 + index * 50}>
+              <Card variant="bordered" class="h-full hover:shadow-lg transition-shadow duration-300">
+                <div class="p-6">
+                  <div class="flex items-start space-x-4">
+                    <span class="text-3xl flex-shrink-0" aria-hidden="true">{tool.icon}</span>
+                    <div>
+                      <h3 class="text-card-header text-header-primary mb-2">{tool.title}</h3>
+                      <p class="text-body-regular text-gray-medium">{tool.description}</p>
+                    </div>
+                  </div>
+                </div>
+              </Card>
+            </BlurFade>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Benefits Section - White Background -->
+  <section class="py-16 md:py-20 bg-white">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="max-w-6xl mx-auto">
+        <BlurFade delay={100}>
+          <div class="text-center mb-12">
+            <h2 class="text-section-header text-header-primary">The Benefits of Root Cause Analysis</h2>
+            <p class="text-section-subheader">Why comprehensive diagnostics matter</p>
+          </div>
+        </BlurFade>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <BlurFade delay={200}>
+            <div class="text-center">
+              <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style="background: linear-gradient(135deg, #a6b443 0%, #c7cd85 100%);">
+                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h3 class="text-card-header text-header-primary mb-2">Accurate Diagnosis</h3>
+              <p class="text-body-regular text-gray-medium">
+                Identify the true source of your symptoms, not just surface-level issues
+              </p>
+            </div>
+          </BlurFade>
+
+          <BlurFade delay={300}>
+            <div class="text-center">
+              <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style="background: linear-gradient(135deg, #a6b443 0%, #c7cd85 100%);">
+                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <h3 class="text-card-header text-header-primary mb-2">Targeted Treatment</h3>
+              <p class="text-body-regular text-gray-medium">
+                Develop precise treatment plans that address core issues effectively
+              </p>
+            </div>
+          </BlurFade>
+
+          <BlurFade delay={400}>
+            <div class="text-center">
+              <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style="background: linear-gradient(135deg, #a6b443 0%, #c7cd85 100%);">
+                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                </svg>
+              </div>
+              <h3 class="text-card-header text-header-primary mb-2">Long-term Wellness</h3>
+              <p class="text-body-regular text-gray-medium">
+                Achieve lasting health improvements without lifetime medication dependency
+              </p>
+            </div>
+          </BlurFade>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section - Gray Background -->
+  <section class="py-16 md:py-20 bg-gray-50">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="max-w-4xl mx-auto">
+        <BlurFade delay={100}>
+          <div class="text-center mb-12">
+            <h2 class="text-section-header text-header-primary">Frequently Asked Questions</h2>
+            <p class="text-section-subheader">Learn more about our diagnostic approach</p>
+          </div>
+        </BlurFade>
+
+        <BlurFade delay={200}>
+          <div class="space-y-4">
+            {faqs.map((faq, index) => (
+              <details class="group bg-white rounded-lg shadow-sm">
+                <summary class="flex justify-between items-center cursor-pointer p-6 hover:bg-gray-50 transition-colors">
+                  <span class="text-body-regular font-semibold text-gray-dark pr-4">{faq.question}</span>
+                  <svg class="w-5 h-5 flex-shrink-0 transition-transform group-open:rotate-180" style="color: #0099ba;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </summary>
+                <div class="px-6 pb-6 pt-0">
+                  <p class="text-body-regular text-gray-medium">{faq.answer}</p>
+                </div>
+              </details>
+            ))}
+          </div>
+        </BlurFade>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section - Blue Gradient Background -->
+  <section class="py-16 md:py-20" style="background: linear-gradient(to bottom right, #0099ba, #006786);">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="max-w-3xl mx-auto text-center">
+        <BlurFade delay={100}>
+          <h2 class="text-section-header text-white mb-4">
+            Want to get to the root cause of your symptoms?
+          </h2>
+          <p class="text-section-subheader text-white/90 mb-8">
+            Schedule a consultation today and discover how our advanced diagnostics can help you achieve optimal health
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button variant="primary" href="/contact">Schedule Consultation</Button>
+            <Button variant="secondary" href="tel:214-368-0900">
+              <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+              Call (214) 368-0900
+            </Button>
+          </div>
+        </BlurFade>
+      </div>
+    </div>
+  </section>
+</Layout>

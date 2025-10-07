@@ -14,10 +14,10 @@ const navigation = [
   },
   {
     title: 'About Us',
-    href: '/about',
+    href: '/our-office',
     type: 'dropdown',
     items: [
-      { title: 'Our Office', href: '/about' },
+      { title: 'Our Office', href: '/our-office' },
       { title: 'Reviews & Testimonials', href: '/reviews-testimonials' },
       { title: 'Our History', href: '/our-history' },
       { title: 'Dr. Jill Ombrello', href: '/team/dr-jill-ombrello' },
@@ -30,10 +30,11 @@ const navigation = [
     href: '/philosophy',
     type: 'dropdown',
     items: [
-      { title: 'Mercury-Free Practice', href: '/services/mercury-free' },
-      { title: 'Sleep & Breathing', href: '/services/sleep-breathing' },
-      { title: 'Holistic Approach', href: '/about#philosophy' },
-      { title: 'Biocompatible Materials', href: '/services/ceramic-implants' }
+      { title: 'Our Approach', href: '/philosophy' },
+      { title: 'Mercury-Free Approach', href: '/services/mercury-free-approach' },
+      { title: 'Functional Health', href: '/services/functional-health' },
+      { title: 'Holistic Approach', href: '/our-office#philosophy' },
+      { title: 'Advanced Technologies', href: '/services/advanced-technologies' }
     ]
   },
   {
@@ -41,13 +42,23 @@ const navigation = [
     href: '/services',
     type: 'dropdown',
     items: [
-      { title: 'Ceramic Implants + PRF', href: '/services/ceramic-implants' },
-      { title: 'Sleep Disordered Breathing', href: '/services/sleep-breathing' },
-      { title: 'Pediatric Healthy Start™', href: '/services/pediatric-healthy-start' },
+      { title: 'Advanced Technologies', href: '/services/advanced-technologies' },
+      { title: 'Advanced Diagnostics', href: '/services/advanced-diagnostics' },
+      { title: 'Mercury-Free Approach', href: '/services/mercury-free-approach' },
+      { title: 'Functional Health (Sleep/TMJ/ADHD)', href: '/services/functional-health' },
       { title: 'Invisalign®', href: '/services/invisalign' },
-      { title: 'CBCT 3D Imaging', href: '/services/cbct' },
-      { title: 'Ozone Therapy', href: '/services/ozone-therapy' },
-      { title: 'Fluoride-Free Bonding', href: '/services/bonding' }
+      { title: 'Pediatric Healthy Start™', href: '/services/pediatric-healthy-start' }
+    ]
+  },
+  {
+    title: 'Pediatrics',
+    href: '/pediatrics',
+    type: 'dropdown',
+    items: [
+      { title: 'Overview', href: '/pediatrics' },
+      { title: 'Pediatric Healthy Start™', href: '/services/pediatric-healthy-start' },
+      { title: 'Sleep-Related Breathing', href: '/pediatrics/sleep-breathing' },
+      { title: 'ADD/ADHD Connection', href: '/pediatrics/adhd' }
     ]
   },
   {
@@ -60,10 +71,19 @@ const navigation = [
     href: '#',
     type: 'dropdown',
     items: [
+      { title: 'Clinical Research', href: '/clinical-research', isParent: true },
+      { title: '  • ADD/ADHD', href: '/clinical-research/add-adhd' },
+      { title: '  • Biological Root Canals', href: '/clinical-research/biological-root-canals' },
+      { title: '  • Fluoride-Free Prevention', href: '/clinical-research/fluoride-free-prevention' },
+      { title: '  • Growth & Development', href: '/clinical-research/growth-and-development' },
+      { title: '  • Malocclusion', href: '/clinical-research/malocclusion' },
+      { title: '  • Nutrition', href: '/clinical-research/nutrition' },
+      { title: '  • Oral Infection', href: '/clinical-research/oral-infection' },
+      { title: '  • Sleep', href: '/clinical-research/sleep' },
+      { title: 'What to Expect', href: '/what-to-expect' },
       { title: 'Blog', href: '/blog' },
-      { title: 'ADHD & Sleep Connection', href: '/services/sleep-breathing#adhd' },
-      { title: 'Patient Forms', href: '/about#forms' },
-      { title: 'Recommended Products', href: '/recommended-products' }
+      { title: 'Recommended Products', href: '/recommended-products' },
+      { title: 'Patient Forms', href: '/forms/new-patient-form.pdf' }
     ]
   }
 ];
@@ -72,13 +92,13 @@ const navigation = [
 <nav class="bg-white shadow-sm sticky top-0 z-50" data-gjs-type="navbar" data-gjs-locked="true">
   <div class="container mx-auto container-padding">
     <div class="flex items-center justify-between h-16 md:h-20">
-      
+
       <!-- Logo -->
       <div class="flex-shrink-0">
         <a href="/" class="flex items-center space-x-2">
-          <img 
-            src="/images/LOGO-01.png" 
-            alt="Central Dentist - Holistic Family Dentistry" 
+          <img
+            src="/images/LOGO-01.png"
+            alt="Central Dentist - Holistic Family Dentistry"
             class="h-8 md:h-10 w-auto"
             loading="eager"
           />
@@ -91,21 +111,21 @@ const navigation = [
           {navigation.map((item) => (
             <div class="relative group">
               {item.type === 'page' ? (
-                <a 
+                <a
                   href={item.href}
                   class={`px-4 py-2 text-sm font-heading font-normal transition-colors duration-200 rounded-md
-                    ${currentPath === item.href 
-                      ? 'text-teal bg-teal/10' 
+                    ${currentPath === item.href
+                      ? 'text-teal bg-teal/10'
                       : 'text-gray-dark hover:text-teal hover:bg-teal/5'
                     }`}
                 >
                   {item.title}
                 </a>
               ) : (
-                <button 
+                <button
                   class={`px-4 py-2 text-sm font-heading font-normal transition-colors duration-200 rounded-md flex items-center space-x-1
                     ${currentPath.startsWith(item.href) && item.href !== '#'
-                      ? 'text-teal bg-teal/10' 
+                      ? 'text-teal bg-teal/10'
                       : 'text-gray-dark hover:text-teal hover:bg-teal/5'
                     }`}
                 >
@@ -115,17 +135,17 @@ const navigation = [
                   </svg>
                 </button>
               )}
-              
+
               <!-- Desktop Dropdown -->
               {item.type === 'dropdown' && item.items && (
                 <div class="absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-teal-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 backdrop-blur-sm border border-gray-100">
                   <div class="py-2">
                     {item.items.map((subItem) => (
-                      <a 
+                      <a
                         href={subItem.href}
                         class={`block px-4 py-2 text-sm font-body transition-all duration-300 rounded-md mx-2
-                          ${currentPath === subItem.href 
-                            ? 'text-teal bg-teal/10 transform translate-x-1' 
+                          ${currentPath === subItem.href
+                            ? 'text-teal bg-teal/10 transform translate-x-1'
                             : 'text-gray-dark hover:text-teal hover:bg-teal/5 hover:transform hover:translate-x-1'
                           }`}
                       >
@@ -142,14 +162,14 @@ const navigation = [
 
       <!-- Contact Info -->
       <div class="hidden lg:flex items-center space-x-4">
-        <a 
-          href="tel:214-368-0900" 
+        <a
+          href="tel:214-368-0900"
           class="text-teal-dark font-body font-semibold hover:text-teal transition-colors"
         >
           214-368-0900
         </a>
-        <a 
-          href="/contact" 
+        <a
+          href="/contact"
           class="text-sm px-6 py-2 bg-gradient-to-r from-[#a6b443] to-[#c7cd85] text-white rounded-full font-medium hover:from-[#8fa339] hover:to-[#a6b443] hover:shadow-lg hover:scale-105 transition-all duration-300"
           style="font-family: 'Playfair Display', 'Times', serif;"
         >
@@ -159,10 +179,10 @@ const navigation = [
 
       <!-- Mobile menu button -->
       <div class="md:hidden">
-        <button 
-          type="button" 
+        <button
+          type="button"
           class="mobile-menu-button inline-flex items-center justify-center p-2 rounded-md text-gray-dark hover:text-teal hover:bg-gray-light focus:outline-none focus:ring-2 focus:ring-teal focus:ring-offset-2"
-          aria-controls="mobile-menu" 
+          aria-controls="mobile-menu"
           aria-expanded="false"
         >
           <span class="sr-only">Open main menu</span>
@@ -181,11 +201,11 @@ const navigation = [
     <!-- Mobile Navigation -->
     <div class="mobile-menu hidden md:hidden transition-all duration-300 ease-in-out transform -translate-y-4 opacity-0" id="mobile-menu">
       <div class="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-light backdrop-blur-sm">
-        
+
         <!-- Phone number prominently displayed on mobile -->
         <div class="px-3 py-2 border-b border-gray-light mb-2">
-          <a 
-            href="tel:214-368-0900" 
+          <a
+            href="tel:214-368-0900"
             class="text-lg font-body font-semibold text-teal-dark hover:text-teal transition-colors"
           >
             📞 214-368-0900
@@ -195,11 +215,11 @@ const navigation = [
         {navigation.map((item) => (
           <div class="mobile-nav-item">
             {item.type === 'page' ? (
-              <a 
+              <a
                 href={item.href}
                 class={`block px-3 py-2 text-base font-body font-medium rounded-md transition-colors
-                  ${currentPath === item.href 
-                    ? 'text-teal bg-teal/10' 
+                  ${currentPath === item.href
+                    ? 'text-teal bg-teal/10'
                     : 'text-gray-dark hover:text-teal hover:bg-gray-light'
                   }`}
               >
@@ -207,10 +227,10 @@ const navigation = [
               </a>
             ) : (
               <div>
-                <button 
+                <button
                   class={`mobile-dropdown-toggle w-full flex items-center justify-between px-3 py-2 text-base font-body font-medium rounded-md transition-colors
                     ${currentPath.startsWith(item.href) && item.href !== '#'
-                      ? 'text-teal bg-teal/10' 
+                      ? 'text-teal bg-teal/10'
                       : 'text-gray-dark hover:text-teal hover:bg-gray-light'
                     }`}
                 >
@@ -219,15 +239,15 @@ const navigation = [
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                   </svg>
                 </button>
-                
+
                 {item.items && (
                   <div class="mobile-dropdown-menu hidden pl-4 mt-1 space-y-1">
                     {item.items.map((subItem) => (
-                      <a 
+                      <a
                         href={subItem.href}
                         class={`block px-3 py-2 text-sm font-body rounded-md transition-colors
-                          ${currentPath === subItem.href 
-                            ? 'text-teal bg-teal/10' 
+                          ${currentPath === subItem.href
+                            ? 'text-teal bg-teal/10'
                             : 'text-gray-medium hover:text-teal hover:bg-gray-light'
                           }`}
                       >
@@ -243,8 +263,8 @@ const navigation = [
 
         <!-- Mobile CTA -->
         <div class="px-3 pt-4">
-          <a 
-            href="/contact" 
+          <a
+            href="/contact"
             class="w-full text-center block py-3 bg-gradient-to-r from-[#a6b443] to-[#c7cd85] text-white rounded-full font-medium hover:from-[#8fa339] hover:to-[#a6b443] hover:shadow-lg transition-all duration-300"
             style="font-family: 'Playfair Display', 'Times', serif;"
           >
@@ -267,7 +287,7 @@ const navigation = [
     if (mobileMenuButton && mobileMenu) {
       mobileMenuButton.addEventListener('click', function() {
         const isOpen = !mobileMenu.classList.contains('hidden');
-        
+
         if (isOpen) {
           // Close menu with animation
           mobileMenu.style.transform = 'translateY(-1rem)';
@@ -298,7 +318,7 @@ const navigation = [
       toggle.addEventListener('click', function() {
         const dropdownMenu = this.nextElementSibling;
         const arrow = this.querySelector('.dropdown-arrow');
-        
+
         if (dropdownMenu?.classList.contains('hidden')) {
           dropdownMenu.classList.remove('hidden');
           arrow?.classList.add('rotate-180');

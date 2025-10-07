@@ -6,14 +6,49 @@ import tailwindcss from '@tailwindcss/vite';
 export default defineConfig({
   // Site configuration for production
   site: 'https://www.centraldentist.com',
-  
+
   // Build configuration
   build: {
     assets: '_astro'
   },
-  
+
   // Output configuration for static site generation
   output: 'static',
+
+  // 301 Redirects for consolidated service pages
+  redirects: {
+    // Advanced Technologies consolidation
+    '/services/cbct': {
+      status: 301,
+      destination: '/services/advanced-technologies#cbct'
+    },
+    '/services/ozone-therapy': {
+      status: 301,
+      destination: '/services/advanced-technologies#ozone'
+    },
+    '/services/ceramic-implants': {
+      status: 301,
+      destination: '/services/advanced-technologies#ceramic-implants'
+    },
+    // Mercury-Free Approach consolidation
+    '/services/bonding': {
+      status: 301,
+      destination: '/services/mercury-free-approach#fluoride-free'
+    },
+    '/services/mercury-free': {
+      status: 301,
+      destination: '/services/mercury-free-approach'
+    },
+    // Functional Health consolidation
+    '/services/sleep-breathing': {
+      status: 301,
+      destination: '/services/functional-health#sleep'
+    },
+    '/services/tmj': {
+      status: 301,
+      destination: '/services/functional-health#tmj'
+    }
+  },
   
   // Image optimization
   image: {

@@ -1,0 +1,157 @@
+---
+import ResearchPageTemplate from '../../layouts/ResearchPageTemplate.astro';
+import BlurFade from '../../components/ui/BlurFade.astro';
+import Card from '../../components/ui/Card.astro';
+
+const studies = [
+  {
+    title: "Comparison of CPP-ACP, Tri-Calcium Phosphate and Hydroxyapatite on Remineralization of Artificial Caries Like Lesions on Primary Enamel -An in vitro Study",
+    date: "2018",
+    source: "Semantic Scholar",
+    sourceUrl: "https://www.semanticscholar.org/paper/Caries-Preventive-Effect-of-NaF%2C-NaF-plus-TCP%2C-NaF-Wierichs-Stausberg/0ed4974e19261eb8e62ccf68465ae99631133dc5",
+    content: "Summary: The aim of this study was to compare the caries-preventive effect of different fluoride varnishes on sound dentin as well as on artificial dentin caries-like lesions. Bovine dentin specimens (n = 220) with one sound surface (ST) and one artificial caries lesion (DT) were prepared and randomly allocated to 11 groups. The interventions before pH cycling were as follows: application of a varnish containing NaF (22,600 ppm F-; Duraphat [NaF0/NaF1]), NaF plus tricalcium phosphate (22,600 ppm F-; Clinpro White Varnish Mint [TCP0/TCP1]), NaF plus casein phosphopeptide-stabilized amorphous calcium phosphate complexes (CPP-ACP; 22,600 ppm F-; MI Varnish [CPP0/CPP1]), or silver diamine fluoride (SDF; 35,400 ppm F-; Cariestop 30% [SDF0/SDF1]) and no intervention (NNB/N0/N1). During pH cycling (14 days, 6 × 120 min demineralization/day) half of the specimens in each group were brushed (10 s; 2 times/day) with either fluoride-free (\"0\"; e.g., TCP0) or 1,100 ppm F- (\"1\"; e.g., TCP1) dentifrice slurry. In another subgroup, the specimens were pH cycled but not brushed (NNB). Differences in integrated mineral loss (ΔΔZ), lesion depth (ΔLD), and colorimetric values (ΔΔE) were calculated between the values after initial demineralization and those after pH cycling, using transversal microradiography and photographic images. After pH cycling, no discoloration could be observed. Furthermore, NNB, N0, and N1 showed significantly increased ΔZDT/LDDT and ΔZST/LDST values, indicating further demineralization. In contrast, CPP0, CPP1, SDF0, and SDF1 showed significantly decreased ΔZDT/LDDT values, indicating remineralization (p ≤ 0.004; paired t test). CPP0, CPP1, SDF0, and SDF1 showed significantly higher changes in ΔΔZDT/ΔLDDT and ΔΔZST/ΔLDST than NNB, N0, and N1 (p < 0.001; Bonferroni post hoc test). In conclusion, under the conditions chosen, all fluoride varnishes prevented further demineralization. However, only NaF plus CPP-ACP and SDF could remineralize artificial dentin caries-like lesions under net-demineralizing conditions, thereby indicating that NaF plus CPP-ACP and SDF may be helpful to high-caries-risk patients."
+  },
+  {
+    title: "Nano-hydroxyapatite and its applications in preventive, restorative and regenerative dentistry: a review of literature",
+    date: "November 20, 2014",
+    source: "NCBI",
+    sourceUrl: "https://www.ncbi.nlm.nih.gov/pubmed/25506416",
+    content: "Abstract: This study aims to critically summarize the literature about nano-hydroxyapatite. The purpose of this work is to analyze the benefits of using nano-hydroxyapatite in dentistry, especially for its preventive, restorative and regenerative applications. We also provide an overview of new dental materials, still experimental, which contain the nano-hydroxyapatite in its nano-crystalline form. Hydroxyapatite is one of the most studied biomaterials in the medical field for its proven biocompatibility and for being the main constituent of the mineral part of bone and teeth. In terms of restorative and preventive dentistry, nano-hydroxyapatite has significant remineralizing effects on initial enamel lesions, certainly superior to conventional fluoride, and good results on the sensitivity of the teeth. The nano-HA has also been used as an additive material, in order to improve already existing and widely used dental materials, in the restorative field (experimental addition to conventional glass ionomer cements, that has led to significant improvements in their mechanical properties). Because of its unique properties, such as the ability to chemically bond to bone, to not induce toxicity or inflammation and to stimulate bone growth through a direct action on osteoblasts, nano-HA has been widely used in periodontology and in oral and maxillofacial surgery. Its use in oral implantology, however, is a widely used practice established for years, as this substance has excellent osteoinductive capacity and improves bone-to-implant integration."
+  },
+  {
+    title: "In Vitro Effects of Nano-hydroxyapatite Paste on Initial Enamel Carious Lesions",
+    date: "May-June, 2014",
+    source: "NCBI",
+    sourceUrl: "https://www.ncbi.nlm.nih.gov/pubmed/24960376",
+    content: "Abstract: The purpose of this study was to analyze the protective effect of remineralizing agents on enamel caries lesions using surface Knoop microhardness testing (KHN) and atomic force microscopy (AFM)."
+  },
+  {
+    title: "Enamel and dentine remineralization by nano-hydroxyapatite toothpastes",
+    date: "June 2010",
+    source: "NCBI",
+    sourceUrl: "https://www.ncbi.nlm.nih.gov/pubmed/21504777",
+    content: "Objective: This in vitro study evaluated the effects of nano-hydroxyapatite (n-HAp) toothpastes on remineralization of bovine enamel and dentine subsurface lesions."
+  },
+  {
+    title: "Effect of nano-hydroxyapatite concentration on remineralization of initial enamel lesion in vitro",
+    date: "June 2009",
+    source: "NCBI",
+    sourceUrl: "https://www.ncbi.nlm.nih.gov/pubmed/19498220",
+    content: "Abstract: The purpose of the research was to determine the effect of nano-hydroxyapatite concentrations on initial enamel lesions under dynamic pH-cycling conditions. Initial enamel lesions were prepared in bovine enamel with an acidic buffer. NaF (positive control), deionized water (negative control) and four different concentrations of nano-hydroxyapatite (1%, 5%, 10% and 15% wt%) were selected as the treatment agents. Surface microhardness (SMH) measurements were performed before/after demineralization and after 3, 6, 9 and 12 days of application, and the percentage surface microhardness recovery (%SMHR) was calculated. The specimens were then examined by a scanning electron microscope. The %SMHR in nano-hydroxyapatite groups was significantly greater than that of negative control. When the concentration of nano-HA was under 10%, SMH and %SMHR increased with increasing nano-hydroxyapatite concentrations. There were no significant differences between the 10% and 15% groups at different time periods in the pH-cycling. The SEM analysis showed that nano-hydroxyapatite particles were regularly deposited on the cellular structure of the demineralized enamel surface, which appeared to form new surface layers. It was concluded that nano-hydroxyapatite had the potential to remineralize initial enamel lesions. A concentration of 10% nano-hydroxyapatite may be optimal for remineralization of early enamel caries."
+  }
+];
+---
+
+<ResearchPageTemplate
+  title="Fluoride-Free Prevention Clinical Research"
+  metaTitle="Fluoride Free Prevention Research | Central Dentist"
+  description="Clinical research on fluoride-free dental prevention methods including nano-hydroxyapatite, CPP-ACP, and other biocompatible remineralization strategies."
+>
+  <div slot="introduction">
+    <h2 class="text-section-header text-header-primary mb-6">
+      Evidence-Based Fluoride-Free Prevention
+    </h2>
+    <p class="text-body-large mb-8">
+      Scientific research demonstrates that effective cavity prevention and remineralization can be achieved without fluoride.
+      Nano-hydroxyapatite and other biocompatible minerals offer safe, effective alternatives that work with your body's natural processes.
+    </p>
+  </div>
+
+  <div slot="main-content">
+    <div class="bg-teal-50 rounded-lg p-6 mb-8" style="border-left: 4px solid #0099ba;">
+      <p class="text-body-regular font-semibold" style="color: #006786;">
+        Key Finding: Studies show nano-hydroxyapatite has superior remineralizing effects on initial enamel lesions compared to conventional fluoride,
+        without the potential risks associated with fluoride exposure.
+      </p>
+    </div>
+  </div>
+
+  <section slot="studies-section" class="py-16 md:py-20 bg-gray-50">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="max-w-4xl mx-auto">
+        <BlurFade delay={100}>
+          <h2 class="text-section-header text-header-primary text-center mb-4">
+            Research Studies on Fluoride-Free Prevention
+          </h2>
+          <p class="text-section-subheader text-center mb-12">
+            Peer-reviewed evidence supporting non-fluoride preventive strategies
+          </p>
+        </BlurFade>
+
+        <div class="space-y-8">
+          {studies.map((study, index) => (
+            <BlurFade delay={200 + (index * 100)}>
+              <Card className="p-6">
+                <h3 class="text-card-header mb-3" style="color: #006786;">
+                  {study.title}
+                </h3>
+                <div class="flex items-center gap-4 mb-4 text-sm text-gray-600">
+                  <span>📅 {study.date}</span>
+                  {study.sourceUrl ? (
+                    <a
+                      href={study.sourceUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="hover:underline"
+                      style="color: #0099ba;"
+                    >
+                      📚 Source: {study.source}
+                    </a>
+                  ) : (
+                    <span>📚 Source: {study.source}</span>
+                  )}
+                </div>
+                <p class="text-body-regular">
+                  {study.content}
+                </p>
+              </Card>
+            </BlurFade>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div slot="related-links">
+    <div class="grid md:grid-cols-3 gap-6">
+      <BlurFade delay={200}>
+        <a href="/services/mercury-free-approach#fluoride-free" class="block">
+          <Card className="h-full hover:shadow-lg transition-shadow">
+            <div class="p-6">
+              <h3 class="text-card-header mb-3">Fluoride-Free Bonding</h3>
+              <p class="text-body-regular">
+                Learn about our fluoride-free bonding treatment options.
+              </p>
+            </div>
+          </Card>
+        </a>
+      </BlurFade>
+
+      <BlurFade delay={300}>
+        <a href="/clinical-research/nutrition" class="block">
+          <Card className="h-full hover:shadow-lg transition-shadow">
+            <div class="p-6">
+              <h3 class="text-card-header mb-3">Nutrition Research</h3>
+              <p class="text-body-regular">
+                The role of nutrition in cavity prevention.
+              </p>
+            </div>
+          </Card>
+        </a>
+      </BlurFade>
+
+      <BlurFade delay={400}>
+        <a href="/recommended-products" class="block">
+          <Card className="h-full hover:shadow-lg transition-shadow">
+            <div class="p-6">
+              <h3 class="text-card-header mb-3">Recommended Products</h3>
+              <p class="text-body-regular">
+                Fluoride-free oral care products we recommend.
+              </p>
+            </div>
+          </Card>
+        </a>
+      </BlurFade>
+    </div>
+  </div>
+</ResearchPageTemplate>

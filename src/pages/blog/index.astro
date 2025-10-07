@@ -1,84 +1,33 @@
 ---
 // Blog Listing Page - Central Dentist
+import { getCollection } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import PageHero from '../../components/shared/PageHero.astro';
 import Card from '../../components/ui/Card.astro';
 import Button from '../../components/ui/Button.astro';
 import BlurFade from '../../components/ui/BlurFade.astro';
 
-// Sample blog posts data (in production, this would come from a CMS or markdown files)
-const blogPosts = [
-  {
-    title: "The Connection Between Oral Health and Heart Disease",
-    excerpt: "Discover how your oral health directly impacts your cardiovascular system and what you can do to protect both.",
-    author: "Dr. Jill Ombrello",
-    date: "2024-01-15",
-    category: "Holistic Health",
-    readTime: "5 min",
-    slug: "oral-health-heart-disease",
-    image: "/images/blog/heart-health.jpg"
-  },
-  {
-    title: "Understanding Ceramic Implants: A Biocompatible Solution",
-    excerpt: "Learn why ceramic implants are becoming the preferred choice for patients seeking metal-free tooth replacement options.",
-    author: "Dr. Sahil Sawnani",
-    date: "2024-01-08",
-    category: "Treatment Options",
-    readTime: "7 min",
-    slug: "ceramic-implants-guide",
-    image: "/images/blog/ceramic-implants.jpg"
-  },
-  {
-    title: "Natural Ways to Prevent Cavities in Children",
-    excerpt: "Effective, holistic strategies to keep your child's teeth healthy without harsh chemicals or treatments.",
-    author: "Melanie Galles",
-    date: "2023-12-20",
-    category: "Pediatric Care",
-    readTime: "4 min",
-    slug: "natural-cavity-prevention-kids",
-    image: "/images/blog/kids-dental.jpg"
-  },
-  {
-    title: "The Benefits of Ozone Therapy in Dentistry",
-    excerpt: "How ozone therapy provides a natural, effective alternative to traditional antimicrobial treatments.",
-    author: "Dr. Jill Ombrello",
-    date: "2023-12-10",
-    category: "Biological Dentistry",
-    readTime: "6 min",
-    slug: "ozone-therapy-benefits",
-    image: "/images/blog/ozone-therapy.jpg"
-  },
-  {
-    title: "Sleep Apnea: The Silent Health Crisis",
-    excerpt: "Understanding the signs, symptoms, and holistic treatment approaches for sleep-disordered breathing.",
-    author: "Dr. Jill Ombrello",
-    date: "2023-11-28",
-    category: "Sleep Health",
-    readTime: "8 min",
-    slug: "sleep-apnea-treatment",
-    image: "/images/blog/sleep-health.jpg"
-  },
-  {
-    title: "Mercury-Free Dentistry: Why It Matters",
-    excerpt: "The importance of safe amalgam removal and biocompatible alternatives for your dental restorations.",
-    author: "Dr. Sahil Sawnani",
-    date: "2023-11-15",
-    category: "Biological Dentistry",
-    readTime: "5 min",
-    slug: "mercury-free-dentistry",
-    image: "/images/blog/mercury-free.jpg"
-  }
-];
+// Get all blog posts from Content Collection, sorted by date
+const allPosts = await getCollection('blog', ({ data }) => {
+  return data.draft !== true;
+});
 
-// Categories for filtering
-const categories = [
-  "All",
-  "Holistic Health",
-  "Biological Dentistry",
-  "Treatment Options",
-  "Pediatric Care",
-  "Sleep Health"
-];
+const blogPosts = allPosts
+  .sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf())
+  .map(post => ({
+    title: post.data.title,
+    excerpt: post.data.excerpt,
+    author: post.data.author,
+    date: post.data.publishDate,
+    categories: post.data.categories,
+    readTime: post.data.readTime,
+    slug: post.slug,
+    image: post.data.featuredImage
+  }));
+
+// Extract unique categories from all posts
+const allCategories = [...new Set(blogPosts.flatMap(post => post.categories))].sort();
+const categories = ["All Posts", ...allCategories];
 
 const breadcrumbs = [
   { label: 'Home', href: '/' },
@@ -124,7 +73,7 @@ const breadcrumbs = [
         <!-- Blog Grid -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {blogPosts.map((post, index) => (
-            <BlurFade delay={0.1 * index} client:visible>
+            <BlurFade delay={0.1 * index}>
               <article class="h-full">
                 <Card variant="hover" class="h-full flex flex-col overflow-hidden">
                   <!-- Post Image -->
@@ -138,11 +87,13 @@ const breadcrumbs = [
                         onerror="this.style.display='none'"
                       />
                     )}
-                    <div class="absolute top-4 left-4">
-                      <span class="inline-block px-3 py-1 bg-white/90 backdrop-blur-sm text-xs font-medium rounded-full" style="color: #0099ba;">
-                        {post.category}
-                      </span>
-                    </div>
+                    {post.categories.length > 0 && (
+                      <div class="absolute top-4 left-4">
+                        <span class="inline-block px-3 py-1 bg-white/90 backdrop-blur-sm text-xs font-medium rounded-full" style="color: #0099ba;">
+                          {post.categories[0]}
+                        </span>
+                      </div>
+                    )}
                   </div>
                   
                   <!-- Post Content -->
@@ -159,9 +110,9 @@ const breadcrumbs = [
                     <div class="flex items-center justify-between text-sm text-gray-500 mb-4">
                       <span>{post.author}</span>
                       <div class="flex items-center gap-2">
-                        <time datetime={post.date}>
-                          {new Date(post.date).toLocaleDateString('en-US', { 
-                            month: 'short', 
+                        <time datetime={post.date.toISOString()}>
+                          {post.date.toLocaleDateString('en-US', {
+                            month: 'short',
                             day: 'numeric',
                             year: 'numeric'
                           })}

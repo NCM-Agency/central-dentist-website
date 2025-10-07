@@ -1,0 +1,299 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PageHero from '../../components/shared/PageHero.astro';
+import BlurFade from '../../components/ui/BlurFade.astro';
+import Card from '../../components/ui/Card.astro';
+
+const benefits = [
+  'Achieve a healthy smile with optimized development of temporomandibular joint, tongue, extraoral musculature, and airway',
+  'Crooked teeth prevention with gentle treatments versus correcting crooked, crowded teeth',
+  'Treatment is best started at an earlier age (as early as 2-3 years old) when patients are more compliant',
+  'Permanent results with drastically minimized rates of relapse',
+  'Using a removable dental appliance that is safe, natural, and exceedingly more hygienic than other orthopedic/orthodontic appliances',
+  'Results can be achieved faster and with less discomfort than with traditional orthodontics'
+];
+
+const conditions = [
+  { category: 'Bite Issues', items: ['Under bite or overbite', 'Cross bite', 'Open bite', 'Gummy smile'] },
+  { category: 'Oral Habits', items: ['Thumb sucking', 'Mouth breathing', 'Deviated swallow', 'Snoring'] }
+];
+
+const steps = [
+  {
+    phase: 'Habit-Corrector',
+    duration: '1-4 months',
+    description: 'The habit-corrector eliminates or improves current oral habits that can damage your child\'s dental health. He or she wears the habit-corrector at night while sleeping. Your child will become used to wearing a device in his or her mouth every night.'
+  },
+  {
+    phase: 'Second Phase',
+    duration: '2-5 months',
+    description: 'Dr. Ombrello will give your child an appliance specifically sized for your child to wear every night. It aids the incoming teeth into their proper places, corrects jaw relations, and expands your child\'s arches for the incoming adult teeth.'
+  },
+  {
+    phase: 'Final Phase',
+    duration: 'Varies',
+    description: 'The final treatment begins with an appliance that accommodates incoming adult teeth. This phase is extremely important because his or her adult teeth are forming and the gum tissue fibers are starting to attach the teeth in the mouth. Healthy Start works precisely to ensure the teeth erupt into proper alignment and prevents shifting.'
+  }
+];
+---
+
+<Layout
+  title="Healthy Start System | Pediatric Orthodontics | Central Dentist"
+  description="The Healthy Start System - a revolutionary early intervention for straight teeth and healthy airways. Natural, non-invasive orthodontic treatment for children."
+>
+  <!-- Hero Section -->
+  <PageHero
+    title="The Healthy Start System"
+    subtitle="Achieving a Healthy Airway While Preventing Crooked Teeth Too!"
+    backgroundImage="/images/services/abstract-white-texture.jpg"
+    variant="standard"
+    breadcrumbs={[
+      { label: 'Pediatrics', href: '/pediatrics' },
+      { label: 'Healthy Start', href: '#' }
+    ]}
+  />
+
+  <!-- Introduction Section - White Background -->
+  <section class="py-16 md:py-20 bg-white">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="max-w-4xl mx-auto">
+        <BlurFade delay={100}>
+          <div class="space-y-6">
+            <p class="text-body-large text-gray-dark">
+              Does your child's snoring sound like a freight train? Are you concerned that a recent diagnosis
+              of ADD or ADHD may be inaccurate, or that his or her thumb sucking will cause permanent issues?
+              Is your child troubled by bed wetting, overly tired in the morning, challenged in school or has
+              allergies? All of these could be signs your child has Sleep Disordered Breathing (SDB).
+            </p>
+
+            <p class="text-body-regular text-gray-medium">
+              Sleep Disordered Breathing is an all-inclusive term for breathing difficulties, ranging from
+              quiet snoring to severe airway obstruction during sleep. When your child's breathing is disrupted,
+              his or her body recognizes the disruption as choking, therefore, slowing the heart rate, raising
+              the blood pressure, arousing the brain, and disrupting sleep, which impacts your child's dental
+              and overall health.
+            </p>
+
+            <Card variant="bordered" class="p-8 bg-blue-50">
+              <p class="text-body-regular text-gray-dark">
+                <strong>Dr. Ombrello is an international speaker certified to train other dental professionals
+                on the Healthy Start system.</strong> She has researched and experienced first-hand the power of
+                this solution and it's positive impact on the immediate and long-term health and wellbeing of
+                your child. She is considered the leading provider of Healthy Start in the Southwest region of
+                the US. While it has been less widely accepted in the US, Healthy Start has treated over 3.5
+                million children worldwide over the past 40 years.
+              </p>
+            </Card>
+          </div>
+        </BlurFade>
+      </div>
+    </div>
+  </section>
+
+  <!-- What is Healthy Start - Gray Background -->
+  <section class="py-16 md:py-20 bg-gray-50">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="max-w-4xl mx-auto">
+        <BlurFade delay={100}>
+          <h2 class="text-section-header text-header-primary text-center mb-8">
+            A Natural Way to Guide Your Child's Development
+          </h2>
+        </BlurFade>
+
+        <BlurFade delay={200}>
+          <div class="space-y-6">
+            <p class="text-body-regular text-gray-dark">
+              Healthy Start is just as its name suggests; is a start-up system to help your child's teeth
+              come in properly. Its use provides no discomfort, and it is a natural way to guide your child's
+              teeth to proper alignment. The Healthy Start System™ is a revolutionary departure from traditional
+              orthodontics into an early, non-invasive, natural way of straightening teeth. It works as well as
+              or better than braces, plastic aligners, surgery, or any other option to achieve a picture-perfect,
+              beautiful smile.
+            </p>
+
+            <p class="text-body-regular text-gray-medium">
+              For patients between the ages of 4 and 7, the Healthy Start System works with the natural forces
+              of tooth eruption. The soft, comfy, removable device tenderly guides the erupting teeth into their
+              perfect positions. In addition, Healthy Start aids in the correct growth and alignment of the lower
+              jaw while tending to facial aesthetics, as well.
+            </p>
+          </div>
+        </BlurFade>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section - White Background -->
+  <section class="py-16 md:py-20 bg-white">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="max-w-6xl mx-auto">
+        <BlurFade delay={100}>
+          <div class="text-center mb-12">
+            <h2 class="text-section-header text-header-primary">
+              Benefits of the Healthy Start System
+            </h2>
+            <p class="text-section-subheader">
+              Dr. Ombrello and her dental team are committed to bringing their patients the most
+              up-to-date dental technology with proven long-term benefits.
+            </p>
+          </div>
+        </BlurFade>
+
+        <div class="grid md:grid-cols-2 gap-6">
+          {benefits.map((benefit, index) => (
+            <BlurFade delay={200 + index * 50}>
+              <div class="flex items-start">
+                <svg class="w-6 h-6 mr-3 mt-1 flex-shrink-0" style="color: #a6b443;" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                <p class="text-body-regular text-gray-dark">{benefit}</p>
+              </div>
+            </BlurFade>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Conditions Treated - Gray Background -->
+  <section class="py-16 md:py-20 bg-gray-50">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="max-w-4xl mx-auto">
+        <BlurFade delay={100}>
+          <div class="text-center mb-12">
+            <h2 class="text-section-header text-header-primary">
+              How Do I Know if My Child Needs the Healthy Start System?
+            </h2>
+            <p class="text-section-subheader">
+              After a thorough dental checkup as early as age 3, Dr. Ombrello will discuss possible
+              dental conditions your child may develop that warrant Healthy Start.
+            </p>
+          </div>
+        </BlurFade>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          {conditions.map((category, index) => (
+            <BlurFade delay={200 + index * 100}>
+              <Card variant="bordered" class="p-6">
+                <h3 class="text-card-header text-header-secondary mb-4">{category.category}</h3>
+                <ul class="space-y-2">
+                  {category.items.map((item) => (
+                    <li class="flex items-start">
+                      <span class="text-xl mr-3" style="color: #0099ba;">•</span>
+                      <span class="text-body-regular text-gray-dark">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </Card>
+            </BlurFade>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3-Step Process - White Background -->
+  <section class="py-16 md:py-20 bg-white">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="max-w-6xl mx-auto">
+        <BlurFade delay={100}>
+          <div class="text-center mb-12">
+            <h2 class="text-section-header text-header-primary">
+              The Healthy Start 3-Step Process
+            </h2>
+            <p class="text-section-subheader">
+              If your child is between the ages of 4 and 7, Healthy Start is a three-step process
+            </p>
+          </div>
+        </BlurFade>
+
+        <div class="space-y-8">
+          {steps.map((step, index) => (
+            <BlurFade delay={200 + index * 100}>
+              <Card variant="bordered" class="overflow-hidden">
+                <div class="flex flex-col md:flex-row">
+                  <div class="md:w-1/4 p-6 bg-gradient-to-r from-[#0099ba] to-[#006786]">
+                    <div class="text-white">
+                      <div class="text-4xl font-bold mb-2">{index + 1}</div>
+                      <h3 class="text-xl font-semibold">{step.phase}</h3>
+                      <p class="text-sm opacity-90">{step.duration}</p>
+                    </div>
+                  </div>
+                  <div class="md:w-3/4 p-6">
+                    <p class="text-body-regular text-gray-dark">{step.description}</p>
+                  </div>
+                </div>
+              </Card>
+            </BlurFade>
+          ))}
+        </div>
+
+        <BlurFade delay={500}>
+          <div class="mt-8 p-6 bg-blue-50 rounded-lg">
+            <p class="text-body-regular text-gray-dark">
+              Dr. Ombrello knows that traditional orthodontics are an effective means for teeth straightening;
+              however, with Healthy Start your child can successfully achieve straight teeth in the privacy
+              of your own home without wearing uncomfortable metal braces. In addition, while correcting and
+              preventing orthodontic issues, Healthy Start results are achieved in less time as compared to
+              traditional orthodontics.
+            </p>
+          </div>
+        </BlurFade>
+      </div>
+    </div>
+  </section>
+
+  <!-- Older Children Section - Gray Background -->
+  <section class="py-16 md:py-20 bg-gray-50">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="max-w-4xl mx-auto text-center">
+        <BlurFade delay={100}>
+          <h2 class="text-section-header text-header-primary mb-8">
+            Healthy Start for Older Children?
+          </h2>
+          <p class="text-body-regular text-gray-dark">
+            Healthy Start is just as effective for older children from ages 8 and up. The same soft,
+            comfy, removable device is available for preteens (8-12) and for teens and adults (13+).
+            No longer is there a need to wear metal braces or aligners to achieve straight teeth!
+            The steps are similar to those for 4-7 year olds, with some variations.
+          </p>
+        </BlurFade>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section - Blue Gradient Background -->
+  <section class="py-16 md:py-20" style="background: linear-gradient(to bottom right, #0099ba, #006786);">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="max-w-3xl mx-auto text-center">
+        <BlurFade delay={100}>
+          <h2 class="text-4xl md:text-5xl font-normal text-white mb-4"
+              style="font-family: 'Playfair Display', serif;">
+            Give Your Child a Healthy Start
+          </h2>
+          <p class="text-lg text-white/90 mb-8" style="font-family: 'Geist', sans-serif;">
+            Schedule a consultation to see if the Healthy Start System is right for your child
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/services/pediatric-healthy-start"
+              class="px-8 py-3 bg-gradient-to-r from-[#a6b443] to-[#c7cd85] text-white rounded-full font-semibold transition-all duration-300 hover:from-[#8fa339] hover:to-[#a6b443] hover:shadow-lg inline-flex items-center justify-center"
+              style="font-family: 'Playfair Display', serif;"
+            >
+              Learn More Details
+            </a>
+            <a
+              href="/contact"
+              class="px-8 py-3 bg-white border-2 rounded-full font-semibold transition-all duration-300 hover:shadow-lg inline-flex items-center justify-center"
+              style="font-family: 'Playfair Display', serif; color: #0099ba; border-color: white;"
+              onmouseover="this.style.backgroundColor='#006786'; this.style.color='white'; this.style.borderColor='#006786';"
+              onmouseout="this.style.backgroundColor='white'; this.style.color='#0099ba'; this.style.borderColor='white';"
+            >
+              Schedule Consultation
+            </a>
+          </div>
+        </BlurFade>
+      </div>
+    </div>
+  </section>
+</Layout>

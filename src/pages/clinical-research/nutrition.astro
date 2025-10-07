@@ -1,0 +1,205 @@
+---
+import ResearchPageTemplate from '../../layouts/ResearchPageTemplate.astro';
+import BlurFade from '../../components/ui/BlurFade.astro';
+import Card from '../../components/ui/Card.astro';
+
+const books = [
+  {
+    title: "Grain Brain: The Surprising Truth about Wheat, Carbs, and Sugar--Your Brain's Silent Killers",
+    author: "Kristin Loberg",
+    authorUrl: "https://www.amazon.com/s/ref=dp_byline_sr_ebooks_2?ie=UTF8&field-author=Kristin+Loberg&text=Kristin+Loberg&sort=relevancerank&search-alias=digital-text",
+    image: "/images/clinical-research/books/grain-brain.jpg",
+    summary: "Dr. Perlmutter's #1 New York Times bestseller about the devastating effects of gluten, sugar, and carbs on the brain and body -- updated with the latest nutritional and neurological science. When Grain Brain was published in 2013, Dr. Perlmutter kick-started a revolution. Since then, his book has been translated into thirty languages, and more than 1.5 million readers have been given the tools to make monumental life-changing improvements to their health. They've lost weight, banished anxiety and depression, reduced or eliminated chronic conditions, and taken proactive steps to safeguard themselves against cognitive decline and neurological disease -- all without drugs. In this fully revised, five-year-anniversary edition, Dr. Perlmutter builds on his mission. Drawing on the latest developments in scientific research, which have further validated his recommendations, he explains how the Grain Brain program boosts the brain, shows the benefits of using fat as a main fuel source, and puts forth the most compelling evidence to date that a non-GMO, gluten-free, and low-carb diet is crucial for cognitive function and long-term health. Featuring up-to-date data and practical advice based on leading-edge medicine, including modified guidelines for testing and supplements, plus a wealth of new recipes, Grain Brain empowers you to take control of your health as never before and achieve optimal wellness for lifelong vitality.",
+    sourceUrl: "https://www.amazon.com/gp/product/B07C9ZS682?ref=dbs_p2d_P_R_popup_yes_prpp_T1"
+  },
+  {
+    title: "The End of Alzheimer's: The First Program to Prevent and Reverse Cognitive Decline",
+    author: "Dale Bredesen",
+    authorUrl: "https://www.amazon.com/Dale-Bredesen/e/B00MBV8O5Y/ref=dp_byline_cont_book_1",
+    image: "/images/clinical-research/books/end-of-alzheimers.jpg",
+    summary: "A groundbreaking plan to prevent and reverse Alzheimer's Disease that fundamentally changes how we understand cognitive decline. Everyone knows someone who has survived cancer, but until now no one knows anyone who has survived Alzheimer's Disease. In this paradigm shifting book, Dale Bredesen, MD, offers real hope to anyone looking to prevent and even reverse Alzheimer's Disease and cognitive decline. Revealing that AD is not one condition, as it is currently treated, but three, The End of Alzheimer's outlines 36 metabolic factors (micronutrients, hormone levels, sleep) that can trigger \"downsizing\" in the brain. The protocol shows us how to rebalance these factors using lifestyle modifications like taking B12, eliminating gluten, or improving oral hygiene. The results are impressive. Of the first ten patients on the protocol, nine displayed significant improvement with 3-6 months; since then the protocol has yielded similar results with hundreds more. Now, The End of Alzheimer's brings new hope to a broad audience of patients, caregivers, physicians, and treatment centers with a fascinating look inside the science and a complete step-by-step plan that fundamentally changes how we treat and even think about AD.",
+    sourceUrl: "https://www.amazon.com/End-Alzheimers-Program-Prevent-Cognitive/dp/0735216207"
+  },
+  {
+    title: "Wheat Belly: Lose the Wheat, Lose the Weight, and Find Your Path Back to Health",
+    author: "William Davis",
+    authorUrl: "https://www.amazon.com/William-Davis/e/B002BLT426/ref=dp_byline_cont_book_1",
+    image: "/images/clinical-research/books/wheat-belly.jpg",
+    summary: "Every day, over 200 million Americans consume food products made of wheat. As a result, over 100 million of them experience some form of adverse health effect, ranging from minor rashes and high blood sugar to the unattractive stomach bulges that preventive cardiologist William Davis calls \"wheat bellies.\" According to Davis, that excess fat has nothing to do with gluttony, sloth, or too much butter: It's due to the whole grain wraps we eat for lunch. After witnessing over 2,000 patients regain their health after giving up wheat, Davis reached the disturbing conclusion that wheat is the single largest contributor to the nationwide obesity epidemic—and its elimination is key to dramatic weight loss and optimal health. In Wheat Belly, Davis exposes the harmful effects of what is actually a product of genetic tinkering and agribusiness being sold to the American public as \"wheat\"—and provides readers with a user-friendly, step-by-step plan to navigate a new, wheat-free lifestyle. Informed by cutting-edge science and nutrition, along with case studies from men and women who have experienced life-changing transformations in their health after waving goodbye to wheat, Wheat Belly is an illuminating look at what is truly making Americans sick and an action plan to clear our plates of this seemingly benign ingredient.",
+    sourceUrl: "https://www.amazon.com/Wheat-Belly-Lose-Weight-Health/dp/1609614798/ref=pd_sbs_14_img_2/144-6864214-5728856?_encoding=UTF8&pd_rd_i=1609614798&pd_rd_r=c914aa4e-2df5-4964-ae37-d9dada14474d&pd_rd_w=1fbdD&pd_rd_wg=85pOJ&pf_rd_p=5cfcfe89-300f-47d2-b1ad-a4e27203a02a&pf_rd_r=MM5W3RR26CVP668Q723S&psc=1&refRID=MM5W3RR26CVP668Q723S"
+  },
+  {
+    title: "Formerly Known As Food: How the Industrial Food System Is Changing Our Minds, Bodies, and Culture",
+    author: "Kristin Lawless",
+    authorUrl: "https://www.amazon.com/Kristin-Lawless/e/B0799623XK/ref=dp_byline_cont_book_1",
+    image: "/images/clinical-research/books/formerly-known-as-food.jpg",
+    summary: "If you think buying organic from Whole Foods is protecting you, you're wrong. Our food―even what we're told is good for us―has changed for the worse in the past 100 years, its nutritional content deteriorating due to industrial farming and its composition altered due to the addition of thousands of chemicals from pesticides to packaging. We simply no longer know what we're eating. In Formerly Known as Food, Kristin Lawless argues that, because of the degradation of our diet, our bodies are literally changing from the inside out. The billion-dollar food industry is reshaping our food preferences, altering our brains, changing the composition of our microbiota, and even affecting the expression of our genes. Lawless chronicles how this is happening and what it means for our bodies, health, and survival. An independent journalist and nutrition expert, Lawless is emerging as the voice of a new generation of food thinkers. After years of \"eat this, not that\" advice from doctors, journalists, and food faddists, she offers something completely different. Lawless presents a comprehensive explanation of the problem―going beyond nutrition to issues of food choice, class, race, and gender―and provides a sound and simple philosophy of eating, which she calls the \"Whole Egg Theory.\" Destined to set the debate over food politics for the next decade, Formerly Known as Food speaks to a new generation looking for a different conversation about the food on our plates.",
+    sourceUrl: "https://www.amazon.com/Formerly-Known-As-Food-Industrial/dp/1250078318/ref=sr_1_1?keywords=formerly+known+as+food&qid=1574278145&s=books&sr=1-1"
+  },
+  {
+    title: "Nutrition and Physical Degeneration",
+    author: "Weston A. Price",
+    authorUrl: "https://www.amazon.com/Weston-A-Price/e/B00LJE2X10/ref=dp_byline_cont_book_1",
+    image: "/images/clinical-research/books/nutrition-physical-degeneration.jpg",
+    summary: "An epic study demonstrating the importance of whole food nutrition, and the degeneration and destruction that comes from a diet of processed foods. For nearly 10 years, Weston Price and his wife traveled around the world in search of the secret to health. Instead of looking at people afflicted with disease symptoms, this highly-respected dentist and dental researcher chose to focus on healthy individuals, and challenged himself to understand how they achieved such amazing health. Dr. Price traveled to hundreds of cities in a total of 14 different countries in his search to find healthy people. He investigated some of the most remote areas in the world. He observed perfect dental arches, minimal tooth decay, high immunity to tuberculosis and overall excellent health in those groups of people who ate their indigenous foods. He found when these people were introduced to modernized foods, such as white flour, white sugar, refined vegetable oils and canned goods, signs of degeneration quickly became quite evident. Dental caries, deformed jaw structures, crooked teeth, arthritis and a low immunity to tuberculosis became rampant amongst them. Dr. Price documented this ancestral wisdom including hundreds of photos in his book, Nutrition and Physical Degeneration.",
+    sourceUrl: "https://www.amazon.com/Nutrition-Physical-Degeneration-Weston-Price/dp/0916764206/ref=pd_rhf_dp_p_img_5?_encoding=UTF8&psc=1&refRID=QNJ5CHGVBAE6CC1Q20D3"
+  },
+  {
+    title: "The Perricone Prescription: A Physician's 28-Day Program for Total Body and Face Rejuvenation",
+    author: "Nicholas Perricone M.D.",
+    authorUrl: "https://www.amazon.com/s/ref=dp_byline_sr_book_1?ie=UTF8&field-author=Nicholas+Perricone+M.D.&text=Nicholas+Perricone+M.D.&sort=relevancerank&search-alias=books",
+    image: "/images/clinical-research/books/perricone-prescription.jpg",
+    summary: "Now in a stunning trade paperback edition that includes a new bonus chapter, the instant #1 New York Times bestseller The Perricone Prescription is the dramatically effective, total body anti–aging program that includes an easy–to–follow exercise, diet, and skin–care regimen for people of all ages. We generally believe that lines and wrinkles are an unavoidable part of the aging process. According to Dr. Nicholas V. Perricone, they are actually due to \"inflammation\" caused by poor nutrition, pollution, sunlight, irritating skin care treatments, and stress. In fact, this type of inflammation is more than just a beauty problem. The production of free radicals that damage the cells and organs in the body also increases the likelihood of heart disease, cancer, diabetes, and arthritis. The good news is, the Perricone Prescription Program can prevent and even reverse these problems. The program will not only produce visible improvement in the skin, it will improve your body's overall health and appearance. Dr. Perricone has developed his own skin care products and recommends other products he believes will help to improve skin tone. By following the Perricone Program of diet, topical creams, vitamins, and exercise, you can dramatically reduce lines and wrinkles and achieve a younger look within three days. You will look and feel better than you ever thought possible. Good health and beautiful skin–an unbeatable combination.",
+    sourceUrl: "https://www.amazon.com/Perricone-Prescription-Physicians-Program-Rejuvenation/dp/0060934352"
+  },
+  {
+    title: "Brain Longevity: The Breakthrough Medical Program that Improves Your Mind and Memory",
+    author: "M.D. Khalsa, Dharma Singh",
+    authorUrl: "https://www.amazon.com/s/ref=dp_byline_sr_book_1?ie=UTF8&field-author=M.D.+Khalsa%2C+Dharma+Singh&text=M.D.+Khalsa%2C+Dharma+Singh&sort=relevancerank&search-alias=books",
+    image: "/images/clinical-research/books/brain-longevity.jpg",
+    summary: "Including a four-part program that involves nutritional, stress-relieving, pharmacological, and mind-body exercises therapies to overcome the effects of brain aging, a guide helps readers over forty control a hormone called cortisol and improve their mental acuity.",
+    sourceUrl: "https://www.amazon.com/Brain-Longevity-Breakthrough-Medical-Improves/dp/0446520675/ref=sr_1_1?crid=3GN1QCSTVM08V&keywords=brain+longevity+dharma+singh+khalsa&qid=1574278303&s=books&sprefix=brain+longevity%2Cstripbooks-intl-ship%2C153&sr=1-1"
+  },
+  {
+    title: "Sugar Blues",
+    author: "William Dufty",
+    authorUrl: "https://www.amazon.com/s/ref=dp_byline_sr_book_1?ie=UTF8&field-author=William+Dufty&text=William+Dufty&sort=relevancerank&search-alias=books",
+    image: "/images/clinical-research/books/sugar-blues.jpg",
+    summary: "It's a prime ingredient in countless substances from cereal to soup, from cola to coffee. Consumed at the rate of one hundred pounds for every American every year, it's as addictive as nicotine -- and as poisonous. It's sugar. And \"Sugar Blues\", inspired by the crusade of Hollywood legend Gloria Swanson, is the classic, bestselling expose that unmasks our generation's greatest medical killer and shows how a revitalizing, sugar-free diet can not only change lives, but quite possibly save them.",
+    sourceUrl: "https://www.amazon.com/Sugar-Blues-William-Dufty/dp/0446343129/ref=sr_1_1?keywords=sugar+blues&qid=1574278191&s=books&sr=1-1"
+  }
+];
+---
+
+<ResearchPageTemplate
+  title="Nutrition Clinical Research"
+  metaTitle="Nutrition Research | Central Dentist"
+  description="Essential reading on nutrition and its profound impact on oral and systemic health. Discover evidence-based approaches to optimal wellness through diet."
+>
+  <div slot="introduction">
+    <h2 class="text-section-header text-header-primary mb-6">
+      The Foundation of Health: Nutrition
+    </h2>
+    <p class="text-body-large mb-8">
+      Your diet is the foundation of your health. What you eat directly affects not only your oral health,
+      but your brain function, energy levels, immune system, and risk of chronic disease. These essential
+      books provide evidence-based insights into the powerful connection between nutrition and wellness.
+    </p>
+  </div>
+
+  <div slot="main-content">
+    <div class="bg-teal-50 rounded-lg p-6 mb-8" style="border-left: 4px solid #0099ba;">
+      <p class="text-body-regular font-semibold" style="color: #006786;">
+        Dr. Weston Price's groundbreaking research demonstrated that traditional, nutrient-dense diets
+        led to perfect dental arches, minimal decay, and exceptional overall health—validating the
+        inseparable connection between nutrition and oral wellness.
+      </p>
+    </div>
+  </div>
+
+  <section slot="studies-section" class="py-16 md:py-20 bg-gray-50">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="max-w-4xl mx-auto">
+        <BlurFade delay={100}>
+          <h2 class="text-section-header text-header-primary text-center mb-4">
+            Essential Reading on Nutrition
+          </h2>
+          <p class="text-section-subheader text-center mb-12">
+            Books that transform our understanding of food and health
+          </p>
+        </BlurFade>
+
+        <div class="space-y-8">
+          {books.map((book, index) => (
+            <BlurFade delay={200 + (index * 50)}>
+              <Card className="p-6">
+                <div class="flex flex-col md:flex-row gap-6">
+                  {book.image && (
+                    <div class="flex-shrink-0">
+                      <img
+                        src={book.image}
+                        alt={`${book.title} book cover`}
+                        class="w-full md:w-48 h-auto rounded-lg shadow-md"
+                        loading="lazy"
+                      />
+                    </div>
+                  )}
+                  <div class="flex-1">
+                    <h3 class="text-card-header mb-3" style="color: #006786;">
+                      {book.title}
+                    </h3>
+                    <div class="mb-4">
+                      <a
+                        href={book.authorUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="text-sm hover:underline"
+                        style="color: #0099ba;"
+                      >
+                        📖 Author: {book.author}
+                      </a>
+                    </div>
+                    <p class="text-body-regular mb-4">
+                      {book.summary}
+                    </p>
+                    <a
+                      href={book.sourceUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="inline-block px-6 py-2 bg-gradient-to-r from-[#a6b443] to-[#c7cd85] text-white rounded-full text-sm font-semibold transition-all duration-300 hover:from-[#8fa339] hover:to-[#a6b443] hover:shadow-lg"
+                    >
+                      View on Amazon
+                    </a>
+                  </div>
+                </div>
+              </Card>
+            </BlurFade>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div slot="related-links">
+    <div class="grid md:grid-cols-3 gap-6">
+      <BlurFade delay={200}>
+        <a href="/clinical-research/fluoride-free-prevention" class="block">
+          <Card className="h-full hover:shadow-lg transition-shadow">
+            <div class="p-6">
+              <h3 class="text-card-header mb-3">Fluoride-Free Prevention</h3>
+              <p class="text-body-regular">
+                Research on natural approaches to cavity prevention.
+              </p>
+            </div>
+          </Card>
+        </a>
+      </BlurFade>
+
+      <BlurFade delay={300}>
+        <a href="/clinical-research/growth-and-development" class="block">
+          <Card className="h-full hover:shadow-lg transition-shadow">
+            <div class="p-6">
+              <h3 class="text-card-header mb-3">Growth & Development</h3>
+              <p class="text-body-regular">
+                The role of nutrition in proper facial and dental development.
+              </p>
+            </div>
+          </Card>
+        </a>
+      </BlurFade>
+
+      <BlurFade delay={400}>
+        <a href="/philosophy" class="block">
+          <Card className="h-full hover:shadow-lg transition-shadow">
+            <div class="p-6">
+              <h3 class="text-card-header mb-3">Our Philosophy</h3>
+              <p class="text-body-regular">
+                Learn about our holistic approach to dental care.
+              </p>
+            </div>
+          </Card>
+        </a>
+      </BlurFade>
+    </div>
+  </div>
+</ResearchPageTemplate>

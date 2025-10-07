@@ -1,0 +1,49 @@
+{
+  "description": "Holistic Family Dentistry practice in Dallas, TX focusing on preventive and biocompatible oral health therapy.",
+  "copyright": "© 2025 Central Dentist. All rights reserved.",
+  "secondaryText": "Holistic Family Dentistry in Dallas, TX",
+  "quickLinks": [
+    {
+      "label": "About Us",
+      "url": "/our-office"
+    },
+    {
+      "label": "Our Services",
+      "url": "/services"
+    },
+    {
+      "label": "Our Philosophy",
+      "url": "/philosophy"
+    },
+    {
+      "label": "Pediatric Care",
+      "url": "/pediatrics"
+    },
+    {
+      "label": "Blog",
+      "url": "/blog"
+    },
+    {
+      "label": "Recommended Products",
+      "url": "/recommended-products"
+    },
+    {
+      "label": "Contact",
+      "url": "/contact"
+    }
+  ],
+  "legalLinks": [
+    {
+      "label": "Privacy Policy",
+      "url": "/privacy-policy"
+    },
+    {
+      "label": "Terms of Service",
+      "url": "/terms"
+    },
+    {
+      "label": "Accessibility",
+      "url": "/accessibility"
+    }
+  ]
+}

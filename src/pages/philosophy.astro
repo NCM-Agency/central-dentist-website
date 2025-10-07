@@ -1,49 +1,118 @@
 ---
-// Our Philosophy Page - Central Dentist
-import AboutPageTemplate from '../layouts/AboutPageTemplate.astro';
+import Layout from '../layouts/Layout.astro';
+import PageHero from '../components/shared/PageHero.astro';
 import BlurFade from '../components/ui/BlurFade.astro';
-import Button from '../components/ui/Button.astro';
 import Card from '../components/ui/Card.astro';
+import Button from '../components/ui/Button.astro';
+
+const principles = [
+  {
+    icon: '🌿',
+    title: 'Biocompatible Materials',
+    description: 'Every material we use is carefully selected for its compatibility with human biology. No mercury, no BPA, no fluoride – just safe, proven materials that work in harmony with your body.',
+    gradient: 'from-[#a6b443] to-[#c7cd85]'
+  },
+  {
+    icon: '🔬',
+    title: 'Root Cause Resolution',
+    description: 'We don\'t just treat symptoms – we investigate why problems occur. By addressing underlying causes like nutrition, breathing, and pH balance, we help prevent future issues.',
+    gradient: 'from-[#0099ba] to-[#006786]'
+  },
+  {
+    icon: '💚',
+    title: 'Minimally Invasive Care',
+    description: 'We preserve as much natural tooth structure as possible. Using advanced technology and conservative techniques, we treat problems early and gently, respecting your body\'s natural design.',
+    gradient: 'from-[#a6b443] to-[#c7cd85]'
+  },
+  {
+    icon: '🎓',
+    title: 'Patient Education',
+    description: 'We believe knowledge empowers better health decisions. We take time to explain your oral-systemic connections, treatment options, and preventive strategies so you can make informed choices.',
+    gradient: 'from-[#0099ba] to-[#006786]'
+  }
+];
+
+const differentiators = [
+  {
+    title: 'Mercury-Free Since 1981',
+    description: 'We\'ve been mercury-free for over 40 years, using SMART protocols for safe amalgam removal and offering only biocompatible alternatives.'
+  },
+  {
+    title: 'Airway-Focused Care',
+    description: 'We evaluate breathing and sleep patterns, understanding that proper airway function is fundamental to overall health and development.'
+  },
+  {
+    title: 'Natural Healing Support',
+    description: 'Using ozone therapy, PRF, and other biological treatments, we support your body\'s natural healing processes without harsh chemicals.'
+  }
+];
+
+const connections = [
+  {
+    system: 'Cardiovascular Health',
+    connection: 'Gum disease bacteria can enter the bloodstream and affect heart health'
+  },
+  {
+    system: 'Respiratory Function',
+    connection: 'Oral bacteria can be aspirated into lungs, affecting breathing'
+  },
+  {
+    system: 'Metabolic Balance',
+    connection: 'Chronic oral inflammation can impact blood sugar regulation'
+  },
+  {
+    system: 'Cognitive Function',
+    connection: 'Oral pathogens have been linked to cognitive decline'
+  },
+  {
+    system: 'Pregnancy Outcomes',
+    connection: 'Gum disease can affect pregnancy and birth outcomes'
+  }
+];
 ---
 
-<AboutPageTemplate
+<Layout
   title="Our Philosophy | Holistic Dental Care | Central Dentist Dallas"
   description="Discover our holistic approach to dentistry - treating the whole person, using biocompatible materials, and addressing root causes for optimal oral and systemic health."
-  heroTitle="Our Holistic Philosophy"
-  heroSubtitle="Treating the Whole Person, Not Just Teeth"
-  breadcrumbs={[
-    { label: 'Our Philosophy', href: '/philosophy' }
-  ]}
-  schemaType="MedicalBusiness"
 >
+  <!-- Hero Section -->
+  <PageHero
+    title="Our Holistic Philosophy"
+    subtitle="Treating the Whole Person, Not Just Teeth"
+    backgroundImage="/images/services/abstract-white-texture.jpg"
+    variant="standard"
+    breadcrumbs={[
+      { label: 'Our Philosophy', href: '#' }
+    ]}
+  />
 
-  <!-- Core Philosophy Section -->
-  <section slot="philosophy" class="about-section bg-white">
-    <div class="container mx-auto container-padding">
+  <!-- Core Philosophy Section - White Background -->
+  <section class="py-16 md:py-20 bg-white">
+    <div class="container mx-auto px-4 md:px-6">
       <div class="max-w-4xl mx-auto">
-        <BlurFade delay={100} client:visible>
-          <h2 class="font-heading text-h2 font-semibold text-gray-dark mb-8">
+        <BlurFade delay={100}>
+          <h2 class="text-section-header text-header-primary text-center mb-8">
             Dentistry That Honors Your Whole Body
           </h2>
         </BlurFade>
 
-        <BlurFade delay={200} client:visible>
-          <div class="prose prose-lg max-w-none mb-12">
-            <p class="font-body text-lg text-gray-medium leading-relaxed mb-6">
+        <BlurFade delay={200}>
+          <div class="space-y-6">
+            <p class="text-body-regular text-gray-dark">
               At Central Dentist, we believe your mouth is the gateway to your overall health. What happens
               in your oral cavity doesn't stay there – it affects your entire body. This understanding drives
               our holistic approach to dentistry, where we consider not just your teeth and gums, but your
               complete wellness journey.
             </p>
 
-            <p class="font-body text-lg text-gray-medium leading-relaxed mb-6">
+            <p class="text-body-regular text-gray-dark">
               Traditional dentistry often treats symptoms. We dig deeper to find root causes. A cavity isn't
               just a hole to fill – it's a sign that something in your body's ecosystem needs attention.
               Maybe it's nutrition, maybe it's pH balance, maybe it's airway issues affecting your sleep.
               We look at the whole picture to help you achieve lasting oral and systemic health.
             </p>
 
-            <p class="font-body text-lg text-gray-medium leading-relaxed mb-6">
+            <p class="text-body-regular text-gray-dark">
               Every material we use, every treatment we recommend, and every protocol we follow is chosen
               with your total health in mind. We're not just fixing problems – we're partnering with your
               body's natural healing abilities to create sustainable wellness.
@@ -54,198 +123,141 @@ import Card from '../components/ui/Card.astro';
     </div>
   </section>
 
-  <!-- Core Principles Section -->
-  <section slot="team" class="about-section bg-gray-50">
-    <div class="container mx-auto container-padding">
+  <!-- Core Principles Section - Gray Background -->
+  <section class="py-16 md:py-20 bg-gray-50">
+    <div class="container mx-auto px-4 md:px-6">
       <div class="max-w-6xl mx-auto">
-        <BlurFade delay={100} client:visible>
-          <h2 class="font-heading text-h2 font-semibold text-gray-dark mb-12 text-center">
-            Our Core Principles
-          </h2>
+        <BlurFade delay={100}>
+          <div class="text-center mb-12">
+            <h2 class="text-section-header text-header-primary">Our Core Principles</h2>
+            <p class="text-section-subheader">The foundation of our holistic approach</p>
+          </div>
         </BlurFade>
 
         <div class="grid md:grid-cols-2 gap-8">
-          <BlurFade delay={200} client:visible>
-            <Card className="h-full">
-              <div class="p-8">
-                <div class="w-16 h-16 rounded-full flex items-center justify-center mb-6" style="background: linear-gradient(135deg, #a6b443, #c7cd85);">
-                  <span class="text-white text-2xl">🌿</span>
+          {principles.map((principle, index) => (
+            <BlurFade delay={200 + index * 100}>
+              <Card variant="bordered" class="h-full">
+                <div class="p-8">
+                  <div class={`w-16 h-16 rounded-full bg-gradient-to-r ${principle.gradient} flex items-center justify-center mb-6`}>
+                    <span class="text-white text-2xl">{principle.icon}</span>
+                  </div>
+                  <h3 class="text-card-header text-header-primary mb-4">{principle.title}</h3>
+                  <p class="text-body-regular text-gray-medium">
+                    {principle.description}
+                  </p>
                 </div>
-                <h3 class="font-heading text-xl font-semibold mb-4">Biocompatibility First</h3>
-                <p class="font-body text-gray-medium">
-                  Every material we use is carefully selected for its compatibility with human biology.
-                  No mercury, no BPA, no fluoride – just safe, proven materials that work in harmony
-                  with your body.
-                </p>
-              </div>
-            </Card>
-          </BlurFade>
-
-          <BlurFade delay={300} client:visible>
-            <Card className="h-full">
-              <div class="p-8">
-                <div class="w-16 h-16 rounded-full flex items-center justify-center mb-6" style="background: linear-gradient(135deg, #0099ba, #006786);">
-                  <span class="text-white text-2xl">🔬</span>
-                </div>
-                <h3 class="font-heading text-xl font-semibold mb-4">Root Cause Resolution</h3>
-                <p class="font-body text-gray-medium">
-                  We don't just treat symptoms – we investigate why problems occur. By addressing
-                  underlying causes like nutrition, breathing, and pH balance, we help prevent
-                  future issues.
-                </p>
-              </div>
-            </Card>
-          </BlurFade>
-
-          <BlurFade delay={400} client:visible>
-            <Card className="h-full">
-              <div class="p-8">
-                <div class="w-16 h-16 rounded-full flex items-center justify-center mb-6" style="background: linear-gradient(135deg, #a6b443, #c7cd85);">
-                  <span class="text-white text-2xl">💚</span>
-                </div>
-                <h3 class="font-heading text-xl font-semibold mb-4">Minimally Invasive Care</h3>
-                <p class="font-body text-gray-medium">
-                  We preserve as much natural tooth structure as possible. Using advanced technology
-                  and conservative techniques, we treat problems early and gently, respecting your
-                  body's natural design.
-                </p>
-              </div>
-            </Card>
-          </BlurFade>
-
-          <BlurFade delay={500} client:visible>
-            <Card className="h-full">
-              <div class="p-8">
-                <div class="w-16 h-16 rounded-full flex items-center justify-center mb-6" style="background: linear-gradient(135deg, #0099ba, #006786);">
-                  <span class="text-white text-2xl">🎓</span>
-                </div>
-                <h3 class="font-heading text-xl font-semibold mb-4">Patient Education</h3>
-                <p class="font-body text-gray-medium">
-                  We believe knowledge empowers better health decisions. We take time to explain
-                  your oral-systemic connections, treatment options, and preventive strategies
-                  so you can make informed choices.
-                </p>
-              </div>
-            </Card>
-          </BlurFade>
+              </Card>
+            </BlurFade>
+          ))}
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Our Approach Section -->
-  <section slot="services" class="about-section bg-white">
-    <div class="container mx-auto container-padding">
+  <!-- What Makes Us Different Section - White Background -->
+  <section class="py-16 md:py-20 bg-white">
+    <div class="container mx-auto px-4 md:px-6">
       <div class="max-w-6xl mx-auto">
-        <BlurFade delay={100} client:visible>
-          <h2 class="font-heading text-h2 font-semibold text-gray-dark mb-12 text-center">
-            What Makes Our Approach Different
-          </h2>
+        <BlurFade delay={100}>
+          <div class="text-center mb-12">
+            <h2 class="text-section-header text-header-primary">
+              What Makes Our Approach Different
+            </h2>
+            <p class="text-section-subheader">
+              Comprehensive care that goes beyond traditional dentistry
+            </p>
+          </div>
         </BlurFade>
 
         <div class="grid md:grid-cols-3 gap-8 mb-12">
-          <BlurFade delay={200} client:visible>
-            <div class="text-center">
-              <h3 class="font-heading text-xl font-semibold mb-4" style="color: #0099ba;">Mercury-Free Since 1981</h3>
-              <p class="font-body text-gray-medium">
-                We've been mercury-free for over 40 years, using SMART protocols for safe amalgam
-                removal and offering only biocompatible alternatives.
-              </p>
-            </div>
-          </BlurFade>
-
-          <BlurFade delay={300} client:visible>
-            <div class="text-center">
-              <h3 class="font-heading text-xl font-semibold mb-4" style="color: #0099ba;">Airway-Focused Care</h3>
-              <p class="font-body text-gray-medium">
-                We evaluate breathing and sleep patterns, understanding that proper airway function
-                is fundamental to overall health and development.
-              </p>
-            </div>
-          </BlurFade>
-
-          <BlurFade delay={400} client:visible>
-            <div class="text-center">
-              <h3 class="font-heading text-xl font-semibold mb-4" style="color: #0099ba;">Natural Healing Support</h3>
-              <p class="font-body text-gray-medium">
-                Using ozone therapy, PRF, and other biological treatments, we support your body's
-                natural healing processes without harsh chemicals.
-              </p>
-            </div>
-          </BlurFade>
+          {differentiators.map((item, index) => (
+            <BlurFade delay={200 + index * 100}>
+              <div class="text-center">
+                <h3 class="text-card-header text-header-secondary mb-4">{item.title}</h3>
+                <p class="text-body-regular text-gray-medium">
+                  {item.description}
+                </p>
+              </div>
+            </BlurFade>
+          ))}
         </div>
+      </div>
+    </div>
+  </section>
 
-        <BlurFade delay={500} client:visible>
-          <div class="bg-gray-50 rounded-lg p-8">
-            <h3 class="font-heading text-2xl font-semibold mb-6 text-center">The Oral-Systemic Connection</h3>
-            <div class="space-y-4">
-              <p class="font-body text-gray-medium">
-                Research consistently shows connections between oral health and systemic conditions:
-              </p>
-              <ul class="space-y-3">
-                <li class="flex items-start">
-                  <span class="text-xl mr-3" style="color: #a6b443;">→</span>
-                  <span class="font-body text-gray-medium">
-                    <strong>Cardiovascular Health:</strong> Gum disease bacteria can enter the bloodstream and affect heart health
-                  </span>
-                </li>
-                <li class="flex items-start">
-                  <span class="text-xl mr-3" style="color: #a6b443;">→</span>
-                  <span class="font-body text-gray-medium">
-                    <strong>Respiratory Function:</strong> Oral bacteria can be aspirated into lungs, affecting breathing
-                  </span>
-                </li>
-                <li class="flex items-start">
-                  <span class="text-xl mr-3" style="color: #a6b443;">→</span>
-                  <span class="font-body text-gray-medium">
-                    <strong>Metabolic Balance:</strong> Chronic oral inflammation can impact blood sugar regulation
-                  </span>
-                </li>
-                <li class="flex items-start">
-                  <span class="text-xl mr-3" style="color: #a6b443;">→</span>
-                  <span class="font-body text-gray-medium">
-                    <strong>Cognitive Function:</strong> Oral pathogens have been linked to cognitive decline
-                  </span>
-                </li>
-                <li class="flex items-start">
-                  <span class="text-xl mr-3" style="color: #a6b443;">→</span>
-                  <span class="font-body text-gray-medium">
-                    <strong>Pregnancy Outcomes:</strong> Gum disease can affect pregnancy and birth outcomes
-                  </span>
-                </li>
-              </ul>
-              <p class="font-body text-gray-medium mt-6">
-                By addressing oral health holistically, we're not just protecting your teeth – we're
-                supporting your entire body's wellness.
-              </p>
-            </div>
+  <!-- Oral-Systemic Connection Section - Gray Background -->
+  <section class="py-16 md:py-20 bg-gray-50">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="max-w-4xl mx-auto">
+        <BlurFade delay={100}>
+          <div class="text-center mb-12">
+            <h2 class="text-section-header text-header-primary">
+              The Oral-Systemic Connection
+            </h2>
+            <p class="text-section-subheader">
+              Understanding how oral health impacts your entire body
+            </p>
           </div>
+        </BlurFade>
+
+        <BlurFade delay={200}>
+          <Card variant="bordered">
+            <div class="p-8">
+              <p class="text-body-regular text-gray-dark mb-8">
+                Research consistently shows connections between oral health and systemic conditions. By addressing
+                oral health holistically, we're not just protecting your teeth – we're supporting your entire body's wellness.
+              </p>
+
+              <div class="space-y-4">
+                {connections.map((item) => (
+                  <div class="flex items-start">
+                    <span class="text-xl mr-3" style="color: #a6b443;">→</span>
+                    <div class="text-body-regular text-gray-dark">
+                      <strong>{item.system}:</strong> {item.connection}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </Card>
         </BlurFade>
       </div>
     </div>
   </section>
 
-  <!-- CTA Section -->
-  <section slot="cta" class="py-16 md:py-20" style="background: linear-gradient(to bottom right, #0099ba, #006786);">
+  <!-- Quote Section - White Background -->
+  <section class="py-16 md:py-20 bg-white">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="max-w-4xl mx-auto text-center">
+        <BlurFade delay={100}>
+          <blockquote class="text-xl md:text-2xl italic text-gray-dark mb-4" style="font-family: 'Playfair Display', serif;">
+            "The mouth is the gateway to the body. A healthy mouth equals a healthy body."
+          </blockquote>
+          <p class="text-body-regular text-gray-medium">
+            – Dr. Jill Ombrello, Founder of Central Dentist
+          </p>
+        </BlurFade>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section - Blue Gradient Background -->
+  <section class="py-16 md:py-20" style="background: linear-gradient(to bottom right, #0099ba, #006786);">
     <div class="container mx-auto px-4 md:px-6">
       <div class="max-w-3xl mx-auto text-center">
-        <BlurFade delay={100} client:load>
+        <BlurFade delay={100}>
           <h2 class="text-4xl md:text-5xl font-normal text-white mb-4"
               style="font-family: 'Playfair Display', serif;">
             Experience Holistic Dentistry
           </h2>
-        </BlurFade>
-
-        <BlurFade delay={200} client:load>
           <p class="text-lg text-white/90 mb-8" style="font-family: 'Geist', sans-serif;">
-            Ready to experience dentistry that considers your whole health? Schedule a consultation to discuss how our holistic approach can benefit you and your family
+            Ready to experience dentistry that considers your whole health? Schedule a consultation to
+            discuss how our holistic approach can benefit you and your family.
           </p>
-        </BlurFade>
-
-        <BlurFade delay={300} client:load>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="/appointment"
+              href="/contact"
               class="px-8 py-3 bg-gradient-to-r from-[#a6b443] to-[#c7cd85] text-white rounded-full font-semibold transition-all duration-300 hover:from-[#8fa339] hover:to-[#a6b443] hover:shadow-lg inline-flex items-center justify-center"
               style="font-family: 'Playfair Display', serif;"
             >
@@ -261,12 +273,11 @@ import Card from '../components/ui/Card.astro';
               <svg class="mr-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
               </svg>
-              Call Now: (214) 368-0900
+              Call (214) 368-0900
             </a>
           </div>
         </BlurFade>
       </div>
     </div>
   </section>
-
-</AboutPageTemplate>
+</Layout>

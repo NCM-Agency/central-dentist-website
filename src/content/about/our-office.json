@@ -1,0 +1,45 @@
+{
+  "title": "Welcome to Our Home Away from Home!",
+  "heroImage": "/images/services/abstract-white-texture.jpg",
+  "introduction": "As we've recently expanded our practice and brought in new technology and equipment (such as our CBCT machine, ozone therapy, and SMART equipment), we thought this would be a great opportunity to update our office to reflect who we are to those new to our practice and to remind our existing patients why they've chosen to partner with us for their families' care.\n\nWhat we hope you feel when you step into our office is that we are committed to a positive (dare we say, fun!) experience for adults and children alike. We recognize that each family and each individual patient will have a unique dental history and personal goals for their future oral and systemic health. We want to personalize and optimize each person's visit with us, allowing you to feel at ease with our consultations and our treatment appointments.",
+  "features": [
+    {
+      "title": "CBCT 3D Imaging",
+      "description": "Advanced 3D imaging for precise diagnosis and treatment planning with minimal radiation exposure.",
+      "icon": "shield"
+    },
+    {
+      "title": "Ozone Therapy",
+      "description": "Natural antimicrobial treatment that promotes healing and eliminates harmful bacteria without side effects.",
+      "icon": "zap"
+    },
+    {
+      "title": "SMART Protocol",
+      "description": "Safe Mercury Amalgam Removal Technique following IAOMT guidelines for maximum patient protection.",
+      "icon": "check"
+    }
+  ],
+  "gallery": [
+    "/images/office/office-1.jpg",
+    "/images/office/office-2.jpg",
+    "/images/office/office-3.jpg",
+    "/images/office/office-4.jpg",
+    "/images/office/office-5.jpg",
+    "/images/office/office-6.jpg",
+    "/images/office/office-7.jpg"
+  ],
+  "environmentalProtection": {
+    "title": "Environmental Protections",
+    "description": "In addition to our new technology and fun decorations, we have installed a number of environmental protectors that may be less obvious but were just as intentional. These protectors help us create a safe and sustainable environment in our office and our larger community.",
+    "airQuality": [
+      "Negative Ionizers: Help remove airborne contaminants and improve air quality",
+      "Enhanced Air Purification: Advanced filtration systems for cleaner air",
+      "Improved Circulation: Optimized air flow throughout the office"
+    ],
+    "waterWaste": [
+      "Water Filtration System: Pure, clean water for all dental procedures",
+      "Amalgam Separator: Prevents mercury from entering the water supply"
+    ],
+    "commitment": "We recognize the importance of minimizing our footprint in our environment while also being mindful of ever-increasing toxicities from materials, chemicals, and other environmental variables. We are doing all that we can to ensure that we are creating a safe and sustainable environment in our office, as well as in our larger community."
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "business": {
+    "name": "Central Dentist",
+    "tagline": "Holistic Family Dentistry practice in Dallas, TX focusing on preventive and biocompatible oral health therapy.",
+    "phone": "214-368-0900",
+    "email": "info@centraldentist.com",
+    "address": {
+      "street": "10210 N Central Expy, Ste 100",
+      "city": "Dallas",
+      "state": "TX",
+      "zip": "75231"
+    }
+  },
+  "hours": {
+    "monday": "8:00 AM - 5:00 PM",
+    "tuesday": "8:00 AM - 5:00 PM",
+    "wednesday": "8:00 AM - 5:00 PM",
+    "thursday": "8:00 AM - 5:00 PM",
+    "friday": "8:00 AM - 2:00 PM",
+    "weekend": "Closed"
+  },
+  "certifications": [
+    {
+      "name": "IAOMT Proud Member"
+    },
+    {
+      "name": "Texas Top 10 Percent"
+    }
+  ],
+  "social": {
+    "facebook": "",
+    "instagram": "",
+    "twitter": "",
+    "linkedin": "",
+    "youtube": ""
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "title": "Our History",
+  "heroImage": "/images/services/abstract-white-texture.jpg",
+  "content": "Four generations of family dentistry has led us to where Central Dentist is today. For us, it is more than a chosen profession, it is a passion. The importance of a positive dental and health experience has been ingrained in our culture, and we strive to treat every patient with the same compassion and care that we would if they were a part of our own family.\n\nWe are honored to take care of multiple generations of families, from the elderly who may be in nursing homes, to children as young as 6-12 months old, to the parents and family members who hold it all together in between.\n\nCentral Dentist was founded in 1981 with a revolutionary vision: to provide dental care that considers the whole person, not just their teeth. Our founders recognized early on that oral health is intrinsically connected to overall wellness, and that the materials and methods used in dentistry can have far-reaching effects on the body.\n\nWe were among the first practices in Dallas to eliminate mercury amalgam fillings, understanding the potential health risks long before it became mainstream knowledge. This pioneering spirit has guided our practice for over four decades, always seeking safer, more biocompatible alternatives to traditional dental materials.",
+  "timeline": [
+    {
+      "year": "1981",
+      "event": "Central Dentist opens its doors with a commitment to mercury-free dentistry and holistic patient care."
+    },
+    {
+      "year": "1995",
+      "event": "We become one of the first practices in Texas to offer biocompatibility testing for dental materials, ensuring each patient receives materials that work best with their individual biology."
+    },
+    {
+      "year": "2005",
+      "event": "Early adoption of the Safe Mercury Amalgam Removal Technique (SMART) protocol, protecting patients and staff during amalgam removal procedures."
+    },
+    {
+      "year": "2015",
+      "event": "Introduction of digital dentistry with 3D imaging, allowing for more precise diagnostics and treatment planning while reducing radiation exposure."
+    },
+    {
+      "year": "2020",
+      "event": "Expansion of our biological dentistry services with ozone therapy and Platelet Rich Fibrin (PRF), offering natural healing and infection control options."
+    },
+    {
+      "year": "Today",
+      "event": "With our recent practice expansion, CBCT technology, and comprehensive holistic services, we continue to lead Dallas in safe, natural dental care while maintaining the personal touch that has defined us for over 40 years."
+    }
+  ],
+  "values": [
+    {
+      "title": "First, Do No Harm",
+      "description": "Every treatment decision prioritizes your overall health"
+    },
+    {
+      "title": "Education Empowers",
+      "description": "We believe informed patients make the best health decisions"
+    },
+    {
+      "title": "Innovation with Purpose",
+      "description": "We adopt new technologies that genuinely improve patient outcomes"
+    },
+    {
+      "title": "Personalized Care",
+      "description": "Every patient is unique, and their treatment should be too"
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+---
+import ResearchPageTemplate from '../../layouts/ResearchPageTemplate.astro';
+import BlurFade from '../../components/ui/BlurFade.astro';
+import Card from '../../components/ui/Card.astro';
+
+const studies = [
+  {
+    title: "Learning, attention/hyperactivity, and conduct problems as sequelae of excessive daytime sleepiness in a general population study of young children",
+    date: "May 1, 2012",
+    source: "Pennsylvania State University College of Medicine",
+    sourceUrl: "https://www.ncbi.nlm.nih.gov/pubmed/22547888",
+    content: "Objective: Although excessive daytime sleepiness (EDS) is a common problem in children, with estimates of 15%; few studies have investigated the sequelae of EDS in young children. We investigated the association of EDS with objective neurocognitive measures and parent reported learning, attention/hyperactivity, and conduct problems in a large general population sample of children."
+  },
+  {
+    title: "Sleep loss in early childhood may contribute to the development of ADHD symptoms",
+    date: "June 15, 2011",
+    source: "American Academy of Sleep Medicine",
+    content: "Summary: Less sleep in preschool-age children significantly predicted worse parent-reported hyperactivity and inattention at kindergarten. In contrast, hyperactivity and inattention at preschool did not predict sleep duration at kindergarten. The sample consisted of approximately 6,860 children, and analyses controlled for gender, ethnicity and family income. According to the authors, sleep problems, particularly difficulty falling asleep and staying asleep, are frequently reported in children and adolescents with ADHD. Longitudinal studies may reveal the direction of causation."
+  },
+  {
+    title: "Sleep disturbances in children with psychiatric disorders",
+    date: "June 2008",
+    source: "Seminars in Pediatric Neurology",
+    sourceUrl: "https://www.ncbi.nlm.nih.gov/pubmed/18555193",
+    content: "Abstract: Sleep disturbances are highly prevalent among children with psychiatric disorders, making recognition and management of pediatric sleep disorders an important step in improving treatment outcome and preventing relapse of mental illness. This chapter will review the research data on the epidemiology, clinical presentation and treatment approaches for sleep disorders frequently seen in the context of common psychiatric conditions in children and adolescents. Readers will learn about interaction between sleep related problems and symptoms of Attention Deficit/Hyperactivity Disorder, Anxiety and Mood Disorders and Autism Spectrum Disorders, and about the impact of sleep loss and sleep fragmentation on the emotional and behavioral development in children."
+  }
+];
+---
+
+<ResearchPageTemplate
+  title="ADD/ADHD Clinical Research"
+  metaTitle="ADD/ADHD Clinical Research | Central Dentist"
+  description="Explore clinical research on the connection between sleep disorders and ADD/ADHD symptoms. Learn about evidence-based approaches to addressing attention and hyperactivity issues."
+>
+  <div slot="introduction">
+    <h2 class="text-section-header text-header-primary mb-6">
+      Understanding the Sleep-ADHD Connection
+    </h2>
+    <p class="text-body-large mb-8">
+      Growing clinical research reveals a significant connection between sleep disorders and ADD/ADHD symptoms.
+      Understanding this relationship is crucial for effective treatment approaches that address root causes rather than just symptoms.
+    </p>
+  </div>
+
+  <div slot="main-content">
+    <div class="bg-teal-50 rounded-lg p-6 mb-8" style="border-left: 4px solid #0099ba;">
+      <p class="text-body-regular font-semibold" style="color: #006786;">
+        Important Finding: Many children diagnosed with ADD/ADHD may actually be experiencing symptoms caused by undiagnosed sleep-breathing disorders.
+      </p>
+    </div>
+  </div>
+
+  <section slot="studies-section" class="py-16 md:py-20 bg-gray-50">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="max-w-4xl mx-auto">
+        <BlurFade delay={100}>
+          <h2 class="text-section-header text-header-primary text-center mb-4">
+            Key Research Studies
+          </h2>
+          <p class="text-section-subheader text-center mb-12">
+            Evidence from peer-reviewed clinical research
+          </p>
+        </BlurFade>
+
+        <div class="space-y-8">
+          {studies.map((study, index) => (
+            <BlurFade delay={200 + (index * 100)}>
+              <Card className="p-6">
+                <h3 class="text-card-header mb-3" style="color: #006786;">
+                  {study.title}
+                </h3>
+                <div class="flex items-center gap-4 mb-4 text-sm text-gray-600">
+                  <span>📅 {study.date}</span>
+                  {study.sourceUrl ? (
+                    <a
+                      href={study.sourceUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="hover:underline"
+                      style="color: #0099ba;"
+                    >
+                      📚 Source: {study.source}
+                    </a>
+                  ) : (
+                    <span>📚 Source: {study.source}</span>
+                  )}
+                </div>
+                <p class="text-body-regular">
+                  {study.content}
+                </p>
+              </Card>
+            </BlurFade>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div slot="related-links">
+    <div class="grid md:grid-cols-3 gap-6">
+      <BlurFade delay={200}>
+        <a href="/clinical-research/sleep" class="block">
+          <Card className="h-full hover:shadow-lg transition-shadow">
+            <div class="p-6">
+              <h3 class="text-card-header mb-3">Sleep Research</h3>
+              <p class="text-body-regular">
+                Explore the connection between sleep quality and overall health.
+              </p>
+            </div>
+          </Card>
+        </a>
+      </BlurFade>
+
+      <BlurFade delay={300}>
+        <a href="/clinical-research/growth-and-development" class="block">
+          <Card className="h-full hover:shadow-lg transition-shadow">
+            <div class="p-6">
+              <h3 class="text-card-header mb-3">Growth & Development</h3>
+              <p class="text-body-regular">
+                Research on proper facial and airway development in children.
+              </p>
+            </div>
+          </Card>
+        </a>
+      </BlurFade>
+
+      <BlurFade delay={400}>
+        <a href="/pediatrics/adhd" class="block">
+          <Card className="h-full hover:shadow-lg transition-shadow">
+            <div class="p-6">
+              <h3 class="text-card-header mb-3">ADD/ADHD Treatment</h3>
+              <p class="text-body-regular">
+                Learn about our comprehensive approach to treating ADD/ADHD symptoms.
+              </p>
+            </div>
+          </Card>
+        </a>
+      </BlurFade>
+    </div>
+  </div>
+</ResearchPageTemplate>

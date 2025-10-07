@@ -1,0 +1,619 @@
+---
+// Functional Health Page - Consolidates Sleep Disordered Breathing, TMJ, and ADHD
+// Shows the interconnections between airway, jaw, and systemic health
+import ServicePageDetailed from '../../layouts/ServicePageDetailed.astro';
+import BlurFade from '../../components/ui/BlurFade.astro';
+import Card from '../../components/ui/Card.astro';
+
+const conditions = [
+  {
+    id: 'sleep',
+    title: 'Sleep Disordered Breathing',
+    icon: '😴',
+    description: 'Sleep apnea, snoring, and upper airway resistance syndrome affect breathing during sleep, leading to poor oxygen levels and fragmented sleep.',
+    symptoms: [
+      'Loud snoring',
+      'Gasping or choking during sleep',
+      'Daytime fatigue',
+      'Morning headaches',
+      'Difficulty concentrating',
+      'Mood changes and irritability'
+    ],
+    gradient: 'from-[#0099ba] to-[#006786]'
+  },
+  {
+    id: 'tmj',
+    title: 'TMJ Disorders',
+    icon: '🦴',
+    description: 'Temporomandibular joint dysfunction causes jaw pain, clicking, and limited movement - often connected to airway and breathing issues.',
+    symptoms: [
+      'Jaw pain or clicking',
+      'Headaches (sometimes migraine-level)',
+      'Ear pain or ringing',
+      'Jaw locking',
+      'Facial pain',
+      'Difficulty chewing'
+    ],
+    gradient: 'from-[#a6b443] to-[#c7cd85]'
+  },
+  {
+    id: 'adhd',
+    title: 'ADHD-Like Symptoms',
+    icon: '🧠',
+    description: 'Poor sleep from airway issues can mimic or worsen ADHD symptoms. Many diagnosed with ADHD actually have an underlying sleep breathing disorder.',
+    symptoms: [
+      'Difficulty concentrating',
+      'Hyperactivity',
+      'Impulsivity',
+      'Memory problems',
+      'Emotional regulation issues',
+      'Poor school/work performance'
+    ],
+    gradient: 'from-[#0099ba] to-[#a6b443]'
+  }
+];
+
+const connections = [
+  {
+    title: 'Sleep + TMJ Connection',
+    description: 'Airway obstruction during sleep often causes jaw clenching and grinding (bruxism) as the body tries to open the airway. This repetitive strain injury damages the TMJ, leading to chronic pain and dysfunction.',
+    icon: '🔗',
+    color: '#e6f7f9'
+  },
+  {
+    title: 'Sleep + ADHD Connection',
+    description: 'Research shows up to 25% of ADHD diagnoses may actually be sleep-related. Poor oxygenation during sleep affects the prefrontal cortex, causing symptoms identical to ADHD. Treating the airway often improves or resolves these symptoms.',
+    icon: '🔗',
+    color: '#f0f9e8'
+  },
+  {
+    title: 'TMJ + ADHD Connection',
+    description: 'TMJ disorders and airway issues often occur together. Chronic pain and poor sleep from TMJ dysfunction can worsen concentration, mood, and behavior - mimicking or amplifying ADHD symptoms.',
+    icon: '🔗',
+    color: '#fef3e6'
+  }
+];
+
+const treatmentApproach = [
+  {
+    step: 1,
+    title: 'Comprehensive Evaluation',
+    description: 'We begin with a thorough assessment including airway evaluation, TMJ analysis, sleep questionnaires, and 3D CBCT imaging to understand your unique situation.',
+    tools: ['Joint Vibration Analysis (JVA)', 'CBCT 3D imaging', 'Sleep disorder screening', 'Airway assessment']
+  },
+  {
+    step: 2,
+    title: 'Root Cause Identification',
+    description: 'We identify whether your symptoms stem from airway obstruction, TMJ dysfunction, or both - and how they may be interconnected.',
+    tools: ['Sleep study coordination', 'TMJ diagnostics', 'Behavioral assessments', 'Medical history review']
+  },
+  {
+    step: 3,
+    title: 'Integrated Treatment Plan',
+    description: 'Based on your evaluation, we create a personalized plan addressing all contributing factors simultaneously for optimal results.',
+    tools: ['Oral appliance therapy', 'TMJ treatments', 'Airway expansion', 'Collaborative care coordination']
+  },
+  {
+    step: 4,
+    title: 'Ongoing Monitoring',
+    description: 'We track your progress with regular follow-ups, adjustments as needed, and coordination with your healthcare team.',
+    tools: ['Progress assessments', 'Appliance adjustments', 'Sleep study follow-ups', 'Symptom tracking']
+  }
+];
+
+const treatments = [
+  {
+    title: 'Oral Appliance Therapy',
+    description: 'Custom-fitted devices that reposition the jaw to open the airway and reduce TMJ stress during sleep.',
+    icon: '🦷',
+    benefits: [
+      'Opens airway for better breathing',
+      'Reduces snoring and apnea',
+      'Decreases jaw clenching',
+      'Comfortable and portable',
+      'Non-invasive solution'
+    ]
+  },
+  {
+    title: 'TMJ Treatment',
+    description: 'Specialized appliances, trigger point injections, and physical therapy to address jaw dysfunction.',
+    icon: '💉',
+    benefits: [
+      'Reduces jaw pain and clicking',
+      'Decompresses joints',
+      'Re-educates muscles',
+      'Improves range of motion',
+      'Addresses bruxism'
+    ]
+  },
+  {
+    title: 'Airway Expansion',
+    description: 'Orthodontic approaches to widen the palate and create more space for proper breathing.',
+    icon: '📏',
+    benefits: [
+      'Creates permanent airway space',
+      'Improves nasal breathing',
+      'Reduces mouth breathing',
+      'Supports facial development',
+      'Prevents future issues'
+    ]
+  },
+  {
+    title: 'Collaborative Care',
+    description: 'We work with sleep physicians, ENTs, myofunctional therapists, and other specialists for comprehensive care.',
+    icon: '🤝',
+    benefits: [
+      'Coordinated treatment approach',
+      'Sleep study facilitation',
+      'Specialist referrals',
+      'Integrated care plans',
+      'Holistic health focus'
+    ]
+  }
+];
+
+const realResults = [
+  {
+    category: 'Sleep Improvements',
+    results: [
+      'Reduced or eliminated snoring',
+      'Better sleep quality',
+      'More refreshing sleep',
+      'Fewer nighttime awakenings',
+      'Partner sleeps better too'
+    ]
+  },
+  {
+    category: 'TMJ Relief',
+    results: [
+      'Reduced jaw pain',
+      'Less clicking and popping',
+      'Improved range of motion',
+      'Fewer headaches',
+      'Decreased teeth grinding'
+    ]
+  },
+  {
+    category: 'Cognitive & Behavioral',
+    results: [
+      'Improved concentration',
+      'Better memory',
+      'Reduced hyperactivity',
+      'Better emotional regulation',
+      'Improved school/work performance'
+    ]
+  },
+  {
+    category: 'Overall Health',
+    results: [
+      'Increased daytime energy',
+      'Better mood',
+      'Reduced health risks',
+      'Improved quality of life',
+      'Better relationships'
+    ]
+  }
+];
+
+const pediatricSigns = [
+  'Snoring more than half the time',
+  'Mouth breathing during day',
+  'ADHD diagnosis or symptoms',
+  'Bedwetting past age 5',
+  'Grinding teeth at night',
+  'Dark circles under eyes',
+  'Restless sleep',
+  'Difficulty concentrating',
+  'Hyperactivity or impulsivity',
+  'Slow growth',
+  'Frequent ear infections',
+  'Behavioral issues at school'
+];
+
+const faqs = [
+  {
+    question: 'How are sleep apnea, TMJ, and ADHD connected?',
+    answer: 'They\'re all interconnected through the airway and jaw position. Airway obstruction during sleep causes jaw clenching (TMJ) and poor oxygenation (ADHD-like symptoms). Treating the airway often improves all three conditions simultaneously.'
+  },
+  {
+    question: 'Could my child\'s ADHD actually be a sleep issue?',
+    answer: 'Research shows up to 25% of children diagnosed with ADHD may have an underlying sleep breathing disorder. Symptoms like difficulty concentrating, hyperactivity, and behavioral issues can result from poor sleep quality. A comprehensive evaluation can determine if airway treatment might help.'
+  },
+  {
+    question: 'Will treating my TMJ help my sleep?',
+    answer: 'Often yes! TMJ disorders and sleep breathing issues frequently occur together. Many TMJ patients also have airway obstruction, and addressing both simultaneously provides the best outcomes.'
+  },
+  {
+    question: 'What if I\'ve already been diagnosed with ADHD and am on medication?',
+    answer: 'Even if you have a true ADHD diagnosis, improving your airway and sleep quality can enhance treatment effectiveness and may allow medication reduction under your doctor\'s supervision. Many patients see significant improvement in symptoms when underlying sleep issues are addressed.'
+  },
+  {
+    question: 'How long until I see results?',
+    answer: 'Many patients notice improved sleep quality within the first few nights of treatment. TMJ pain often decreases within weeks. Cognitive improvements may take 1-3 months as sleep quality improves and the brain recovers from chronic sleep deprivation.'
+  },
+  {
+    question: 'Do you work with my child\'s pediatrician or psychiatrist?',
+    answer: 'Absolutely. We believe in collaborative care and will coordinate with your child\'s healthcare providers to ensure integrated treatment. This often includes sharing sleep study results, treatment progress, and symptom improvements.'
+  }
+];
+---
+
+<ServicePageDetailed
+  title="Functional Health Solutions"
+  subtitle="Treating Sleep, TMJ, and ADHD Through Airway-Centered Care"
+  description="Comprehensive treatment for sleep disordered breathing, TMJ, and ADHD-like symptoms at Central Dentist Dallas"
+  metaDescription="Sleep disordered breathing, TMJ, and ADHD treatment at Central Dentist Dallas. Integrated airway-centered care for lasting relief and improved quality of life."
+  backgroundImage="/images/services/abstract-white-texture.jpg"
+>
+  <!-- Introduction Section - White Background -->
+  <section class="py-16 md:py-20 bg-white">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="max-w-4xl mx-auto">
+        <BlurFade delay={100}>
+          <div class="text-center mb-12">
+            <h2 class="text-section-header text-header-primary">
+              It's All Connected
+            </h2>
+            <p class="text-section-subheader">
+              Understanding the link between sleep, jaw health, and brain function
+            </p>
+          </div>
+        </BlurFade>
+
+        <BlurFade delay={200}>
+          <div class="prose max-w-none">
+            <p class="text-body-regular text-gray-dark mb-6">
+              Many patients are surprised to learn that their jaw pain, poor sleep, and concentration problems
+              aren't separate issues - they're all connected through the airway. At Central Dentist, we take a
+              comprehensive approach that addresses these interconnected conditions simultaneously, leading to
+              better outcomes than treating each problem in isolation.
+            </p>
+
+            <div class="bg-gradient-to-r from-teal-50 to-green-50 rounded-lg p-6 my-8">
+              <p class="text-body-regular text-gray-dark font-semibold mb-3" style="color: #006786;">
+                Did you know?
+              </p>
+              <ul class="space-y-2">
+                <li class="text-body-regular text-gray-dark flex items-start">
+                  <span class="mr-2" style="color: #0099ba;">•</span>
+                  <span>Up to 80% of TMJ patients also have sleep breathing disorders</span>
+                </li>
+                <li class="text-body-regular text-gray-dark flex items-start">
+                  <span class="mr-2" style="color: #0099ba;">•</span>
+                  <span>25% of ADHD diagnoses may actually be sleep-related</span>
+                </li>
+                <li class="text-body-regular text-gray-dark flex items-start">
+                  <span class="mr-2" style="color: #0099ba;">•</span>
+                  <span>Treating the airway often improves or resolves all three conditions</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </BlurFade>
+      </div>
+    </div>
+  </section>
+
+  <!-- Three Conditions - Gray Background -->
+  <section class="py-16 md:py-20 bg-gray-50">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="max-w-6xl mx-auto">
+        <BlurFade delay={100}>
+          <div class="text-center mb-12">
+            <h2 class="text-section-header text-header-primary">
+              The Three Connected Conditions
+            </h2>
+            <p class="text-section-subheader">
+              Understanding each piece of the puzzle
+            </p>
+          </div>
+        </BlurFade>
+
+        <div class="space-y-8">
+          {conditions.map((condition, index) => (
+            <BlurFade delay={200 + index * 100}>
+              <Card variant="bordered" class="overflow-hidden">
+                <div class={`p-6 bg-gradient-to-r ${condition.gradient}`}>
+                  <div class="flex items-center space-x-4">
+                    <span class="text-5xl">{condition.icon}</span>
+                    <div>
+                      <h3 class="text-3xl font-normal text-white mb-1" style="font-family: 'Playfair Display', serif;">
+                        {condition.title}
+                      </h3>
+                      <p class="text-lg text-white/90">{condition.description}</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="p-6">
+                  <h4 class="text-card-header text-header-primary mb-4">Common Symptoms</h4>
+                  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-3">
+                    {condition.symptoms.map((symptom) => (
+                      <div class="flex items-start">
+                        <span class="text-xl mr-2" style="color: #a6b443;">•</span>
+                        <span class="text-body-regular text-gray-dark">{symptom}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </Card>
+            </BlurFade>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Connections - White Background -->
+  <section class="py-16 md:py-20 bg-white">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="max-w-6xl mx-auto">
+        <BlurFade delay={100}>
+          <div class="text-center mb-12">
+            <h2 class="text-section-header text-header-primary">
+              How They're Connected
+            </h2>
+            <p class="text-section-subheader">
+              Understanding the relationships changes everything
+            </p>
+          </div>
+        </BlurFade>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          {connections.map((connection, index) => (
+            <BlurFade delay={200 + index * 100}>
+              <div class="text-center">
+                <div class="w-20 h-20 mx-auto mb-6 rounded-full flex items-center justify-center" style={`background-color: ${connection.color};`}>
+                  <span class="text-4xl">{connection.icon}</span>
+                </div>
+                <h3 class="text-card-header text-header-primary mb-4">{connection.title}</h3>
+                <p class="text-body-regular text-gray-medium">{connection.description}</p>
+              </div>
+            </BlurFade>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Treatment Approach - Gray Background -->
+  <section class="py-16 md:py-20 bg-gray-50">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="max-w-4xl mx-auto">
+        <BlurFade delay={100}>
+          <div class="text-center mb-12">
+            <h2 class="text-section-header text-header-primary">
+              Our Integrated Treatment Approach
+            </h2>
+            <p class="text-section-subheader">
+              Four steps to comprehensive healing
+            </p>
+          </div>
+        </BlurFade>
+
+        <div class="space-y-6">
+          {treatmentApproach.map((phase, index) => (
+            <BlurFade delay={200 + index * 100}>
+              <Card variant="bordered" class="p-6">
+                <div class="flex gap-4">
+                  <div class="flex-shrink-0">
+                    <div class="w-12 h-12 bg-gradient-to-br from-[#0099ba] to-[#006786] rounded-full flex items-center justify-center text-white font-bold text-xl">
+                      {phase.step}
+                    </div>
+                  </div>
+                  <div class="flex-grow">
+                    <h3 class="text-card-header text-header-primary mb-3">{phase.title}</h3>
+                    <p class="text-body-regular text-gray-dark mb-4">{phase.description}</p>
+                    <div class="flex flex-wrap gap-2">
+                      {phase.tools.map((tool) => (
+                        <span class="px-3 py-1 bg-gray-100 rounded-full text-body-small text-gray-medium">
+                          {tool}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </Card>
+            </BlurFade>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Treatment Options - White Background -->
+  <section class="py-16 md:py-20 bg-white">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="max-w-6xl mx-auto">
+        <BlurFade delay={100}>
+          <div class="text-center mb-12">
+            <h2 class="text-section-header text-header-primary">
+              Comprehensive Treatment Options
+            </h2>
+            <p class="text-section-subheader">
+              Personalized solutions for lasting relief
+            </p>
+          </div>
+        </BlurFade>
+
+        <div class="grid md:grid-cols-2 gap-6">
+          {treatments.map((treatment, index) => (
+            <BlurFade delay={200 + index * 100}>
+              <Card variant="bordered" class="p-6 h-full">
+                <div class="flex items-start space-x-4 mb-4">
+                  <span class="text-4xl flex-shrink-0">{treatment.icon}</span>
+                  <div>
+                    <h3 class="text-card-header text-header-primary mb-2">{treatment.title}</h3>
+                    <p class="text-body-regular text-gray-medium mb-4">{treatment.description}</p>
+                  </div>
+                </div>
+                <ul class="space-y-2">
+                  {treatment.benefits.map((benefit) => (
+                    <li class="flex items-start">
+                      <svg class="w-5 h-5 mr-2 mt-0.5 flex-shrink-0" style="color: #a6b443;" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                      </svg>
+                      <span class="text-body-small text-gray-dark">{benefit}</span>
+                    </li>
+                  ))}
+                </ul>
+              </Card>
+            </BlurFade>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pediatric Signs - Gray Background -->
+  <section class="py-16 md:py-20 bg-gray-50">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="max-w-4xl mx-auto">
+        <BlurFade delay={100}>
+          <div class="text-center mb-12">
+            <h2 class="text-section-header text-header-primary">
+              Pediatric Warning Signs
+            </h2>
+            <p class="text-section-subheader">
+              Early intervention can prevent lifelong issues
+            </p>
+          </div>
+        </BlurFade>
+
+        <BlurFade delay={200}>
+          <Card variant="bordered" class="p-8">
+            <p class="text-body-regular text-gray-dark mb-6">
+              Children's developing airways and jaws make them particularly vulnerable. Early signs often get
+              dismissed as "just a phase" or misdiagnosed as ADHD. Watch for these warning signs:
+            </p>
+
+            <div class="grid md:grid-cols-2 gap-4">
+              {pediatricSigns.map((sign) => (
+                <div class="flex items-start">
+                  <span class="text-xl mr-3" style="color: #0099ba;">→</span>
+                  <span class="text-body-regular text-gray-dark">{sign}</span>
+                </div>
+              ))}
+            </div>
+
+            <div class="mt-8 p-4 rounded-lg bg-yellow-50 border border-yellow-200">
+              <p class="text-body-regular text-gray-dark font-semibold">
+                If your child shows 2 or more of these signs, a comprehensive airway evaluation could be life-changing.
+              </p>
+            </div>
+          </Card>
+        </BlurFade>
+      </div>
+    </div>
+  </section>
+
+  <!-- Real Results - White Background -->
+  <section class="py-16 md:py-20 bg-white">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="max-w-6xl mx-auto">
+        <BlurFade delay={100}>
+          <div class="text-center mb-12">
+            <h2 class="text-section-header text-header-primary">
+              Real Results Our Patients Experience
+            </h2>
+            <p class="text-section-subheader">
+              Life-changing improvements across all areas
+            </p>
+          </div>
+        </BlurFade>
+
+        <div class="grid md:grid-cols-2 gap-6">
+          {realResults.map((category, index) => (
+            <BlurFade delay={200 + index * 100}>
+              <Card variant="bordered" class="p-6">
+                <h3 class="text-card-header text-header-primary mb-4">{category.category}</h3>
+                <ul class="space-y-2">
+                  {category.results.map((result) => (
+                    <li class="flex items-start">
+                      <span class="mr-3 text-lg" style="color: #a6b443;">✓</span>
+                      <span class="text-body-regular text-gray-dark">{result}</span>
+                    </li>
+                  ))}
+                </ul>
+              </Card>
+            </BlurFade>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section - Gray Background -->
+  <section class="py-16 md:py-20 bg-gray-50">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="max-w-3xl mx-auto">
+        <BlurFade delay={100}>
+          <div class="text-center mb-12">
+            <h2 class="text-section-header text-header-primary">
+              Frequently Asked Questions
+            </h2>
+            <p class="text-section-subheader">
+              Understanding the connections
+            </p>
+          </div>
+        </BlurFade>
+
+        <BlurFade delay={200}>
+          <div class="space-y-4">
+            {faqs.map((faq) => (
+              <details class="group bg-white rounded-lg shadow-sm">
+                <summary class="flex justify-between items-center cursor-pointer p-6 hover:bg-gray-50 transition-colors">
+                  <span class="text-body-regular font-semibold text-gray-dark pr-4">{faq.question}</span>
+                  <svg class="w-5 h-5 flex-shrink-0 transition-transform group-open:rotate-180" style="color: #0099ba;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </summary>
+                <div class="px-6 pb-6 pt-0">
+                  <p class="text-body-regular text-gray-medium">{faq.answer}</p>
+                </div>
+              </details>
+            ))}
+          </div>
+        </BlurFade>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section - Blue Gradient Background -->
+  <section slot="cta" class="py-16 md:py-20" style="background: linear-gradient(to bottom right, #0099ba, #006786);">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="max-w-3xl mx-auto text-center">
+        <BlurFade delay={100}>
+          <h2 class="text-4xl md:text-5xl font-normal text-white mb-4"
+              style="font-family: 'Playfair Display', serif;">
+            Stop Treating Symptoms. Address the Cause.
+          </h2>
+          <p class="text-lg text-white/90 mb-8" style="font-family: 'Geist', sans-serif;">
+            Whether it's sleep issues, jaw pain, or concentration problems - we'll help you understand the root
+            cause and create a comprehensive treatment plan that addresses all connected factors.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/contact"
+              class="px-8 py-3 bg-gradient-to-r from-[#a6b443] to-[#c7cd85] text-white rounded-full font-semibold transition-all duration-300 hover:from-[#8fa339] hover:to-[#a6b443] hover:shadow-lg inline-flex items-center justify-center"
+              style="font-family: 'Playfair Display', serif;"
+            >
+              Schedule Comprehensive Evaluation
+            </a>
+            <a
+              href="tel:214-368-0900"
+              class="px-8 py-3 bg-white border-2 rounded-full font-semibold transition-all duration-300 hover:shadow-lg inline-flex items-center justify-center"
+              style="font-family: 'Playfair Display', serif; color: #0099ba; border-color: white;"
+              onmouseover="this.style.backgroundColor='#006786'; this.style.color='white'; this.style.borderColor='#006786';"
+              onmouseout="this.style.backgroundColor='white'; this.style.color='#0099ba'; this.style.borderColor='white';"
+            >
+              <svg class="mr-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+              Call (214) 368-0900
+            </a>
+          </div>
+        </BlurFade>
+      </div>
+    </div>
+  </section>
+</ServicePageDetailed>

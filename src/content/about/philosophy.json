@@ -1,0 +1,63 @@
+{
+  "title": "Our Holistic Philosophy",
+  "heroImage": "/images/services/abstract-white-texture.jpg",
+  "content": "At Central Dentist, we believe your mouth is the gateway to your overall health. What happens in your oral cavity doesn't stay there – it affects your entire body. This understanding drives our holistic approach to dentistry, where we consider not just your teeth and gums, but your complete wellness journey.\n\nTraditional dentistry often treats symptoms. We dig deeper to find root causes. A cavity isn't just a hole to fill – it's a sign that something in your body's ecosystem needs attention. Maybe it's nutrition, maybe it's pH balance, maybe it's airway issues affecting your sleep. We look at the whole picture to help you achieve lasting oral and systemic health.\n\nEvery material we use, every treatment we recommend, and every protocol we follow is chosen with your total health in mind. We're not just fixing problems – we're partnering with your body's natural healing abilities to create sustainable wellness.",
+  "values": [
+    {
+      "title": "Biocompatible Materials",
+      "description": "Every material we use is carefully selected for its compatibility with human biology. No mercury, no BPA, no fluoride – just safe, proven materials that work in harmony with your body."
+    },
+    {
+      "title": "Root Cause Resolution",
+      "description": "We don't just treat symptoms – we investigate why problems occur. By addressing underlying causes like nutrition, breathing, and pH balance, we help prevent future issues."
+    },
+    {
+      "title": "Minimally Invasive Care",
+      "description": "We preserve as much natural tooth structure as possible. Using advanced technology and conservative techniques, we treat problems early and gently, respecting your body's natural design."
+    },
+    {
+      "title": "Patient Education",
+      "description": "We believe knowledge empowers better health decisions. We take time to explain your oral-systemic connections, treatment options, and preventive strategies so you can make informed choices."
+    }
+  ],
+  "differentiators": [
+    {
+      "title": "Mercury-Free Since 1981",
+      "description": "We've been mercury-free for over 40 years, using SMART protocols for safe amalgam removal and offering only biocompatible alternatives."
+    },
+    {
+      "title": "Airway-Focused Care",
+      "description": "We evaluate breathing and sleep patterns, understanding that proper airway function is fundamental to overall health and development."
+    },
+    {
+      "title": "Natural Healing Support",
+      "description": "Using ozone therapy, PRF, and other biological treatments, we support your body's natural healing processes without harsh chemicals."
+    }
+  ],
+  "oralSystemicConnections": [
+    {
+      "system": "Cardiovascular Health",
+      "connection": "Gum disease bacteria can enter the bloodstream and affect heart health"
+    },
+    {
+      "system": "Respiratory Function",
+      "connection": "Oral bacteria can be aspirated into lungs, affecting breathing"
+    },
+    {
+      "system": "Metabolic Balance",
+      "connection": "Chronic oral inflammation can impact blood sugar regulation"
+    },
+    {
+      "system": "Cognitive Function",
+      "connection": "Oral pathogens have been linked to cognitive decline"
+    },
+    {
+      "system": "Pregnancy Outcomes",
+      "connection": "Gum disease can affect pregnancy and birth outcomes"
+    }
+  ],
+  "quote": {
+    "text": "The mouth is the gateway to the body. A healthy mouth equals a healthy body.",
+    "author": "Dr. Jill Ombrello, Founder of Central Dentist"
+  }
+}

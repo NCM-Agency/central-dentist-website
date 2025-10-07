@@ -1,0 +1,215 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PageHero from '../../components/shared/PageHero.astro';
+import BlurFade from '../../components/ui/BlurFade.astro';
+import Card from '../../components/ui/Card.astro';
+
+const researchCategories = [
+  {
+    title: "ADD/ADHD",
+    description: "Research on the connection between sleep disorders and attention deficit hyperactivity symptoms.",
+    link: "/clinical-research/add-adhd",
+    icon: "🧠"
+  },
+  {
+    title: "Biological Root Canals",
+    description: "Evidence supporting biocompatible endodontic treatments using calcium oxide and ozone therapy.",
+    link: "/clinical-research/biological-root-canals",
+    icon: "🦷"
+  },
+  {
+    title: "Fluoride-Free Prevention",
+    description: "Studies on effective cavity prevention using nano-hydroxyapatite and other fluoride alternatives.",
+    link: "/clinical-research/fluoride-free-prevention",
+    icon: "🛡️"
+  },
+  {
+    title: "Growth & Development",
+    description: "Research on proper facial and airway development in children and its long-term impact.",
+    link: "/clinical-research/growth-and-development",
+    icon: "📈"
+  },
+  {
+    title: "Malocclusion",
+    description: "Understanding the causes and systemic effects of improper bite alignment.",
+    link: "/clinical-research/malocclusion",
+    icon: "😬"
+  },
+  {
+    title: "Mercury-Free Fillings",
+    description: "Scientific evidence on the health impacts of mercury amalgam and safer alternatives.",
+    link: "/clinical-research/mercury-free-fillings",
+    icon: "⚗️"
+  },
+  {
+    title: "Nutrition",
+    description: "The critical role of nutrition in oral health and cavity prevention.",
+    link: "/clinical-research/nutrition",
+    icon: "🥗"
+  },
+  {
+    title: "Oral Infection",
+    description: "Research on the systemic impact of oral infections and biological treatment approaches.",
+    link: "/clinical-research/oral-infection",
+    icon: "🔬"
+  },
+  {
+    title: "Sleep",
+    description: "Studies on sleep-disordered breathing and its connection to overall health.",
+    link: "/clinical-research/sleep",
+    icon: "😴"
+  }
+];
+---
+
+<Layout
+  title="Clinical Research | Central Dentist"
+  description="Explore evidence-based research supporting our holistic approach to dentistry. Learn about the latest scientific findings in biological and integrative dental care."
+>
+  <PageHero
+    title="Clinical Research"
+    subtitle="Evidence-based insights for optimal oral and systemic health"
+    backgroundImage="/images/services/abstract-white-texture.jpg"
+    variant="standard"
+    breadcrumbs={[
+      { label: 'Clinical Research', href: '/clinical-research' }
+    ]}
+  />
+
+  <!-- Introduction Section -->
+  <section class="py-16 md:py-20 bg-white">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="max-w-3xl mx-auto text-center">
+        <BlurFade delay={100}>
+          <h2 class="text-section-header text-header-primary mb-6">
+            Science-Based Holistic Dentistry
+          </h2>
+          <p class="text-body-large mb-8">
+            At Central Dentist, our treatment approaches are grounded in peer-reviewed scientific research.
+            We continuously review the latest studies to provide you with the most effective, biocompatible,
+            and minimally invasive dental care available.
+          </p>
+          <div class="bg-teal-50 rounded-lg p-6" style="border-left: 4px solid #0099ba;">
+            <p class="text-body-regular font-semibold" style="color: #006786;">
+              Our commitment: Every treatment recommendation is supported by clinical evidence and
+              aligned with your body's natural healing processes.
+            </p>
+          </div>
+        </BlurFade>
+      </div>
+    </div>
+  </section>
+
+  <!-- Research Categories Section -->
+  <section class="py-16 md:py-20 bg-gray-50">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="max-w-6xl mx-auto">
+        <BlurFade delay={100}>
+          <h2 class="text-section-header text-header-primary text-center mb-4">
+            Research Categories
+          </h2>
+          <p class="text-section-subheader text-center mb-12">
+            Explore our curated collection of clinical research
+          </p>
+        </BlurFade>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {researchCategories.map((category, index) => (
+            <BlurFade delay={200 + (index * 50)}>
+              <a href={category.link} class="block h-full">
+                <Card className="h-full hover:shadow-lg transition-shadow">
+                  <div class="p-6">
+                    <div class="text-4xl mb-4">{category.icon}</div>
+                    <h3 class="text-card-header mb-3" style="color: #006786;">
+                      {category.title}
+                    </h3>
+                    <p class="text-body-regular">
+                      {category.description}
+                    </p>
+                  </div>
+                </Card>
+              </a>
+            </BlurFade>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Research Matters Section -->
+  <section class="py-16 md:py-20 bg-white">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="max-w-4xl mx-auto">
+        <BlurFade delay={100}>
+          <h2 class="text-section-header text-header-primary text-center mb-8">
+            Why Clinical Research Matters
+          </h2>
+        </BlurFade>
+
+        <div class="space-y-6">
+          <BlurFade delay={200}>
+            <Card className="p-6">
+              <h3 class="text-card-header mb-3">Informed Treatment Decisions</h3>
+              <p class="text-body-regular">
+                By staying current with the latest research, we can offer you treatment options that are
+                proven effective and aligned with your health goals.
+              </p>
+            </Card>
+          </BlurFade>
+
+          <BlurFade delay={300}>
+            <Card className="p-6">
+              <h3 class="text-card-header mb-3">Patient Empowerment</h3>
+              <p class="text-body-regular">
+                Understanding the science behind your treatment helps you make informed decisions about
+                your oral health and its impact on your overall wellness.
+              </p>
+            </Card>
+          </BlurFade>
+
+          <BlurFade delay={400}>
+            <Card className="p-6">
+              <h3 class="text-card-header mb-3">Continuous Improvement</h3>
+              <p class="text-body-regular">
+                As new research emerges, we adapt our protocols to incorporate the most effective and
+                least invasive treatment methods available.
+              </p>
+            </Card>
+          </BlurFade>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 md:py-20" style="background: linear-gradient(to bottom right, #0099ba, #006786);">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="max-w-3xl mx-auto text-center">
+        <BlurFade delay={100}>
+          <h2 class="text-section-header text-white mb-6">
+            Ready to Experience Evidence-Based Holistic Dentistry?
+          </h2>
+          <p class="text-section-subheader text-white/90 mb-8">
+            Schedule a consultation to learn how our research-backed approaches can benefit your health
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/contact"
+              class="px-8 py-3 bg-gradient-to-r from-[#a6b443] to-[#c7cd85] text-white rounded-full font-semibold transition-all duration-300 hover:from-[#8fa339] hover:to-[#a6b443] hover:shadow-lg"
+              style="font-family: 'Playfair Display', serif;">
+              Schedule Consultation
+            </a>
+            <a
+              href="tel:2143680900"
+              class="px-8 py-3 bg-white border-2 rounded-full font-semibold transition-all duration-300 hover:shadow-lg"
+              style="font-family: 'Playfair Display', serif; color: #0099ba; border-color: white;"
+              onmouseover="this.style.backgroundColor='#006786'; this.style.color='white';"
+              onmouseout="this.style.backgroundColor='white'; this.style.color='#0099ba';">
+              Call (214) 368-0900
+            </a>
+          </div>
+        </BlurFade>
+      </div>
+    </div>
+  </section>
+</Layout>

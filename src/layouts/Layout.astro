@@ -142,6 +142,9 @@ const schemaMarkup = generateSchemaMarkup(schemaType);
     
     <!-- Lottie Player for animations -->
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+    <!-- Netlify Identity Widget for CMS authentication -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   </head>
 
   <body 
@@ -257,8 +260,21 @@ const schemaMarkup = generateSchemaMarkup(schemaType);
             }
           });
         });
-        
+
         observer.observe({ type: 'navigation', buffered: true });
+      }
+    </script>
+
+    <!-- Netlify Identity Widget redirect handling -->
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", user => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
       }
     </script>
 

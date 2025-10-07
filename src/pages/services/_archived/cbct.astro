@@ -1,0 +1,29 @@
+---
+// CBCT Service Page - Central Dentist (Minimized per PM requirements)
+import ServicePageMinimal from '../../layouts/ServicePageMinimal.astro';
+
+const content = `CBCT (Cone Beam Computed Tomography) provides detailed 3D images of your teeth, jaw, and airway. This technology allows us to see what traditional X-rays cannot, making diagnosis and treatment planning more accurate.
+
+We use CBCT for implant planning, airway analysis, and complex dental procedures. The 3D view helps us identify problems early and plan the most effective treatment.`;
+
+const benefits = [
+  '3D view of teeth and jaw structures',
+  'Minimal radiation exposure',
+  'Precise treatment planning',
+  'See hidden infections and problems',
+  'Plan implants with precision',
+  'Evaluate airway for sleep issues',
+  'Detect problems before symptoms appear'
+];
+---
+
+<ServicePageMinimal
+  title="CBCT 3D Imaging"
+  description="Advanced 3D dental imaging for accurate diagnosis"
+  metaDescription="CBCT 3D imaging at Central Dentist Dallas. Advanced diagnostic technology for precise treatment planning with minimal radiation."
+  backgroundImage="/images/services/abstract-white-texture.jpg"
+  content={content}
+  benefits={benefits}
+  ctaTitle="Need Advanced 3D Imaging?"
+  ctaText="Experience the precision of CBCT technology"
+/>

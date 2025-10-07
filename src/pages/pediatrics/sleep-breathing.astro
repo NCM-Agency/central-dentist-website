@@ -1,0 +1,409 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PageHero from '../../components/shared/PageHero.astro';
+import BlurFade from '../../components/ui/BlurFade.astro';
+import Card from '../../components/ui/Card.astro';
+
+const symptoms = [
+  {
+    category: 'Poor Nighttime Habits',
+    icon: '🌙',
+    items: [
+      'Mouth breathing',
+      'Snoring',
+      'Sleep walking/talking',
+      'Teeth grinding',
+      'Wakes up at night, restless sleep',
+      'Night sweats',
+      'Bedwetting',
+      'Nightmares'
+    ]
+  },
+  {
+    category: 'Behavioral Issues',
+    icon: '🧠',
+    items: [
+      'Difficulty listening, interrupting often',
+      'Fidgets with hands',
+      'ADHD, hyperactivity, attention deficit',
+      'Difficulty in school (specifically math, science, spelling)'
+    ]
+  },
+  {
+    category: 'Myofunctional, Anatomical',
+    icon: '🦷',
+    items: [
+      'Speech problems',
+      'Tongue thrust, dysfunctional swallow',
+      'Crowded teeth',
+      'Delayed or stunted growth'
+    ]
+  },
+  {
+    category: 'Immunological, Hormonal',
+    icon: '💊',
+    items: [
+      'Frequent throat infections',
+      'More frequent upper respiratory infections',
+      'Allergies, asthma',
+      'Skin conditions, eczema',
+      'Morning headaches',
+      'Increased risk of type 2 diabetes, obesity'
+    ]
+  }
+];
+
+const rootCauses = [
+  'Mouth breathing instead of nasal breathing',
+  'A narrow palette',
+  'Improper tongue placement and/or dysfunctional tongue movement patterns',
+  'Improper jaw relationships &/or a deficient mandible'
+];
+
+const treatmentGoals = [
+  'Establish nasal breathing',
+  'Reinforce proper tongue placement and function',
+  'Advance the mandible downward and forward, thus opening up the airway',
+  'Expanding the dental arches and promoting optimal growth and development and dental eruption in children, or more ideal arch relationships in adults'
+];
+---
+
+<Layout
+  title="Pediatric Sleep-Related Breathing Disorder | Central Dentist Dallas"
+  description="Understanding and treating sleep-disordered breathing in children. Comprehensive assessment and treatment for airway health and better sleep."
+>
+  <!-- Hero Section -->
+  <PageHero
+    title="Pediatric Sleep-Related Breathing Disorder"
+    subtitle="Addressing the Root Cause of Many Chronic Symptoms"
+    backgroundImage="/images/services/abstract-white-texture.jpg"
+    variant="standard"
+    breadcrumbs={[
+      { label: 'Pediatrics', href: '/pediatrics' },
+      { label: 'Sleep-Related Breathing', href: '#' }
+    ]}
+  />
+
+  <!-- What's the History Section - White Background -->
+  <section class="py-16 md:py-20 bg-white">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="max-w-4xl mx-auto">
+        <BlurFade delay={100}>
+          <h2 class="text-section-header text-header-primary mb-8">
+            What's the history?
+          </h2>
+        </BlurFade>
+
+        <BlurFade delay={200}>
+          <div class="space-y-6">
+            <p class="text-body-regular text-gray-dark">
+              Based on a wide variety of credible, <a href="/clinical-research" class="text-header-secondary hover:underline">peer-reviewed research</a>,
+              we understand that the root cause of many chronic inflammatory symptoms is associated with a compromised
+              airway, which can cause disturbances to breathing both during the day and at night while a patient is
+              sleeping. While the presentation of these symptoms may be different in adults vs. children, our
+              philosophical basis of therapy is similar in that we employ minimally invasive medical & dental devices,
+              myofunctional exercises, and lifestyle changes to address the root cause. By treating this root cause,
+              we can eliminate the need for pharmaceutical intervention (ie. prescription medications) that is limited
+              in benefit to masking symptoms of this inflammation without ever "healing" the true etiology.
+            </p>
+
+            <p class="text-body-regular text-gray-dark">
+              In <a href="https://www.mydigitalpublication.com/publication/?i=286350&ver=html5&p=24"
+                 target="_blank" rel="noopener noreferrer" class="text-header-secondary hover:underline">
+              a 2016 study of over 500 pediatric subjects published in the Journal of the American Orthodontic Society</a>,
+              researchers used this same therapeutic modality and demonstrated almost complete resolution (>90%) of
+              symptoms including morning headaches, snoring, labored breathing. Additional symptoms that demonstrated
+              improvement by 74-90% included teeth grinding, night sweats, daytime sleepiness and irritability,
+              restless sleep, bedwetting, and throat infections.
+            </p>
+          </div>
+        </BlurFade>
+      </div>
+    </div>
+  </section>
+
+  <!-- What is Sleep-Disordered Breathing Section - Gray Background -->
+  <section class="py-16 md:py-20 bg-gray-50">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="max-w-4xl mx-auto">
+        <BlurFade delay={100}>
+          <h2 class="text-section-header text-header-primary mb-8">
+            What is sleep-disordered breathing? What is its relation to a compromise in airway health?
+          </h2>
+        </BlurFade>
+
+        <BlurFade delay={200}>
+          <div class="space-y-6">
+            <p class="text-body-regular text-gray-dark">
+              Sleep-disordered breathing is an umbrella term for several chronic conditions in which partial or
+              complete cessation of breathing occurs many times throughout the night, resulting in daytime sleepiness
+              or fatigue that interferes with a person's ability to function and reduces quality of life. SDB causes
+              systemic inflammation and can manifest itself in a variety of symptoms that can be easily overlooked,
+              misdiagnosed, and most unfortunately, left untreated.
+            </p>
+
+            <p class="text-body-regular text-gray-medium">
+              Awareness related to sleep-disordered breathing in both adults and children has increased drastically
+              over the past two decades. Traditionally seen in the field of sleep medicine, most patients diagnosed
+              with "sleep issues" fit the stereotype of an older person, oftentimes overweight, who snores loudly.
+              However, in more recent years, physicians, dentists, and research scientists have tested and proven
+              that sleep and airway disturbances occur much more commonly, and the presentation of associated
+              symptoms looks very different based on the patient type.
+            </p>
+
+            <p class="text-body-regular text-gray-medium">
+              For example in a child, audible breathing at nighttime is indicative of an airway issue that would
+              disturb sleep; if a child is actually snoring, then he or she has a further progression of the disorder,
+              or is presenting with more severe symptoms. Additionally, "young fit females" has become a classification
+              for high risk patients who's symptoms are not only different to identify from what is typically associated
+              with this disorder, but oftentimes these patients get misdiagnosed or their symptoms are "excused away"
+              based on lifestyle or other factors.
+            </p>
+          </div>
+        </BlurFade>
+      </div>
+    </div>
+  </section>
+
+  <!-- Common Symptoms Section - White Background -->
+  <section class="py-16 md:py-20 bg-white">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="max-w-6xl mx-auto">
+        <BlurFade delay={100}>
+          <h2 class="text-section-header text-header-primary text-center mb-12">
+            Common Symptoms Associated with Pediatric Sleep-Disordered Breathing:
+          </h2>
+        </BlurFade>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          {symptoms.map((category, index) => (
+            <BlurFade delay={200 + index * 100}>
+              <Card variant="bordered" class="h-full">
+                <div class="p-6">
+                  <div class="flex items-center mb-4">
+                    <span class="text-3xl mr-3">{category.icon}</span>
+                    <h3 class="text-card-header text-header-primary">{category.category}</h3>
+                  </div>
+                  <ul class="space-y-2">
+                    {category.items.map((item) => (
+                      <li class="flex items-start">
+                        <svg class="w-5 h-5 mr-2 mt-0.5 flex-shrink-0" style="color: #0099ba;" fill="currentColor" viewBox="0 0 20 20">
+                          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                        </svg>
+                        <span class="text-body-regular text-gray-dark">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </Card>
+            </BlurFade>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Root Cause Section - Gray Background -->
+  <section class="py-16 md:py-20 bg-gray-50">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="max-w-4xl mx-auto">
+        <BlurFade delay={100}>
+          <h2 class="text-section-header text-header-primary mb-8">
+            What is the root cause of this disorder?
+          </h2>
+        </BlurFade>
+
+        <BlurFade delay={200}>
+          <div class="space-y-6">
+            <p class="text-body-regular text-gray-dark">
+              Research from the past 20 years has linked these outward signs and symptoms to the following root causes:
+            </p>
+
+            <ul class="space-y-3">
+              {rootCauses.map((cause) => (
+                <li class="flex items-start">
+                  <span class="text-xl mr-3" style="color: #a6b443;">•</span>
+                  <span class="text-body-regular text-gray-dark">{cause}</span>
+                </li>
+              ))}
+            </ul>
+
+            <p class="text-body-regular text-gray-medium">
+              Said another way, if the child has any of these conditions, then the mandible (or "lower jaw") will
+              drift down and back towards the spinal cord, thus restricting the airway that sits posteriorly.
+            </p>
+          </div>
+        </BlurFade>
+      </div>
+    </div>
+  </section>
+
+  <!-- Effects of Mouth Breathing Section - White Background -->
+  <section class="py-16 md:py-20 bg-white">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="max-w-6xl mx-auto">
+        <BlurFade delay={100}>
+          <h2 class="text-section-header text-header-primary text-center mb-8">
+            Effects of Mouth Breathing
+          </h2>
+          <p class="text-section-subheader text-center mb-12">
+            Pictured here are 2 different types of scans to show the effects of mouth breathing on the airway.
+            Opening the mouth 1/2 inch causes the oropharynx (or the upper part of the airway) to be reduced by 6mm
+          </p>
+        </BlurFade>
+
+        <BlurFade delay={200}>
+          <div class="grid md:grid-cols-2 gap-8 mb-8">
+            <img
+              src="/images/pediatrics/mouth-breathing.avif"
+              alt="Effects of mouth breathing on airway"
+              class="rounded-lg shadow-md w-full"
+            />
+            <img
+              src="/images/pediatrics/airway-cbct.avif"
+              alt="CBCT scan showing compromised airway"
+              class="rounded-lg shadow-md w-full"
+            />
+          </div>
+
+          <div class="bg-blue-50 rounded-lg p-6 space-y-4">
+            <p class="text-body-regular text-gray-dark">
+              As a frame of reference, the average 7 year old child should have an airway that is approximately
+              7mm anteroposteriorly. So when a child of that age is breathing through his or her mouth, it's
+              comparable to having their airway reduced to the size of a coffee straw.
+            </p>
+            <p class="text-body-regular text-gray-dark">
+              For adults, a healthy airway can be measured within a range of 11-15mm.
+            </p>
+          </div>
+        </BlurFade>
+      </div>
+    </div>
+  </section>
+
+  <!-- Treatment Approach Section - Gray Background -->
+  <section class="py-16 md:py-20 bg-gray-50">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="max-w-4xl mx-auto">
+        <BlurFade delay={100}>
+          <h2 class="text-section-header text-header-primary mb-8">
+            How is this related to patients with other chronic conditions?
+          </h2>
+        </BlurFade>
+
+        <BlurFade delay={200}>
+          <div class="space-y-6">
+            <p class="text-body-regular text-gray-dark">
+              For children who present with other comorbidities (ie. those who experience seizures associated
+              with a hypoxic birth, those with special needs, those who are on the autism spectrum, etc.),
+              improved health can still be accomplished via improved neurological functioning (cognition and mood),
+              improved immunity and endocrine balance, and decreased inflammation.
+            </p>
+
+            <p class="text-body-large text-header-secondary mb-4">
+              To expedite these optimized clinical outcomes, our team uses a series of intra-oral appliances
+              to accomplish the following:
+            </p>
+
+            <div class="bg-white rounded-lg p-8">
+              <ul class="space-y-4">
+                {treatmentGoals.map((goal) => (
+                  <li class="flex items-start">
+                    <svg class="w-6 h-6 mr-3 mt-0.5 flex-shrink-0" style="color: #a6b443;" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                    </svg>
+                    <span class="text-body-regular text-gray-dark">{goal}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <p class="text-body-regular text-gray-medium">
+              Additionally, we have <a href="/trusted-collaborators" class="text-header-secondary hover:underline">
+              ongoing collaborative relationships with leading experts</a> in speech pathology, occupational therapy,
+              ENT physicians and pediatricians, dietitians, integrative medicine doctors, and chiropractors to help
+              educate you on any additional issues your child may be facing that we can resolve.
+            </p>
+          </div>
+        </BlurFade>
+      </div>
+    </div>
+  </section>
+
+  <!-- How Do I Know This Will Work Section - White Background -->
+  <section class="py-16 md:py-20 bg-white">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="max-w-4xl mx-auto">
+        <BlurFade delay={100}>
+          <h2 class="text-section-header text-header-primary text-center mb-8">
+            How do I know this will work for my child?
+          </h2>
+        </BlurFade>
+
+        <BlurFade delay={200}>
+          <Card variant="bordered" class="p-8">
+            <p class="text-body-regular text-gray-dark mb-4">
+              In a study of 220 children over the course of 5.5 months presenting with varying levels of symptom
+              severity, the following results were found as related to resolution of these symptoms via early
+              interventional, oral appliance therapy.
+            </p>
+
+            <div class="bg-gray-50 rounded-lg p-6">
+              <p class="text-body-regular text-gray-medium italic">
+                As an example on how to interpret the chart below, of those children who presented with the symptom
+                "headaches", 98% of all of those children who were experiencing chronic headaches had improvement,
+                with average improvement of headaches being 94% better, and 85% of the children experience COMPLETE
+                resolution of their headaches all together.
+              </p>
+            </div>
+
+            <img
+              src="/images/pediatrics/improvement-chart.avif"
+              alt="Clinical improvement chart showing symptom resolution rates"
+              class="mt-6 rounded-lg shadow-md w-full"
+            />
+          </Card>
+        </BlurFade>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section - Blue Gradient Background -->
+  <section class="py-16 md:py-20" style="background: linear-gradient(to bottom right, #0099ba, #006786);">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="max-w-3xl mx-auto text-center">
+        <BlurFade delay={100}>
+          <h2 class="text-4xl md:text-5xl font-normal text-white mb-4"
+              style="font-family: 'Playfair Display', serif;">
+            Schedule a Complimentary Evaluation
+          </h2>
+          <p class="text-lg text-white/90 mb-8" style="font-family: 'Geist', sans-serif;">
+            For more information, or to schedule a complimentary evaluation for your child,
+            please contact our office
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/contact"
+              class="px-8 py-3 bg-gradient-to-r from-[#a6b443] to-[#c7cd85] text-white rounded-full font-semibold transition-all duration-300 hover:from-[#8fa339] hover:to-[#a6b443] hover:shadow-lg inline-flex items-center justify-center"
+              style="font-family: 'Playfair Display', serif;"
+            >
+              Schedule Evaluation
+            </a>
+            <a
+              href="tel:214-368-0900"
+              class="px-8 py-3 bg-white border-2 rounded-full font-semibold transition-all duration-300 hover:shadow-lg inline-flex items-center justify-center"
+              style="font-family: 'Playfair Display', serif; color: #0099ba; border-color: white;"
+              onmouseover="this.style.backgroundColor='#006786'; this.style.color='white'; this.style.borderColor='#006786';"
+              onmouseout="this.style.backgroundColor='white'; this.style.color='#0099ba'; this.style.borderColor='white';"
+            >
+              Call (214) 368-0900
+            </a>
+          </div>
+          <p class="text-white/80 text-sm mt-4">
+            or email us at <a href="mailto:info@centraldentist.com" class="text-white underline">info@centraldentist.com</a>
+          </p>
+        </BlurFade>
+      </div>
+    </div>
+  </section>
+</Layout>

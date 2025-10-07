@@ -11,22 +11,22 @@
 /* Custom Component Classes */
 @layer components {
   .btn-primary {
-    background: linear-gradient(to right, #0099ba, #006786);
+    background: linear-gradient(to right, #a6b443, #c7cd85);
     @apply text-white px-8 py-3 rounded-full font-medium
            transition-all
            focus:outline-none focus:ring-2 focus:ring-offset-2;
     font-family: 'Playfair Display', 'Times', serif;
-    box-shadow: 0 4px 12px rgba(0, 153, 186, 0.1);
+    box-shadow: 0 4px 12px rgba(166, 180, 67, 0.1);
   }
-  
+
   .btn-primary:focus {
-    --tw-ring-color: #0099ba;
+    --tw-ring-color: #a6b443;
   }
-  
+
   .btn-primary:hover {
-    background: linear-gradient(to right, #006786, #004d5c) !important;
+    background: linear-gradient(to right, #8fa339, #a6b443) !important;
     @apply shadow-xl -translate-y-0.5 text-white;
-    box-shadow: 0 8px 24px rgba(0, 153, 186, 0.16);
+    box-shadow: 0 8px 24px rgba(166, 180, 67, 0.16);
   }
 
   .btn-secondary {
@@ -34,15 +34,15 @@
            transition-all focus:outline-none focus:ring-2 focus:ring-offset-2;
     font-family: 'Playfair Display', 'Times', serif;
     color: #0099ba;
-    border: 2px solid #0099ba;
+    border: 2px solid white;
   }
-  
+
   .btn-secondary:hover {
-    background-color: #0099ba !important;
+    background-color: #006786 !important;
     color: white !important;
     border-color: #006786 !important;
   }
-  
+
   .btn-secondary:focus {
     --tw-ring-color: #0099ba;
   }

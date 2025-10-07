@@ -1,0 +1,372 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Local development mode - enabled for testing
+local_backend: true
+
+media_folder: "public/images"
+public_folder: "/images"
+
+collections:
+  # ===========================
+  # BLOG POSTS
+  # ===========================
+  - name: "blog"
+    label: "Blog Posts"
+    folder: "src/content/blog"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Author", name: "author", widget: "string", default: "Central Dentist"}
+      - {label: "Publish Date", name: "publishDate", widget: "datetime", format: "YYYY-MM-DD"}
+      - {label: "Updated Date", name: "updatedDate", widget: "datetime", format: "YYYY-MM-DD", required: false}
+      - {label: "Read Time", name: "readTime", widget: "string", default: "5 min read"}
+      - {label: "Featured Image", name: "image", widget: "image", required: false}
+      - {label: "Categories", name: "categories", widget: "list", default: [], required: false}
+      - {label: "Excerpt", name: "excerpt", widget: "text"}
+      - {label: "Body", name: "body", widget: "markdown"}
+
+  # ===========================
+  # SITE SETTINGS
+  # ===========================
+  - name: "settings"
+    label: "Site Settings"
+    files:
+      - label: "Contact & Business Info"
+        name: "contact"
+        file: "src/content/site-settings.json"
+        fields:
+          - label: "Business Information"
+            name: "business"
+            widget: "object"
+            fields:
+              - {label: "Practice Name", name: "name", widget: "string"}
+              - {label: "Tagline", name: "tagline", widget: "string"}
+              - {label: "Phone Number", name: "phone", widget: "string"}
+              - {label: "Email", name: "email", widget: "string"}
+              - label: "Address"
+                name: "address"
+                widget: "object"
+                fields:
+                  - {label: "Street", name: "street", widget: "string"}
+                  - {label: "City", name: "city", widget: "string"}
+                  - {label: "State", name: "state", widget: "string"}
+                  - {label: "Zip Code", name: "zip", widget: "string"}
+
+          - label: "Office Hours"
+            name: "hours"
+            widget: "object"
+            fields:
+              - {label: "Monday", name: "monday", widget: "string", default: "8:00 AM - 5:00 PM"}
+              - {label: "Tuesday", name: "tuesday", widget: "string", default: "8:00 AM - 5:00 PM"}
+              - {label: "Wednesday", name: "wednesday", widget: "string", default: "8:00 AM - 5:00 PM"}
+              - {label: "Thursday", name: "thursday", widget: "string", default: "8:00 AM - 5:00 PM"}
+              - {label: "Friday", name: "friday", widget: "string", default: "8:00 AM - 2:00 PM"}
+              - {label: "Weekend", name: "weekend", widget: "string", default: "Closed"}
+
+          - label: "Certifications"
+            name: "certifications"
+            widget: "list"
+            fields:
+              - {label: "Name", name: "name", widget: "string"}
+              - {label: "Icon (optional)", name: "icon", widget: "image", required: false}
+
+          - label: "Social Media"
+            name: "social"
+            widget: "object"
+            required: false
+            fields:
+              - {label: "Facebook", name: "facebook", widget: "string", required: false}
+              - {label: "Instagram", name: "instagram", widget: "string", required: false}
+              - {label: "Twitter", name: "twitter", widget: "string", required: false}
+              - {label: "LinkedIn", name: "linkedin", widget: "string", required: false}
+              - {label: "YouTube", name: "youtube", widget: "string", required: false}
+
+      - label: "Footer Content"
+        name: "footer"
+        file: "src/content/footer.json"
+        fields:
+          - {label: "Practice Description", name: "description", widget: "text"}
+          - {label: "Copyright Text", name: "copyright", widget: "string"}
+          - {label: "Secondary Text", name: "secondaryText", widget: "string", default: "Holistic Family Dentistry in Dallas, TX"}
+
+          - label: "Quick Links"
+            name: "quickLinks"
+            widget: "list"
+            fields:
+              - {label: "Label", name: "label", widget: "string"}
+              - {label: "URL", name: "url", widget: "string"}
+
+          - label: "Legal Links"
+            name: "legalLinks"
+            widget: "list"
+            fields:
+              - {label: "Label", name: "label", widget: "string"}
+              - {label: "URL", name: "url", widget: "string"}
+
+  # ===========================
+  # HOMEPAGE CONTENT
+  # ===========================
+  - name: "homepage"
+    label: "Homepage"
+    files:
+      - label: "Homepage Content"
+        name: "homepage"
+        file: "src/content/homepage.json"
+        fields:
+          # Hero Section
+          - label: "Hero Section"
+            name: "hero"
+            widget: "object"
+            fields:
+              - {label: "Main Title", name: "mainTitle", widget: "string"}
+              - {label: "Tagline 1", name: "tagline1", widget: "string"}
+              - {label: "Tagline 2", name: "tagline2", widget: "string"}
+              - {label: "Bold Subhead", name: "boldSubhead", widget: "string"}
+              - {label: "Description", name: "description", widget: "text"}
+              - {label: "Background Video", name: "backgroundVideo", widget: "string", hint: "Path to video file"}
+              - label: "Primary CTA"
+                name: "primaryCTA"
+                widget: "object"
+                fields:
+                  - {label: "Text", name: "text", widget: "string"}
+                  - {label: "Link", name: "href", widget: "string"}
+              - label: "Secondary CTA"
+                name: "secondaryCTA"
+                widget: "object"
+                fields:
+                  - {label: "Text", name: "text", widget: "string"}
+                  - {label: "Link", name: "href", widget: "string"}
+
+          # About Preview Section
+          - label: "Why Holistic Dentistry Section"
+            name: "aboutPreview"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Subtitle", name: "subtitle", widget: "string"}
+              - label: "Benefits"
+                name: "benefits"
+                widget: "list"
+                fields:
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Description", name: "description", widget: "text"}
+                  - label: "Icon"
+                    name: "icon"
+                    widget: "select"
+                    options: ["shield", "moon", "leaf", "heart", "zap", "check"]
+
+          # Doctors Section
+          - label: "Meet Our Doctors"
+            name: "doctors"
+            widget: "object"
+            fields:
+              - {label: "Section Title", name: "title", widget: "string"}
+              - label: "Doctors"
+                name: "doctors"
+                widget: "list"
+                fields:
+                  - {label: "Name", name: "name", widget: "string"}
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Photo", name: "image", widget: "image"}
+                  - {label: "Bio Page Link", name: "href", widget: "string"}
+
+          # Testimonials
+          - label: "Testimonials"
+            name: "testimonials"
+            widget: "list"
+            fields:
+              - {label: "Content", name: "content", widget: "text"}
+              - {label: "Author Name", name: "author", widget: "string"}
+              - {label: "Rating", name: "rating", widget: "number", min: 1, max: 5, default: 5}
+              - {label: "Verified", name: "verified", widget: "boolean", default: true}
+
+          # Approach Section
+          - label: "Our Approach Section"
+            name: "approach"
+            widget: "object"
+            fields:
+              - {label: "Section Title", name: "title", widget: "string"}
+              - label: "Approaches"
+                name: "approaches"
+                widget: "list"
+                fields:
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Description", name: "description", widget: "text"}
+                  - {label: "Image", name: "image", widget: "image", required: false}
+                  - {label: "Link", name: "href", widget: "string"}
+
+          # Bottom CTA
+          - label: "Call to Action"
+            name: "cta"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Description", name: "description", widget: "text"}
+              - label: "Primary CTA"
+                name: "primaryCTA"
+                widget: "object"
+                fields:
+                  - {label: "Text", name: "text", widget: "string"}
+                  - {label: "Link", name: "href", widget: "string"}
+              - label: "Secondary CTA"
+                name: "secondaryCTA"
+                widget: "object"
+                fields:
+                  - {label: "Text", name: "text", widget: "string"}
+                  - {label: "Link", name: "href", widget: "string"}
+
+  # ===========================
+  # SERVICES
+  # ===========================
+  - name: "services"
+    label: "Services"
+    files:
+      - label: "All Services"
+        name: "services"
+        file: "src/content/services.json"
+        fields:
+          - label: "Services"
+            name: "services"
+            widget: "list"
+            fields:
+              - {label: "ID", name: "id", widget: "string"}
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Slug (URL)", name: "slug", widget: "string", hint: "Used in URL like /services/slug"}
+              - {label: "Description", name: "description", widget: "text"}
+              - {label: "Short Description", name: "shortDescription", widget: "string"}
+              - label: "Features"
+                name: "features"
+                widget: "list"
+                field: {label: "Feature", name: "feature", widget: "string"}
+              - {label: "Highlight on Homepage", name: "highlight", widget: "boolean", default: false}
+              - {label: "Priority (1-10)", name: "priority", widget: "number", min: 1, max: 10}
+              - label: "Category"
+                name: "category"
+                widget: "select"
+                options: ["Restorative", "Preventive", "Cosmetic", "Orthodontic", "Diagnostic", "Therapeutic", "Biological", "Airway", "Pediatric"]
+              - {label: "Featured Image", name: "image", widget: "image"}
+              - {label: "Image Alt Text", name: "imageAlt", widget: "string"}
+              - {label: "Estimated Time", name: "estimatedTime", widget: "string", required: false}
+              - label: "Content"
+                name: "content"
+                widget: "object"
+                fields:
+                  - {label: "Overview", name: "overview", widget: "text"}
+                  - label: "Benefits"
+                    name: "benefits"
+                    widget: "list"
+                    field: {label: "Benefit", name: "benefit", widget: "string"}
+                  - label: "Process Steps"
+                    name: "process"
+                    widget: "list"
+                    field: {label: "Step", name: "step", widget: "string"}
+                    required: false
+
+  # ===========================
+  # TEAM MEMBERS (Folder-based - Can add/remove)
+  # ===========================
+  - name: "team"
+    label: "Team Members"
+    folder: "src/content/team"
+    create: true  # Allow adding new team members
+    delete: true  # Allow removing team members
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    fields:
+      - {label: "Name", name: "name", widget: "string"}
+      - {label: "Credentials", name: "credentials", widget: "string", hint: "e.g., DDS, AIAOMT, AIABDM", required: false}
+      - {label: "Role", name: "role", widget: "string", hint: "e.g., Holistic Family Dentist & Founder"}
+      - {label: "Photo", name: "image", widget: "image"}
+      - {label: "Email", name: "email", widget: "string", required: false}
+      - {label: "Phone", name: "phone", widget: "string", required: false}
+      - {label: "Treatment Philosophy Quote", name: "philosophy", widget: "text", required: false}
+      - {label: "Biography & Details", name: "body", widget: "markdown", hint: "Full biography with education, expertise, and personal details in markdown format"}
+
+  # ===========================
+  # ABOUT PAGES
+  # ===========================
+  - name: "about"
+    label: "About Pages"
+    files:
+      - label: "Our Office"
+        name: "our-office"
+        file: "src/content/about/our-office.json"
+        fields:
+          - {label: "Page Title", name: "title", widget: "string"}
+          - {label: "Hero Image", name: "heroImage", widget: "image"}
+          - {label: "Introduction", name: "introduction", widget: "markdown"}
+
+          - label: "Office Features"
+            name: "features"
+            widget: "list"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Description", name: "description", widget: "text"}
+              - {label: "Icon", name: "icon", widget: "select", options: ["shield", "heart", "star", "leaf", "zap", "check"]}
+
+          - label: "Gallery Images"
+            name: "gallery"
+            widget: "list"
+            field: {label: "Image", name: "image", widget: "image"}
+
+      - label: "Our Philosophy"
+        name: "philosophy"
+        file: "src/content/about/philosophy.json"
+        fields:
+          - {label: "Page Title", name: "title", widget: "string"}
+          - {label: "Hero Image", name: "heroImage", widget: "image"}
+          - {label: "Main Content", name: "content", widget: "markdown"}
+
+          - label: "Core Values"
+            name: "values"
+            widget: "list"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Description", name: "description", widget: "text"}
+
+      - label: "Our History"
+        name: "our-history"
+        file: "src/content/about/our-history.json"
+        fields:
+          - {label: "Page Title", name: "title", widget: "string"}
+          - {label: "Hero Image", name: "heroImage", widget: "image"}
+          - {label: "History Content", name: "content", widget: "markdown"}
+
+          - label: "Timeline"
+            name: "timeline"
+            widget: "list"
+            fields:
+              - {label: "Year", name: "year", widget: "string"}
+              - {label: "Event", name: "event", widget: "text"}
+
+  # ===========================
+  # RECOMMENDED PRODUCTS
+  # ===========================
+  - name: "products"
+    label: "Recommended Products"
+    files:
+      - label: "Product List"
+        name: "products"
+        file: "src/content/recommended-products.json"
+        fields:
+          - {label: "Page Title", name: "title", widget: "string"}
+          - {label: "Introduction", name: "introduction", widget: "text"}
+
+          - label: "Product Categories"
+            name: "categories"
+            widget: "list"
+            fields:
+              - {label: "Category Name", name: "name", widget: "string"}
+              - label: "Products"
+                name: "products"
+                widget: "list"
+                fields:
+                  - {label: "Product Name", name: "name", widget: "string"}
+                  - {label: "Description", name: "description", widget: "text"}
+                  - {label: "Link URL", name: "url", widget: "string"}
+                  - {label: "Image", name: "image", widget: "image", required: false}
+                  - {label: "Recommended For", name: "recommendedFor", widget: "string", required: false}

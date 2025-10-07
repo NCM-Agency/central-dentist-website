@@ -1,0 +1,374 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PageHero from '../../components/shared/PageHero.astro';
+import BlurFade from '../../components/ui/BlurFade.astro';
+import Card from '../../components/ui/Card.astro';
+import Button from '../../components/ui/Button.astro';
+
+const services = [
+  {
+    title: 'Healthy Start™ System',
+    description: 'FDA-cleared treatment system for early orthodontic intervention and optimal airway development.',
+    link: '/services/pediatric-healthy-start',
+    icon: '🌟'
+  },
+  {
+    title: 'Sleep-Related Breathing Disorders',
+    description: 'Addressing mouth breathing, snoring, and sleep issues that affect growth and development.',
+    link: '/pediatrics/sleep-breathing',
+    icon: '😴'
+  },
+  {
+    title: 'ADD/ADHD Connection',
+    description: 'Understanding how airway issues and sleep disorders can mimic ADD/ADHD symptoms.',
+    link: '/pediatrics/adhd',
+    icon: '🧠'
+  }
+];
+
+const commonIssues = [
+  'Mouth breathing',
+  'Thumb sucking',
+  'Teeth grinding',
+  'Chronic runny nose or sore throat',
+  'Speech difficulties',
+  'Bedwetting',
+  'Behavioral issues',
+  'Poor sleep quality'
+];
+---
+
+<Layout
+  title="Pediatrics | Children's Holistic Dental Care | Central Dentist Dallas"
+  description="Early orthodontic intervention and airway development for children. Comprehensive pediatric dentistry addressing root causes of dental and health issues."
+>
+  <!-- Hero Section -->
+  <PageHero
+    title="Oral Health for Children"
+    subtitle="It's About A Lot More Than Teeth"
+    backgroundImage="/images/services/abstract-white-texture.jpg"
+    variant="standard"
+    breadcrumbs={[
+      { label: 'Pediatrics', href: '#' }
+    ]}
+  />
+
+  <!-- Why Start Early Section - White Background -->
+  <section class="py-16 md:py-20 bg-white">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="max-w-4xl mx-auto">
+        <BlurFade delay={100}>
+          <h2 class="text-section-header text-header-primary text-center mb-8">
+            Why start treatment early?
+          </h2>
+        </BlurFade>
+
+        <BlurFade delay={200}>
+          <div class="space-y-6">
+            <p class="text-body-regular text-gray-dark">
+              Children experience a number of growth spurts leading up to puberty. Each of those growth spurts
+              can be used to harness the natural forces of the body to guide ideal jaw and tooth positioning.
+              "Waiting until all the permanent teeth are in" is an archaic, deficient methodology for treating
+              malocclusion, and more often than not, "traditional orthodontics" will straighten teeth but will
+              not eliminate unhealthy oral habits, which will lead to either needing lifetime retention
+              (a permanent retainer) or relapse of teeth in adulthood.
+            </p>
+
+            <p class="text-body-regular text-gray-dark">
+              Poor oral habits such as mouth breathing, thumb sucking, and an anterior tongue thrust cause
+              a myriad of chronic inflammatory responses as well as dental malocclusion issues. It's important
+              to note...
+            </p>
+
+            <div class="bg-yellow-50 border-l-4 border-yellow-400 p-6 my-8">
+              <p class="text-body-regular font-semibold text-gray-dark">
+                These habits & malocclusions DO NOT SELF CORRECT! And they only get more difficult to treat with age.
+              </p>
+            </div>
+
+            <p class="text-body-large text-header-secondary text-center italic">
+              "The more time we have for treatment during natural growth and development, the easier it is to
+              achieve desired results."
+            </p>
+          </div>
+        </BlurFade>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Pediatric Services - Gray Background -->
+  <section class="py-16 md:py-20 bg-gray-50">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="max-w-6xl mx-auto">
+        <BlurFade delay={100}>
+          <div class="text-center mb-12">
+            <h2 class="text-section-header text-header-primary">
+              Comprehensive Pediatric Services
+            </h2>
+            <p class="text-section-subheader">
+              Early intervention for lifelong wellness
+            </p>
+          </div>
+        </BlurFade>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          {services.map((service, index) => (
+            <BlurFade delay={200 + index * 100}>
+              <Card variant="bordered" class="h-full hover:shadow-lg transition-shadow duration-300">
+                <a href={service.link} class="block p-8">
+                  <div class="text-4xl mb-4">{service.icon}</div>
+                  <h3 class="text-card-header text-header-primary mb-3">
+                    {service.title}
+                  </h3>
+                  <p class="text-body-regular text-gray-medium mb-4">
+                    {service.description}
+                  </p>
+                  <span class="text-body-small font-semibold" style="color: #0099ba;">
+                    Learn More →
+                  </span>
+                </a>
+              </Card>
+            </BlurFade>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comprehensive Diagnosis Section - White Background -->
+  <section class="py-16 md:py-20 bg-white">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="max-w-4xl mx-auto">
+        <BlurFade delay={100}>
+          <h2 class="text-section-header text-header-primary text-center mb-8">
+            Comprehensive Diagnosis
+          </h2>
+        </BlurFade>
+
+        <BlurFade delay={200}>
+          <div class="space-y-6">
+            <p class="text-body-regular text-gray-dark">
+              "You can't fix what you can't see"... this is the basis for a relatively common conversation
+              we have with our new patient families. We hear from them, "This is the first time I've heard
+              that my child has an issue that can or should be treated, but he/she has been seeing a dentist
+              for years." There is nothing wrong with your existing dentist, and on some occasions, we even
+              co-treat patients who want to stay with their current dentist but seek this treatment from us.
+            </p>
+
+            <p class="text-body-regular text-gray-dark">
+              Typically what is happening is that your dentist is focused on the "sickcare" side of dentistry,
+              not the "wellcare" (for more of a discussion on this, review <a href="/philosophy" class="text-header-secondary hover:underline">Our Practice Philosophy</a>).
+              More than likely, it is a combination of your existing dentist not being trained in this
+              comprehensive treatment as well as he or she not having the extensive diagnostic tools that
+              are needed to identify and treat these issues.
+            </p>
+
+            <Card variant="bordered" class="p-8">
+              <h3 class="text-card-header text-header-primary mb-4">
+                Our Diagnostic Tools Include:
+              </h3>
+              <ul class="grid md:grid-cols-2 gap-4">
+                {[
+                  'CBCT scan for jaw, sinus, nasal, and airway health',
+                  'Handfilm x-ray to determine skeletal growth projection',
+                  'Digital scan for 3D dental models',
+                  'Cephalometric x-ray analysis',
+                  'Home sleep testing',
+                  'TMJ electrodiagnosis and T-scan'
+                ].map((tool) => (
+                  <li class="flex items-start">
+                    <svg class="w-5 h-5 mr-2 mt-0.5 flex-shrink-0" style="color: #a6b443;" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                    </svg>
+                    <span class="text-body-regular text-gray-dark">{tool}</span>
+                  </li>
+                ))}
+              </ul>
+              <p class="text-body-regular text-gray-medium mt-6">
+                These tools facilitate a comprehensive baseline so that we can build a predictable therapeutic
+                plan, one that is rooted in our functional, holistic approach to oral health.
+              </p>
+              <a href="/services/advanced-diagnostics" class="inline-flex items-center mt-4 text-header-secondary hover:underline">
+                Learn more about our Advanced Diagnostics →
+              </a>
+            </Card>
+          </div>
+        </BlurFade>
+      </div>
+    </div>
+  </section>
+
+  <!-- Treatment Approach - Gray Background -->
+  <section class="py-16 md:py-20 bg-gray-50">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="max-w-6xl mx-auto">
+        <BlurFade delay={100}>
+          <div class="text-center mb-12">
+            <h2 class="text-section-header text-header-primary">
+              Our Treatment Approach
+            </h2>
+            <p class="text-section-subheader">
+              Comprehensive care addressing root causes
+            </p>
+          </div>
+        </BlurFade>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Habit Elimination -->
+          <BlurFade delay={200}>
+            <Card variant="bordered" class="h-full">
+              <div class="p-8">
+                <h3 class="text-card-header text-header-primary mb-4">
+                  Habit Elimination
+                </h3>
+                <p class="text-body-regular text-gray-medium mb-4">
+                  In many pediatric dentistry cases, elimination of whatever habit(s) may be present for a
+                  child will correspond with a reduction in many chronic, systemic inflammatory symptoms that
+                  child was previously experiencing. Speech difficulties? Resolved. Chronic runny nose or sore
+                  throat? Fixed. Teeth grinding? Gone.
+                </p>
+                <p class="text-body-small text-gray-medium">
+                  We utilize a suite of various removable and fixed appliances in conjunction with behavioral
+                  modification techniques, routine office visits, and telemedicine checks to ensure our patients
+                  have success in this critical process.
+                </p>
+              </div>
+            </Card>
+          </BlurFade>
+
+          <!-- Arch Expansion -->
+          <BlurFade delay={300}>
+            <Card variant="bordered" class="h-full">
+              <div class="p-8">
+                <h3 class="text-card-header text-header-primary mb-4">
+                  Arch Expansion & TMJ Positioning
+                </h3>
+                <p class="text-body-regular text-gray-medium mb-4">
+                  Pending patient needs as he or she progresses through treatment, we include all necessary
+                  auxiliary orthopedic and orthodontic appliances and frenum reduction to ensure we achieve
+                  the results we need to do so.
+                </p>
+                <p class="text-body-small text-gray-medium">
+                  While our initial treatment plan is consistently in line with what we execute upon over the
+                  course of treatment, we do maintain a hefty "toolbox" of advanced, research-based therapies
+                  to deliver upon the results each child deserves.
+                </p>
+              </div>
+            </Card>
+          </BlurFade>
+
+          <!-- Teeth Straightening -->
+          <BlurFade delay={400}>
+            <Card variant="bordered" class="h-full">
+              <div class="p-8">
+                <h3 class="text-card-header text-header-primary mb-4">
+                  Teeth Straightening for Lifetime Retention
+                </h3>
+                <p class="text-body-regular text-gray-medium mb-4">
+                  Depending on the age of the child and compliance with the prescribed therapy thus far, we
+                  will choose the individually-optimized therapy in conjunction with the parent.
+                </p>
+                <p class="text-body-small text-gray-medium">
+                  This includes but is not limited to Healthy Start by Orthotain Orthodontic Appliances,
+                  Invisalign, or traditional bands and brackets.
+                </p>
+              </div>
+            </Card>
+          </BlurFade>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Common Issues We Treat - White Background -->
+  <section class="py-16 md:py-20 bg-white">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="max-w-5xl mx-auto">
+        <BlurFade delay={100}>
+          <div class="text-center mb-12">
+            <h2 class="text-section-header text-header-primary">
+              Common Issues We Treat
+            </h2>
+            <p class="text-section-subheader">
+              Early intervention can resolve these problems
+            </p>
+          </div>
+        </BlurFade>
+
+        <BlurFade delay={200}>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {commonIssues.map((issue, index) => (
+              <Card variant="bordered" class="text-center p-6 hover:shadow-lg transition-shadow duration-300">
+                <div class="mb-3">
+                  <div class="w-12 h-12 mx-auto rounded-full flex items-center justify-center"
+                       style="background: linear-gradient(to bottom right, #0099ba, #006786);">
+                    <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                    </svg>
+                  </div>
+                </div>
+                <span class="text-body-regular text-gray-dark font-medium">{issue}</span>
+              </Card>
+            ))}
+          </div>
+        </BlurFade>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mom Approved Badge -->
+  <section class="py-8 bg-gray-50">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="flex justify-center">
+        <BlurFade delay={100}>
+          <img
+            src="/images/badges/mom-approved-2020.png"
+            alt="Mom Approved 2020"
+            class="h-32"
+          />
+        </BlurFade>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section - Blue Gradient Background -->
+  <section class="py-16 md:py-20" style="background: linear-gradient(to bottom right, #0099ba, #006786);">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="max-w-3xl mx-auto text-center">
+        <BlurFade delay={100}>
+          <h2 class="text-4xl md:text-5xl font-normal text-white mb-4"
+              style="font-family: 'Playfair Display', serif;">
+            Starting early can ensure a lifetime of wellness.
+          </h2>
+          <p class="text-lg text-white/90 mb-8" style="font-family: 'Geist', sans-serif;">
+            To schedule an orthodontic evaluation today, contact our office
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/contact"
+              class="px-8 py-3 bg-gradient-to-r from-[#a6b443] to-[#c7cd85] text-white rounded-full font-semibold transition-all duration-300 hover:from-[#8fa339] hover:to-[#a6b443] hover:shadow-lg inline-flex items-center justify-center"
+              style="font-family: 'Playfair Display', serif;"
+            >
+              Schedule Evaluation
+            </a>
+            <a
+              href="tel:214-368-0900"
+              class="px-8 py-3 bg-white border-2 rounded-full font-semibold transition-all duration-300 hover:shadow-lg inline-flex items-center justify-center"
+              style="font-family: 'Playfair Display', serif; color: #0099ba; border-color: white;"
+              onmouseover="this.style.backgroundColor='#006786'; this.style.color='white'; this.style.borderColor='#006786';"
+              onmouseout="this.style.backgroundColor='white'; this.style.color='#0099ba'; this.style.borderColor='white';"
+            >
+              <svg class="mr-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+              Call (214) 368-0900
+            </a>
+          </div>
+          <p class="text-white/80 text-sm mt-4">
+            or email us at <a href="mailto:info@centraldentist.com" class="text-white underline">info@centraldentist.com</a>
+          </p>
+        </BlurFade>
+      </div>
+    </div>
+  </section>
+</Layout>

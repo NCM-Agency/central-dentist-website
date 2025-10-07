@@ -1,0 +1,226 @@
+---
+// Ceramic Implants + PRF Service Page - Using new template
+import ServicePageLayout from '../../layouts/ServicePageLayout.astro';
+import servicesData from '../../content/services.json';
+
+// Get the service data
+const service = servicesData.services.find(s => s.slug === 'ceramic-implants');
+
+const features = service?.features || [];
+const benefits = service?.content?.benefits || [];
+const process = service?.content?.process || [];
+
+const faqs = [
+  {
+    question: "Are ceramic implants as strong as titanium implants?",
+    answer: "Yes! Modern ceramic implants made from zirconia are incredibly strong and durable. They have been proven to withstand the forces of chewing just as well as titanium implants, with the added benefits of being metal-free and more biocompatible."
+  },
+  {
+    question: "What is PRF and why is it important?",
+    answer: "Platelet-Rich Fibrin (PRF) is a concentration of healing factors from your own blood. When applied during implant placement, it significantly accelerates healing, reduces post-operative discomfort, and improves the integration of the implant with your bone."
+  },
+  {
+    question: "How long do ceramic implants last?",
+    answer: "With proper care and maintenance, ceramic implants can last a lifetime. Studies show success rates comparable to or better than traditional titanium implants, with many patients enjoying their ceramic implants for 20+ years."
+  },
+  {
+    question: "Am I a candidate for ceramic implants?",
+    answer: "Most patients who are candidates for traditional implants can receive ceramic implants. During your consultation, we'll evaluate your bone density, overall health, and specific needs to determine if ceramic implants are right for you."
+  },
+  {
+    question: "Why should I avoid mercury-containing dental materials?",
+    answer: "Mercury is a known neurotoxin that has been linked to numerous health conditions including Alzheimer's disease, autoimmune disorders, and cardiovascular problems. The World Health Organization states that no level of mercury exposure is considered safe. Our mercury-free practice ensures your dental care supports your overall health."
+  }
+];
+---
+
+<ServicePageLayout 
+  title="Ceramic Implants + PRF"
+  description="Mercury-free biocompatible implants enhanced with Platelet-Rich Fibrin for optimal healing and integration."
+  image="/images/services/abstract-white-texture.jpg"
+  features={features}
+  benefits={benefits}
+  process={process}
+  faqs={faqs}
+>
+  <div slot="overview" class="space-y-4">
+    <p class="text-gray-dark leading-relaxed">
+      At Central Dentist, we're proud to offer ceramic dental implants with PRF (Platelet-Rich Fibrin) therapy - 
+      a revolutionary approach to tooth replacement that aligns with our commitment to mercury-free, 
+      biocompatible dentistry.
+    </p>
+    <p class="text-gray-dark leading-relaxed">
+      Ceramic implants, made from high-strength zirconia, provide all the benefits of traditional implants 
+      without introducing any metals into your body. When combined with PRF therapy derived from your own blood, 
+      these implants offer superior healing, integration, and long-term success.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-teal-dark mt-6 mb-3" style="font-family: 'Playfair Display', serif;">
+      Our Mercury-Free Commitment
+    </h3>
+    <p class="text-gray-dark leading-relaxed">
+      As a 100% mercury-free practice, we understand the importance of using only the safest, most biocompatible 
+      materials in your mouth. Mercury from dental amalgams has been scientifically linked to serious health conditions 
+      including:
+    </p>
+    <ul class="space-y-2 ml-6 text-gray-dark">
+      <li class="flex items-start">
+        <span class="text-teal mr-2">•</span>
+        <span>Alzheimer's disease and neurological disorders</span>
+      </li>
+      <li class="flex items-start">
+        <span class="text-teal mr-2">•</span>
+        <span>Autoimmune conditions</span>
+      </li>
+      <li class="flex items-start">
+        <span class="text-teal mr-2">•</span>
+        <span>Cardiovascular problems</span>
+      </li>
+      <li class="flex items-start">
+        <span class="text-teal mr-2">•</span>
+        <span>Depression and anxiety</span>
+      </li>
+      <li class="flex items-start">
+        <span class="text-teal mr-2">•</span>
+        <span>Chronic fatigue and fibromyalgia</span>
+      </li>
+    </ul>
+    <p class="text-gray-dark leading-relaxed">
+      That's why we exclusively use ceramic implants - they're completely metal-free, eliminating any risk of 
+      mercury or metal toxicity while providing exceptional durability and aesthetics.
+    </p>
+  </div>
+
+  <div slot="content">
+    <div>
+      <h2 class="text-2xl md:text-3xl font-normal text-teal-dark mb-4" 
+          style="font-family: 'Playfair Display', serif;">
+        Why Choose Ceramic Over Titanium?
+      </h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+        <div class="bg-white rounded-lg p-5 shadow-sm">
+          <h3 class="text-xl font-semibold text-teal-dark mb-3" style="font-family: 'Playfair Display', serif;">
+            Ceramic Advantages
+          </h3>
+          <ul class="space-y-2 text-gray-dark">
+            <li class="flex items-start space-x-2">
+              <svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #a6b443;" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+              </svg>
+              <span>Natural white color - no gray lines at gums</span>
+            </li>
+            <li class="flex items-start space-x-2">
+              <svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #a6b443;" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+              </svg>
+              <span>Zero metal content or mercury risk</span>
+            </li>
+            <li class="flex items-start space-x-2">
+              <svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #a6b443;" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+              </svg>
+              <span>Superior gum health and tissue response</span>
+            </li>
+            <li class="flex items-start space-x-2">
+              <svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #a6b443;" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+              </svg>
+              <span>No risk of galvanic currents in mouth</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="bg-red-50 rounded-lg p-5 border border-red-200">
+          <h3 class="text-xl font-semibold text-red-800 mb-3" style="font-family: 'Playfair Display', serif;">
+            Titanium Concerns
+          </h3>
+          <ul class="space-y-2 text-red-700">
+            <li class="flex items-start space-x-2">
+              <span class="text-red-600 mt-0.5">✗</span>
+              <span>Can cause gray discoloration at gum line</span>
+            </li>
+            <li class="flex items-start space-x-2">
+              <span class="text-red-600 mt-0.5">✗</span>
+              <span>Potential for metal sensitivity or allergy</span>
+            </li>
+            <li class="flex items-start space-x-2">
+              <span class="text-red-600 mt-0.5">✗</span>
+              <span>May interfere with body's energy meridians</span>
+            </li>
+            <li class="flex items-start space-x-2">
+              <span class="text-red-600 mt-0.5">✗</span>
+              <span>Can create galvanic reactions with other metals</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <h2 class="text-2xl md:text-3xl font-normal text-teal-dark mb-4" 
+          style="font-family: 'Playfair Display', serif;">
+        The PRF Advantage
+      </h2>
+      <p class="text-gray-dark mb-4">
+        Platelet-Rich Fibrin (PRF) is a game-changer in implant dentistry. This advanced healing technique uses a 
+        concentrated form of your body's own healing factors to dramatically improve outcomes:
+      </p>
+      <div class="rounded-xl p-6 border" style="background: linear-gradient(to bottom right, rgba(0, 153, 186, 0.1), rgba(77, 208, 225, 0.1)); border-color: rgba(0, 153, 186, 0.2);">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <h4 class="font-semibold text-teal-dark mb-2">Immediate Benefits:</h4>
+            <ul class="space-y-1 text-sm text-gray-dark">
+              <li>• Reduced post-operative pain</li>
+              <li>• Minimal swelling and bruising</li>
+              <li>• Faster initial healing</li>
+              <li>• Lower infection risk</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-semibold text-teal-dark mb-2">Long-term Benefits:</h4>
+            <ul class="space-y-1 text-sm text-gray-dark">
+              <li>• Enhanced bone integration</li>
+              <li>• Improved implant stability</li>
+              <li>• Better soft tissue health</li>
+              <li>• Higher success rates</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-8">
+      <h2 class="text-2xl md:text-3xl font-normal text-teal-dark mb-4" 
+          style="font-family: 'Playfair Display', serif;">
+        Safe Mercury Removal Protocol
+      </h2>
+      <p class="text-gray-dark mb-4">
+        If you have existing mercury amalgam fillings or metal implants that need replacement, we follow the 
+        SMART (Safe Mercury Amalgam Removal Technique) protocol developed by the IAOMT to ensure your safety:
+      </p>
+      <ul class="space-y-3 text-gray-dark">
+        <li class="flex items-start space-x-3">
+          <span class="text-teal font-bold">1.</span>
+          <span><strong>Protective barriers:</strong> Rubber dam isolation and protective draping</span>
+        </li>
+        <li class="flex items-start space-x-3">
+          <span class="text-teal font-bold">2.</span>
+          <span><strong>High-volume evacuation:</strong> Specialized suction to capture mercury vapor</span>
+        </li>
+        <li class="flex items-start space-x-3">
+          <span class="text-teal font-bold">3.</span>
+          <span><strong>Clean air supply:</strong> Oxygen or air supply to avoid breathing mercury vapor</span>
+        </li>
+        <li class="flex items-start space-x-3">
+          <span class="text-teal font-bold">4.</span>
+          <span><strong>Sectioning technique:</strong> Removing amalgam in large chunks to minimize vapor</span>
+        </li>
+        <li class="flex items-start space-x-3">
+          <span class="text-teal font-bold">5.</span>
+          <span><strong>Air filtration:</strong> HEPA filters and proper ventilation throughout the procedure</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</ServicePageLayout>

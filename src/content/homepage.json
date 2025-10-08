@@ -101,7 +101,7 @@
         "title": "Advanced Diagnostics",
         "description": "Identifying the root causes of oral & systemic health issues",
         "image": "/images/approach/diagnostics.jpg",
-        "href": "/advanced-diagnostics"
+        "href": "/services/advanced-diagnostics"
       },
       {
         "title": "Preventive & Biological Solutions", 
@@ -113,7 +113,7 @@
         "title": "Collaboration within Our Community",
         "description": "Working with other healthcare providers to optimize care",
         "image": "/images/approach/collaboration.jpg",
-        "href": "/our-philosophy"
+        "href": "/philosophy"
       }
     ]
   },

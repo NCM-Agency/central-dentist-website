@@ -13,3 +13,10 @@
 # Functional Health consolidation (Sleep + TMJ + ADHD)
 /services/sleep-breathing       /services/functional-health#sleep                  301
 /services/tmj                   /services/functional-health#tmj                    301
+
+# Other broken URL redirects (fixed during link audit January 2025)
+/our-philosophy                 /philosophy                                         301
+/advanced-diagnostics           /services/advanced-diagnostics                      301
+/reviews                        /reviews-testimonials                               301
+/services/healthy-start         /services/pediatric-healthy-start                   301
+/appointment                    /contact                                            301

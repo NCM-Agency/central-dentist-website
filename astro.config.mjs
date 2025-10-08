@@ -47,6 +47,27 @@ export default defineConfig({
     '/services/tmj': {
       status: 301,
       destination: '/services/functional-health#tmj'
+    },
+    // Other broken URL redirects
+    '/our-philosophy': {
+      status: 301,
+      destination: '/philosophy'
+    },
+    '/advanced-diagnostics': {
+      status: 301,
+      destination: '/services/advanced-diagnostics'
+    },
+    '/reviews': {
+      status: 301,
+      destination: '/reviews-testimonials'
+    },
+    '/services/healthy-start': {
+      status: 301,
+      destination: '/services/pediatric-healthy-start'
+    },
+    '/appointment': {
+      status: 301,
+      destination: '/contact'
     }
   },
   

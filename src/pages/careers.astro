@@ -281,7 +281,15 @@ const benefits = [
 
         <BlurFade delay={200}>
           <Card variant="bordered" class="p-8">
-            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" enctype="multipart/form-data">
+            <!-- Netlify Forms will automatically handle this form -->
+            <form name="career-application" method="POST" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data">
+              <!-- Hidden field for Netlify Forms -->
+              <input type="hidden" name="form-name" value="career-application" />
+              <!-- Honeypot field for spam protection (hidden from users) -->
+              <div class="hidden">
+                <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+              </div>
+
               <div class="space-y-6">
                 <!-- Name -->
                 <div>

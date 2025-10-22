@@ -5,7 +5,7 @@
     "tagline2": "Addressing the Root Causes of Disease",
     "boldSubhead": "Radical Generosity",
     "description": "Exceptional care. Innovative education. Whole body wellness—delivered with radical generosity and heartfelt compassion.",
-    "backgroundVideo": "/videos/hero-video.mp4",
+    "backgroundVideo": "/videos/hero-video-loop-v2.mp4",
     "primaryCTA": {
       "text": "Schedule Your Visit",
       "href": "/contact"
@@ -56,7 +56,7 @@
     "doctors": [
       {
         "name": "Dr. Jill Rosellini Ombrello, DDS",
-        "title": "Founder & Lead Dentist",
+        "title": "Founder & Principal Dentist",
         "image": "/images/team/dr-ombrello.jpg",
         "href": "/team/dr-jill-ombrello"
       },
@@ -68,7 +68,7 @@
       },
       {
         "name": "Dr. Sahil Sawnani, DDS",
-        "title": "Associate Doctor",
+        "title": "Biological and Family Dentist",
         "image": "/images/team/dr-sawnani.jpg",
         "href": "/team/dr-sahil-sawnani"
       }

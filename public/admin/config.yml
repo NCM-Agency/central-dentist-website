@@ -2,8 +2,9 @@ backend:
   name: git-gateway
   branch: master
 
-# Local development mode - enabled for testing
-local_backend: true
+# Local development mode - disabled for production
+# Uncomment the line below for local development with npm run cms-proxy
+# local_backend: true
 
 media_folder: "public/images"
 public_folder: "/images"

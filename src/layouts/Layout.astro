@@ -145,7 +145,7 @@ const schemaMarkup = generateSchemaMarkup(schemaType);
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
     <!-- Netlify Identity Widget for CMS authentication -->
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script src="https://unpkg.com/netlify-identity-widget@^1.9.2/build/netlify-identity-widget.js"></script>
   </head>
 
   <body 
@@ -286,23 +286,44 @@ const schemaMarkup = generateSchemaMarkup(schemaType);
 
     <!-- Netlify Identity Widget redirect handling -->
     <script>
-      if (window.netlifyIdentity) {
-        window.netlifyIdentity.on("init", user => {
-          if (!user) {
-            window.netlifyIdentity.on("login", () => {
-              // Redirect to CMS after login if on admin page
-              if (window.location.pathname.includes('/admin')) {
-                document.location.href = "/admin/";
-              }
-            });
-          }
-        });
+      // Wait for the widget to load and initialize
+      function initNetlifyIdentity() {
+        if (typeof window.netlifyIdentity !== 'undefined') {
+          window.netlifyIdentity.on("init", user => {
+            if (!user) {
+              window.netlifyIdentity.on("login", () => {
+                // Redirect to CMS after login if on admin page
+                if (window.location.pathname.includes('/admin')) {
+                  document.location.href = "/admin/";
+                }
+              });
+            }
 
-        // IMPORTANT: Handle invitation and recovery tokens
-        // This opens the modal to set password when clicking the invite link
-        if (window.location.hash && (window.location.hash.includes('invite_token') || window.location.hash.includes('recovery_token') || window.location.hash.includes('confirmation_token'))) {
-          window.netlifyIdentity.open();
+            // Handle invitation and recovery tokens
+            // This opens the modal to set password when clicking the invite link
+            if (window.location.hash) {
+              if (window.location.hash.includes('invite_token') ||
+                  window.location.hash.includes('recovery_token') ||
+                  window.location.hash.includes('confirmation_token')) {
+                console.log('Opening identity widget for token:', window.location.hash);
+                window.netlifyIdentity.open();
+              }
+            }
+          });
+
+          // Initialize the widget
+          window.netlifyIdentity.init();
+        } else {
+          // If widget hasn't loaded yet, try again in 100ms
+          setTimeout(initNetlifyIdentity, 100);
         }
+      }
+
+      // Start initialization when DOM is ready
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initNetlifyIdentity);
+      } else {
+        initNetlifyIdentity();
       }
     </script>
 

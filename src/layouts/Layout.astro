@@ -290,10 +290,19 @@ const schemaMarkup = generateSchemaMarkup(schemaType);
         window.netlifyIdentity.on("init", user => {
           if (!user) {
             window.netlifyIdentity.on("login", () => {
-              document.location.href = "/admin/";
+              // Redirect to CMS after login if on admin page
+              if (window.location.pathname.includes('/admin')) {
+                document.location.href = "/admin/";
+              }
             });
           }
         });
+
+        // IMPORTANT: Handle invitation and recovery tokens
+        // This opens the modal to set password when clicking the invite link
+        if (window.location.hash && (window.location.hash.includes('invite_token') || window.location.hash.includes('recovery_token') || window.location.hash.includes('confirmation_token'))) {
+          window.netlifyIdentity.open();
+        }
       }
     </script>
 

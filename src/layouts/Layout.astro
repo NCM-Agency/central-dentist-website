@@ -2,6 +2,7 @@
 // Layout.astro - Main site layout with SEO, meta tags, and GrapesJS preparation
 import Header from '../components/common/Header.astro';
 import Footer from '../components/common/Footer.astro';
+import ContactWidget from '../components/ContactWidget.astro';
 import '../styles/global.css';
 
 export interface Props {
@@ -174,10 +175,13 @@ const schemaMarkup = generateSchemaMarkup(schemaType);
     <!-- Site Footer -->
     <Footer />
 
+    <!-- Contact Widget (Netlify Forms) -->
+    <ContactWidget />
+
     <!-- Back to Top Button -->
     <button 
       id="back-to-top"
-      class="fixed bottom-8 right-8 bg-teal text-white p-3 rounded-full shadow-teal-lg opacity-0 invisible transition-all hover:bg-teal-dark hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-teal focus:ring-offset-2 z-40"
+      class="fixed bottom-20 right-6 bg-teal text-white p-3 rounded-full shadow-teal-lg opacity-0 invisible transition-all hover:bg-teal-dark hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-teal focus:ring-offset-2 z-30"
       aria-label="Back to top"
     >
       <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -185,7 +189,8 @@ const schemaMarkup = generateSchemaMarkup(schemaType);
       </svg>
     </button>
 
-    <!--Start of Tawk.to Script-->
+    <!-- Tawk.to Script (Disabled - Using Netlify Forms Widget Instead) -->
+    <!-- To re-enable Tawk.to chat, uncomment the following:
     <script type="text/javascript">
       var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
       (function(){
@@ -197,7 +202,7 @@ const schemaMarkup = generateSchemaMarkup(schemaType);
         s0.parentNode.insertBefore(s1,s0);
       })();
     </script>
-    <!--End of Tawk.to Script-->
+    -->
 
     <!-- Scripts -->
     <script>

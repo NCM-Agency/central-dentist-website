@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: main
+  branch: master
 
 # Local development mode - enabled for testing
 local_backend: true

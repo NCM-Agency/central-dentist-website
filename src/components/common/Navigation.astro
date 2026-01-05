@@ -22,7 +22,10 @@ const navigation = [
       { title: 'Our History', href: '/our-history' },
       { title: 'Dr. Jill Ombrello', href: '/team/dr-jill-ombrello' },
       { title: 'Dr. Elizabeth Alejandrez', href: '/team/dr-elizabeth-alejandrez' },
-      { title: 'Dr. Sahil Sawnani', href: '/team/dr-sahil-sawnani' }
+      { title: 'Dr. Sahil Sawnani', href: '/team/dr-sahil-sawnani' },
+      { title: 'Lakisha Merrick, COO', href: '/team/lakisha-merrick' },
+      { title: 'Melanie Galles, RDH', href: '/team/melanie-galles' },
+      { title: 'Jaclyn Altman, RDH', href: '/team/jaclyn-altman' }
     ]
   },
   {
@@ -60,6 +63,11 @@ const navigation = [
       { title: 'Sleep-Related Breathing', href: '/pediatrics/sleep-breathing' },
       { title: 'ADD/ADHD Connection', href: '/pediatrics/adhd' }
     ]
+  },
+  {
+    title: 'Patient Payments',
+    href: 'https://p.adit.com/mG28O',
+    type: 'external'
   },
   {
     title: 'Contact',
@@ -111,9 +119,11 @@ const navigation = [
         <div class="ml-10 flex items-baseline space-x-1">
           {navigation.map((item) => (
             <div class="relative group">
-              {item.type === 'page' ? (
+              {item.type === 'page' || item.type === 'external' ? (
                 <a
                   href={item.href}
+                  target={item.type === 'external' ? '_blank' : undefined}
+                  rel={item.type === 'external' ? 'noopener noreferrer' : undefined}
                   class={`px-4 py-2 text-sm font-heading font-normal transition-colors duration-200 rounded-md
                     ${currentPath === item.href
                       ? 'text-teal bg-teal/10'
@@ -215,9 +225,11 @@ const navigation = [
 
         {navigation.map((item) => (
           <div class="mobile-nav-item">
-            {item.type === 'page' ? (
+            {item.type === 'page' || item.type === 'external' ? (
               <a
                 href={item.href}
+                target={item.type === 'external' ? '_blank' : undefined}
+                rel={item.type === 'external' ? 'noopener noreferrer' : undefined}
                 class={`block px-3 py-2 text-base font-body font-medium rounded-md transition-colors
                   ${currentPath === item.href
                     ? 'text-teal bg-teal/10'

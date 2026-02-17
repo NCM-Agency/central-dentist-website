@@ -77,11 +77,13 @@ import BlurFade from '../components/ui/BlurFade.astro';
               <h3 class="text-card-header text-header-primary mb-2" style="color: #006786;">
                 Location
               </h3>
-              <address class="text-body-regular text-gray-dark not-italic">
-                10210 N Central Expy<br>
-                Suite 100<br>
-                Dallas, TX 75231
-              </address>
+              <a href="https://maps.google.com/?q=10210+N+Central+Expy+Suite+100+Dallas+TX+75231" target="_blank" rel="noopener noreferrer" class="hover:underline" style="color: #0099ba;">
+                <address class="text-body-regular not-italic">
+                  10210 N Central Expy<br>
+                  Suite 100<br>
+                  Dallas, TX 75231
+                </address>
+              </a>
             </Card>
           </div>
         </div>
@@ -276,22 +278,14 @@ import BlurFade from '../components/ui/BlurFade.astro';
                   <div>
                     <h4 class="text-body-regular font-semibold text-gray-dark mb-2">New Patient Forms</h4>
                     <p class="text-body-small text-gray-medium mb-3">
-                      Save time on your first visit by downloading and completing our new patient form in advance.
+                      To save time during your first visit, we will send your new patient digital paperwork via email or text prior to your appointment. Please complete all required fields before your visit.
                     </p>
-                    <a
-                      href="/forms/new-patient-form.pdf"
-                      target="_blank"
-                      class="inline-flex items-center px-4 py-2 rounded-lg text-white font-semibold text-sm transition-all duration-200 hover:opacity-90"
-                      style="background: linear-gradient(135deg, #a6b443 0%, #c7cd85 100%);"
-                    >
-                      <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    <div class="inline-flex items-center px-4 py-2 rounded-lg text-sm" style="background-color: #f0f7f9; color: #006786;">
+                      <svg class="w-5 h-5 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                       </svg>
-                      Download New Patient Form (PDF)
-                    </a>
-                    <p class="text-body-small text-gray-medium mt-3">
-                      You can also complete the form when you arrive - just come 15 minutes early to your appointment.
-                    </p>
+                      Sent to you digitally before your appointment
+                    </div>
                   </div>
 
                   <div>

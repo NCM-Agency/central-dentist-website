@@ -30,7 +30,6 @@ const allCategories = [...new Set(blogPosts.flatMap(post => post.categories))].s
 const categories = ["All Posts", ...allCategories];
 
 const breadcrumbs = [
-  { label: 'Home', href: '/' },
   { label: 'Blog', href: '/blog' }
 ];
 ---

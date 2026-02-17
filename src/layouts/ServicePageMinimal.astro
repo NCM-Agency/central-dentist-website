@@ -53,10 +53,12 @@ const {
 
         <!-- Content Block -->
         <BlurFade delay={100} client:visible>
-          <div class="mb-12">
-            <p class="text-lg leading-relaxed" style="color: #4b5563; font-family: 'Geist', sans-serif;">
-              {content}
-            </p>
+          <div class="mb-12 space-y-6">
+            {content.split('\n\n').map((paragraph) => (
+              <p class="text-lg leading-relaxed" style="color: #4b5563; font-family: 'Geist', sans-serif;">
+                {paragraph.trim()}
+              </p>
+            ))}
           </div>
         </BlurFade>
       </div>

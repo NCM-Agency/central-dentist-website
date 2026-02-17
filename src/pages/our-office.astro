@@ -13,7 +13,7 @@ import Gallery from '../components/ui/Gallery.astro';
   heroTitle="Welcome to Our Home Away from Home!"
   heroSubtitle="A holistic dental practice committed to positive experiences for adults and children alike"
   breadcrumbs={[
-    { label: 'About', href: '/about' }
+    { label: 'About', href: '/our-office' }
   ]}
   schemaType="MedicalBusiness"
 >
@@ -333,46 +333,37 @@ import Gallery from '../components/ui/Gallery.astro';
           New Patient Forms
         </h2>
         
-        <p class="font-body text-lg text-gray-medium text-center mb-4 leading-relaxed">
-          Save time during your first visit by completing your paperwork in advance. We will send your new patient digital paperwork via email or text for your convenience. Please note that any fields marked with an asterisk (*) are required and must be completed prior to your appointment.
-        </p>
         <p class="font-body text-lg text-gray-medium text-center mb-8 leading-relaxed">
-          You may also download the forms below if you prefer to print and fill them out ahead of time.
+          To save time during your first visit, we will send your new patient digital paperwork via email or text prior to your appointment. Please note that any fields marked with an asterisk (<span class="text-red-500 font-semibold">*</span>) are required and must be completed before your visit.
         </p>
-        
+
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
           <Card variant="hover" class="p-6 text-center">
             <div class="icon-circle bg-gradient-to-br" style="background: linear-gradient(to bottom right, #0099ba, #006786);">
               <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
               </svg>
             </div>
             <h3 class="font-heading text-h4 font-semibold text-gray-dark mb-4">
               Adult New Patient Forms
             </h3>
             <p class="font-body text-gray-medium mb-6">
-              Comprehensive intake forms for adult patients including health history and treatment preferences.
+              Comprehensive intake forms for adult patients including health history and treatment preferences. Sent to you digitally before your appointment.
             </p>
-            <Button variant="primary" size="md" href="/forms/adult-new-patient-paperwork.pdf" target="_blank">
-              Download Adult Forms
-            </Button>
           </Card>
-          
+
           <Card variant="hover" class="p-6 text-center">
             <div class="icon-circle bg-gradient-to-br from-[#a6b443] to-[#c7cd85]">
               <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1m4 0h1m-6 4h8m2-10h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
               </svg>
             </div>
             <h3 class="font-heading text-h4 font-semibold text-gray-dark mb-4">
               Child New Patient Forms
             </h3>
             <p class="font-body text-gray-medium mb-6">
-              Pediatric intake forms designed specifically for children's health history and development.
+              Pediatric intake forms designed specifically for children's health history and development. Sent to you digitally before your appointment.
             </p>
-            <Button variant="primary" size="md" href="/forms/child-new-patient-paperwork.pdf" target="_blank">
-              Download Child Forms
-            </Button>
           </Card>
         </div>
       </div>

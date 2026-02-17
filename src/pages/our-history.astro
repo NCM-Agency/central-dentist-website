@@ -12,7 +12,7 @@ import Card from '../components/ui/Card.astro';
   heroTitle="Our History"
   heroSubtitle="Four Generations of Family Dentistry Excellence"
   breadcrumbs={[
-    { label: 'About', href: '/about' },
+    { label: 'About', href: '/our-office' },
     { label: 'Our History', href: '/our-history' }
   ]}
   schemaType="MedicalBusiness"
@@ -68,11 +68,11 @@ import Card from '../components/ui/Card.astro';
       <div class="max-w-6xl mx-auto">
         <BlurFade delay={100} client:visible>
           <h2 class="text-section-header text-header-primary text-center mb-12">
-            Meet Our Doctors
+            Meet Our Team
           </h2>
         </BlurFade>
 
-        <div class="grid md:grid-cols-3 gap-8 mb-16">
+        <div class="grid md:grid-cols-3 gap-8 mb-8">
           <!-- Dr. Jill Ombrello -->
           <BlurFade delay={200} client:visible>
             <Card className="h-full overflow-hidden">
@@ -149,6 +149,64 @@ import Card from '../components/ui/Card.astro';
                 </p>
                 <a
                   href="/team/dr-sahil-sawnani"
+                  class="inline-flex items-center text-sm font-semibold"
+                  style="color: #0099ba;"
+                >
+                  Learn More
+                  <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
+            </Card>
+          </BlurFade>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto mb-16">
+          <!-- Lakisha Merrick -->
+          <BlurFade delay={500} client:visible>
+            <Card className="h-full overflow-hidden">
+              <img
+                src="/images/team/lakisha-merrick.jpg"
+                alt="Lakisha Merrick"
+                class="w-full h-64 object-cover"
+              />
+              <div class="p-6">
+                <h3 class="font-heading text-xl font-semibold mb-2">Lakisha Merrick</h3>
+                <p class="text-sm font-semibold mb-3" style="color: #0099ba;">Chief Operating Officer</p>
+                <p class="text-sm text-gray-medium mb-4">
+                  Leading our operations and ensuring every patient receives an exceptional experience from the moment they contact our office.
+                </p>
+                <a
+                  href="/team/lakisha-merrick"
+                  class="inline-flex items-center text-sm font-semibold"
+                  style="color: #0099ba;"
+                >
+                  Learn More
+                  <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
+            </Card>
+          </BlurFade>
+
+          <!-- Jaclyn Altman -->
+          <BlurFade delay={600} client:visible>
+            <Card className="h-full overflow-hidden">
+              <img
+                src="/images/team/jaclyn-altman.jpg"
+                alt="Jaclyn Altman, RDH"
+                class="w-full h-64 object-cover"
+              />
+              <div class="p-6">
+                <h3 class="font-heading text-xl font-semibold mb-2">Jaclyn Altman</h3>
+                <p class="text-sm font-semibold mb-3" style="color: #0099ba;">RDH, Registered Dental Hygienist</p>
+                <p class="text-sm text-gray-medium mb-4">
+                  Over 22 years of experience specializing in holistic dental care, laser dentistry, and myofunctional therapy.
+                </p>
+                <a
+                  href="/team/jaclyn-altman"
                   class="inline-flex items-center text-sm font-semibold"
                   style="color: #0099ba;"
                 >

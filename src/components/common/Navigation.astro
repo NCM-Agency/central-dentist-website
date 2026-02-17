@@ -44,6 +44,7 @@ const navigation = [
     href: '/services',
     type: 'dropdown',
     items: [
+      { title: 'All Services', href: '/services' },
       { title: 'Advanced Technologies', href: '/services/advanced-technologies' },
       { title: 'Mercury-Free Approach', href: '/services/mercury-free-approach' },
       { title: 'Functional Health (Sleep/TMJ/ADHD)', href: '/services/functional-health' },
@@ -98,7 +99,7 @@ const navigation = [
 ];
 ---
 
-<nav class="bg-white shadow-sm sticky top-0 z-50" data-gjs-type="navbar" data-gjs-locked="true">
+<nav class="bg-white shadow-sm" data-gjs-type="navbar" data-gjs-locked="true">
   <div class="container mx-auto container-padding">
     <div class="flex items-center justify-between h-16 lg:h-20">
 
@@ -169,23 +170,6 @@ const navigation = [
             </div>
           ))}
         </div>
-      </div>
-
-      <!-- Contact Info -->
-      <div class="hidden lg:flex items-center space-x-4">
-        <a
-          href="tel:214-368-0900"
-          class="text-teal-dark font-body font-semibold hover:text-teal transition-colors"
-        >
-          214-368-0900
-        </a>
-        <a
-          href="/contact"
-          class="text-sm px-6 py-2 bg-gradient-to-r from-[#a6b443] to-[#c7cd85] text-white rounded-full font-medium hover:from-[#8fa339] hover:to-[#a6b443] hover:shadow-lg hover:scale-105 transition-all duration-300"
-          style="font-family: 'Playfair Display', 'Times', serif;"
-        >
-          Schedule Visit
-        </a>
       </div>
 
       <!-- Mobile menu button -->

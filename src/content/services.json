@@ -151,7 +151,37 @@
       }
     },
     {
-      "id": "advanced-diagnostics", 
+      "id": "digital-smile-exam",
+      "title": "Digital Smile Exam",
+      "slug": "digital-smile-exam",
+      "description": "Advanced digital imaging for comprehensive smile evaluation and personalized treatment planning.",
+      "shortDescription": "Personalized smile analysis with digital imaging",
+      "features": [
+        "High-resolution digital imaging",
+        "Personalized smile analysis",
+        "Preview treatment outcomes",
+        "Non-invasive evaluation",
+        "Collaborative treatment planning"
+      ],
+      "highlight": false,
+      "priority": 6,
+      "category": "Diagnostic",
+      "image": "/images/services/abstract-white-texture.jpg",
+      "imageAlt": "Digital smile exam technology for comprehensive dental evaluation",
+      "estimatedTime": "30-45 minutes",
+      "content": {
+        "overview": "Our Digital Smile Exam uses advanced imaging technology to capture a comprehensive view of your smile and develop personalized treatment plans.",
+        "benefits": [
+          "Non-invasive evaluation",
+          "Personalized analysis",
+          "Preview potential outcomes",
+          "Informed decision-making",
+          "Collaborative planning"
+        ]
+      }
+    },
+    {
+      "id": "advanced-diagnostics",
       "title": "Advanced Diagnostics",
       "slug": "advanced-diagnostics",
       "description": "Comprehensive testing to identify root causes of oral and systemic health issues.",

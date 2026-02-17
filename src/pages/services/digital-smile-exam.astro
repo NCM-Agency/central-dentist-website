@@ -1,0 +1,29 @@
+---
+// Digital Smile Exam Service Page - Central Dentist
+import ServicePageMinimal from '../../layouts/ServicePageMinimal.astro';
+
+const content = `Our Digital Smile Exam uses advanced imaging technology to capture a comprehensive view of your teeth, gums, and facial structure. This non-invasive evaluation allows our doctors to analyze your smile in detail and develop a personalized treatment plan tailored to your unique needs.
+
+Using high-resolution digital photography and specialized software, we can show you a preview of potential outcomes before any treatment begins. This collaborative approach empowers you to make informed decisions about your care and ensures that your goals align with your treatment plan.`;
+
+const benefits = [
+  'Non-invasive, comfortable evaluation',
+  'High-resolution digital imaging',
+  'Personalized smile analysis',
+  'Preview potential treatment outcomes',
+  'Collaborative treatment planning',
+  'Comprehensive facial and dental assessment',
+  'Supports informed decision-making'
+];
+---
+
+<ServicePageMinimal
+  title="Digital Smile Exam"
+  description="Advanced digital imaging for personalized smile analysis"
+  metaDescription="Digital Smile Exam at Central Dentist Dallas. Advanced imaging technology for comprehensive smile evaluation, personalized analysis, and collaborative treatment planning."
+  backgroundImage="/images/services/abstract-white-texture.jpg"
+  content={content}
+  benefits={benefits}
+  ctaTitle="Ready to See Your Best Smile?"
+  ctaText="Schedule your Digital Smile Exam today"
+/>

@@ -24,7 +24,6 @@ const navigation = [
       { title: 'Dr. Elizabeth Alejandrez', href: '/team/dr-elizabeth-alejandrez' },
       { title: 'Dr. Sahil Sawnani', href: '/team/dr-sahil-sawnani' },
       { title: 'Lakisha Merrick, COO', href: '/team/lakisha-merrick' },
-      { title: 'Melanie Galles, RDH', href: '/team/melanie-galles' },
       { title: 'Jaclyn Altman, RDH', href: '/team/jaclyn-altman' }
     ]
   },
@@ -50,6 +49,7 @@ const navigation = [
       { title: 'Functional Health (Sleep/TMJ/ADHD)', href: '/services/functional-health' },
       { title: 'Pediatric Healthy Start™', href: '/services/pediatric-healthy-start' },
       { title: 'Invisalign®', href: '/services/invisalign' },
+      { title: 'Digital Smile Exam', href: '/services/digital-smile-exam' },
       { title: 'Advanced Diagnostics', href: '/services/advanced-diagnostics' }
     ]
   },
@@ -100,7 +100,7 @@ const navigation = [
 
 <nav class="bg-white shadow-sm sticky top-0 z-50" data-gjs-type="navbar" data-gjs-locked="true">
   <div class="container mx-auto container-padding">
-    <div class="flex items-center justify-between h-16 md:h-20">
+    <div class="flex items-center justify-between h-16 lg:h-20">
 
       <!-- Logo -->
       <div class="flex-shrink-0">
@@ -108,14 +108,14 @@ const navigation = [
           <img
             src="/images/LOGO-01.png"
             alt="Central Dentist - Holistic Family Dentistry"
-            class="h-8 md:h-10 w-auto"
+            class="h-8 lg:h-10 w-auto"
             loading="eager"
           />
         </a>
       </div>
 
       <!-- Desktop Navigation -->
-      <div class="hidden md:block">
+      <div class="hidden lg:block">
         <div class="ml-10 flex items-baseline space-x-1">
           {navigation.map((item) => (
             <div class="relative group">
@@ -189,7 +189,7 @@ const navigation = [
       </div>
 
       <!-- Mobile menu button -->
-      <div class="md:hidden">
+      <div class="lg:hidden">
         <button
           type="button"
           class="mobile-menu-button inline-flex items-center justify-center p-2 rounded-md text-gray-dark hover:text-teal hover:bg-gray-light focus:outline-none focus:ring-2 focus:ring-teal focus:ring-offset-2"
@@ -210,7 +210,7 @@ const navigation = [
     </div>
 
     <!-- Mobile Navigation -->
-    <div class="mobile-menu hidden md:hidden transition-all duration-300 ease-in-out transform -translate-y-4 opacity-0" id="mobile-menu">
+    <div class="mobile-menu hidden lg:hidden transition-all duration-300 ease-in-out transform -translate-y-4 opacity-0" id="mobile-menu">
       <div class="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-light backdrop-blur-sm">
 
         <!-- Phone number prominently displayed on mobile -->

@@ -1,0 +1,26 @@
+---
+import ProcedurePageLayout from '../../layouts/ProcedurePageLayout.astro';
+import proceduresData from '../../content/procedures.json';
+
+export function getStaticPaths() {
+  return proceduresData.procedures.map((procedure) => ({
+    params: { slug: procedure.slug },
+    props: { procedure },
+  }));
+}
+
+const { procedure } = Astro.props;
+const category = proceduresData.categories.find(c => c.id === procedure.category);
+---
+
+<ProcedurePageLayout
+  title={procedure.title}
+  categoryTitle={category?.title || 'Procedure'}
+  overview={procedure.overview}
+  postOperativeCare={procedure.postOperativeCare}
+  dietAndActivity={procedure.dietAndActivity}
+  oralHygiene={procedure.oralHygiene}
+  holisticSupport={procedure.holisticSupport}
+  whenToContact={procedure.whenToContact}
+  followUp={procedure.followUp}
+/>

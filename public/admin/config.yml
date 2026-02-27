@@ -345,6 +345,59 @@ collections:
               - {label: "Event", name: "event", widget: "text"}
 
   # ===========================
+  # PROCEDURES (Surgical / Post-Op Care)
+  # ===========================
+  - name: "procedures"
+    label: "Procedures"
+    files:
+      - label: "All Procedures"
+        name: "procedures"
+        file: "src/content/procedures.json"
+        fields:
+          - label: "Categories"
+            name: "categories"
+            widget: "list"
+            fields:
+              - {label: "ID", name: "id", widget: "string"}
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Description", name: "description", widget: "text"}
+
+          - label: "Procedures"
+            name: "procedures"
+            widget: "list"
+            fields:
+              - {label: "URL Slug", name: "slug", widget: "string", hint: "Used in URL: /surgical/your-slug"}
+              - {label: "Title", name: "title", widget: "string"}
+              - label: "Category"
+                name: "category"
+                widget: "select"
+                options:
+                  - {label: "Surgical", value: "surgical"}
+                  - {label: "Restorative", value: "restorative"}
+                  - {label: "Cosmetic", value: "cosmetic"}
+                  - {label: "Sleep & Wellness", value: "sleep"}
+              - {label: "Short Description", name: "shortDescription", widget: "text"}
+              - {label: "Overview", name: "overview", widget: "text"}
+              - label: "Post-Operative Care"
+                name: "postOperativeCare"
+                widget: "list"
+                field: {label: "Item", name: "item", widget: "text"}
+              - label: "Diet & Activity"
+                name: "dietAndActivity"
+                widget: "list"
+                field: {label: "Item", name: "item", widget: "text"}
+              - label: "Oral Hygiene Instructions"
+                name: "oralHygiene"
+                widget: "list"
+                field: {label: "Item", name: "item", widget: "text"}
+              - label: "Holistic/Natural Support"
+                name: "holisticSupport"
+                widget: "list"
+                field: {label: "Item", name: "item", widget: "text"}
+              - {label: "When to Contact", name: "whenToContact", widget: "text"}
+              - {label: "Follow-Up", name: "followUp", widget: "text"}
+
+  # ===========================
   # RECOMMENDED PRODUCTS
   # ===========================
   - name: "products"

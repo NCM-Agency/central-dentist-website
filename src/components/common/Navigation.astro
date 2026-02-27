@@ -18,6 +18,7 @@ const navigation = [
     type: 'dropdown',
     items: [
       { title: 'Our Office', href: '/our-office' },
+      { title: 'Our Philosophy', href: '/philosophy' },
       { title: 'Reviews & Testimonials', href: '/reviews-testimonials' },
       { title: 'Our History', href: '/our-history' },
       { title: 'Dr. Jill Ombrello', href: '/team/dr-jill-ombrello' },
@@ -25,18 +26,6 @@ const navigation = [
       { title: 'Dr. Sahil Sawnani', href: '/team/dr-sahil-sawnani' },
       { title: 'Lakisha Merrick, COO', href: '/team/lakisha-merrick' },
       { title: 'Jaclyn Altman, RDH', href: '/team/jaclyn-altman' }
-    ]
-  },
-  {
-    title: 'Our Philosophy',
-    href: '/philosophy',
-    type: 'dropdown',
-    items: [
-      { title: 'Our Approach', href: '/philosophy' },
-      { title: 'Mercury-Free Approach', href: '/services/mercury-free-approach' },
-      { title: 'Functional Health', href: '/services/functional-health' },
-      { title: 'Holistic Approach', href: '/our-office#philosophy' },
-      { title: 'Advanced Technologies', href: '/services/advanced-technologies' }
     ]
   },
   {
@@ -48,21 +37,25 @@ const navigation = [
       { title: 'Advanced Technologies', href: '/services/advanced-technologies' },
       { title: 'Mercury-Free Approach', href: '/services/mercury-free-approach' },
       { title: 'Functional Health (Sleep/TMJ/ADHD)', href: '/services/functional-health' },
-      { title: 'Pediatric Healthy Start™', href: '/services/pediatric-healthy-start' },
       { title: 'Invisalign®', href: '/services/invisalign' },
       { title: 'Digital Smile Exam', href: '/services/digital-smile-exam' },
-      { title: 'Advanced Diagnostics', href: '/services/advanced-diagnostics' }
+      { title: 'Advanced Diagnostics', href: '/services/advanced-diagnostics' },
+      { title: 'Pediatrics', href: '/pediatrics', isParent: true },
+      { title: '  • Healthy Start™', href: '/services/pediatric-healthy-start' },
+      { title: '  • Sleep-Related Breathing', href: '/pediatrics/sleep-breathing' },
+      { title: '  • ADD/ADHD Connection', href: '/pediatrics/adhd' }
     ]
   },
   {
-    title: 'Pediatrics',
-    href: '/pediatrics',
+    title: 'Surgical',
+    href: '/surgical',
     type: 'dropdown',
     items: [
-      { title: 'Overview', href: '/pediatrics' },
-      { title: 'Pediatric Healthy Start™', href: '/services/pediatric-healthy-start' },
-      { title: 'Sleep-Related Breathing', href: '/pediatrics/sleep-breathing' },
-      { title: 'ADD/ADHD Connection', href: '/pediatrics/adhd' }
+      { title: 'All Procedures', href: '/surgical' },
+      { title: 'Surgical Procedures', href: '/surgical#surgical' },
+      { title: 'Restorative Procedures', href: '/surgical#restorative' },
+      { title: 'Cosmetic Procedures', href: '/surgical#cosmetic' },
+      { title: 'Sleep & Wellness', href: '/surgical#sleep' }
     ]
   },
   {

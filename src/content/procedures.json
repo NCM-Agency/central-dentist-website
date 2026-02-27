@@ -1,0 +1,328 @@
+{
+  "categories": [
+    {
+      "id": "surgical",
+      "title": "Surgical Procedures",
+      "description": "Post-operative care for surgical dental procedures"
+    },
+    {
+      "id": "restorative",
+      "title": "Restorative Procedures",
+      "description": "Care instructions for restorative dental work"
+    },
+    {
+      "id": "cosmetic",
+      "title": "Cosmetic Procedures",
+      "description": "Care instructions for cosmetic dental treatments"
+    },
+    {
+      "id": "sleep",
+      "title": "Sleep & Wellness",
+      "description": "Care instructions for sleep-related appliances"
+    }
+  ],
+  "procedures": [
+    {
+      "slug": "scaling-and-root-planing",
+      "title": "Scaling & Root Planing (SRP)",
+      "category": "surgical",
+      "shortDescription": "Deep-cleaning procedure to remove plaque, calculus, and bacterial toxins from below the gumline.",
+      "overview": "Scaling and Root Planing is a deep-cleaning procedure to remove plaque, calculus, and bacterial toxins from below the gumline. This treatment supports gum health and overall systemic well-being by reducing inflammation.",
+      "postOperativeCare": [
+        "Rest & Relaxation: Allow yourself to relax immediately after the procedure.",
+        "Rinsing: For the first 24 hours, avoid vigorous rinsing or spitting to prevent disturbing healing tissues."
+      ],
+      "dietAndActivity": [
+        "Diet: Consume a soft, cool diet — think smoothies, soups, and pureed fruits — to ease discomfort and support healing.",
+        "Activity: Limit strenuous physical activity for 24–48 hours. Gentle walks and stress reduction practices (meditation, deep breathing) are encouraged."
+      ],
+      "oralHygiene": [
+        "Brushing: Use a soft-bristled brush with a natural toothpaste; avoid the treated area for the first day.",
+        "Rinsing: After 24 hours, gently rinse with a warm saline or herbal chamomile solution."
+      ],
+      "holisticSupport": [
+        "Herbal Teas: Sip on anti-inflammatory teas (ginger, chamomile) throughout the day.",
+        "Oil Pulling: Consider gentle oil pulling (using coconut oil) as an adjunct to maintain oral microbial balance."
+      ],
+      "whenToContact": "Increased swelling, persistent pain beyond 72 hours, or any unusual bleeding should prompt a call to our office.",
+      "followUp": "Attend your scheduled follow-up appointment to ensure optimal healing and discuss any additional holistic support you may need."
+    },
+    {
+      "slug": "tooth-extraction-bone-grafting",
+      "title": "Tooth Extraction & Bone Grafting",
+      "category": "surgical",
+      "shortDescription": "Tooth removal combined with bone grafting to preserve jaw integrity using a holistic approach.",
+      "overview": "This procedure involves the removal of a tooth — often one that is root canal treated and asymptomatic — combined with bone grafting to preserve jaw integrity. Our holistic approach emphasizes natural healing and long-term oral balance.",
+      "postOperativeCare": [
+        "Ice Application: Use ice packs on the affected area for 15–20 minutes at a time during the first 48 hours to minimize swelling.",
+        "Pressure & Clot Protection: Gently bite on gauze for 30–45 minutes post-extraction. Avoid spitting or forceful rinsing to protect the blood clot."
+      ],
+      "dietAndActivity": [
+        "Diet: Stick to a soft, cool diet for the first 3–5 days. Nutrient-rich soups, smoothies, and mashed vegetables are recommended.",
+        "Activity: Rest and avoid strenuous activities for 48–72 hours to allow the graft and extraction site to stabilize."
+      ],
+      "oralHygiene": [
+        "Rinsing: After the first 24 hours, rinse gently with a saline or herbal chamomile solution.",
+        "Brushing: Resume brushing carefully away from the extraction site using a soft brush and holistic oral care products."
+      ],
+      "holisticSupport": [
+        "Herbal Supplements: If advised, use natural anti-inflammatory supplements (turmeric, arnica) as directed by your provider.",
+        "Mind-Body Techniques: Practice stress-reduction techniques to support your body's natural healing process."
+      ],
+      "whenToContact": "Report any increased pain, prolonged bleeding, signs of infection (foul taste, fever), or graft displacement immediately.",
+      "followUp": "Attend your follow-up visit for evaluation of the extraction and graft integration. Additional holistic care recommendations may be provided."
+    },
+    {
+      "slug": "dental-implant-placement",
+      "title": "Dental Implant Placement",
+      "category": "surgical",
+      "shortDescription": "Biocompatible implant insertion into the jawbone to support a prosthetic tooth.",
+      "overview": "Dental implant placement involves inserting a biocompatible implant into the jawbone to support a prosthetic tooth. Our holistic protocols emphasize natural healing and integrative care to promote osseointegration.",
+      "postOperativeCare": [
+        "Ice & Rest: Apply ice packs to the surgical area intermittently during the first 48 hours. Rest and limit head movement.",
+        "Hemostasis: Use gauze as directed to control bleeding and protect the initial blood clot."
+      ],
+      "dietAndActivity": [
+        "Diet: Follow a soft-food diet for 5–7 days. Prioritize cool, nutrient-dense meals such as smoothies, soups, and pureed vegetables.",
+        "Activity: Avoid strenuous exercise and heavy lifting for at least 72 hours. Gentle walking is encouraged."
+      ],
+      "oralHygiene": [
+        "Rinsing: Begin rinsing gently with a saline or herbal solution (aloe vera, chamomile) after the first 24 hours.",
+        "Brushing: Brush carefully around the implant site using a soft-bristled brush and holistic oral care products."
+      ],
+      "holisticSupport": [
+        "Natural Supplements: Follow any prescribed natural anti-inflammatory protocols (e.g., turmeric or arnica) to support healing.",
+        "Stress Reduction: Practice meditation or gentle yoga to enhance systemic healing responses."
+      ],
+      "whenToContact": "Notify us if you experience excessive pain, swelling, or signs of infection such as fever or unusual discharge.",
+      "followUp": "Attend all follow-up appointments for radiographic and clinical evaluations of osseointegration and implant stability."
+    },
+    {
+      "slug": "implant-second-stage-surgery",
+      "title": "Implant Second Stage Surgery",
+      "category": "surgical",
+      "shortDescription": "Exposing the implant and preparing it for the prosthetic phase with minimally invasive care.",
+      "overview": "The second stage of implant surgery involves exposing the implant and preparing it for the prosthetic phase. This minimally invasive procedure requires careful post-operative care to ensure soft tissue healing.",
+      "postOperativeCare": [
+        "Rest & Ice: Use ice packs for the first 48 hours to reduce swelling and promote comfort.",
+        "Gentle Care: Avoid touching the surgical area with your tongue or fingers."
+      ],
+      "dietAndActivity": [
+        "Diet: Stick to a soft-food diet for 3–5 days. Focus on cool, nutrient-rich foods that require minimal chewing.",
+        "Activity: Limit physical activity for the initial 48–72 hours to maintain stability at the surgical site."
+      ],
+      "oralHygiene": [
+        "Rinsing: Start with a gentle saline or herbal rinse (chamomile/aloe) after 24 hours to maintain cleanliness without irritation.",
+        "Brushing: Resume gentle brushing away from the surgical site with a soft brush and biocompatible oral care products."
+      ],
+      "holisticSupport": [
+        "Herbal Remedies: Consider using natural anti-inflammatory herbs as recommended.",
+        "Mindfulness: Engage in relaxation techniques to support your overall healing process."
+      ],
+      "whenToContact": "Report any persistent pain, increased swelling, or signs of infection immediately.",
+      "followUp": "Attend your follow-up appointment for evaluation and to plan the final prosthetic phase of your implant restoration."
+    },
+    {
+      "slug": "periodontal-laser-surgery",
+      "title": "Periodontal / Laser Surgery",
+      "category": "surgical",
+      "shortDescription": "Advanced treatment for gum disease to reduce pocket depths and restore healthy gum tissue.",
+      "overview": "Periodontal surgery is performed to treat advanced gum disease, reduce pocket depths, and restore healthy gum tissue. Our approach integrates conventional techniques with holistic care to support systemic health.",
+      "postOperativeCare": [
+        "Rest & Cool Compress: Apply cool compresses intermittently during the first 24–48 hours to reduce swelling.",
+        "Rinsing: Avoid vigorous rinsing for the first 24 hours. After this period, rinse gently with a warm saline or herbal solution (e.g., chamomile)."
+      ],
+      "dietAndActivity": [
+        "Diet: Maintain a soft, anti-inflammatory diet for 3–5 days — choose nutrient-rich broths, smoothies, and mashed vegetables.",
+        "Activity: Avoid heavy lifting and strenuous activities for 48–72 hours; light walking is recommended."
+      ],
+      "oralHygiene": [
+        "Brushing: Use a soft-bristled brush and natural toothpaste; avoid the surgical site until initial healing is observed.",
+        "Flossing: Resume gentle flossing as advised by your provider to prevent plaque accumulation without disturbing healing tissues."
+      ],
+      "holisticSupport": [
+        "Herbal Supplements: Use any recommended natural anti-inflammatory agents (e.g., turmeric, green tea extract) to support healing.",
+        "Stress Management: Engage in gentle relaxation practices to promote overall wellness."
+      ],
+      "whenToContact": "Should you experience increased pain, prolonged bleeding, or signs of infection, please contact our office immediately.",
+      "followUp": "Attend scheduled follow-up appointments to monitor healing and discuss ongoing holistic care strategies for periodontal health."
+    },
+    {
+      "slug": "soft-tissue-grafting",
+      "title": "Soft Tissue Grafting",
+      "category": "surgical",
+      "shortDescription": "Enhancing gum tissue volume and support for improved function and aesthetics.",
+      "overview": "Soft tissue grafting aims to enhance gum tissue volume and support, often improving both function and aesthetics. Our holistic protocols support tissue regeneration through natural and integrative healing methods.",
+      "postOperativeCare": [
+        "Rest & Ice: Apply ice packs intermittently for the first 48 hours to minimize swelling.",
+        "Wound Protection: Avoid touching or irritating the graft site with your tongue or fingers."
+      ],
+      "dietAndActivity": [
+        "Diet: Follow a soft, cool diet for 5–7 days. Emphasize nutrient-dense meals that aid tissue repair, such as protein-rich smoothies and soft vegetables.",
+        "Activity: Limit physical activity for the first 72 hours; rest is essential to prevent disruption of the graft."
+      ],
+      "oralHygiene": [
+        "Rinsing: Begin gentle rinsing with a warm saline or herbal solution (chamomile or sage) 24 hours post-procedure.",
+        "Brushing: Resume brushing carefully around the graft area using a soft brush and biocompatible products as directed."
+      ],
+      "holisticSupport": [
+        "Herbal Support: Use any prescribed natural supplements (e.g., aloe vera, arnica) to reduce inflammation and promote healing.",
+        "Mind-Body Practices: Incorporate stress-reduction techniques to support the body's natural healing response."
+      ],
+      "whenToContact": "Contact us if you notice increased pain, excessive bleeding, or signs of graft rejection, such as unusual discoloration or persistent swelling.",
+      "followUp": "Attend all follow-up appointments to evaluate graft integration and receive any additional holistic care instructions."
+    },
+    {
+      "slug": "dental-filling-composite",
+      "title": "Dental Filling (Composite)",
+      "category": "restorative",
+      "shortDescription": "Biocompatible composite fillings that restore decayed areas while preserving tooth structure.",
+      "overview": "Composite dental fillings restore decayed areas while preserving tooth structure. Our holistic care integrates biocompatible materials and natural post-treatment care to promote long-term oral health.",
+      "postOperativeCare": [
+        "Rest: Allow the filled tooth to settle; avoid immediate heavy use or biting down on that side of the mouth.",
+        "Sensitivity Management: Mild sensitivity may occur; apply a cool compress externally if needed."
+      ],
+      "dietAndActivity": [
+        "Diet: For 24–48 hours, avoid extreme temperatures. Choose soft, nutrient-dense foods that promote overall tissue repair.",
+        "Activity: Normal activity can usually be resumed immediately; however, be gentle on the treated area."
+      ],
+      "oralHygiene": [
+        "Brushing: Use a soft-bristled brush and holistic toothpaste to clean gently around the filled area.",
+        "Flossing: Resume flossing once the sensitivity subsides, taking care not to disturb the restoration."
+      ],
+      "holisticSupport": [
+        "Herbal Rinses: A gentle rinse with chamomile or sage-infused water can soothe any mild discomfort.",
+        "Dietary Focus: Incorporate foods high in antioxidants and omega-3 fatty acids to support cell regeneration."
+      ],
+      "whenToContact": "Persistent sensitivity beyond 72 hours or any sharp pain when chewing should be reported.",
+      "followUp": "A follow-up check may be scheduled to ensure the filling is stable and the tooth is responding well to treatment."
+    },
+    {
+      "slug": "crown-and-bridge",
+      "title": "Crown & Bridge",
+      "category": "restorative",
+      "shortDescription": "Restoring tooth function and aesthetics with biocompatible crowns and bridges.",
+      "overview": "Crowns and bridges restore tooth function and aesthetics. Our holistic protocols focus on preserving natural tissue health and integrating biocompatible materials for lasting results.",
+      "postOperativeCare": [
+        "Initial Rest: Avoid biting or applying pressure on the restored area for the first 48 hours.",
+        "Assessment: Verify that no excessive pressure is placed on the crown/bridge immediately following placement."
+      ],
+      "dietAndActivity": [
+        "Diet: Stick to soft foods for the first two days; gradually reintroduce firmer foods as comfort allows. Avoid sticky, hard, or chewy foods.",
+        "Activity: Light activities are encouraged; avoid any strenuous exercise that may affect the new restoration."
+      ],
+      "oralHygiene": [
+        "Brushing: Use a non-abrasive, soft-bristled brush with natural toothpaste around the margins of the crown/bridge.",
+        "Rinsing: Rinse gently with a warm herbal solution (e.g., chamomile or sage) starting 24 hours post-procedure."
+      ],
+      "holisticSupport": [
+        "Herbal Teas: Consume soothing herbal teas to reduce inflammation.",
+        "Mindful Eating: Chew slowly and mindfully to allow the restoration to adapt and settle."
+      ],
+      "whenToContact": "Report any unusual movement, persistent discomfort, or signs of sensitivity around the restoration.",
+      "followUp": "Attend scheduled follow-up appointments for adjustments and to ensure long-term comfort and function."
+    },
+    {
+      "slug": "removable-prosthesis",
+      "title": "Removable Prosthesis (Dentures)",
+      "category": "restorative",
+      "shortDescription": "Custom-fit removable prosthesis designed for comfort, biocompatibility, and long-term oral health.",
+      "overview": "The fabrication and placement of a removable prosthesis (dentures) involve custom-fit design and careful adjustment to restore function and aesthetics. Our holistic approach emphasizes comfort, biocompatibility, and long-term oral health.",
+      "postOperativeCare": [
+        "Adaptation: Allow time for your mouth to adjust to the new prosthesis. Remove and clean the appliance as instructed.",
+        "Soreness Management: Mild soreness is normal; use a cool, damp cloth on the affected areas if needed."
+      ],
+      "dietAndActivity": [
+        "Diet: Begin with soft, non-abrasive foods for the first 3–5 days. Gradually reintroduce firmer foods as you adjust to the prosthesis.",
+        "Activity: Resume normal activities, but avoid activities that may dislodge the prosthesis during the initial adjustment phase."
+      ],
+      "oralHygiene": [
+        "Cleaning the Prosthesis: Clean the appliance daily using a non-abrasive cleanser and warm water.",
+        "Mouth Care: Maintain a regular oral hygiene routine with a soft-bristled brush and natural toothpaste to care for your gums and remaining teeth."
+      ],
+      "holisticSupport": [
+        "Herbal Rinses: Use a diluted herbal rinse (e.g., sage or chamomile) to soothe any irritation.",
+        "Fit Adjustments: Practice mindful chewing and note any discomfort to address with your provider for timely adjustments."
+      ],
+      "whenToContact": "Report any persistent discomfort, sore spots, or issues with the fit of your prosthesis immediately.",
+      "followUp": "Attend scheduled appointments for adjustments and to ensure the prosthesis continues to support optimal oral health."
+    },
+    {
+      "slug": "tooth-whitening",
+      "title": "Tooth Whitening",
+      "category": "cosmetic",
+      "shortDescription": "Gentle yet effective whitening that minimizes sensitivity and protects enamel.",
+      "overview": "Tooth whitening enhances the brightness of your smile using gentle, yet effective, bleaching agents. Our holistic protocols minimize sensitivity and protect enamel while achieving natural, radiant results.",
+      "postOperativeCare": [
+        "Rest Period: After the whitening procedure, allow your teeth to settle; avoid any abrasive activities immediately.",
+        "Rinse Carefully: Rinse your mouth gently with lukewarm water if any residual bleaching agent is present."
+      ],
+      "dietAndActivity": [
+        "Diet: For 24–48 hours, avoid staining foods and beverages (coffee, tea, red wine, deeply colored sauces).",
+        "Activity: There are no significant activity restrictions, but be mindful of any discomfort while chewing."
+      ],
+      "oralHygiene": [
+        "Brushing: Use a soft-bristled brush and a non-abrasive, holistic toothpaste to maintain the whitening effect.",
+        "Flossing: Resume normal flossing habits but avoid over-aggressive techniques that could irritate sensitive areas."
+      ],
+      "holisticSupport": [
+        "Desensitizing Rinse: Use a natural, desensitizing herbal rinse if you experience mild sensitivity (e.g., aloe vera-based solutions).",
+        "Additional Care: Incorporate oil pulling as a gentle adjunct to help maintain oral cleanliness and support enamel health."
+      ],
+      "whenToContact": "Notify us if sensitivity or discomfort persists beyond 48–72 hours or if you observe any unusual reactions.",
+      "followUp": "A follow-up evaluation may be scheduled to monitor your progress and recommend any touch-up treatments if necessary."
+    },
+    {
+      "slug": "veneer-placement",
+      "title": "Veneer Placement",
+      "category": "cosmetic",
+      "shortDescription": "Thin porcelain or composite veneers to enhance tooth appearance with biocompatible materials.",
+      "overview": "Veneer placement enhances the appearance of teeth by applying a thin layer of porcelain or composite material. Our holistic approach ensures biocompatibility and integrates care for long-term oral health and aesthetics.",
+      "postOperativeCare": [
+        "Initial Care: Avoid biting or chewing on hard foods immediately after veneer placement to allow the adhesive to set properly.",
+        "Comfort Measures: Use a cool compress externally if mild discomfort or sensitivity occurs."
+      ],
+      "dietAndActivity": [
+        "Diet: For the first 48 hours, stick to soft, non-abrasive foods. Gradually reintroduce regular foods while being mindful of hard or sticky items that could dislodge the veneer.",
+        "Activity: Normal activities may resume, but avoid extreme temperature changes in beverages during the initial healing phase."
+      ],
+      "oralHygiene": [
+        "Brushing: Use a soft, non-abrasive brush and natural toothpaste to clean around the veneers gently.",
+        "Rinsing: Rinse with a warm herbal solution (chamomile or sage) starting 24 hours post-procedure to reduce any potential irritation."
+      ],
+      "holisticSupport": [
+        "Herbal Supplements: Consider natural anti-inflammatory support if minor sensitivity occurs.",
+        "Preventive Care: Incorporate regular holistic oral hygiene practices, such as oil pulling and mindful brushing techniques, to prolong the longevity of your veneers."
+      ],
+      "whenToContact": "Should you experience persistent discomfort, sensitivity, or any issues with the veneer's fit, please contact our office immediately.",
+      "followUp": "Attend scheduled follow-up appointments to assess the veneers, make any necessary adjustments, and ensure your ongoing oral health."
+    },
+    {
+      "slug": "custom-sleep-appliance",
+      "title": "Custom Sleep Appliance",
+      "category": "sleep",
+      "shortDescription": "Custom-designed appliance to protect teeth and promote optimal sleep quality.",
+      "overview": "This custom sleep appliance is designed to protect your teeth and promote optimal sleep quality by addressing issues such as bruxism or mild sleep apnea. Tailored to your unique dental anatomy, it supports improved oral health and systemic well-being. Our holistic approach integrates its use with lifestyle and stress-reduction techniques to enhance your sleep and overall health.",
+      "postOperativeCare": [
+        "Initial Fitting: Upon delivery, carefully follow the fitting instructions provided. Expect a brief adaptation period where mild discomfort or pressure may occur.",
+        "Adjustment Period: It is normal to experience slight soreness or sensitivity as your mouth adjusts to the appliance. Document any persistent pressure points for review during your next visit."
+      ],
+      "dietAndActivity": [
+        "Evening Routine: To complement the appliance, avoid heavy meals and caffeinated or acidic beverages in the two hours before bedtime.",
+        "Sleep Hygiene: Maintain a consistent sleep schedule. Incorporate gentle relaxation practices — such as meditation or deep breathing — to prepare for restorative sleep."
+      ],
+      "oralHygiene": [
+        "Daily Cleaning: Remove the appliance each morning and brush it gently with a soft-bristled toothbrush and non-abrasive cleanser. Rinse with lukewarm water to remove all residue.",
+        "Mouth Care: After removal, rinse your mouth with water or a gentle herbal mouth rinse to ensure a clean oral environment.",
+        "Storage: Store the appliance in its dedicated case in a clean, dry area when not in use to maintain its integrity."
+      ],
+      "holisticSupport": [
+        "Natural Sleep Support: Enhance your sleep quality with herbal teas (such as chamomile or valerian root) before bed.",
+        "Mind-Body Practices: Consider incorporating yoga, meditation, or gentle stretching into your nightly routine to reduce stress and complement the appliance's benefits.",
+        "Self-Monitoring: Keep a sleep diary noting any changes in comfort or sleep quality, which can be discussed during follow-up visits."
+      ],
+      "whenToContact": "Notify us if you experience persistent discomfort, significant changes in bite, or notice any damage to the appliance. Report any unusual oral symptoms or sleep disturbances that you believe may be related to the appliance.",
+      "followUp": "Attend your scheduled follow-up appointment to evaluate the fit, function, and overall impact on your sleep quality and oral health. Adjustments or refinements may be made to ensure ongoing comfort and effectiveness as part of your holistic care plan."
+    }
+  ]
+}

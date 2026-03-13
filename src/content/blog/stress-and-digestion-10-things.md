@@ -5,12 +5,12 @@ publishDate: 2018-10-30
 updatedDate: 2019-11-20
 readTime: "4 min read"
 categories: []
-excerpt: "By: Korin Miller of Yahoo Lifestyle One mom in Virginia is warning parents about the symptoms of sleep apnea in children after her son was almost mistakenly dia..."
+excerpt: "By: Korin Miller of Yahoo Lifestyle One mom in Virginia is warning parents about the symptoms of sleep-disordered breathing in children after her son was almost mistakenly dia..."
 ---
 
 By:  Korin Miller of Yahoo Lifestyle
 
-One mom in Virginia is warning parents about the symptoms of sleep apnea in children after her son was almost mistakenly diagnosed with ADHD.
+One mom in Virginia is warning parents about the symptoms of sleep-disordered breathing in children after her son was almost mistakenly diagnosed with ADHD.
 
 Melody Yazdani wrote in a Facebook post that’s now gone viral about how her 8-year-old son, Kian, started having behavioral issues in first grade. “Parent teacher conferences, new reward system in place, and it seems to improve,” she wrote. “But at home it did anything but. When Kian gets angry, he gets ANGRY. He gets fixated on little things (there is a hair in the shower, it’s gross! I can’t shower in there! *melt down commences*), his fuse gets shorter and shorter, and he’s a picky eater who barely eats.
 
@@ -28,7 +28,7 @@ The mom says she “immediately” scheduled appointments with a pediatric ear, 
 
 The sleep study, Yazdani revealed in her Facebook post, also had shocking results. “He got exactly 0 minutes of REM sleep during the first study, and oxygen saturation in the low 80 percent,” she wrote. “We had no idea that Kian had a headache daily, but it was just his normal so he never thought to tell us. Kian had his tonsils and adenoids removed and the change was immediate. He could breathe through his nose as he came out of surgery, where he couldn’t when they wheeled him in.”
 
-Yazdani said other changes were also noticeable right away. “We have seen a complete 180 in behavior. No more angry tantrums, no more fixation on little OCD things, it’s been an enormous change. And we haven’t even finished the second step — fixing his jaw and tongue issues that developed during the course of undiagnosed sleep apnea. Our followup sleep study? 360 minutes of REM sleep, and oxygen saturation above the minimum threshold. No behavior reports in school. His appetite has exploded, he’s no longer a picky eater, and he had a huge growth spurt two weeks after the surgery. He still has mild sleep apnea, but the frequency in the night was cut in half, and the duration of each episode was cut in half. If we see this much of a change now, I can only imagine how much it will improve once we cross the finish line.”
+Yazdani said other changes were also noticeable right away. “We have seen a complete 180 in behavior. No more angry tantrums, no more fixation on little OCD things, it’s been an enormous change. And we haven’t even finished the second step — fixing his jaw and tongue issues that developed during the course of undiagnosed sleep-disordered breathing. Our followup sleep study? 360 minutes of REM sleep, and oxygen saturation above the minimum threshold. No behavior reports in school. His appetite has exploded, he’s no longer a picky eater, and he had a huge growth spurt two weeks after the surgery. He still has mild sleep-disordered breathing, but the frequency in the night was cut in half, and the duration of each episode was cut in half. If we see this much of a change now, I can only imagine how much it will improve once we cross the finish line.”
 
 Yazdani says Kian’s mouth-breathing should have been a tip-off, along with the ADHD-like symptoms he was experiencing, grinding his teeth, under-eye circles, and snoring.
 
@@ -40,8 +40,8 @@ Children don’t show signs of sleepiness the same way adults do, he says. “Th
 
 Although Yazdani says in her Facebook post that children should never breathe through their mouths, Winter says that’s not 100 percent true. “It’s not bad for them to breathe through their mouths, but it could be a sign of something bad,” he says.
 
-Winter recommends parents look out for snoring, poor behavioral reports at school, frequent nighttime wake-ups, and wetting the bed — those can all be subtle signs of sleep apnea.
+Winter recommends parents look out for snoring, poor behavioral reports at school, frequent nighttime wake-ups, and wetting the bed — those can all be subtle signs of sleep-disordered breathing.
 
-If your child has signs of ADHD but you suspect that their symptoms could be due to sleep apnea, talk to your doctor about getting a sleep study. “A sleep study is easy, and it could be a game changer,” Winter says.
+If your child has signs of ADHD but you suspect that their symptoms could be due to sleep-disordered breathing, talk to your doctor about getting a sleep study. “A sleep study is easy, and it could be a game changer,” Winter says.
 
 Source:  Yahoo Lifestyle

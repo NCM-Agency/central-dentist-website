@@ -67,7 +67,7 @@
       "description": "Integrated treatment for sleep disordered breathing, TMJ disorders, and ADHD-related symptoms.",
       "shortDescription": "Airway-centered care for sleep, TMJ, and focus",
       "features": [
-        "Sleep apnea and snoring treatment",
+        "Sleep-disordered breathing and snoring treatment",
         "TMJ pain relief",
         "ADHD symptom improvement",
         "Comprehensive airway evaluation",
@@ -121,7 +121,7 @@
     },
     {
       "id": "pediatric-healthy-start",
-      "title": "Pediatric Healthy Start™",
+      "title": "Pediatric Superhealth™",
       "slug": "pediatric-healthy-start",
       "description": "Early intervention program for proper jaw and airway development in children.",
       "shortDescription": "Early intervention for proper development",
@@ -140,7 +140,7 @@
       "estimatedTime": "Ongoing program",
       "ageRange": "3-12 years",
       "content": {
-        "overview": "The Healthy Start program guides proper growth and development during critical early years.",
+        "overview": "The Superhealth™ program guides proper growth and development during critical early years.",
         "benefits": [
           "Prevents future orthodontic problems",
           "Improves breathing and sleep",

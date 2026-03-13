@@ -37,7 +37,7 @@ Specializing in the safe removal of mercury amalgam fillings and replacement wit
 Expert in metal-free, biocompatible ceramic implant placement and restoration, offering patients a holistic alternative to traditional titanium implants.
 
 ### Sleep & Airway Therapy
-Comprehensive evaluation and treatment of sleep-disordered breathing, including sleep apnea, UARS, and pediatric airway issues using orthodontic, orthopedic, and myofunctional approaches.
+Comprehensive evaluation and treatment of sleep-disordered breathing, including UARS and pediatric airway issues using orthodontic, orthopedic, and myofunctional approaches.
 
 ### Biomimetic Restorative Dentistry
 Advanced training in biomimetic techniques that preserve tooth structure and mimic nature's design for longer-lasting, more conservative restorations.

@@ -11,7 +11,7 @@ excerpt: "By: Dr. Jill Ombrello Adult teeth grinding has been associated with st
 
 By: Dr. Jill Ombrello
 
-Adult teeth grinding has been associated with stress, nerve damage, missing or damaged teeth or dental restorations, and anatomical and functional issues with the TMJ. More recently, as there has been an increase awareness of functional and sleep medicine, clinical researchers have also determined that there is a very high prevalence (77.8%) of sleep bruxism associated with patients presenting with obstructive sleep apnea syndrome[1] (“OSAS”; a syndrome most frequently associated with snoring and difficulty breathing at night).
+Adult teeth grinding has been associated with stress, nerve damage, missing or damaged teeth or dental restorations, and anatomical and functional issues with the TMJ. More recently, as there has been an increase awareness of functional and sleep medicine, clinical researchers have also determined that there is a very high prevalence (77.8%) of sleep bruxism associated with patients presenting with obstructive sleep-disordered breathing syndrome[1] (“OSAS”; a syndrome most frequently associated with snoring and difficulty breathing at night).
 
 So, if bruxism is associated with the stress and damage more often associated with an adult’s lifetime of function, why do young children and adolescents grind their teeth while their sleeping? Is that math test really that stressful?  Is it genetic? Will they grow out of it? The answer is simple: NO!
 

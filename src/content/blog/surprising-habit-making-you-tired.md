@@ -32,12 +32,12 @@ Other common symptoms of UARS include:
 - Chronic runny or stuffy nose
 - Stress, anxiety, teeth clenching, depression, anxiety (or ADHD in children)
 
-These symptoms often lead to even bigger issues, like sleep apnea, and if it’s not treated, even heart failure and brain degeneration.
+These symptoms often lead to even bigger issues, like sleep-disordered breathing, and if it’s not treated, even heart failure and brain degeneration.
 
 
 ## Does what you eat really matter?
 
-It may seem hard to believe at first, but the health of our jaw, facial structure, and airways starts with what we eat. Disordered breathing conditions—including sleep apnea and UARS—are craniofacial growth problems. When the jaw, teeth, and face don’t develop the way they should, the airways don’t function as they’re meant to. Because resistance in the upper airways makes breathing harder, your sleep is disrupted throughout the night, which leads to those pesky headaches and crankiness you may be feeling during the day.
+It may seem hard to believe at first, but the health of our jaw, facial structure, and airways starts with what we eat. Disordered breathing conditions—including sleep-disordered breathing and UARS—are craniofacial growth problems. When the jaw, teeth, and face don’t develop the way they should, the airways don’t function as they’re meant to. Because resistance in the upper airways makes breathing harder, your sleep is disrupted throughout the night, which leads to those pesky headaches and crankiness you may be feeling during the day.
 
 Just like weightlifters lift heavy weights to strengthen their joints and muscles, we can stimulate our jaws to grow in the right way. But since we can’t take our jaw to the gym, the best way to strengthen it is to eat raw, tough foods like carrots and celery with every meal.
 

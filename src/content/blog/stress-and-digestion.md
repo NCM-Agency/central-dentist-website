@@ -12,7 +12,7 @@ By:   Jose Colon, MD, MPH
 
 Hippocrates, the father of medicine, recognized the importance of sleep in wellness. He noted, “Sleep and watchfulness, both of them, when immoderate, constitute disease.” He equally recognized the value of nutrition, as he also said, “Let food be thy medicine and medicine be thy food.” And so the deep roots of medicine established the vital nature of nutrition and sleep to well-being, and now emerging science shows how they are interrelated.
 
-Sleep research scientist Teresa Arora, PhD, said, “Sleep doesn’t waste time, it’s good for the waist line.”But while much is known about the effects of sleep deprivation and its links to weight, what about the flipside? That is, nutrition has effects on sleep health and sleep disorders too. Researchers have accumulated a mouthful of science on how nutrition impacts sleep quality, circadian rhythms, and sleep architecture, and also plays a role in disorders such an insomnia, hypersomnia, and sleep apnea.
+Sleep research scientist Teresa Arora, PhD, said, “Sleep doesn’t waste time, it’s good for the waist line.”But while much is known about the effects of sleep deprivation and its links to weight, what about the flipside? That is, nutrition has effects on sleep health and sleep disorders too. Researchers have accumulated a mouthful of science on how nutrition impacts sleep quality, circadian rhythms, and sleep architecture, and also plays a role in disorders such an insomnia, hypersomnia, and sleep-disordered breathing.
 
 No conclusive studies point to one particular diet that is best for sleep. But various sources suggest that a variety of whole foods and a low-glycemic diet is helpful in improving sleep quality.
 
@@ -50,13 +50,13 @@ Minerals. Magnesium and zinc may improve sleep. Balanced magnesium is key for th
 
 Magnesium and zinc can be found together in dark leafy greens, nuts and seeds, legumes, whole grains, and…dark chocolate! Zinc can additionally be found in meats and shellfish, and magnesium can also be found in avocados.
 
-Other Vitamins. Fascinatingly, whereas B vitamins affect sleep and circadian factors, other vitamins may have a role in sleep apnea! Vitamin C improves endothelial function (blood vessel health) in sleep apnea patients to levels seen in people without sleep apnea. Working synergistically with vitamin C, vitamin E mitigates the oxidative stress seen in sleep apnea patients.
+Other Vitamins. Fascinatingly, whereas B vitamins affect sleep and circadian factors, other vitamins may have a role in sleep-disordered breathing! Vitamin C improves endothelial function (blood vessel health) in sleep-disordered breathing patients to levels seen in people without sleep-disordered breathing. Working synergistically with vitamin C, vitamin E mitigates the oxidative stress seen in sleep-disordered breathing patients.
 
-Selenium’s role as a potent antioxidant may reduce the oxidative stress seen in sleep apnea patients, write co-authors on the micronutrient’s 200th discovery anniversary, noting that 1 in 7 people do not consume the recommend daily intake.
+Selenium’s role as a potent antioxidant may reduce the oxidative stress seen in sleep-disordered breathing patients, write co-authors on the micronutrient’s 200th discovery anniversary, noting that 1 in 7 people do not consume the recommend daily intake.
 
-Sleep apnea is linked with vitamin D deficiency. The worse the apnea, the more severe the deficiency. Low vitamin D has also been linked to worsening of sleep apnea’s negative effect on heart disease risk.
+Sleep-disordered breathing is linked with vitamin D deficiency. The worse the apnea, the more severe the deficiency. Low vitamin D has also been linked to worsening of sleep-disordered breathing’s negative effect on heart disease risk.
 
-Sleep apnea patients have low retinol (vitamin A). Retinol suppresses the growth of vascular smooth muscle, the growth of which causes blood vessels to clog. So low vitamin A levels may be a mediator to the cardiovascular complications seen in sleep apnea patients.
+Sleep-disordered breathing patients have low retinol (vitamin A). Retinol suppresses the growth of vascular smooth muscle, the growth of which causes blood vessels to clog. So low vitamin A levels may be a mediator to the cardiovascular complications seen in sleep-disordered breathing patients.
 
 Vitamin C is well known to be found in citrus, but cruciferous vegetables such as broccoli, Brussels sprouts, and cauliflower are also great sources, as are dark leafy greens. Dark leafy greens are also a great source of vitamins E and A. Vitamin A is also found in carrots. Brazil nuts are a robust source of selenium. Vitamin D is traditionally obtained through sunlight; however it can also be found in fatty fish such as salmon and mackerel, as well as egg yolks and beef liver.
 

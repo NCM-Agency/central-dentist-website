@@ -42,11 +42,13 @@ const {
   <!-- Background -->
   <div class="absolute inset-0 z-0">
     {backgroundVideo ? (
-      <video 
-        autoplay 
-        muted 
-        loop 
-        playsInline 
+      <video
+        autoplay
+        muted
+        loop
+        playsInline
+        preload="auto"
+        poster="/videos/hero-poster.jpg"
         class="w-full h-full object-cover"
       >
         <source src={backgroundVideo} type="video/mp4" />

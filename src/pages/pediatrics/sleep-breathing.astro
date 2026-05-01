@@ -187,7 +187,7 @@ const treatmentGoals = [
                   <ul class="space-y-2">
                     {category.items.map((item) => (
                       <li class="flex items-start">
-                        <svg class="w-5 h-5 mr-2 mt-0.5 flex-shrink-0" style="color: #0099ba;" fill="currentColor" viewBox="0 0 20 20">
+                        <svg aria-hidden="true" focusable="false" class="w-5 h-5 mr-2 mt-0.5 flex-shrink-0" style="color: #0099ba;" fill="currentColor" viewBox="0 0 20 20">
                           <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                         </svg>
                         <span class="text-body-regular text-gray-dark">{item}</span>
@@ -309,7 +309,7 @@ const treatmentGoals = [
               <ul class="space-y-4">
                 {treatmentGoals.map((goal) => (
                   <li class="flex items-start">
-                    <svg class="w-6 h-6 mr-3 mt-0.5 flex-shrink-0" style="color: #a6b443;" fill="currentColor" viewBox="0 0 20 20">
+                    <svg aria-hidden="true" focusable="false" class="w-6 h-6 mr-3 mt-0.5 flex-shrink-0" style="color: #a6b443;" fill="currentColor" viewBox="0 0 20 20">
                       <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                     </svg>
                     <span class="text-body-regular text-gray-dark">{goal}</span>
@@ -401,6 +401,9 @@ const treatmentGoals = [
           </div>
           <p class="text-white/80 text-sm mt-4">
             or email us at <a href="mailto:info@centraldentist.com" class="text-white underline">info@centraldentist.com</a>
+          </p>
+          <p class="text-white/70 text-xs italic mt-6 max-w-2xl mx-auto">
+            Complimentary evaluation covers the initial consultation only. Diagnostic imaging, sleep studies, and any treatment are billed separately. Please contact our office for current pricing.
           </p>
         </BlurFade>
       </div>

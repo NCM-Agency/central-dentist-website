@@ -22,16 +22,13 @@
   "certifications": [
     {
       "name": "IAOMT Proud Member"
-    },
-    {
-      "name": "Texas Top 10 Percent"
     }
   ],
   "social": {
-    "facebook": "",
-    "instagram": "",
-    "twitter": "",
-    "linkedin": "",
-    "youtube": ""
+    "facebook": "https://www.facebook.com/centraldentist",
+    "instagram": "https://www.instagram.com/centraldentist",
+    "twitter": "https://x.com/centraldentist",
+    "linkedin": "https://www.linkedin.com/company/central-dentist/",
+    "youtube": "https://www.youtube.com/@centraldentist"
   }
 }

@@ -17,6 +17,7 @@ What we have found to be true with many of our patients (both adults and childre
   <iframe
     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
     src="https://www.youtube.com/embed/PVxlL_lMces"
+    title="Mouth breathing, malocclusion, TMJ dysfunction, and migraine headaches — educational video"
     frameborder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
     allowfullscreen>

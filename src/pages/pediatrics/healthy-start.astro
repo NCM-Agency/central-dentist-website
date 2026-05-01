@@ -76,12 +76,11 @@ const steps = [
 
             <Card variant="bordered" class="p-8 bg-blue-50">
               <p class="text-body-regular text-gray-dark">
-                <strong>Dr. Ombrello is an international speaker certified to train other dental professionals
-                on the Superhealth system.</strong> She has researched and experienced first-hand the power of
-                this solution and it's positive impact on the immediate and long-term health and wellbeing of
-                your child. She is considered the leading provider of Superhealth in the Southwest region of
-                the US. While it has been less widely accepted in the US, Superhealth has treated over 3.5
-                million children worldwide over the past 40 years.
+                <strong>Dr. Ombrello is an international speaker and a certified Superhealth trainer who
+                trains other dental professionals on the Superhealth system.</strong> She has researched and
+                experienced first-hand the impact of this approach on the immediate and long-term health and
+                wellbeing of children in her care. While Superhealth has been less widely adopted in the US,
+                it has been used with over 3.5 million children worldwide over the past 40 years.
               </p>
             </Card>
           </div>
@@ -103,12 +102,11 @@ const steps = [
         <BlurFade delay={200}>
           <div class="space-y-6">
             <p class="text-body-regular text-gray-dark">
-              Superhealth is just as its name suggests; is a start-up system to help your child's teeth
-              come in properly. Its use provides no discomfort, and it is a natural way to guide your child's
-              teeth to proper alignment. The Superhealth System™ is a revolutionary departure from traditional
-              orthodontics into an early, non-invasive, natural way of straightening teeth. It works as well as
-              or better than braces, plastic aligners, surgery, or any other option to achieve a picture-perfect,
-              beautiful smile.
+              Superhealth is just as its name suggests; it is a start-up system to help your child's teeth
+              come in properly. It is designed to be comfortable, and it is a natural way to guide your child's
+              teeth to proper alignment. The Superhealth System™ is an early, non-invasive approach to guiding
+              tooth alignment. It is offered as an alternative early-intervention option for eligible patients
+              ages 4 to 7. Individual results vary based on each child's needs.
             </p>
 
             <p class="text-body-regular text-gray-medium">
@@ -143,7 +141,7 @@ const steps = [
           {benefits.map((benefit, index) => (
             <BlurFade delay={200 + index * 50}>
               <div class="flex items-start">
-                <svg class="w-6 h-6 mr-3 mt-1 flex-shrink-0" style="color: #a6b443;" fill="currentColor" viewBox="0 0 20 20">
+                <svg aria-hidden="true" focusable="false" class="w-6 h-6 mr-3 mt-1 flex-shrink-0" style="color: #a6b443;" fill="currentColor" viewBox="0 0 20 20">
                   <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                 </svg>
                 <p class="text-body-regular text-gray-dark">{benefit}</p>

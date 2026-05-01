@@ -140,7 +140,7 @@ const breadcrumbs = [
                       style="color: #0099ba;"
                     >
                       Read Article
-                      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg aria-hidden="true" focusable="false" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                       </svg>
                     </a>
@@ -177,9 +177,13 @@ const breadcrumbs = [
           Subscribe to our newsletter for the latest articles, tips, and updates on biological dentistry.
         </p>
         <form class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-          <input 
-            type="email" 
+          <label for="newsletter-email" class="sr-only">Email address</label>
+          <input
+            id="newsletter-email"
+            name="email"
+            type="email"
             placeholder="Enter your email"
+            aria-label="Email address"
             class="flex-grow px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#0099ba] focus:border-transparent"
             required
           />

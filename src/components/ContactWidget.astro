@@ -8,7 +8,7 @@
   class="fixed bottom-6 right-3 sm:right-6 bg-gradient-to-r from-[#0099ba] to-[#006786] text-white p-4 rounded-full shadow-lg hover:scale-110 transition-transform duration-300 z-40"
   aria-label="Contact Us"
 >
-  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
   </svg>
 </button>
@@ -17,6 +17,10 @@
 <div
   id="contact-widget-modal"
   class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="contact-widget-title"
+  aria-hidden="true"
 >
   <div class="flex items-center justify-center min-h-screen p-4">
     <div class="bg-white rounded-lg shadow-xl max-w-md w-full max-h-[90vh] overflow-y-auto">
@@ -24,7 +28,7 @@
       <div class="p-6 border-b border-gray-200">
         <div class="flex items-center justify-between">
           <div>
-            <h3 class="text-xl font-semibold text-gray-900">Contact Central Dentist</h3>
+            <h3 id="contact-widget-title" class="text-xl font-semibold text-gray-900">Contact Central Dentist</h3>
             <p class="text-sm text-gray-600 mt-1">We'll get back to you soon!</p>
           </div>
           <button
@@ -32,7 +36,7 @@
             class="text-gray-400 hover:text-gray-600"
             aria-label="Close"
           >
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
@@ -140,33 +144,33 @@
     const btn = document.getElementById('contact-widget-btn');
     const modal = document.getElementById('contact-widget-modal');
     const closeBtn = document.getElementById('close-widget-modal');
+    const firstField = document.getElementById('widget-name') as HTMLInputElement | null;
 
-    // Open modal
-    btn?.addEventListener('click', () => {
-      modal?.classList.remove('hidden');
-      document.body.style.overflow = 'hidden'; // Prevent background scrolling
-    });
+    const openModal = () => {
+      if (!modal) return;
+      modal.classList.remove('hidden');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+      firstField?.focus();
+    };
 
-    // Close modal
-    closeBtn?.addEventListener('click', () => {
-      modal?.classList.add('hidden');
-      document.body.style.overflow = ''; // Restore scrolling
-    });
+    const closeModal = () => {
+      if (!modal) return;
+      modal.classList.add('hidden');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+      btn?.focus();
+    };
 
-    // Close on outside click
+    btn?.addEventListener('click', openModal);
+    closeBtn?.addEventListener('click', closeModal);
+
     modal?.addEventListener('click', (e) => {
-      if (e.target === modal) {
-        modal.classList.add('hidden');
-        document.body.style.overflow = '';
-      }
+      if (e.target === modal) closeModal();
     });
 
-    // Close on escape key
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && !modal?.classList.contains('hidden')) {
-        modal.classList.add('hidden');
-        document.body.style.overflow = '';
-      }
+      if (e.key === 'Escape' && !modal?.classList.contains('hidden')) closeModal();
     });
   });
 </script>

@@ -31,10 +31,10 @@ Her approach combines cutting-edge technology with time-tested biological princi
 ## Areas of Expertise
 
 ### Mercury-Free & Metal-Free Dentistry
-Specializing in the safe removal of mercury amalgam fillings and replacement with biocompatible materials. Dr. Jill is SMART-certified for safe mercury removal protocols.
+Provides safe mercury amalgam removal and replacement with biocompatible materials. Dr. Jill is SMART-certified for safe mercury removal protocols.
 
 ### Ceramic Implants
-Expert in metal-free, biocompatible ceramic implant placement and restoration, offering patients a holistic alternative to traditional titanium implants.
+Experienced in metal-free, biocompatible ceramic implant placement and restoration, provided as part of her general dentistry practice as a holistic alternative to traditional titanium implants.
 
 ### Sleep & Airway Therapy
 Comprehensive evaluation and treatment of sleep-disordered breathing, including UARS and pediatric airway issues using orthodontic, orthopedic, and myofunctional approaches.

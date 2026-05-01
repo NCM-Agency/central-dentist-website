@@ -63,10 +63,12 @@ const cardVariant = highlight ? 'service' : 'hover';
       <ul class="space-y-2 mb-6">
         {features.map((feature) => (
           <li class="flex items-start space-x-2">
-            <svg 
-              class="w-4 h-4 text-teal mt-0.5 flex-shrink-0" 
-              fill="currentColor" 
+            <svg
+              class="w-4 h-4 text-teal mt-0.5 flex-shrink-0"
+              fill="currentColor"
               viewBox="0 0 20 20"
+              aria-hidden="true"
+              focusable="false"
             >
               <path 
                 fill-rule="evenodd" 
@@ -82,8 +84,9 @@ const cardVariant = highlight ? 'service' : 'hover';
 
     <!-- CTA Button -->
     <div class="mt-auto pt-4">
-      <a 
+      <a
         href={href}
+        aria-label={`Learn more about ${title}`}
         class="block w-full text-center px-6 py-3 bg-gradient-to-r from-[#a6b443] to-[#c7cd85] text-white rounded-full font-semibold text-sm hover:from-[#8fa339] hover:to-[#a6b443] hover:shadow-lg hover:scale-105 transition-all duration-300"
       >
         Learn More

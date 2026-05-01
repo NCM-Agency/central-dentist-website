@@ -10,9 +10,9 @@ philosophy: "Modern dentistry should work in harmony with the body's natural hea
 
 ## About Dr. Sawnani
 
-Dr. Sahil Sawnani is a dedicated holistic dentist who brings expertise in biological dentistry and advanced implant techniques to Central Dentist. His commitment to using biocompatible materials and minimally invasive procedures ensures that patients receive care that supports their overall health and well-being.
+Dr. Sahil Sawnani is a dedicated general dentist who brings a holistic approach and experience with implant techniques to Central Dentist. His commitment to using biocompatible materials and minimally invasive procedures ensures that patients receive care that supports their overall health and well-being.
 
-As a member of the International Academy of Oral Medicine and Toxicology (IAOMT) and the American Academy of Implant Dentistry (AAID), Dr. Sawnani stays at the forefront of biological dentistry and implant innovations. He specializes in ceramic implants and other metal-free restorative options that provide both aesthetic and health benefits.
+As a member of the International Academy of Oral Medicine and Toxicology (IAOMT) and the American Academy of Implant Dentistry (AAID), Dr. Sawnani stays current with biological dentistry research and implant techniques. He focuses his general dentistry practice on ceramic implants and other metal-free restorative services that provide both aesthetic and health benefits.
 
 Dr. Sawnani's approach to dentistry focuses on prevention and conservative treatment, always considering the impact of dental procedures on the patient's systemic health. His gentle chairside manner and thorough explanations help patients feel comfortable and informed about their treatment options.
 

@@ -28,14 +28,19 @@ const gridClass = {
   )}
 
   <div class={`grid ${gridClass} gap-4`}>
-    {images.map((image, index) => (
-      <div class="gallery-item group relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
+    {images.map((image) => (
+      <button
+        type="button"
+        class="gallery-item group relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#0099ba] focus:ring-offset-2"
+        data-src={image.src}
+        data-alt={image.alt}
+        aria-label={`Enlarge photo: ${image.alt}`}
+      >
         <img
           src={image.src}
           alt={image.alt}
           loading="lazy"
           class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
-          onclick={`openLightbox('${image.src}', '${image.alt}')`}
         />
         {image.caption && (
           <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -43,14 +48,26 @@ const gridClass = {
           </div>
         )}
         <div class="absolute inset-0 bg-gradient-to-br from-[#0099ba]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
-      </div>
+      </button>
     ))}
   </div>
 </div>
 
-<!-- Simple Lightbox -->
-<div id="lightbox" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/90 p-4" onclick="closeLightbox()">
-  <button class="absolute top-4 right-4 text-white text-4xl hover:text-gray-300 z-50" onclick="closeLightbox()">&times;</button>
+<!-- Lightbox -->
+<div
+  id="lightbox"
+  class="fixed inset-0 z-50 hidden items-center justify-center bg-black/90 p-4"
+  role="dialog"
+  aria-modal="true"
+  aria-label="Photo lightbox"
+  aria-hidden="true"
+>
+  <button
+    id="lightbox-close"
+    type="button"
+    class="absolute top-4 right-4 text-white text-4xl hover:text-gray-300 z-50 focus:outline-none focus:ring-2 focus:ring-white rounded-full w-12 h-12 flex items-center justify-center"
+    aria-label="Close lightbox"
+  >&times;</button>
   <img id="lightbox-image" src="" alt="" class="max-w-full max-h-full object-contain" />
 </div>
 
@@ -69,29 +86,48 @@ const gridClass = {
 </style>
 
 <script>
-  function openLightbox(src, alt) {
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImage = document.getElementById('lightbox-image');
-    lightboxImage.src = src;
-    lightboxImage.alt = alt;
-    lightbox.classList.add('active');
-    document.body.style.overflow = 'hidden';
-  }
+  document.addEventListener('DOMContentLoaded', () => {
+    const lightbox = document.getElementById('lightbox') as HTMLDivElement | null;
+    const lightboxImage = document.getElementById('lightbox-image') as HTMLImageElement | null;
+    const closeBtn = document.getElementById('lightbox-close') as HTMLButtonElement | null;
+    let lastTrigger: HTMLElement | null = null;
 
-  function closeLightbox() {
-    const lightbox = document.getElementById('lightbox');
-    lightbox.classList.remove('active');
-    document.body.style.overflow = 'auto';
-  }
+    if (!lightbox || !lightboxImage || !closeBtn) return;
 
-  // Close lightbox with Escape key
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-      closeLightbox();
-    }
+    const openLightbox = (src: string, alt: string, trigger: HTMLElement) => {
+      lastTrigger = trigger;
+      lightboxImage.src = src;
+      lightboxImage.alt = alt;
+      lightbox.classList.add('active');
+      lightbox.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+      closeBtn.focus();
+    };
+
+    const closeLightbox = () => {
+      lightbox.classList.remove('active');
+      lightbox.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = 'auto';
+      lastTrigger?.focus();
+      lastTrigger = null;
+    };
+
+    document.querySelectorAll<HTMLButtonElement>('.gallery-item').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const src = btn.dataset.src ?? '';
+        const alt = btn.dataset.alt ?? '';
+        openLightbox(src, alt, btn);
+      });
+    });
+
+    closeBtn.addEventListener('click', closeLightbox);
+
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && lightbox.classList.contains('active')) closeLightbox();
+    });
   });
-
-  // Make functions global
-  window.openLightbox = openLightbox;
-  window.closeLightbox = closeLightbox;
 </script>

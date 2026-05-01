@@ -95,16 +95,16 @@ const {
         
         <!-- Tagline 2 - "Addressing the Root Causes..." (MEDIUM) -->
         {tagline2 && (
-          <h3 class="text-xl md:text-2xl lg:text-3xl font-normal mb-8 leading-relaxed text-white" style="font-family: 'Playfair Display', serif;">
+          <p class="text-xl md:text-2xl lg:text-3xl font-normal mb-8 leading-relaxed text-white" style="font-family: 'Playfair Display', serif;">
             <span data-gjs-editable="true">{tagline2}</span>
-          </h3>
+          </p>
         )}
-        
+
         <!-- Bold Subhead - "Radical Generosity" (BOLD) -->
         {boldSubhead && (
-          <h4 class="text-2xl md:text-3xl lg:text-4xl font-semibold mb-4 text-white" style="font-family: 'Playfair Display', serif;">
+          <p class="text-2xl md:text-3xl lg:text-4xl font-semibold mb-4 text-white" style="font-family: 'Playfair Display', serif;">
             <span data-gjs-editable="true">{boldSubhead}</span>
-          </h4>
+          </p>
         )}
         
         <!-- Description - Long text (NORMAL) -->
@@ -145,7 +145,7 @@ const {
   <!-- Scroll Indicator -->
   <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
     <div class="animate-bounce">
-      <svg class="w-6 h-6 text-white/70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <svg class="w-6 h-6 text-white/70" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
       </svg>
     </div>

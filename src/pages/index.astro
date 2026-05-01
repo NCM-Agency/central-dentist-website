@@ -93,33 +93,33 @@ const displayServices = [...featuredServices, ...additionalServices];
               <!-- Icon -->
               <div class="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-[#a6b443] to-[#c7cd85] rounded-2xl flex items-center justify-center group-hover:scale-110 transition-all duration-300">
                 {benefit.icon === 'shield' && (
-                  <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
                     <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/>
                   </svg>
                 )}
                 {benefit.icon === 'moon' && (
-                  <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
                     <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
                   </svg>
                 )}
                 {benefit.icon === 'leaf' && (
-                  <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
                     <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/>
                     <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/>
                   </svg>
                 )}
                 {benefit.icon === 'heart' && (
-                  <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
                     <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"/>
                   </svg>
                 )}
                 {benefit.icon === 'zap' && (
-                  <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
                     <polygon points="13,2 3,14 12,14 11,22 21,10 12,10"/>
                   </svg>
                 )}
                 {benefit.icon === 'check' && (
-                  <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
                     <circle cx="12" cy="12" r="10"/>
                     <path d="m9 12 2 2 4-4"/>
                   </svg>
@@ -196,7 +196,7 @@ const displayServices = [...featuredServices, ...additionalServices];
               <!-- Enhanced CTA button -->
               <a href={doctor.href} class="mt-auto inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-[#a6b443] to-[#c7cd85] text-white rounded-full font-semibold text-sm hover:from-[#8fa339] hover:to-[#a6b443] hover:shadow-lg hover:scale-105 transition-all duration-300">
                 <span>Learn More</span>
-                <svg class="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg class="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
               </a>
@@ -208,7 +208,7 @@ const displayServices = [...featuredServices, ...additionalServices];
       <!-- Learn More About History - Enhanced -->
       <div class="text-center mt-12">
         <a href="/our-office" class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-[#a6b443] to-[#c7cd85] text-white rounded-full font-semibold hover:from-[#8fa339] hover:to-[#a6b443] hover:shadow-lg hover:scale-105 transition-all duration-300">
-          <svg class="mr-3 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg class="mr-3 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
           </svg>
           Learn More about our history
@@ -248,7 +248,7 @@ const displayServices = [...featuredServices, ...additionalServices];
               <!-- Icon -->
               <div class="w-24 h-24 mx-auto mb-6 bg-gradient-to-br from-[#a6b443] to-[#c7cd85] rounded-2xl flex items-center justify-center group-hover:scale-110 transition-all duration-300">
                 {approach.title.includes('Diagnostics') && (
-                  <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
                     <path d="M6 2h6l4 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2Z"/>
                     <path d="M10 2v6h6"/>
                     <circle cx="10" cy="16" r="2"/>
@@ -256,13 +256,13 @@ const displayServices = [...featuredServices, ...additionalServices];
                   </svg>
                 )}
                 {approach.title.includes('Preventive') && (
-                  <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
                     <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/>
                     <path d="m9 12 2 2 4-4"/>
                   </svg>
                 )}
                 {approach.title.includes('Collaboration') && (
-                  <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
                     <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
                     <circle cx="9" cy="7" r="4"/>
                     <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
@@ -291,7 +291,7 @@ const displayServices = [...featuredServices, ...additionalServices];
               <!-- Enhanced CTA button -->
               <a href={approach.href} class="btn-accent inline-flex items-center justify-center">
                 <span>Learn More</span>
-                <svg class="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg class="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
               </a>

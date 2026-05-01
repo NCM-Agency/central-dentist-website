@@ -227,7 +227,7 @@ const bgStyle = bgStyles[backgroundColor];
   <!-- Decorative Elements -->
   {backgroundColor !== 'white' && (
     <div class="absolute inset-0 opacity-10 pointer-events-none">
-      <svg width="100%" height="100%" class="w-full h-full">
+      <svg width="100%" height="100%" class="w-full h-full" aria-hidden="true" focusable="false">
         <defs>
           <pattern id="cta-pattern" x="0" y="0" width="60" height="60" patternUnits="userSpaceOnUse">
             <circle cx="30" cy="30" r="1" fill="white" opacity="0.3"/>

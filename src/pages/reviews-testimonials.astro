@@ -9,7 +9,7 @@ import BlurFade from '../components/ui/BlurFade.astro';
 
 <Layout
   title="Patient Reviews & Testimonials | Central Dentist Dallas"
-  description="Real-life experiences from our patient families at Central Dentist in Dallas. Discover how holistic dentistry has transformed our patients' health and lives."
+  description="Real-life experiences from our patient families at Central Dentist in Dallas. Read about our holistic approach to dental care."
   schemaType="MedicalBusiness"
 >
 
@@ -72,64 +72,42 @@ import BlurFade from '../components/ui/BlurFade.astro';
       <div class="max-w-6xl mx-auto">
         <BlurFade delay={100}>
           <h2 class="text-section-header text-header-primary text-center mb-12">
-            Trusted by Hundreds of Families
+            Serving Dallas Families
           </h2>
         </BlurFade>
 
         <BlurFade delay={200}>
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 max-w-4xl mx-auto">
           <!-- RateaBiz Summary -->
           <Card variant="bordered" class="p-8 text-center hover:shadow-lg transition-shadow">
             <div class="mb-4">
-              <div class="text-5xl font-bold" style="color: #a6b443;">25+</div>
               <div class="flex justify-center my-3">
                 {Array.from({ length: 5 }, (_, i) => (
-                  <svg key={i} class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                  <svg aria-hidden="true" focusable="false" key={i} class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
                   </svg>
                 ))}
               </div>
               <p class="text-lg font-semibold text-gray-700">Five-Star Reviews</p>
-              <p class="text-sm text-gray-500 mt-2">on RateaBiz</p>
-            </div>
-            <div class="pt-4 border-t border-gray-200">
-              <p class="text-2xl font-bold" style="color: #0099ba;">100%</p>
-              <p class="text-sm text-gray-600">Would Recommend</p>
+              <p class="text-sm text-gray-500 mt-2">Read patient reviews on RateaBiz</p>
             </div>
             <a href="http://www.rateabiz.com/reviews/central-dentist-dallas-tx/caadb434537b28328343a9284987d3a5/summary"
                target="_blank"
                rel="noopener noreferrer"
                class="inline-flex items-center mt-4 text-sm font-semibold" style="color: #0099ba;">
               Read All Reviews
-              <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg aria-hidden="true" focusable="false" class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
               </svg>
             </a>
-          </Card>
-
-          <!-- Patient Satisfaction -->
-          <Card variant="bordered" class="p-8 text-center hover:shadow-lg transition-shadow">
-            <div class="mb-4">
-              <div class="text-5xl font-bold" style="color: #0099ba;">98%</div>
-              <p class="text-lg font-semibold text-gray-700 mt-3">Patient Satisfaction</p>
-              <p class="text-sm text-gray-500 mt-2">Based on hundreds of patient reviews</p>
-            </div>
-            <div class="pt-4 border-t border-gray-200">
-              <p class="text-2xl font-bold" style="color: #a6b443;">4 Generations</p>
-              <p class="text-sm text-gray-600">Families We've Served</p>
-            </div>
           </Card>
 
           <!-- Years of Trust -->
           <Card variant="bordered" class="p-8 text-center hover:shadow-lg transition-shadow">
             <div class="mb-4">
               <div class="text-5xl font-bold" style="color: #006786;">40+</div>
-              <p class="text-lg font-semibold text-gray-700 mt-3">Years of Trust</p>
-              <p class="text-sm text-gray-500 mt-2">Serving Dallas families</p>
-            </div>
-            <div class="pt-4 border-t border-gray-200">
-              <p class="text-2xl font-bold" style="color: #a6b443;">1000s</p>
-              <p class="text-sm text-gray-600">Happy Patients</p>
+              <p class="text-lg font-semibold text-gray-700 mt-3">Years Serving Dallas Families</p>
+              <p class="text-sm text-gray-500 mt-2">Caring for our community since the practice was founded</p>
             </div>
           </Card>
           </div>
@@ -155,7 +133,7 @@ import BlurFade from '../components/ui/BlurFade.astro';
             <div class="text-center mb-6">
               <div class="flex justify-center mb-4">
                 {Array.from({ length: 5 }, (_, i) => (
-                  <svg key={i} class="w-6 h-6 mx-1" style="color: #c7cd85;" fill="currentColor" viewBox="0 0 20 20">
+                  <svg aria-hidden="true" focusable="false" key={i} class="w-6 h-6 mx-1" style="color: #c7cd85;" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
                   </svg>
                 ))}
@@ -190,8 +168,8 @@ import BlurFade from '../components/ui/BlurFade.astro';
                 </p>
                 <div class="p-4 rounded-lg" style="background-color: #e6f7fa; border-left: 4px solid #0099ba;">
                   <p class="text-sm" style="color: #006786;">
-                    <strong>Amazing Results:</strong> Major improvements in speech, sleep quality,
-                    and overall systemic health!
+                    <strong>Reported Outcomes:</strong> Improvements in speech, sleep quality,
+                    and overall systemic health.
                   </p>
                 </div>
               </div>
@@ -199,8 +177,11 @@ import BlurFade from '../components/ui/BlurFade.astro';
 
             <div class="text-center mt-6 pt-6 border-t border-gray-200">
               <cite class="text-gray-600 font-semibold">
-                — Dallas Area Family (2 Children in Treatment)
+                Dallas Area Family (2 Children in Treatment)
               </cite>
+              <p class="text-xs text-gray-500 mt-3 italic">
+                Individual results vary. This patient's experience is not a guarantee of outcomes.
+              </p>
             </div>
           </Card>
           </div>
@@ -212,7 +193,7 @@ import BlurFade from '../components/ui/BlurFade.astro';
           <Card variant="bordered" class="p-6">
             <div class="flex justify-center mb-4">
               {Array.from({ length: 5 }, (_, i) => (
-                <svg key={i} class="w-5 h-5" style="color: #c7cd85;" fill="currentColor" viewBox="0 0 20 20">
+                <svg aria-hidden="true" focusable="false" key={i} class="w-5 h-5" style="color: #c7cd85;" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
                 </svg>
               ))}
@@ -223,22 +204,14 @@ import BlurFade from '../components/ui/BlurFade.astro';
               I've seen in the past. Can't recommend them enough!"
             </blockquote>
             <cite class="text-gray-600 font-semibold text-center block">
-              — Taylor S.
+              Taylor S.
             </cite>
-            <div class="text-center mt-2">
-              <span class="inline-flex items-center text-sm" style="color: #0099ba;">
-                <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                </svg>
-                Verified Patient
-              </span>
-            </div>
           </Card>
 
           <Card variant="bordered" class="p-6">
             <div class="flex justify-center mb-4">
               {Array.from({ length: 5 }, (_, i) => (
-                <svg key={i} class="w-5 h-5" style="color: #c7cd85;" fill="currentColor" viewBox="0 0 20 20">
+                <svg aria-hidden="true" focusable="false" key={i} class="w-5 h-5" style="color: #c7cd85;" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
                 </svg>
               ))}
@@ -249,22 +222,14 @@ import BlurFade from '../components/ui/BlurFade.astro';
               Dr. Ombrello's holistic approach."
             </blockquote>
             <cite class="text-gray-600 font-semibold text-center block">
-              — Sarah M.
+              Sarah M.
             </cite>
-            <div class="text-center mt-2">
-              <span class="inline-flex items-center text-sm" style="color: #0099ba;">
-                <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                </svg>
-                Verified Parent
-              </span>
-            </div>
           </Card>
 
           <Card variant="bordered" class="p-6">
             <div class="flex justify-center mb-4">
               {Array.from({ length: 5 }, (_, i) => (
-                <svg key={i} class="w-5 h-5" style="color: #c7cd85;" fill="currentColor" viewBox="0 0 20 20">
+                <svg aria-hidden="true" focusable="false" key={i} class="w-5 h-5" style="color: #c7cd85;" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
                 </svg>
               ))}
@@ -275,22 +240,14 @@ import BlurFade from '../components/ui/BlurFade.astro';
               and overall wellness."
             </blockquote>
             <cite class="text-gray-600 font-semibold text-center block">
-              — Michael R.
+              Michael R.
             </cite>
-            <div class="text-center mt-2">
-              <span class="inline-flex items-center text-sm" style="color: #0099ba;">
-                <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                </svg>
-                Verified Patient
-              </span>
-            </div>
           </Card>
 
           <Card variant="bordered" class="p-6">
             <div class="flex justify-center mb-4">
               {Array.from({ length: 5 }, (_, i) => (
-                <svg key={i} class="w-5 h-5" style="color: #c7cd85;" fill="currentColor" viewBox="0 0 20 20">
+                <svg aria-hidden="true" focusable="false" key={i} class="w-5 h-5" style="color: #c7cd85;" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
                 </svg>
               ))}
@@ -301,22 +258,17 @@ import BlurFade from '../components/ui/BlurFade.astro';
               improved tremendously."
             </blockquote>
             <cite class="text-gray-600 font-semibold text-center block">
-              — Jennifer L.
+              Jennifer L.
             </cite>
-            <div class="text-center mt-2">
-              <span class="inline-flex items-center text-sm" style="color: #0099ba;">
-                <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                </svg>
-                Verified Parent
-              </span>
-            </div>
+            <p class="text-xs text-gray-500 mt-3 italic text-center">
+              Individual results vary. This experience is not a guarantee of similar outcomes.
+            </p>
           </Card>
 
           <Card variant="bordered" class="p-6">
             <div class="flex justify-center mb-4">
               {Array.from({ length: 5 }, (_, i) => (
-                <svg key={i} class="w-5 h-5" style="color: #c7cd85;" fill="currentColor" viewBox="0 0 20 20">
+                <svg aria-hidden="true" focusable="false" key={i} class="w-5 h-5" style="color: #c7cd85;" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
                 </svg>
               ))}
@@ -326,22 +278,14 @@ import BlurFade from '../components/ui/BlurFade.astro';
               I love that they're metal-free and biocompatible. Best dental decision I ever made."
             </blockquote>
             <cite class="text-gray-600 font-semibold text-center block">
-              — David K.
+              David K.
             </cite>
-            <div class="text-center mt-2">
-              <span class="inline-flex items-center text-sm" style="color: #0099ba;">
-                <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                </svg>
-                Verified Patient
-              </span>
-            </div>
           </Card>
 
           <Card variant="bordered" class="p-6">
             <div class="flex justify-center mb-4">
               {Array.from({ length: 5 }, (_, i) => (
-                <svg key={i} class="w-5 h-5" style="color: #c7cd85;" fill="currentColor" viewBox="0 0 20 20">
+                <svg aria-hidden="true" focusable="false" key={i} class="w-5 h-5" style="color: #c7cd85;" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
                 </svg>
               ))}
@@ -351,16 +295,11 @@ import BlurFade from '../components/ui/BlurFade.astro';
               no food restrictions, and my smile looks amazing. The whole team was wonderful!"
             </blockquote>
             <cite class="text-gray-600 font-semibold text-center block">
-              — Rachel W.
+              Rachel W.
             </cite>
-            <div class="text-center mt-2">
-              <span class="inline-flex items-center text-sm" style="color: #0099ba;">
-                <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                </svg>
-                Verified Patient
-              </span>
-            </div>
+            <p class="text-xs text-gray-500 mt-3 italic text-center">
+              Individual results vary.
+            </p>
           </Card>
           </div>
         </BlurFade>
@@ -382,7 +321,7 @@ import BlurFade from '../components/ui/BlurFade.astro';
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <Card variant="bordered" class="p-6 text-center">
               <div class="w-12 h-12 mx-auto mb-4 rounded-full flex items-center justify-center" style="background-color: #0099ba;">
-                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg aria-hidden="true" focusable="false" class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                 </svg>
               </div>
@@ -396,7 +335,7 @@ import BlurFade from '../components/ui/BlurFade.astro';
 
             <Card variant="bordered" class="p-6 text-center">
               <div class="w-12 h-12 mx-auto mb-4 rounded-full flex items-center justify-center" style="background-color: #a6b443;">
-                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg aria-hidden="true" focusable="false" class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path>
                 </svg>
               </div>
@@ -410,7 +349,7 @@ import BlurFade from '../components/ui/BlurFade.astro';
 
             <Card variant="bordered" class="p-6 text-center">
               <div class="w-12 h-12 mx-auto mb-4 rounded-full flex items-center justify-center" style="background-color: #c7cd85;">
-                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg aria-hidden="true" focusable="false" class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
                 </svg>
               </div>
@@ -424,7 +363,7 @@ import BlurFade from '../components/ui/BlurFade.astro';
 
             <Card variant="bordered" class="p-6 text-center">
               <div class="w-12 h-12 mx-auto mb-4 rounded-full flex items-center justify-center" style="background-color: #006786;">
-                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg aria-hidden="true" focusable="false" class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
                 </svg>
               </div>
@@ -438,7 +377,7 @@ import BlurFade from '../components/ui/BlurFade.astro';
 
             <Card variant="bordered" class="p-6 text-center">
               <div class="w-12 h-12 mx-auto mb-4 rounded-full flex items-center justify-center" style="background-color: #0099ba;">
-                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg aria-hidden="true" focusable="false" class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
                 </svg>
               </div>
@@ -452,7 +391,7 @@ import BlurFade from '../components/ui/BlurFade.astro';
 
             <Card variant="bordered" class="p-6 text-center">
               <div class="w-12 h-12 mx-auto mb-4 rounded-full flex items-center justify-center" style="background-color: #a6b443;">
-                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg aria-hidden="true" focusable="false" class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                 </svg>
               </div>
@@ -480,19 +419,7 @@ import BlurFade from '../components/ui/BlurFade.astro';
         </BlurFade>
 
         <BlurFade delay={200}>
-          <div class="flex justify-center items-center space-x-12">
-            <div class="text-center">
-              <div class="w-24 h-24 mx-auto mb-4 rounded-full flex items-center justify-center text-white font-bold text-xl" style="background-color: #0099ba;">
-                TOP 10%
-              </div>
-              <h3 class="text-lg font-semibold" style="color: #2d3748;">
-                Texas Top 10%
-              </h3>
-              <p class="text-gray-600 text-sm">
-                Recognition for Excellence
-              </p>
-            </div>
-
+          <div class="flex justify-center items-center">
             <div class="text-center">
               <div class="w-24 h-24 mx-auto mb-4 rounded-full flex items-center justify-center text-white font-bold text-xl" style="background-color: #a6b443;">
                 IAOMT
@@ -501,7 +428,7 @@ import BlurFade from '../components/ui/BlurFade.astro';
                 IAOMT Member
               </h3>
               <p class="text-gray-600 text-sm">
-                Oral Medicine & Toxicology
+                International Academy of Oral Medicine and Toxicology
               </p>
             </div>
           </div>
@@ -521,8 +448,8 @@ import BlurFade from '../components/ui/BlurFade.astro';
         </BlurFade>
         <BlurFade delay={200}>
           <p class="text-lg md:text-xl text-white/90 mb-8 max-w-3xl mx-auto">
-            Experience the difference of holistic dentistry and join the hundreds of families who have
-            transformed their health and smiles with our comprehensive approach to dental care.
+            Experience the difference of holistic dentistry and join the families who choose our
+            comprehensive approach to dental care.
           </p>
         </BlurFade>
         <BlurFade delay={300}>
@@ -543,7 +470,7 @@ import BlurFade from '../components/ui/BlurFade.astro';
               class="min-w-[200px] bg-white hover:bg-gray-100"
               style="color: #0099ba; border: 2px solid white;"
             >
-              <svg class="w-5 h-5 mr-2 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg aria-hidden="true" focusable="false" class="w-5 h-5 mr-2 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
               </svg>
               Call (214) 368-0900

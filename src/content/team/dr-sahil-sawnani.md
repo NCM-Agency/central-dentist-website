@@ -18,11 +18,16 @@ Dr. Sawnani's approach to dentistry focuses on prevention and conservative treat
 
 ## Education & Training
 
-- Doctor of Dental Surgery (DDS) - University of Texas Health Science Center at Houston
-- Advanced Training in Biological Dentistry - IAOMT
-- Implant Dentistry Certification - American Academy of Implant Dentistry
-- Ceramic Implant Training - International Congress of Oral Implantologists
-- SMART Certification for Safe Mercury Amalgam Removal
+- Doctor of Dental Surgery from Detroit Mercy School of Dentistry
+- Advanced Training and Accreditation in Biological Dentistry with IAOMT
+- Member of the American Academy of Implant Dentistry
+- Implant and Sinus lift training from Dr. Virgil Mongalo at Live Implant Training and Trinon Collegium Practicum
+- All X Digital workflow training provided through Implant Education Company
+- Zero Bone Loss training through Dr. Tomas Linkevicius
+- Gum Graft and ridge augmentation training through EM Academy and Khouly Advanced Dental Institute
+- Ceramic Implant Training through the Swiss Biohealth Clinic
+- SMART Certified for safe Mercury removal
+- Trained in placing Neodent, Paltop, Nobel, MIS, Straumann, SDS, and Z-system implants; skilled in restoring any implant brand.
 
 ## Areas of Expertise
 

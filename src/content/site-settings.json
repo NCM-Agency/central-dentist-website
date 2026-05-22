@@ -30,5 +30,8 @@
     "twitter": "https://x.com/centraldentist",
     "linkedin": "https://www.linkedin.com/company/central-dentist/",
     "youtube": "https://www.youtube.com/@centraldentist"
+  },
+  "analytics": {
+    "googleAnalyticsId": "G-HJNG733GBJ"
   }
 }

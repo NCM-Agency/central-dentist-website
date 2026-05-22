@@ -129,7 +129,7 @@ const hasSocial = Object.values(social).some((v) => typeof v === 'string' && v.t
               </p>
 
               <Card variant="bordered" class="p-6">
-                <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" class="space-y-6">
+                <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/contact-success" class="space-y-6">
                   <!-- Netlify form detection -->
                   <input type="hidden" name="form-name" value="contact" />
 

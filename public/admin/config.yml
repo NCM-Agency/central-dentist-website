@@ -86,6 +86,13 @@ collections:
               - {label: "LinkedIn", name: "linkedin", widget: "string", required: false, hint: "Full profile URL"}
               - {label: "YouTube", name: "youtube", widget: "string", required: false, hint: "Full channel URL"}
 
+          - label: "Analytics"
+            name: "analytics"
+            widget: "object"
+            required: false
+            fields:
+              - {label: "Google Analytics 4 Measurement ID", name: "googleAnalyticsId", widget: "string", required: false, hint: "GA4 Measurement ID, e.g. G-HJNG733GBJ. Leave blank to disable tracking site-wide."}
+
       - label: "Footer Content"
         name: "footer"
         file: "src/content/footer.json"

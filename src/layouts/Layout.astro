@@ -3,7 +3,10 @@
 import Header from '../components/common/Header.astro';
 import Footer from '../components/common/Footer.astro';
 import ContactWidget from '../components/ContactWidget.astro';
+import siteSettings from '../content/site-settings.json';
 import '../styles/global.css';
+
+const gaId = siteSettings.analytics?.googleAnalyticsId?.trim() || '';
 
 export interface Props {
   title: string;
@@ -97,6 +100,20 @@ const schemaMarkup = generateSchemaMarkup(schemaType);
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
     <meta name="format-detection" content="telephone=no" />
+
+    {gaId && (
+      <>
+        <!-- Google Analytics (gtag.js) -->
+        <script async src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}></script>
+        <script is:inline define:vars={{ gaId }}>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){ dataLayer.push(arguments); }
+          window.gtag = gtag;
+          gtag('js', new Date());
+          gtag('config', gaId);
+        </script>
+      </>
+    )}
     
     <!-- SEO Meta Tags -->
     <title>{fullTitle}</title>
@@ -327,7 +344,58 @@ const schemaMarkup = generateSchemaMarkup(schemaType);
       }
     </script>
 
-    <!-- Google Analytics or other tracking scripts would go here -->
-    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script> -->
+    {gaId && (
+      <script is:inline>
+        // GA4 conversion tracking — booking/appointment touchpoints
+        // No PHI captured: events only carry click location and CTA label,
+        // never form values or selected health-condition subjects.
+        document.addEventListener('DOMContentLoaded', function () {
+          if (typeof window.gtag !== 'function') return;
+
+          const APPOINTMENT_KEYWORDS = /(schedule|book|appointment|consultation|evaluation)/i;
+          const ADIT_HOST = 'p.adit.com';
+
+          function locationOf(el) {
+            if (el.closest('header')) return 'header';
+            if (el.closest('footer')) return 'footer';
+            if (el.closest('#contact-widget-modal')) return 'contact_widget';
+            if (el.closest('section') && /hero/i.test(el.closest('section').className || '')) return 'hero';
+            return 'page_body';
+          }
+
+          document.body.addEventListener('click', function (e) {
+            const link = e.target.closest('a, button');
+            if (!link) return;
+
+            // tel: links → phone_click
+            const href = link.getAttribute('href') || '';
+            if (href.toLowerCase().startsWith('tel:')) {
+              window.gtag('event', 'phone_click', {
+                phone_location: locationOf(link)
+              });
+              return;
+            }
+
+            // Adit Patient Payments outbound link
+            try {
+              if (href && new URL(href, window.location.origin).hostname === ADIT_HOST) {
+                window.gtag('event', 'patient_payments_click', {});
+                return;
+              }
+            } catch (_) { /* invalid URL, ignore */ }
+
+            // Appointment / booking CTAs — match by visible text
+            const label = (link.textContent || '').trim();
+            if (label && APPOINTMENT_KEYWORDS.test(label) && label.length < 60) {
+              window.gtag('event', 'book_appointment_click', {
+                cta_label: label,
+                cta_location: locationOf(link),
+                page_path: window.location.pathname
+              });
+            }
+          }, { passive: true });
+        });
+      </script>
+    )}
   </body>
 </html>

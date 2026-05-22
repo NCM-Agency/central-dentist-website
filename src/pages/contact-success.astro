@@ -66,4 +66,26 @@ import Button from '../components/ui/Button.astro';
       </div>
     </div>
   </section>
+
+  <!-- GA4 conversion event: fires once when the visitor lands on this page after a successful form submission -->
+  <script is:inline>
+    document.addEventListener('DOMContentLoaded', function () {
+      if (typeof window.gtag === 'function') {
+        const referrer = document.referrer || '';
+        let formLocation = 'unknown';
+        try {
+          const refUrl = new URL(referrer);
+          if (refUrl.hostname === window.location.hostname) {
+            formLocation = refUrl.pathname === '/contact/' || refUrl.pathname === '/contact'
+              ? 'main_contact_form'
+              : 'contact_widget';
+          }
+        } catch (_) { /* invalid or empty referrer */ }
+
+        window.gtag('event', 'appointment_form_submit', {
+          form_location: formLocation
+        });
+      }
+    });
+  </script>
 </Layout>

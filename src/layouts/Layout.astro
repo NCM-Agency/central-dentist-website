@@ -346,7 +346,7 @@ const schemaMarkup = generateSchemaMarkup(schemaType);
 
     {gaId && (
       <script is:inline>
-        // GA4 conversion tracking — booking/appointment touchpoints
+        // GA4 conversion tracking - booking/appointment touchpoints
         // No PHI captured: events only carry click location and CTA label,
         // never form values or selected health-condition subjects.
         document.addEventListener('DOMContentLoaded', function () {
@@ -384,7 +384,7 @@ const schemaMarkup = generateSchemaMarkup(schemaType);
               }
             } catch (_) { /* invalid URL, ignore */ }
 
-            // Appointment / booking CTAs — match by visible text
+            // Appointment / booking CTAs - match by visible text
             const label = (link.textContent || '').trim();
             if (label && APPOINTMENT_KEYWORDS.test(label) && label.length < 60) {
               window.gtag('event', 'book_appointment_click', {

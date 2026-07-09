@@ -10,13 +10,16 @@ export function getStaticPaths() {
 }
 
 const { procedure } = Astro.props;
+const proc = procedure as any;
 const category = proceduresData.categories.find(c => c.id === procedure.category);
 ---
 
 <ProcedurePageLayout
   title={procedure.title}
   categoryTitle={category?.title || 'Procedure'}
+  tagline={proc.tagline}
   overview={procedure.overview}
+  overviewParagraphs={proc.overviewParagraphs}
   postOperativeCare={procedure.postOperativeCare}
   dietAndActivity={procedure.dietAndActivity}
   oralHygiene={procedure.oralHygiene}

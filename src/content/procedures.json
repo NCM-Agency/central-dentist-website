@@ -33,7 +33,7 @@
         "Rinsing: For the first 24 hours, avoid vigorous rinsing or spitting to prevent disturbing healing tissues."
       ],
       "dietAndActivity": [
-        "Diet: Consume a soft, cool diet — think smoothies, soups, and pureed fruits — to ease discomfort and support healing.",
+        "Diet: Consume a soft, cool diet of smoothies, soups, and pureed fruits to ease discomfort and support healing.",
         "Activity: Limit strenuous physical activity for 24–48 hours. Gentle walks and stress reduction practices (meditation, deep breathing) are encouraged."
       ],
       "oralHygiene": [
@@ -52,7 +52,13 @@
       "title": "Tooth Extraction & Bone Grafting",
       "category": "surgical",
       "shortDescription": "Tooth removal combined with bone grafting to preserve jaw integrity using a holistic approach.",
-      "overview": "This procedure involves the removal of a tooth — often one that is root canal treated and asymptomatic — combined with bone grafting to preserve jaw integrity. Our holistic approach emphasizes natural healing and long-term oral balance.",
+      "tagline": "Remove a failing tooth and protect the bone beneath it in one visit, so replacing that tooth later stays an option.",
+      "overview": "This procedure combines the removal of a tooth, often one that is root canal treated and without symptoms, with bone grafting to preserve jaw integrity. Our holistic approach emphasizes natural healing and long-term oral balance.",
+      "overviewParagraphs": [
+        "When a tooth cannot be saved, removing it and placing a bone graft in the same visit preserves the ridge of bone that would otherwise shrink after extraction. Holding that bone volume matters because it keeps the shape of your jaw and leaves the door open for a dental implant later. This is often recommended for teeth that have had root canal treatment and no longer serve your health, even when they cause no pain.",
+        "Dr. Sahil Sawnani performs extractions and grafting with a focus on saving as much healthy tissue as possible. He completed gum graft and ridge augmentation training through the EM Academy and the Khouly Advanced Dental Institute, and he often uses platelet-rich fibrin, a concentrate made from your own blood, to support clot stability and healing at the site.",
+        "The work follows the standards set by founder Dr. Jill Rosellini Ombrello, who is SMART certified for safe removal of mercury fillings and accredited by the International Academy of Oral Medicine and Toxicology. Grafting materials are chosen for biocompatibility, and your recovery plan uses natural anti-inflammatory support so the extraction site and graft can heal on a strong base."
+      ],
       "postOperativeCare": [
         "Ice Application: Use ice packs on the affected area for 15–20 minutes at a time during the first 48 hours to minimize swelling.",
         "Pressure & Clot Protection: Gently bite on gauze for 30–45 minutes post-extraction. Avoid spitting or forceful rinsing to protect the blood clot."
@@ -77,7 +83,13 @@
       "title": "Dental Implant Placement",
       "category": "surgical",
       "shortDescription": "Biocompatible implant insertion into the jawbone to support a prosthetic tooth.",
+      "tagline": "Replace a missing tooth with a stable, metal-free option, placed by a team that plans around how your body heals.",
       "overview": "Dental implant placement involves inserting a biocompatible implant into the jawbone to support a prosthetic tooth. Our holistic protocols emphasize natural healing and integrative care to promote osseointegration.",
+      "overviewParagraphs": [
+        "Dental implant placement replaces the root of a missing tooth with a small post that anchors into your jawbone. Once the bone grows around the post, it holds a crown that looks and works like a natural tooth. At Central Dentist, every placement is planned with 3D CBCT imaging so the implant sits at the right position and depth before any surgery begins.",
+        "Dr. Sahil Sawnani leads implant placement at the practice. He completed advanced implant and sinus lift training, studied the Zero Bone Loss protocols developed by Dr. Tomas Linkevicius, and places both ceramic and titanium implants based on what fits your health goals. For patients who want a metal-free option, he places biocompatible ceramic implants using techniques he trained in at the Swiss Biohealth Clinic.",
+        "Every case is guided by the biological philosophy that founder Dr. Jill Rosellini Ombrello built the practice around, which means biocompatible materials and a minimally invasive technique. To help you heal faster, the team often uses platelet-rich fibrin drawn from your own blood. The goal is a tooth replacement that works well and protects your overall health."
+      ],
       "postOperativeCare": [
         "Ice & Rest: Apply ice packs to the surgical area intermittently during the first 48 hours. Rest and limit head movement.",
         "Hemostasis: Use gauze as directed to control bleeding and protect the initial blood clot."
@@ -102,7 +114,13 @@
       "title": "Implant Second Stage Surgery",
       "category": "surgical",
       "shortDescription": "Exposing the implant and preparing it for the prosthetic phase with minimally invasive care.",
+      "tagline": "The short final step that uncovers your healed implant and gets it ready for a new tooth.",
       "overview": "The second stage of implant surgery involves exposing the implant and preparing it for the prosthetic phase. This minimally invasive procedure requires careful post-operative care to ensure soft tissue healing.",
+      "overviewParagraphs": [
+        "Second stage implant surgery is a brief procedure that uncovers an implant after it has fused with the jawbone. The dentist exposes the top of the implant and attaches a healing abutment that shapes the gum tissue around it. Once the gums heal into the right contour, your implant is ready to receive its final crown. Because the bone has already integrated, this stage is minimally invasive and recovery is usually quick.",
+        "Dr. Sahil Sawnani handles the second stage with the same care he brings to placement. He is trained to restore implants across major systems, including Neodent, Straumann, Nobel, and ceramic Z-Systems, so the healing abutment and final restoration match your implant correctly. His gentle technique protects the gum tissue and keeps the site clean for the prosthetic phase.",
+        "As with every surgical step at Central Dentist, care follows the whole-body philosophy of founder Dr. Jill Rosellini Ombrello. Biocompatible components and careful handling of the soft tissue help your gums recover in comfort, so the final restoration fits well and lasts."
+      ],
       "postOperativeCare": [
         "Rest & Ice: Use ice packs for the first 48 hours to reduce swelling and promote comfort.",
         "Gentle Care: Avoid touching the surgical area with your tongue or fingers."
@@ -127,13 +145,19 @@
       "title": "Periodontal / Laser Surgery",
       "category": "surgical",
       "shortDescription": "Advanced treatment for gum disease to reduce pocket depths and restore healthy gum tissue.",
+      "tagline": "Stop gum disease at its source and rebuild healthy tissue, with laser precision and a plan that supports your whole body.",
       "overview": "Periodontal surgery is performed to treat advanced gum disease, reduce pocket depths, and restore healthy gum tissue. Our approach integrates conventional techniques with holistic care to support systemic health.",
+      "overviewParagraphs": [
+        "Periodontal surgery treats advanced gum disease by reducing the deep pockets where bacteria collect below the gumline and restoring the health of the tissue that holds your teeth in place. Where the case allows, laser techniques remove diseased tissue with less bleeding and a more comfortable recovery than traditional surgery. Treating gum disease also protects your general health, since long-term inflammation in the mouth is linked to problems elsewhere in the body.",
+        "Dr. Jill Rosellini Ombrello, founder of Central Dentist, treats gum health as part of whole-body wellness. She is accredited by the International Academy of Oral Medicine and Toxicology and the International Academy of Biological Dentistry and Medicine, and she uses ozone therapy to disinfect periodontal pockets and lower the bacterial load without harsh chemicals.",
+        "For cases that call for rebuilding lost tissue, Dr. Sahil Sawnani adds surgical experience from his gum graft and ridge augmentation training. Together the team pairs proven periodontal methods with biocompatible materials, so your gums heal on a foundation that protects both your smile and your general health."
+      ],
       "postOperativeCare": [
         "Rest & Cool Compress: Apply cool compresses intermittently during the first 24–48 hours to reduce swelling.",
         "Rinsing: Avoid vigorous rinsing for the first 24 hours. After this period, rinse gently with a warm saline or herbal solution (e.g., chamomile)."
       ],
       "dietAndActivity": [
-        "Diet: Maintain a soft, anti-inflammatory diet for 3–5 days — choose nutrient-rich broths, smoothies, and mashed vegetables.",
+        "Diet: Maintain a soft, anti-inflammatory diet for 3 to 5 days. Choose nutrient-rich broths, smoothies, and mashed vegetables.",
         "Activity: Avoid heavy lifting and strenuous activities for 48–72 hours; light walking is recommended."
       ],
       "oralHygiene": [
@@ -309,7 +333,7 @@
       ],
       "dietAndActivity": [
         "Evening Routine: To complement the appliance, avoid heavy meals and caffeinated or acidic beverages in the two hours before bedtime.",
-        "Sleep Hygiene: Maintain a consistent sleep schedule. Incorporate gentle relaxation practices — such as meditation or deep breathing — to prepare for restorative sleep."
+        "Sleep Hygiene: Maintain a consistent sleep schedule. Incorporate gentle relaxation practices such as meditation or deep breathing to prepare for restorative sleep."
       ],
       "oralHygiene": [
         "Daily Cleaning: Remove the appliance each morning and brush it gently with a soft-bristled toothbrush and non-abrasive cleanser. Rinse with lukewarm water to remove all residue.",

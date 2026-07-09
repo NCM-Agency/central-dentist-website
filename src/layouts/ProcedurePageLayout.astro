@@ -7,7 +7,9 @@ import BlurFade from '../components/ui/BlurFade.astro';
 export interface Props {
   title: string;
   categoryTitle: string;
+  tagline?: string;
   overview: string;
+  overviewParagraphs?: string[];
   postOperativeCare: string[];
   dietAndActivity: string[];
   oralHygiene: string[];
@@ -19,7 +21,9 @@ export interface Props {
 const {
   title,
   categoryTitle,
+  tagline,
   overview,
+  overviewParagraphs,
   postOperativeCare,
   dietAndActivity,
   oralHygiene,
@@ -57,7 +61,7 @@ const careCards = [
 ---
 
 <Layout
-  title={`${title} — Post-Op Care | Central Dentist Dallas`}
+  title={`${title} Post-Op Care | Central Dentist Dallas`}
   description={`Post-operative care instructions for ${title} at Central Dentist Dallas. Holistic recovery guidance for optimal healing.`}
   schemaType="MedicalBusiness"
 >
@@ -84,9 +88,22 @@ const careCards = [
               {categoryTitle}
             </span>
           </div>
-          <p class="text-lg leading-relaxed" style="color: #4b5563; font-family: 'Geist', sans-serif;">
-            {overview}
-          </p>
+          {tagline && (
+            <p class="text-xl md:text-2xl leading-snug mb-6" style="font-family: 'Playfair Display', serif; color: #006786;">
+              {tagline}
+            </p>
+          )}
+          {overviewParagraphs && overviewParagraphs.length > 0 ? (
+            overviewParagraphs.map((para) => (
+              <p class="text-lg leading-relaxed mb-4 last:mb-0" style="color: #4b5563; font-family: 'Geist', sans-serif;">
+                {para}
+              </p>
+            ))
+          ) : (
+            <p class="text-lg leading-relaxed" style="color: #4b5563; font-family: 'Geist', sans-serif;">
+              {overview}
+            </p>
+          )}
         </BlurFade>
       </div>
     </div>

@@ -1,0 +1,92 @@
+---
+// Hidden campaign landing page - "Back to School" sleep video from Dr. Jill
+// Intentionally not in navigation, not in sitemap.xml, and set to noindex.
+// URL: /back-to-school-sleep
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="A Back-to-School Note from Dr. Jill"
+  description="A quick personal check-in from Dr. Jill about your child's sleep and breathing as the school year begins."
+  ogImage="/videos/dr-jill-back-to-school.jpg"
+  canonicalURL="https://www.centraldentist.com/back-to-school-sleep"
+  noindex={true}
+  schemaType="WebPage"
+>
+  <section class="py-12 md:py-20 bg-white">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="max-w-3xl mx-auto">
+
+        <!-- Heading -->
+        <div class="text-center mb-8">
+          <span class="inline-block px-3 py-1 rounded-full text-sm font-medium text-white mb-4"
+                style="background: linear-gradient(to right, #0099ba, #006786);">
+            A message for our families
+          </span>
+          <h1 class="text-3xl md:text-5xl font-normal mb-4"
+              style="font-family: 'Playfair Display', serif; color: #006786;">
+            A Back-to-School Note from Dr. Jill
+          </h1>
+          <p class="text-lg" style="color: #4b5563; font-family: 'Geist', sans-serif;">
+            A quick check-in about your child's sleep and breathing as the new school year begins.
+          </p>
+        </div>
+
+        <!-- Video -->
+        <div class="mb-8">
+          <video
+            class="w-full rounded-2xl shadow-lg bg-black"
+            controls
+            playsinline
+            preload="metadata"
+            poster="/videos/dr-jill-back-to-school.jpg"
+          >
+            <source src="/videos/dr-jill-back-to-school.mp4" type="video/mp4" />
+            <track
+              kind="captions"
+              src="/videos/dr-jill-back-to-school.vtt"
+              srclang="en"
+              label="English"
+              default
+            />
+            Your browser does not support embedded video.
+            <a href="/videos/dr-jill-back-to-school.mp4">Download the video instead.</a>
+          </video>
+        </div>
+
+        <!-- Body copy -->
+        <div class="max-w-2xl mx-auto text-center mb-10">
+          <p class="text-lg leading-relaxed" style="color: #4b5563; font-family: 'Geist', sans-serif;">
+            As the school year gets going, Dr. Jill wanted to check in about your child's sleep and
+            breathing. If you would like to reconnect, review how your child is doing, or set up a
+            re-evaluation, reach out and our team will get you scheduled.
+          </p>
+        </div>
+
+        <!-- CTA buttons: Schedule first, then Call -->
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="/contact"
+            class="px-8 py-3 bg-gradient-to-r from-[#a6b443] to-[#c7cd85] text-white rounded-full font-semibold transition-all duration-300 hover:from-[#8fa339] hover:to-[#a6b443] hover:shadow-lg inline-flex items-center justify-center"
+            style="font-family: 'Playfair Display', serif;"
+          >
+            Schedule an Evaluation
+          </a>
+          <a
+            href="tel:214-368-0900"
+            class="px-8 py-3 bg-white border-2 rounded-full font-semibold transition-all duration-300 hover:shadow-lg inline-flex items-center justify-center"
+            style="font-family: 'Playfair Display', serif; color: #0099ba; border-color: #0099ba;"
+            onmouseover="this.style.backgroundColor='#006786'; this.style.color='white'; this.style.borderColor='#006786';"
+            onmouseout="this.style.backgroundColor='white'; this.style.color='#0099ba'; this.style.borderColor='#0099ba';"
+          >
+            <svg aria-hidden="true" focusable="false" class="mr-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+            Call (214) 368-0900
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</Layout>

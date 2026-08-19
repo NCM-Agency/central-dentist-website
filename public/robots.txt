@@ -13,6 +13,7 @@ Allow: /favicon.svg
 Disallow: /test
 Disallow: /admin/
 Disallow: /_astro/
+Disallow: /back-to-school-sleep
 
 # Sitemap location
 Sitemap: https://www.centraldentist.com/sitemap.xml

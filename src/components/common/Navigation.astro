@@ -113,7 +113,7 @@ const navigation = [
       <!-- Desktop Navigation -->
       <div class="hidden lg:block">
         <div class="ml-10 flex items-baseline space-x-1">
-          {navigation.map((item) => (
+          {navigation.map((item, idx) => (
             <div class="relative group">
               {item.type === 'page' || item.type === 'external' ? (
                 <a
@@ -145,7 +145,7 @@ const navigation = [
 
               <!-- Desktop Dropdown -->
               {item.type === 'dropdown' && item.items && (
-                <div class="absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-teal-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 backdrop-blur-sm border border-gray-100">
+                <div class={`absolute ${idx === navigation.length - 1 ? 'right-0' : 'left-0'} mt-2 w-64 bg-white rounded-lg shadow-teal-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 backdrop-blur-sm border border-gray-100`}>
                   <div class="py-2">
                     {item.items.map((subItem) => (
                       <a

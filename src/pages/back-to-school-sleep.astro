@@ -34,26 +34,56 @@ import Layout from '../layouts/Layout.astro';
 
         <!-- Video (portrait 9:16 - constrain by height so it fits the viewport, then center) -->
         <div class="mb-8 flex justify-center">
-          <video
-            class="rounded-2xl shadow-lg bg-black w-auto max-w-full"
-            style="max-height: 78vh;"
-            controls
-            playsinline
-            preload="metadata"
-            poster="/videos/dr-jill-back-to-school.jpg"
-          >
-            <source src="/videos/dr-jill-back-to-school.mp4" type="video/mp4" />
-            <track
-              kind="captions"
-              src="/videos/dr-jill-back-to-school.vtt"
-              srclang="en"
-              label="English"
-              default
-            />
-            Your browser does not support embedded video.
-            <a href="/videos/dr-jill-back-to-school.mp4">Download the video instead.</a>
-          </video>
+          <div class="relative inline-block leading-none">
+            <video
+              id="dr-jill-video"
+              class="block rounded-2xl shadow-lg bg-black w-auto max-w-full"
+              style="max-height: 78vh;"
+              controls
+              playsinline
+              preload="metadata"
+              poster="/videos/dr-jill-back-to-school.jpg"
+            >
+              <source src="/videos/dr-jill-back-to-school.mp4" type="video/mp4" />
+              <track
+                kind="captions"
+                src="/videos/dr-jill-back-to-school.vtt"
+                srclang="en"
+                label="English"
+                default
+              />
+              Your browser does not support embedded video.
+              <a href="/videos/dr-jill-back-to-school.mp4">Download the video instead.</a>
+            </video>
+            <!-- Custom play-button overlay (hidden once playback starts) -->
+            <button
+              type="button"
+              id="dr-jill-video-play"
+              aria-label="Play video"
+              class="absolute inset-0 flex items-center justify-center rounded-2xl cursor-pointer group focus:outline-none"
+              style="background: rgba(0, 40, 55, 0.18);"
+            >
+              <span
+                class="flex items-center justify-center rounded-full shadow-xl transition-transform duration-200 group-hover:scale-110"
+                style="width: 88px; height: 88px; background: linear-gradient(to bottom right, #0099ba, #006786);"
+              >
+                <svg class="w-9 h-9 ml-1 text-white" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </span>
+            </button>
+          </div>
         </div>
+
+        <script is:inline>
+          (function () {
+            var v = document.getElementById('dr-jill-video');
+            var btn = document.getElementById('dr-jill-video-play');
+            if (!v || !btn) return;
+            btn.addEventListener('click', function () { v.play(); });
+            v.addEventListener('play', function () { btn.style.display = 'none'; });
+          })();
+        </script>
 
         <!-- Body copy -->
         <div class="max-w-2xl mx-auto text-center mb-10">

@@ -14,6 +14,7 @@ Disallow: /test
 Disallow: /admin/
 Disallow: /_astro/
 Disallow: /back-to-school-sleep
+Disallow: /safe-filling-replacement
 
 # Sitemap location
 Sitemap: https://www.centraldentist.com/sitemap.xml

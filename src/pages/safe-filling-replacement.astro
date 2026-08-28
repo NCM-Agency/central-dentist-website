@@ -1,0 +1,141 @@
+---
+// Hidden campaign landing page - "Safe Filling Replacement" video from Dr. Jill
+// Intentionally not in navigation, not in sitemap.xml, and set to noindex.
+// URL: /safe-filling-replacement
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="A Note from Dr. Jill About Your Silver Fillings"
+  description="Dr. Jill on safely replacing older mercury amalgam fillings using the SMART protocol at Central Dentist Dallas."
+  ogImage="/videos/dr-jill-mercury-fillings.jpg"
+  canonicalURL="https://www.centraldentist.com/safe-filling-replacement"
+  noindex={true}
+  schemaType="WebPage"
+>
+  <section class="py-12 md:py-20 bg-white">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="max-w-3xl mx-auto">
+
+        <!-- Heading -->
+        <div class="text-center mb-8">
+          <span class="inline-block px-3 py-1 rounded-full text-sm font-medium text-white mb-4"
+                style="background: linear-gradient(to right, #0099ba, #006786);">
+            A message for our patients
+          </span>
+          <h1 class="text-3xl md:text-5xl font-normal mb-4"
+              style="font-family: 'Playfair Display', serif; color: #006786;">
+            A Personal Note from Dr. Jill About Your Silver Fillings
+          </h1>
+          <p class="text-lg" style="color: #4b5563; font-family: 'Geist', sans-serif;">
+            Why we may suggest replacing older mercury amalgam fillings, and how we do it safely.
+          </p>
+        </div>
+
+        <!-- Video (portrait - constrain by height so it fits the viewport, then center) -->
+        <div class="mb-8 flex justify-center">
+          <div class="relative inline-block leading-none">
+            <video
+              id="mercury-video"
+              class="block rounded-2xl shadow-lg bg-black w-auto max-w-full"
+              style="max-height: 78vh;"
+              controls
+              playsinline
+              preload="metadata"
+              poster="/videos/dr-jill-mercury-fillings.jpg"
+            >
+              <source src="/videos/dr-jill-mercury-fillings.mp4" type="video/mp4" />
+              <track
+                kind="captions"
+                src="/videos/dr-jill-mercury-fillings.vtt"
+                srclang="en"
+                label="English"
+                default
+              />
+              Your browser does not support embedded video.
+              <a href="/videos/dr-jill-mercury-fillings.mp4">Download the video instead.</a>
+            </video>
+            <!-- Custom play-button overlay (hidden once playback starts) -->
+            <button
+              type="button"
+              id="mercury-video-play"
+              aria-label="Play video"
+              class="absolute inset-0 flex items-center justify-center rounded-2xl cursor-pointer group focus:outline-none"
+              style="background: rgba(0, 40, 55, 0.18);"
+            >
+              <span
+                class="flex items-center justify-center rounded-full shadow-xl transition-transform duration-200 group-hover:scale-110"
+                style="width: 88px; height: 88px; background: linear-gradient(to bottom right, #0099ba, #006786);"
+              >
+                <svg class="w-9 h-9 ml-1 text-white" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </span>
+            </button>
+          </div>
+        </div>
+
+        <script is:inline>
+          (function () {
+            var v = document.getElementById('mercury-video');
+            var btn = document.getElementById('mercury-video-play');
+            if (!v || !btn) return;
+            btn.addEventListener('click', function () { v.play(); });
+            v.addEventListener('play', function () { btn.style.display = 'none'; });
+          })();
+        </script>
+
+        <!-- Body copy -->
+        <div class="max-w-2xl mx-auto mb-10 space-y-4">
+          <p class="text-lg leading-relaxed" style="color: #4b5563; font-family: 'Geist', sans-serif;">
+            Silver fillings, also called amalgam, contain mercury. An intact filling does not automatically
+            mean it is causing a health problem, but small amounts of mercury vapor can be released over time,
+            especially with chewing, grinding, or very hot or very cold drinks. From a biological dentistry
+            perspective, our goal is to reduce unnecessary exposure and lower your overall toxic burden. Older
+            fillings also crack and age, which can lead to fractures in the tooth around them, so replacing them
+            at the right time can prevent bigger problems later.
+          </p>
+          <p class="text-lg leading-relaxed" style="color: #4b5563; font-family: 'Geist', sans-serif;">
+            If you choose to have them replaced, we use the SMART protocol (Safe Mercury Amalgam Removal
+            Technique), with special isolation, high-volume suction, air filtration, and other protective steps
+            designed to minimize mercury exposure during the procedure. We can start with the fillings that are
+            largest, oldest, or showing signs of wear, and build a plan that feels manageable for you.
+          </p>
+        </div>
+
+        <!-- CTA buttons -->
+        <div class="flex flex-col sm:flex-row flex-wrap gap-4 justify-center">
+          <a
+            href="/contact"
+            class="px-8 py-3 bg-gradient-to-r from-[#a6b443] to-[#c7cd85] text-white rounded-full font-semibold transition-all duration-300 hover:from-[#8fa339] hover:to-[#a6b443] hover:shadow-lg inline-flex items-center justify-center"
+            style="font-family: 'Playfair Display', serif;"
+          >
+            Schedule a Consultation
+          </a>
+          <a
+            href="tel:214-368-0900"
+            class="px-8 py-3 bg-white border-2 rounded-full font-semibold transition-all duration-300 hover:shadow-lg inline-flex items-center justify-center"
+            style="font-family: 'Playfair Display', serif; color: #0099ba; border-color: #0099ba;"
+            onmouseover="this.style.backgroundColor='#006786'; this.style.color='white'; this.style.borderColor='#006786';"
+            onmouseout="this.style.backgroundColor='white'; this.style.color='#0099ba'; this.style.borderColor='#0099ba';"
+          >
+            <svg aria-hidden="true" focusable="false" class="mr-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+            Call (214) 368-0900
+          </a>
+          <a
+            href="/services/mercury-free-approach"
+            class="px-8 py-3 bg-white border-2 rounded-full font-semibold transition-all duration-300 hover:shadow-lg inline-flex items-center justify-center"
+            style="font-family: 'Playfair Display', serif; color: #0099ba; border-color: #0099ba;"
+            onmouseover="this.style.backgroundColor='#006786'; this.style.color='white'; this.style.borderColor='#006786';"
+            onmouseout="this.style.backgroundColor='white'; this.style.color='#0099ba'; this.style.borderColor='#0099ba';"
+          >
+            Learn About Our SMART Approach
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</Layout>

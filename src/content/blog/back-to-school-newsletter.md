@@ -58,7 +58,7 @@ Beth is currently creating all new educational materials for our patients.  She
 
 I’m super excited that expanding the biocompatibility component of our practice will also help my growing population of special needs pediatric patients and pediatric patients who are on the spectrum or present with another neurocognitive or behavioral diagnosis.
 
-To receive these updates and stay informed, please subscribe to our “Holistic Oral Health Newsletter”.  If you’d like more information on this sooner, Beth will be offering complimentary diagnostic exams and consultations every Thursday in August and September to help get this information out ASAP to those who want and need it.  Please call our office to schedule at your convenience.
+To receive these updates and stay informed, please subscribe to our “Holistic Oral Health Newsletter”.  If you’d like more information on this sooner, Beth will be offering diagnostic exams and consultations every Thursday in August and September to help get this information out ASAP to those who want and need it.  Please call our office to schedule at your convenience.
 
 So, in a year that started off in a very unexpected way, I couldn’t be more grateful for where I have ended up.  I’m beyond thrilled to have this new energy in our practice to ensure my team, my patients, and our environment are as safe and protected, happy and healthy as possible.
 

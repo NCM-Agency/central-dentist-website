@@ -41,6 +41,6 @@ The good news is, there’s no need for you or your child to suffer any longer! 
 
 Our Super Health program uses removable, myofunctional dental devices to guide jaw development and open up the airway, allowing children to experience a good night’s sleep — possibly for the first time in their lives -- and to eliminate bedwetting both swiftly and permanently.  Many of our patients see results in a matter of days or weeks.  There are numerous other benefits to this early interventional therapy to promote proper growth and development for a lifetime of systemic wellness, but we think eliminating bedwetting is a major win to get started.
 
-If your child suffers from bedwetting, there’s no need for them to avoid sleepovers — or for you to do a nightly load of laundry. Call our office at 214-368-0900 or email us at info@centraldentist.com to schedule a complimentary consult with our team of specialists today!
+If your child suffers from bedwetting, there’s no need for them to avoid sleepovers — or for you to do a nightly load of laundry. Call our office at 214-368-0900 or email us at info@centraldentist.com to schedule a consult with our team of specialists today!
 
 ![ree](https://static.wixstatic.com/media/e94047_cb10c5ee2f384d1c9bb4f5b3f17cf2e4~mv2_d_5665_3777_s_4_2.jpg/v1/fill/w_147,h_98,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/e94047_cb10c5ee2f384d1c9bb4f5b3f17cf2e4~mv2_d_5665_3777_s_4_2.jpg)

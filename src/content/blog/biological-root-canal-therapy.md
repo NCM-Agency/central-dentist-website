@@ -92,6 +92,6 @@ Even if a tooth is removed successfully with no complication of cavitation, plac
 Now it is important to note that we are not discrediting the value of the dental implant procedure. We think this is a great option for many patients, and we recommend it quite often. We work with oral surgeons and periodontists who have advanced training in this type of procedure, which helps diminish these potential risk factors. But the purpose of discussing this is that too often patients think in extremes or in black and white terms, and they don't understand that each option needs to be weighted appropriately to determine what the best option is for them and for their longterm health.
 
 
-### If you have questions about biological root therapy, please contact our office to schedule a complimentary diagnostic work up and consult.
+### If you have questions about biological root therapy, please contact our office to schedule a diagnostic work up and consult.
 
 214-368-0900  |  info@centraldentist.com

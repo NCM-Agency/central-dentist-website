@@ -1,0 +1,179 @@
+---
+// Giving Day campaign landing page (standalone, not linked in nav).
+// Route: /giving-day
+// ALL page text and settings live in src/content/giving-day.json so copy can be swapped without touching layout.
+// Palette sampled from the approved key visual (Option 2, open door). No red.
+import Layout from '../layouts/Layout.astro';
+import content from '../content/giving-day.json';
+
+const { config, meta, hero, intro, faqs, finalCta } = content;
+
+// One mailto, used by every button on the page.
+const mailto = `mailto:${config.email}?subject=${encodeURIComponent(config.emailSubject)}`;
+
+// "What's included" is controlled by config.showWhatsIncluded.
+const visibleFaqs = faqs.filter((f) => !f.optional || config.showWhatsIncluded);
+
+// --- Palette (from the key visual swatches) ---
+const c = {
+  cream: '#F3EDD9',
+  creamLight: '#F8F4E8',
+  creamDeep: '#E8DCBD',
+  sage: '#9EB48A',
+  sageDark: '#686756',
+  taupe: '#B49E84',
+  brown: '#675646',
+  ochre: '#CD9C2C',
+  ochreDark: '#A97F1E',
+};
+
+// --- Event schema (JSON-LD). America/Chicago is UTC-06:00 in January. ---
+const eventSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Event',
+  name: 'Central Dentist Giving Day',
+  startDate: '2027-01-16T08:00:00-06:00',
+  endDate: '2027-01-16T14:00:00-06:00',
+  eventStatus: 'https://schema.org/EventScheduled',
+  eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+  description: 'Complimentary dental care for new patients at Central Dentist.',
+  image: `https://www.centraldentist.com${config.heroImage}`,
+  location: {
+    '@type': 'Place',
+    name: 'Central Dentist',
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: '10210 N Central Expy, Ste 100',
+      addressLocality: 'Dallas',
+      addressRegion: 'TX',
+      postalCode: '75231',
+      addressCountry: 'US',
+    },
+  },
+  organizer: { '@type': 'Organization', name: 'Central Dentist', url: 'https://www.centraldentist.com' },
+  audience: { '@type': 'Audience', audienceType: 'New patients' },
+  isAccessibleForFree: true,
+  offers: {
+    '@type': 'Offer',
+    price: '0',
+    priceCurrency: 'USD',
+    availability: 'https://schema.org/LimitedAvailability',
+    url: 'https://www.centraldentist.com/giving-day',
+  },
+};
+
+const btnClass =
+  'inline-flex items-center justify-center text-center px-7 py-4 rounded-full font-semibold transition-all duration-300 hover:shadow-lg max-w-full';
+const btnStyle = `background-color: ${c.ochre}; color: #FFFFFF; font-family: 'Playfair Display', serif; overflow-wrap: anywhere;`;
+---
+
+<Layout title={meta.title} description={meta.description} ogImage={config.heroImage} schemaType="WebPage">
+  <script type="application/ld+json" set:html={JSON.stringify(eventSchema)} is:inline></script>
+
+  <div class="giving-day" style={`background-color: ${c.cream};`}>
+
+    <!-- HERO -->
+    <section class="py-12 md:py-20 overflow-hidden" style={`background-color: ${c.cream};`}>
+      <div class="container mx-auto px-4 md:px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center max-w-6xl mx-auto">
+          <div class="text-center lg:text-left">
+            <p class="text-sm font-semibold tracking-[0.2em] mb-4" style={`color: ${c.ochreDark}; font-family: 'Geist', sans-serif;`}>
+              {hero.eyebrow}
+            </p>
+            <h1 class="text-6xl md:text-7xl lg:text-8xl font-normal leading-none mb-5" style={`font-family: 'Playfair Display', serif; color: ${c.brown};`}>
+              {hero.title}
+            </h1>
+            <p class="text-2xl md:text-3xl italic mb-6" style={`font-family: 'Playfair Display', serif; color: ${c.sageDark};`}>
+              {hero.subhead}
+            </p>
+            <p class="text-lg mb-4" style={`font-family: 'Geist', sans-serif; color: ${c.brown};`}>
+              {hero.details}
+            </p>
+            <p class="text-lg font-semibold mb-1" style={`font-family: 'Geist', sans-serif; color: ${c.brown};`}>
+              {hero.line}
+            </p>
+            <p class="text-base mb-8" style={`font-family: 'Geist', sans-serif; color: ${c.sageDark};`}>
+              {hero.serviceLine}
+            </p>
+            <a
+              href={mailto}
+              class={btnClass}
+              style={btnStyle}
+              onmouseover={`this.style.backgroundColor='${c.ochreDark}';`}
+              onmouseout={`this.style.backgroundColor='${c.ochre}';`}
+            >
+              {hero.button}
+            </a>
+          </div>
+
+          <!-- Key visual (Option 2, open door). Swap the file at config.heroImage for the designer's final export. -->
+          <div class="flex justify-center lg:justify-end">
+            <img
+              src={config.heroImage}
+              alt={config.heroImageAlt}
+              width="1079"
+              height="1400"
+              class="w-full max-w-[340px] md:max-w-[420px] lg:max-w-[480px] h-auto rounded-3xl"
+              loading="eager"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTRO -->
+    <section class="py-14 md:py-20" style={`background-color: ${c.brown};`}>
+      <div class="container mx-auto px-4 md:px-6">
+        <div class="max-w-3xl mx-auto space-y-5 text-center">
+          {intro.map((p) => (
+            <p class="text-lg md:text-xl leading-relaxed" style={`font-family: 'Playfair Display', serif; color: ${c.creamLight};`}>
+              {p}
+            </p>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- QUESTIONS -->
+    <section class="py-14 md:py-20" style={`background-color: ${c.creamLight};`}>
+      <div class="container mx-auto px-4 md:px-6">
+        <div class="max-w-3xl mx-auto">
+          {visibleFaqs.map((item, i) => (
+            <div class="py-7" style={i < visibleFaqs.length - 1 ? `border-bottom: 1px solid ${c.taupe}66;` : ''}>
+              <h2 class="text-2xl md:text-3xl font-normal mb-3" style={`font-family: 'Playfair Display', serif; color: ${c.brown};`}>
+                {item.q}
+              </h2>
+              <p class="text-lg leading-relaxed" style={`font-family: 'Geist', sans-serif; color: ${c.brown};`}>
+                {item.a}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="py-16 md:py-24" style={`background-color: ${c.sageDark};`}>
+      <div class="container mx-auto px-4 md:px-6">
+        <div class="max-w-3xl mx-auto text-center">
+          <h2 class="text-3xl md:text-4xl font-normal mb-4" style={`font-family: 'Playfair Display', serif; color: ${c.creamLight};`}>
+            {finalCta.heading}
+          </h2>
+          <p class="text-lg mb-8 leading-relaxed" style={`font-family: 'Geist', sans-serif; color: ${c.creamDeep};`}>
+            {finalCta.body}
+          </p>
+          <a
+            href={mailto}
+            class={btnClass}
+            style={btnStyle}
+            onmouseover={`this.style.backgroundColor='${c.ochreDark}';`}
+            onmouseout={`this.style.backgroundColor='${c.ochre}';`}
+          >
+            {finalCta.button}
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</Layout>

@@ -1,22 +1,21 @@
 {
   "config": {
     "email": "givingday@centraldentist.com",
-    "emailSubject": "Giving Day",
+    "emailSubject": "Giving Day / ",
     "showWhatsIncluded": true,
     "heroImage": "/images/giving-day/giving-day-hero.jpg",
     "heroImageAlt": "An open door glowing with warm light inside a sage and ochre arch"
   },
   "meta": {
     "title": "Giving Day",
-    "description": "Central Dentist Giving Day on Saturday, January 16, 2027: complimentary dental care for new patients."
+    "description": "Central Dentist Giving Day on Saturday, January 16, 2027: one complimentary dental treatment for selected individuals who are not yet established patients."
   },
   "hero": {
     "eyebrow": "CENTRAL DENTIST",
     "title": "Giving Day",
     "subhead": "Giving Your Smile a Fresh Start",
     "details": "Saturday, January 16, 2027 · 8:00 AM to 2:00 PM",
-    "line": "Complimentary dental care for new patients.",
-    "serviceLine": "One cleaning, extraction, or filling per new patient.",
+    "line": "Giving Day offers selected individuals who are not yet established patients at Central Dentist the opportunity to receive one complimentary dental treatment, consisting of either a cleaning, extraction, or filling.",
     "button": "Reach Out For Your Chance To Be Accepted"
   },
   "intro": [
@@ -33,21 +32,38 @@
       "a": "Giving Day is for new patients. Existing Central Dentist patients are not eligible for the complimentary Giving Day service."
     },
     {
-      "q": "What's included",
-      "a": "One complimentary dental treatment: a cleaning, an extraction, or a filling. Please put the treatment you're interested in as your email subject.",
-      "optional": true
+      "q": "What's Included?",
+      "optional": true,
+      "intro": "Selected participants will receive:",
+      "list": {
+        "ordered": false,
+        "items": [
+          { "text": "A dental examination and assessment" },
+          { "text": "Necessary diagnostic imaging" },
+          { "text": "One complimentary dental treatment, consisting of either a cleaning, extraction, or filling, as determined appropriate following the examination" }
+        ]
+      }
     },
     {
-      "q": "How do I sign up?",
-      "a": "Email givingday@centraldentist.com. Our team will review each email to see who we can care for on Giving Day, based on dental needs. If you're accepted, we'll email you back with your appointment time."
+      "q": "How Do I Request an Appointment?",
+      "intro": "To request consideration for Giving Day, please follow these steps:",
+      "list": {
+        "ordered": true,
+        "items": [
+          { "label": "Email:", "text": "givingday@centraldentist.com", "mailto": true },
+          { "label": "Subject Line:", "text": "Giving Day / Your First and Last Name" },
+          { "label": "Email Message:", "text": "Briefly describe your reason for requesting an appointment and your primary dental concerns." }
+        ]
+      },
+      "outro": "Our team will review the information submitted. If you are selected to participate, we will contact you by email with your scheduled appointment time."
     },
     {
-      "q": "Why we do Giving Day",
-      "a": "Giving Day is one way we can give back to our community and welcome people who may not have found a dental home yet. We know that taking the first step can often be the hardest part. We'd love to make that step a little easier for you."
+      "q": "Why We Do Giving Day",
+      "a": "Giving Day is our way of giving back to the holistic dental community through kindness, compassion, and radical generosity. By providing a complimentary dental service, we hope to help individuals take the first step toward better oral health while educating them about additional dental care that may benefit their overall well-being. We believe everyone deserves to feel heard, valued, and supported, and our goal is to make that first step a little easier."
     }
   ],
   "finalCta": {
-    "heading": "Want a chance to be accepted for Giving Day?",
+    "heading": "Are You Ready to Give Your Smile a Fresh Start?",
     "body": "Email us to be considered. Giving Day takes place Saturday, January 16, 2027, from 8:00 AM to 2:00 PM.",
     "button": "Email givingday@centraldentist.com"
   }

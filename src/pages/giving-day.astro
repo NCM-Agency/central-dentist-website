@@ -36,7 +36,7 @@ const eventSchema = {
   endDate: '2027-01-16T14:00:00-06:00',
   eventStatus: 'https://schema.org/EventScheduled',
   eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
-  description: 'Complimentary dental care for new patients at Central Dentist.',
+  description: meta.description,
   image: `https://www.centraldentist.com${config.heroImage}`,
   location: {
     '@type': 'Place',
@@ -90,11 +90,8 @@ const btnStyle = `background-color: ${c.ochre}; color: #FFFFFF; font-family: 'Pl
             <p class="text-lg mb-4" style={`font-family: 'Geist', sans-serif; color: ${c.brown};`}>
               {hero.details}
             </p>
-            <p class="text-lg font-semibold mb-1" style={`font-family: 'Geist', sans-serif; color: ${c.brown};`}>
+            <p class="text-lg font-medium leading-relaxed mb-8 max-w-xl mx-auto lg:mx-0" style={`font-family: 'Geist', sans-serif; color: ${c.brown};`}>
               {hero.line}
-            </p>
-            <p class="text-base mb-8" style={`font-family: 'Geist', sans-serif; color: ${c.sageDark};`}>
-              {hero.serviceLine}
             </p>
             <a
               href={mailto}
@@ -144,9 +141,40 @@ const btnStyle = `background-color: ${c.ochre}; color: #FFFFFF; font-family: 'Pl
               <h2 class="text-2xl md:text-3xl font-normal mb-3" style={`font-family: 'Playfair Display', serif; color: ${c.brown};`}>
                 {item.q}
               </h2>
-              <p class="text-lg leading-relaxed" style={`font-family: 'Geist', sans-serif; color: ${c.brown};`}>
-                {item.a}
-              </p>
+              {item.a && (
+                <p class="text-lg leading-relaxed" style={`font-family: 'Geist', sans-serif; color: ${c.brown};`}>
+                  {item.a}
+                </p>
+              )}
+              {item.intro && (
+                <p class="text-lg leading-relaxed mb-3" style={`font-family: 'Geist', sans-serif; color: ${c.brown};`}>
+                  {item.intro}
+                </p>
+              )}
+              {item.list && item.list.ordered && (
+                <ol class="list-decimal space-y-2 pl-6 text-lg leading-relaxed marker:font-semibold marker:text-[#A97F1E]" style={`font-family: 'Geist', sans-serif; color: ${c.brown};`}>
+                  {item.list.items.map((li) => (
+                    <li>
+                      {li.label && <strong class="font-semibold">{li.label} </strong>}
+                      {li.mailto
+                        ? <a href={mailto} class="underline underline-offset-2" style={`color: ${c.ochreDark}; overflow-wrap: anywhere;`}>{li.text}</a>
+                        : li.text}
+                    </li>
+                  ))}
+                </ol>
+              )}
+              {item.list && !item.list.ordered && (
+                <ul class="list-disc space-y-2 pl-6 text-lg leading-relaxed marker:text-[#A97F1E]" style={`font-family: 'Geist', sans-serif; color: ${c.brown};`}>
+                  {item.list.items.map((li) => (
+                    <li>{li.text}</li>
+                  ))}
+                </ul>
+              )}
+              {item.outro && (
+                <p class="text-lg leading-relaxed mt-4" style={`font-family: 'Geist', sans-serif; color: ${c.brown};`}>
+                  {item.outro}
+                </p>
+              )}
             </div>
           ))}
         </div>

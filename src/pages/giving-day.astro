@@ -107,6 +107,11 @@ const btnStyle = `background-color: ${c.ochre}; color: #FFFFFF; font-family: 'Pl
             >
               {hero.button}
             </a>
+            {hero.emailOnlyNote && (
+              <p class="text-sm mt-4" style={`font-family: 'Geist', sans-serif; color: ${c.sageDark};`}>
+                {hero.emailOnlyNote}
+              </p>
+            )}
           </div>
 
           <!-- Key visual (Option 2, open door). Swap the file at config.heroImage for the designer's final export. -->

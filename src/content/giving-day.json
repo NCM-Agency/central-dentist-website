@@ -17,7 +17,8 @@
     "details": "Saturday, January 16, 2027 · 8:00 AM–2:00 PM",
     "line": "Giving Day offers selected individuals who are not yet established patients at Central Dentist the opportunity to receive one complimentary dental treatment, consisting of either a cleaning, extraction, or filling.",
     "button": "Reach Out For Your Chance To Be Accepted",
-    "location": "Central Dentist, 10210 N Central Expy, Ste 100, Dallas, TX 75231"
+    "location": "Central Dentist, 10210 N Central Expy, Ste 100, Dallas, TX 75231",
+    "emailOnlyNote": "Giving Day requests are only accepted by email."
   },
   "intro": [
     "Giving Day is a special day at Central Dentist, dedicated to giving back to the community through complimentary dental care.",
@@ -25,11 +26,11 @@
   ],
   "faqs": [
     {
-      "q": "What is Giving Day?",
+      "q": "What Is Giving Day?",
       "a": "Giving Day is Central Dentist's way of giving back to the community by welcoming new patients into the office for complimentary dental care. It's a one-day event, so appointment availability is limited."
     },
     {
-      "q": "Who can participate?",
+      "q": "Who Can Participate?",
       "a": "Giving Day is for new patients. Existing Central Dentist patients aren't eligible for the Giving Day service."
     },
     {

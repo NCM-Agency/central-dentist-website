@@ -68,7 +68,7 @@ const btnStyle = `background-color: ${c.ochre}; color: #FFFFFF; font-family: 'Pl
 ---
 
 <!-- noindex is temporary while the page is under review. Remove noindex={true} once approved so Google can list the event. -->
-<Layout title={meta.title} description={meta.description} ogImage={config.heroImage} schemaType="WebPage" noindex={true}>
+<Layout title={meta.title} description={meta.description} ogImage={config.heroImage} canonicalURL="https://centraldentist.com/giving-day/" schemaType="WebPage" noindex={true}>
   <script type="application/ld+json" set:html={JSON.stringify(eventSchema)} is:inline></script>
 
   <div class="giving-day" style={`background-color: ${c.cream};`}>

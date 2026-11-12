@@ -8,15 +8,16 @@
   },
   "meta": {
     "title": "Giving Day",
-    "description": "Central Dentist Giving Day on Saturday, January 16, 2027: one complimentary dental treatment for selected individuals who are not yet established patients."
+    "description": "Central Dentist Giving Day, Saturday, January 16, 2027, 8:00 AM–2:00 PM: one complimentary dental treatment for selected individuals who are not yet established patients."
   },
   "hero": {
     "eyebrow": "CENTRAL DENTIST",
     "title": "Giving Day",
     "subhead": "Giving Your Smile a Fresh Start",
-    "details": "Saturday, January 16, 2027 · 8:00 AM to 2:00 PM",
+    "details": "Saturday, January 16, 2027 · 8:00 AM–2:00 PM",
     "line": "Giving Day offers selected individuals who are not yet established patients at Central Dentist the opportunity to receive one complimentary dental treatment, consisting of either a cleaning, extraction, or filling.",
-    "button": "Reach Out For Your Chance To Be Accepted"
+    "button": "Reach Out For Your Chance To Be Accepted",
+    "location": "Central Dentist, 10210 N Central Expy, Ste 100, Dallas, TX 75231"
   },
   "intro": [
     "Giving Day is a special day at Central Dentist, dedicated to giving back to the community through complimentary dental care.",
@@ -29,7 +30,7 @@
     },
     {
       "q": "Who can participate?",
-      "a": "Giving Day is for new patients. Existing Central Dentist patients are not eligible for the complimentary Giving Day service."
+      "a": "Giving Day is for new patients. Existing Central Dentist patients aren't eligible for the Giving Day service."
     },
     {
       "q": "What's Included?",
@@ -38,9 +39,15 @@
       "list": {
         "ordered": false,
         "items": [
-          { "text": "A dental examination and assessment" },
-          { "text": "Necessary diagnostic imaging" },
-          { "text": "One complimentary dental treatment, consisting of either a cleaning, extraction, or filling, as determined appropriate following the examination" }
+          {
+            "text": "A dental examination and assessment"
+          },
+          {
+            "text": "Necessary diagnostic imaging"
+          },
+          {
+            "text": "One complimentary dental treatment, consisting of either a cleaning, extraction, or filling, as determined appropriate following the examination"
+          }
         ]
       }
     },
@@ -50,9 +57,19 @@
       "list": {
         "ordered": true,
         "items": [
-          { "label": "Email:", "text": "givingday@centraldentist.com", "mailto": true },
-          { "label": "Subject Line:", "text": "Giving Day / Your First and Last Name" },
-          { "label": "Email Message:", "text": "Briefly describe your reason for requesting an appointment and your primary dental concerns." }
+          {
+            "label": "Email:",
+            "text": "givingday@centraldentist.com",
+            "mailto": true
+          },
+          {
+            "label": "Subject Line:",
+            "text": "Giving Day / Your First and Last Name"
+          },
+          {
+            "label": "Email Message:",
+            "text": "Briefly describe your reason for requesting an appointment and your primary dental concerns."
+          }
         ]
       },
       "outro": "Our team will review the information submitted. If you are selected to participate, we will contact you by email with your scheduled appointment time."
@@ -64,7 +81,7 @@
   ],
   "finalCta": {
     "heading": "Are You Ready to Give Your Smile a Fresh Start?",
-    "body": "Email us to be considered. Giving Day takes place Saturday, January 16, 2027, from 8:00 AM to 2:00 PM.",
+    "body": "Email us to be considered. Giving Day takes place Saturday, January 16, 2027, 8:00 AM–2:00 PM, at Central Dentist, 10210 N Central Expy, Ste 100, Dallas, TX 75231.",
     "button": "Email givingday@centraldentist.com"
   }
 }

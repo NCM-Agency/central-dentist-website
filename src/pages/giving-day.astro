@@ -87,9 +87,14 @@ const btnStyle = `background-color: ${c.ochre}; color: #FFFFFF; font-family: 'Pl
             <p class="text-2xl md:text-3xl italic mb-6" style={`font-family: 'Playfair Display', serif; color: ${c.sageDark};`}>
               {hero.subhead}
             </p>
-            <p class="text-lg mb-4" style={`font-family: 'Geist', sans-serif; color: ${c.brown};`}>
+            <p class="text-lg mb-1" style={`font-family: 'Geist', sans-serif; color: ${c.brown};`}>
               {hero.details}
             </p>
+            {hero.location && (
+              <p class="text-base mb-5" style={`font-family: 'Geist', sans-serif; color: ${c.sageDark};`}>
+                {hero.location}
+              </p>
+            )}
             <p class="text-lg font-medium leading-relaxed mb-8 max-w-xl mx-auto lg:mx-0" style={`font-family: 'Geist', sans-serif; color: ${c.brown};`}>
               {hero.line}
             </p>

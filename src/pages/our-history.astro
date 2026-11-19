@@ -177,7 +177,7 @@ import Card from '../components/ui/Card.astro';
           </BlurFade>
         </div>
 
-        <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-16">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto mb-16">
           <!-- Lakisha Merrick -->
           <BlurFade delay={500} client:visible>
             <Card className="h-full overflow-hidden">
@@ -206,8 +206,36 @@ import Card from '../components/ui/Card.astro';
             </Card>
           </BlurFade>
 
-          <!-- Jaclyn Altman -->
+          <!-- Brynn Smith -->
           <BlurFade delay={600} client:visible>
+            <Card className="h-full overflow-hidden">
+              <img
+                src="/images/team/brynn-smith.jpg"
+                alt="Brynn Smith, RDH"
+                class="w-full h-64 object-cover"
+              />
+              <div class="p-6">
+                <h3 class="font-heading text-xl font-semibold mb-2">Brynn Smith</h3>
+                <p class="text-sm font-semibold mb-3" style="color: #0099ba;">RDH, Lead Dental Hygienist</p>
+                <p class="text-sm text-gray-medium mb-4">
+                  Leads our hygiene team with advanced training in laser dentistry and biological dentistry, and a passion for patient education.
+                </p>
+                <a
+                  href="/team/brynn-smith"
+                  class="inline-flex items-center text-sm font-semibold"
+                  style="color: #0099ba;"
+                >
+                  Learn More
+                  <svg aria-hidden="true" focusable="false" class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
+            </Card>
+          </BlurFade>
+
+          <!-- Jaclyn Altman -->
+          <BlurFade delay={700} client:visible>
             <Card className="h-full overflow-hidden">
               <img
                 src="/images/team/jaclyn-altman.jpg"
@@ -235,7 +263,7 @@ import Card from '../components/ui/Card.astro';
           </BlurFade>
 
           <!-- Ginny Allen -->
-          <BlurFade delay={700} client:visible>
+          <BlurFade delay={800} client:visible>
             <Card className="h-full overflow-hidden">
               <img
                 src="/images/team/ginny-allen.jpg"

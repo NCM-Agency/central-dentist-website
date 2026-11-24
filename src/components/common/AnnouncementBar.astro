@@ -1,0 +1,63 @@
+---
+// AnnouncementBar.astro - Date-limited notices (holiday closures etc).
+// Data: src/content/announcements.json. variant="bar" = site-wide strip above the header,
+// variant="card" = inline notice (Contact page Office Hours box).
+// Each notice carries its dates and an inline script hides it outside the window,
+// so it disappears on time even if the site isn't rebuilt.
+import data from '../../content/announcements.json';
+
+export interface Props {
+  variant?: 'bar' | 'card';
+}
+const { variant = 'bar' } = Astro.props;
+
+const now = Date.now();
+const active = (data.announcements || []).filter((a) => {
+  const until = a.showUntil ? Date.parse(a.showUntil) : Infinity;
+  return until > now;
+});
+---
+
+{active.map((a) => (
+  variant === 'bar' ? (
+    <div
+      class="cd-announcement w-full"
+      style="background-color: #f1f4e1; border-bottom: 1px solid #dfe5bf;"
+      role="region"
+      aria-label={a.label}
+      data-from={a.showFrom}
+      data-until={a.showUntil}
+    >
+      <div class="container mx-auto container-padding py-2 text-center text-sm font-body" style="color: #2d3748;">
+        <svg class="inline-block w-4 h-4 mr-1 -mt-0.5" style="color: #006786;" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+        </svg>
+        <strong style="color: #006786;">{a.label}:</strong>{" "}{a.message}
+      </div>
+    </div>
+  ) : (
+    <div
+      class="cd-announcement rounded-lg p-4 mb-5 text-sm font-body"
+      style="background-color: #f1f4e1; border: 1px solid #dfe5bf; color: #2d3748;"
+      data-from={a.showFrom}
+      data-until={a.showUntil}
+    >
+      <strong style="color: #006786;">{a.label}:</strong>{" "}{a.message}
+    </div>
+  )
+))}
+
+{active.length > 0 && (
+  <script is:inline>
+    (function () {
+      var now = Date.now();
+      document.querySelectorAll('.cd-announcement').forEach(function (el) {
+        var from = el.getAttribute('data-from');
+        var until = el.getAttribute('data-until');
+        if ((from && now < Date.parse(from)) || (until && now >= Date.parse(until))) {
+          el.style.display = 'none';
+        }
+      });
+    })();
+  </script>
+)}

@@ -1,0 +1,12 @@
+{
+  "_note": "Site-wide notices (holiday closures etc). Each shows from showFrom until showUntil (ISO date-time, Central time offset). Expired ones hide automatically in the browser and drop out on the next build.",
+  "announcements": [
+    {
+      "id": "thanksgiving-2026",
+      "label": "Holiday Closure",
+      "message": "Our office will be closed Wednesday, November 25 through Friday, November 27. We will resume normal business hours on Monday, November 30.",
+      "showFrom": "2026-11-01T00:00:00-06:00",
+      "showUntil": "2026-11-30T00:00:00-06:00"
+    }
+  ]
+}
